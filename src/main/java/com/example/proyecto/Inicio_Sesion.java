@@ -29,6 +29,7 @@ public class Inicio_Sesion
 
     @javafx.fxml.FXML
     public void initialize() {
+        System.out.println("hola fran, estoy modificando desde git");
     }
 
     @javafx.fxml.FXML
