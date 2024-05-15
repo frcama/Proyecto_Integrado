@@ -6,6 +6,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.text.Text;
 
 public class Registro {
+    String hola = "hola";
     @javafx.fxml.FXML
     private CheckBox Aceptar;
     @javafx.fxml.FXML
