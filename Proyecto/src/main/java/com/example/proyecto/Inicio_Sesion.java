@@ -40,7 +40,6 @@ public class Inicio_Sesion
     public void initialize() {
 
     }
-
     @javafx.fxml.FXML
     public void inicio(ActionEvent actionEvent) {
         try {
