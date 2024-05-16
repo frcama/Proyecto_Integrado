@@ -1,38 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Registro">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="364.0" style="-fx-border-color: #00C8F8;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Registro">
    <children>
-      <AnchorPane layoutX="-4.0" layoutY="-3.0" prefHeight="497.0" prefWidth="600.0">
-         <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="225.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@img/logo.png" />
-               </image>
-            </ImageView>
-            <Text fx:id="Condiciones" layoutX="207.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Condiciones y Politicas de Empresa" />
-            <CheckBox fx:id="Aceptar" layoutX="179.0" layoutY="383.0" mnemonicParsing="false" onAction="#Aceptar" text="He leído y acepto la politica de privacidad" />
-            <Button fx:id="Crear_Cuenta" layoutX="258.0" layoutY="432.0" mnemonicParsing="false" onAction="#Crear_Cuenta" style="-fx-background-color: #00C8F8;" text="Crear Cuenta" />
-            <Text layoutX="281.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="37.32421875" />
-            <TextField layoutX="225.0" layoutY="209.0" />
-            <Text layoutX="275.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
-            <TextField layoutX="226.0" layoutY="275.0" />
-            <TextField layoutX="226.0" layoutY="346.0" />
-            <Text layoutX="255.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Repeat Password" />
-            <ImageView fitHeight="105.0" fitWidth="108.0" layoutX="485.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@img/Chat.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
+      <Label layoutX="113.0" layoutY="57.0" style="-fx-background-color: #00C8F8;" text="REGISTRO">
+         <font>
+            <Font name="Cooper Black" size="25.0" />
+         </font>
+      </Label>
+      <TextField layoutX="92.0" layoutY="103.0" prefHeight="25.0" prefWidth="181.0" promptText="Nombre" style="-fx-border-color: #00C8F8;" />
+      <TextField layoutX="92.0" layoutY="140.0" prefHeight="25.0" prefWidth="181.0" promptText="Apellidos" style="-fx-border-color: #00C8F8;" />
+      <TextField layoutX="92.0" layoutY="180.0" prefHeight="25.0" prefWidth="181.0" promptText="Numero de telefono" style="-fx-border-color: #00C8F8;" />
+      <TextField layoutX="92.0" layoutY="219.0" prefHeight="25.0" prefWidth="181.0" promptText="Dni" style="-fx-border-color: #00C8F8;" />
+      <TextField layoutX="92.0" layoutY="260.0" prefHeight="25.0" prefWidth="181.0" promptText="Correo electronico" style="-fx-border-color: #00C8F8;" />
+      <TextField layoutX="92.0" layoutY="301.0" prefHeight="25.0" prefWidth="181.0" promptText="Contraseña" style="-fx-border-color: #00C8F8;" />
+      <TextField layoutX="92.0" layoutY="341.0" prefHeight="25.0" prefWidth="181.0" promptText="Repite Contraseña" style="-fx-border-color: #00C8F8;" />
+      <Button layoutX="101.0" layoutY="427.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #00C8F8;" text="ACEPTAR" />
+      <Button layoutX="183.0" layoutY="427.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #00C8F8;" text="CANCELAR" />
+      <DatePicker layoutX="95.0" layoutY="384.0" prefHeight="25.0" prefWidth="175.0" promptText="Fecha de nacimiento" style="-fx-background-color: #00C8F8;" />
+      <ImageView fitHeight="63.0" fitWidth="104.0" layoutX="144.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/logo.png" />
+         </image>
+      </ImageView>
    </children>
-</AnchorPane>
+</Pane>
