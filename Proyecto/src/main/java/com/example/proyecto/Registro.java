@@ -14,22 +14,21 @@ import java.util.logging.Logger;
 public class Registro extends Conexion{
     String hola = "hola";
     @javafx.fxml.FXML
-    private CheckBox Aceptar;
-    @javafx.fxml.FXML
-    private Text Condiciones;
-    @javafx.fxml.FXML
     private Button Crear_Cuenta;
     @javafx.fxml.FXML
     private AnchorPane panel1;
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void Aceptar(ActionEvent actionEvent) {
 
     }
 
 
-    @Deprecated
+    @javafx.fxml.FXML
     public void clickCrearCuenta(ActionEvent actionEvent) {
+
+
+
 
 
         try {
