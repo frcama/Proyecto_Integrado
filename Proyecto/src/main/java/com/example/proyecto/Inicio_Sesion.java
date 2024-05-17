@@ -14,8 +14,7 @@ import java.security.cert.PolicyNode;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Inicio_Sesion
-{
+public class Inicio_Sesion {
 
     @javafx.fxml.FXML
     private Button inicioBOTON;
@@ -24,13 +23,9 @@ public class Inicio_Sesion
     @javafx.fxml.FXML
     private TextField pass;
     @javafx.fxml.FXML
-    private ImageView tiktok;
-    @javafx.fxml.FXML
     private Text id_pass;
     @javafx.fxml.FXML
     private ImageView logo;
-    @javafx.fxml.FXML
-    private ImageView instagram;
     @javafx.fxml.FXML
     private TextField email;
     @javafx.fxml.FXML
@@ -42,8 +37,6 @@ public class Inicio_Sesion
     public void initialize() {
 
     }
-
-
     @javafx.fxml.FXML
     public void inicioBOTONclick(ActionEvent actionEvent) {
             System.out.println("funciona bien");
@@ -58,13 +51,14 @@ public class Inicio_Sesion
 
     @javafx.fxml.FXML
     public void crearBOTONCLICK(ActionEvent actionEvent) {
-        System.out.println("funciona");
-
-        try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Registro.fxml"));
-            this.panelInicioSesion.getChildren().setAll(pane);
-        } catch (IOException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("funciona bien");
+            try {
+                AnchorPane pane = FXMLLoader.load(getClass().getResource("Registro.fxml"));
+                this.panelInicioSesion.getChildren().setAll(pane);
+            } catch (IOException ex) {
+                Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
-    }
-}
+        }
+
+

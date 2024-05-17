@@ -10,59 +10,40 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Inicio_Sesion">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Inicio_Sesion">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
    <children>
-      <AnchorPane fx:id="panelInicioSesion" prefHeight="1068.0" prefWidth="995.0">
+      <AnchorPane fx:id="panelInicioSesion" prefHeight="599.0" prefWidth="419.0">
          <children>
-            <TextField fx:id="email" layoutX="482.0" layoutY="432.0" prefHeight="25.0" prefWidth="198.0" />
-            <Text fx:id="id_email" layoutX="550.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="72.32421875">
+            <TextField fx:id="email" layoutX="58.0" layoutY="205.0" prefHeight="25.0" prefWidth="198.0" />
+            <Text fx:id="id_email" layoutX="121.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="72.32421875">
                <font>
                   <Font size="30.0" />
                </font></Text>
-            <TextField fx:id="pass" layoutX="482.0" layoutY="522.0" prefHeight="25.0" prefWidth="198.0" />
-            <Text fx:id="id_pass" layoutX="516.0" layoutY="504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="129.32421875">
+            <TextField fx:id="pass" layoutX="58.0" layoutY="317.0" prefHeight="25.0" prefWidth="198.0" />
+            <Text fx:id="id_pass" layoutX="92.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" textAlignment="CENTER" wrappingWidth="129.32421875">
                <font>
-                  <Font size="30.0" />
+                  <Font size="20.0" />
                </font></Text>
-            <ImageView fx:id="logo" fitHeight="347.0" fitWidth="341.0" layoutX="411.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="logo" fitHeight="225.0" fitWidth="129.0" layoutX="93.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@img/logo.png" />
                </image>
             </ImageView>
-            <Button fx:id="inicioBOTON" layoutX="457.0" layoutY="560.0" mnemonicParsing="false" onAction="#inicioBOTONclick" style="-fx-background-color: #00C8F8;" text="Inicio de Sesión">
+            <Button fx:id="inicioBOTON" layoutX="74.0" layoutY="370.0" mnemonicParsing="false" onAction="#inicioBOTONclick" style="-fx-background-color: #00C8F8;" text="Inicio de Sesión">
                <font>
-                  <Font size="30.0" />
+                  <Font size="20.0" />
                </font>
             </Button>
-            <Text layoutX="384.0" layoutY="677.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Tu primera vez en Estubook?">
+            <Text layoutX="25.0" layoutY="467.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Tu primera vez en Estubook?">
                <font>
-                  <Font size="30.0" />
+                  <Font size="20.0" />
                </font></Text>
-            <Text layoutX="482.0" layoutY="802.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Redes Sociales" wrappingWidth="198.00000000000006">
+            <Button fx:id="crearBOTON" layoutX="46.0" layoutY="491.0" mnemonicParsing="false" onAction="#crearBOTONCLICK" prefHeight="52.0" prefWidth="220.0" style="-fx-background-color: #00C8F8;" text="Crear Cuenta">
                <font>
-                  <Font size="30.0" />
-               </font></Text>
-            <ImageView fx:id="tiktok" fitHeight="90.0" fitWidth="103.0" layoutX="431.0" layoutY="822.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@img/imagen_2024-05-01_182029839.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="instagram" fitHeight="103.0" fitWidth="105.0" layoutX="616.0" layoutY="816.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@img/imagen_2024-05-01_181923471.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="795.0" layoutY="912.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@img/Chat.png" />
-               </image>
-            </ImageView>
-            <Button fx:id="crearBOTON" layoutX="457.0" layoutY="695.0" mnemonicParsing="false" onAction="#crearBOTONCLICK" prefHeight="66.0" prefWidth="247.0" style="-fx-background-color: #00C8F8;" text="Crear Cuenta">
-               <font>
-                  <Font size="30.0" />
+                  <Font size="20.0" />
                </font>
             </Button>
          </children>

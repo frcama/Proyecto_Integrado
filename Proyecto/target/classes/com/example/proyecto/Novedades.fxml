@@ -15,7 +15,6 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="PanelNovedades" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Novedades">
    <children>
       <Button fx:id="novedadesBOTON" layoutX="14.0" layoutY="100.0" mnemonicParsing="false" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="NOVEDADES" />
@@ -52,21 +51,21 @@
             <Image url="@../../../../../../../../../../imagenes/Image%20Pasted%202024-30-04%20at%2010.08.23.png" />
          </image>
       </ImageView>
-      <Button fx:id="PerfilBOTON" layoutX="269.0" layoutY="27.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0" style="-fx-background-image: &quot;@img/logo.png&quot;;">
+      <Button layoutX="278.0" layoutY="42.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0" style="-fx-background-image: &quot;@img/logo.png&quot;;">
          <graphic>
-            <ImageView fx:id="PerfilBOTON" fitHeight="43.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="PerfilBOTON" fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@img/logo.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Label layoutX="278.0" layoutY="76.0" text="PERFIL">
+      <Label layoutX="282.0" layoutY="77.0" text="PERFIL">
          <font>
             <Font name="Poor Richard" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="30.0" layoutY="34.0" text="ESTUBOOK" underline="true">
+      <Label layoutX="17.0" layoutY="34.0" text="ESTUBOOK" underline="true">
          <font>
             <Font name="Papyrus" size="25.0" />
          </font>
@@ -75,7 +74,7 @@
                <stops>
                   <Stop>
                      <color>
-                        <Color />
+                        <Color green="1.0" blue="0.28333333134651184" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
@@ -97,7 +96,7 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Ayuda">
             <items>
-              <MenuItem mnemonicParsing="false" text="CHAT" />
+              <MenuItem mnemonicParsing="false" text="Chat" />
             </items>
           </Menu>
         </menus>
