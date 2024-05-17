@@ -1,6 +1,7 @@
 package com.example.proyecto;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -16,28 +17,28 @@ import java.util.logging.Logger;
 
 public class Inicio_Sesion {
 
-    @javafx.fxml.FXML
+    @FXML
     private Button inicioBOTON;
-    @javafx.fxml.FXML
+    @FXML
     private Text id_email;
-    @javafx.fxml.FXML
+    @FXML
     private TextField pass;
-    @javafx.fxml.FXML
+    @FXML
     private Text id_pass;
-    @javafx.fxml.FXML
+    @FXML
     private ImageView logo;
-    @javafx.fxml.FXML
+    @FXML
     private TextField email;
-    @javafx.fxml.FXML
+    @FXML
     private AnchorPane panelInicioSesion;
-    @javafx.fxml.FXML
+    @FXML
     private Button crearBOTON;
 
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
 
     }
-    @javafx.fxml.FXML
+    @FXML
     public void inicioBOTONclick(ActionEvent actionEvent) {
             System.out.println("funciona bien");
         try {
@@ -49,7 +50,7 @@ public class Inicio_Sesion {
 
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void crearBOTONCLICK(ActionEvent actionEvent) {
             System.out.println("funciona bien");
             try {

@@ -1,6 +1,7 @@
 package com.example.proyecto;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
@@ -14,31 +15,31 @@ import java.util.logging.Logger;
 
 public class Registro extends Conexion{
 
-    @javafx.fxml.FXML
+    @FXML
     private Button aceptarBOTON;
-    @javafx.fxml.FXML
+    @FXML
     private TextField contrasenyaTF;
-    @javafx.fxml.FXML
+    @FXML
     private TextField nombreTF;
-    @javafx.fxml.FXML
+    @FXML
     private TextField dniTF;
-    @javafx.fxml.FXML
+    @FXML
     private DatePicker fechaNacimiento;
-    @javafx.fxml.FXML
+    @FXML
     private TextField RepeContrasenyaTF;
-    @javafx.fxml.FXML
+    @FXML
     private Button cancelarBOTON;
-    @javafx.fxml.FXML
+    @FXML
     private TextField apellidosTF;
-    @javafx.fxml.FXML
+    @FXML
     private TextField correoTF;
-    @javafx.fxml.FXML
+    @FXML
     private TextField telefonoTF;
-    @javafx.fxml.FXML
+    @FXML
     private AnchorPane PanelDeRegistro;
 
 
-    @javafx.fxml.FXML
+    @FXML
     public void aceptarBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -50,7 +51,7 @@ public class Registro extends Conexion{
         }
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void cancelarBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
