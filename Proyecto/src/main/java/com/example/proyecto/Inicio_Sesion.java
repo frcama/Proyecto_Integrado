@@ -16,6 +16,9 @@ import java.util.logging.Logger;
 
 public class Inicio_Sesion
 {
+
+    @javafx.fxml.FXML
+    private Button inicioBOTON;
     @javafx.fxml.FXML
     private Text id_email;
     @javafx.fxml.FXML
@@ -25,36 +28,42 @@ public class Inicio_Sesion
     @javafx.fxml.FXML
     private Text id_pass;
     @javafx.fxml.FXML
-    private Button crear_cuenta;
-    @javafx.fxml.FXML
     private ImageView logo;
-    @javafx.fxml.FXML
-    private Button inicio;
     @javafx.fxml.FXML
     private ImageView instagram;
     @javafx.fxml.FXML
     private TextField email;
-    private Pane panel1;
+    @javafx.fxml.FXML
+    private AnchorPane panelInicioSesion;
+    @javafx.fxml.FXML
+    private Button crearBOTON;
 
     @javafx.fxml.FXML
     public void initialize() {
 
     }
+
+
     @javafx.fxml.FXML
-    public void inicio(ActionEvent actionEvent) {
+    public void inicioBOTONclick(ActionEvent actionEvent) {
+            System.out.println("funciona");
         try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Terminos.fxml"));
-            this.panel1.getChildren().setAll(pane);
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Novedades.fxml"));
+            this.panelInicioSesion.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
+
+
     }
 
     @javafx.fxml.FXML
-    public void crear(ActionEvent actionEvent) {
+    public void crearBOTONCLICK(ActionEvent actionEvent) {
+        System.out.println("funciona");
+
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Registro.fxml"));
-            this.panel1.getChildren().setAll(pane);
+            this.panelInicioSesion.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }

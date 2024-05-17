@@ -15,7 +15,7 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
    <children>
-      <AnchorPane prefHeight="1068.0" prefWidth="995.0">
+      <AnchorPane fx:id="panelInicioSesion" prefHeight="1068.0" prefWidth="995.0">
          <children>
             <TextField fx:id="email" layoutX="482.0" layoutY="432.0" prefHeight="25.0" prefWidth="198.0" />
             <Text fx:id="id_email" layoutX="550.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="72.32421875">
@@ -32,18 +32,15 @@
                   <Image url="@img/logo.png" />
                </image>
             </ImageView>
-            <Button fx:id="inicio" layoutX="457.0" layoutY="560.0" mnemonicParsing="false" onAction="#inicio" style="-fx-background-color: #00C8F8;" text="Inicio de Sesión">
+            <Button fx:id="inicioBOTON" layoutX="457.0" layoutY="560.0" mnemonicParsing="false" onAction="#inicioBOTONclick" style="-fx-background-color: #00C8F8;" text="Inicio de Sesión">
                <font>
                   <Font size="30.0" />
-               </font></Button>
+               </font>
+            </Button>
             <Text layoutX="384.0" layoutY="677.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Tu primera vez en Estubook?">
                <font>
                   <Font size="30.0" />
                </font></Text>
-            <Button fx:id="crear_cuenta" layoutX="476.0" layoutY="692.0" mnemonicParsing="false" onAction="#crear" prefHeight="55.0" prefWidth="220.0" style="-fx-background-color: #00C8F8;" text="Crear Cuenta">
-               <font>
-                  <Font size="30.0" />
-               </font></Button>
             <Text layoutX="482.0" layoutY="802.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Redes Sociales" wrappingWidth="198.00000000000006">
                <font>
                   <Font size="30.0" />
@@ -63,6 +60,11 @@
                   <Image url="@img/Chat.png" />
                </image>
             </ImageView>
+            <Button fx:id="crearBOTON" layoutX="457.0" layoutY="695.0" mnemonicParsing="false" onAction="#crearBOTONCLICK" prefHeight="66.0" prefWidth="247.0" style="-fx-background-color: #00C8F8;" text="Crear Cuenta">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>
