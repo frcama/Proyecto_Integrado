@@ -42,9 +42,6 @@ public class Registro extends Conexion{
     public void cancelarBOTONclick(ActionEvent actionEvent) {
         try {
 
-            Alert a = new Alert(Alert.AlertType.ERROR);
-            a.setContentText("NO SE REGISTRO NINGUN USUARI0");
-            a.showAndWait();
             AnchorPane pane = FXMLLoader.load(getClass().getResource("inicio_sesion.fxml"));
             this.panelRegistro.getChildren().setAll(pane);
         } catch (IOException ex) {

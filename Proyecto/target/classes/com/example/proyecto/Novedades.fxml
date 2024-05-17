@@ -52,13 +52,16 @@
             <Image url="@../../../../../../../../../../imagenes/Image%20Pasted%202024-30-04%20at%2010.08.23.png" />
          </image>
       </ImageView>
-      <Button fx:id="PerfilBOTON" layoutX="271.0" layoutY="28.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="45.0" style="-fx-background-image: &quot;@img/logo.png&quot;;" text="Button" />
-      <ImageView fitHeight="54.0" fitWidth="66.0" layoutX="236.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@img/logo.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="286.0" layoutY="59.0" text="PERFIL">
+      <Button fx:id="PerfilBOTON" layoutX="269.0" layoutY="27.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0" style="-fx-background-image: &quot;@img/logo.png&quot;;">
+         <graphic>
+            <ImageView fx:id="PerfilBOTON" fitHeight="43.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/logo.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="278.0" layoutY="76.0" text="PERFIL">
          <font>
             <Font name="Poor Richard" size="12.0" />
          </font>
