@@ -10,6 +10,10 @@
     background-size: cover;
     background-position: center;
 }
+.logoempresa{
+    position: relative;
+    right: 70px;
+}
 .navbar{
     width: 85%;
     margin: auto;

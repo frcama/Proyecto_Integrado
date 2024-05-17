@@ -4,6 +4,7 @@ module com.example.proyecto {
     requires jdk.jdi;
     requires java.sql;
     requires mysql.connector.j;
+    requires java.desktop;
 
 
     opens com.example.proyecto to javafx.fxml;

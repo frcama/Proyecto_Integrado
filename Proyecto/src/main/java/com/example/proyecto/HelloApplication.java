@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
@@ -15,8 +16,17 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
         stage.show();
     }
-String cambio = "hola";
+
     public static void main(String[] args) {
-        launch();
+
+        File file = new File("src\\sample\\image.jpg");
+        try {
+            file.createNewFile();
+
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+        launch(args);
+
     }
 }

@@ -11,6 +11,10 @@
     background-position: center;
     background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)), url(imagenes/fondosesion.jpg);
 }
+.logoempresa{
+    position: relative;
+    right: 70px;
+}
 .navbar{
     width: 85%;
     margin: auto;
@@ -47,6 +51,10 @@
 }
 .navbar ul li:hover::after{
     width: 100%;
+}
+.logoempresa{
+    position: relative;
+    right: 70px;
 }
 .content{
     width: 100%;

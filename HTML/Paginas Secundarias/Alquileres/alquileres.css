@@ -11,7 +11,6 @@
     background-position: center;
     background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)), url(imagenes/fondosesion.jpg);
 }
-.body{}
 .navbar{
     width: 85%;
     margin: auto;
@@ -119,6 +118,10 @@ button:hover{
 .paragrafo{
     position: relative;
     left: 35px;
+}
+.logoempresa{
+    position: relative;
+    right: 70px;
 }
 .casa{
     display: flex;
