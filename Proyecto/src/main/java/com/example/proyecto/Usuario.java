@@ -8,7 +8,6 @@ public class Usuario {
     private String DNI;
     private int edad;
 
-
     public Usuario(String nombre, String apellido, String correo, String DNI, int edad) {
         this.nombre = nombre;
         this.apellido = apellido;
