@@ -27,6 +27,5 @@ public class HelloApplication extends Application {
             e.printStackTrace();
         }
         launch(args);
-
     }
 }
