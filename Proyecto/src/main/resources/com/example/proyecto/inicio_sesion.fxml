@@ -15,7 +15,7 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
    <children>
-      <AnchorPane prefHeight="1068.0" prefWidth="995.0">
+      <AnchorPane fx:id="panelInicioSesion" prefHeight="1068.0" prefWidth="995.0">
          <children>
             <TextField fx:id="email" layoutX="482.0" layoutY="432.0" prefHeight="25.0" prefWidth="198.0" />
             <Text fx:id="id_email" layoutX="550.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="72.32421875">

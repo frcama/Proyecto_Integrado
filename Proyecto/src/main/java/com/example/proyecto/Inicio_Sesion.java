@@ -43,7 +43,7 @@ public class Inicio_Sesion
     @javafx.fxml.FXML
     public void inicio(ActionEvent actionEvent) {
         try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Terminos.fxml"));
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Eventos.fxml"));
             this.panel1.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
