@@ -1,10 +1,18 @@
 package com.example.proyecto;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
+
+import java.io.IOException;
+import java.security.cert.PolicyNode;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Inicio_Sesion
 {
@@ -26,17 +34,29 @@ public class Inicio_Sesion
     private ImageView instagram;
     @javafx.fxml.FXML
     private TextField email;
+    private Pane panel1;
 
     @javafx.fxml.FXML
     public void initialize() {
-        System.out.println("hola fran, estoy modificando desde git");
-    }
 
+    }
     @javafx.fxml.FXML
     public void inicio(ActionEvent actionEvent) {
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Terminos.fxml"));
+            this.panel1.getChildren().setAll(pane);
+        } catch (IOException ex) {
+            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @javafx.fxml.FXML
     public void crear(ActionEvent actionEvent) {
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Registro.fxml"));
+            this.panel1.getChildren().setAll(pane);
+        } catch (IOException ex) {
+            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

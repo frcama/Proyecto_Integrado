@@ -58,9 +58,9 @@
                   <Image url="@img/imagen_2024-05-01_181923471.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="787.0" layoutY="912.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="795.0" layoutY="912.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/Chat.jpeg" />
+                  <Image url="@img/Chat.png" />
                </image>
             </ImageView>
          </children>
