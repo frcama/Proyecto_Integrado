@@ -9,28 +9,32 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="panelRegistro" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Registro">
+<AnchorPane fx:id="panelRegistro" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Registro">
    <children>
-      <Label layoutX="230.0" layoutY="71.0" style="-fx-background-color: #00C8F8;" text="REGISTRO">
+      <Label layoutX="106.0" layoutY="79.0" style="-fx-background-color: #00C8F8;" text="REGISTRO">
          <font>
             <Font name="Cooper Black" size="25.0" />
          </font>
       </Label>
-      <TextField fx:id="nombreTF" layoutX="209.0" layoutY="117.0" prefHeight="25.0" prefWidth="181.0" promptText="Nombre" style="-fx-border-color: #00C8F8;" />
-      <TextField fx:id="apellidosTF" layoutX="209.0" layoutY="154.0" prefHeight="25.0" prefWidth="181.0" promptText="Apellidos" style="-fx-border-color: #00C8F8;" />
-      <TextField fx:id="telefonoTF" layoutX="209.0" layoutY="194.0" prefHeight="25.0" prefWidth="181.0" promptText="Numero de telefono" style="-fx-border-color: #00C8F8;" />
-      <TextField fx:id="dniTF" layoutX="209.0" layoutY="233.0" prefHeight="25.0" prefWidth="181.0" promptText="Dni" style="-fx-border-color: #00C8F8;" />
-      <TextField fx:id="correoTF" layoutX="209.0" layoutY="274.0" prefHeight="25.0" prefWidth="181.0" promptText="Correo electronico" style="-fx-border-color: #00C8F8;" />
-      <TextField fx:id="contrasenyaTF" layoutX="209.0" layoutY="315.0" prefHeight="25.0" prefWidth="181.0" promptText="Contraseña" style="-fx-border-color: #00C8F8;" />
-      <TextField fx:id="RepeContrasenyaTF" layoutX="209.0" layoutY="355.0" prefHeight="25.0" prefWidth="181.0" promptText="Repite Contraseña" style="-fx-border-color: #00C8F8;" />
-      <Button fx:id="aceptarBOTON" layoutX="218.0" layoutY="441.0" mnemonicParsing="false" onAction="#aceptarBOTONclick" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #00C8F8;" text="ACEPTAR" />
-      <Button fx:id="cancelarBOTON" layoutX="300.0" layoutY="441.0" mnemonicParsing="false" onAction="#cancelarBOTONclick" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #00C8F8;" text="CANCELAR" />
-      <DatePicker fx:id="fechaNacimiento" layoutX="212.0" layoutY="398.0" prefHeight="25.0" prefWidth="175.0" promptText="Fecha de nacimiento" style="-fx-background-color: #00C8F8;" />
-      <ImageView fitHeight="63.0" fitWidth="104.0" layoutX="261.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <TextField fx:id="nombreTF" layoutX="85.0" layoutY="125.0" prefHeight="25.0" prefWidth="181.0" promptText="Nombre" style="-fx-border-color: #00C8F8;" />
+      <TextField fx:id="apellidosTF" layoutX="85.0" layoutY="162.0" prefHeight="25.0" prefWidth="181.0" promptText="Apellidos" style="-fx-border-color: #00C8F8;" />
+      <TextField fx:id="telefonoTF" layoutX="85.0" layoutY="202.0" prefHeight="25.0" prefWidth="181.0" promptText="Numero de telefono" style="-fx-border-color: #00C8F8;" />
+      <TextField fx:id="dniTF" layoutX="85.0" layoutY="241.0" prefHeight="25.0" prefWidth="181.0" promptText="Dni" style="-fx-border-color: #00C8F8;" />
+      <TextField fx:id="correoTF" layoutX="85.0" layoutY="282.0" prefHeight="25.0" prefWidth="181.0" promptText="Correo electronico" style="-fx-border-color: #00C8F8;" />
+      <TextField fx:id="contrasenyaTF" layoutX="85.0" layoutY="323.0" prefHeight="25.0" prefWidth="181.0" promptText="Contraseña" style="-fx-border-color: #00C8F8;" />
+      <TextField fx:id="RepeContrasenyaTF" layoutX="85.0" layoutY="363.0" prefHeight="25.0" prefWidth="181.0" promptText="Repite Contraseña" style="-fx-border-color: #00C8F8;" />
+      <Button fx:id="aceptarBOTON" layoutX="94.0" layoutY="449.0" mnemonicParsing="false" onAction="#aceptarBOTONclick" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #00C8F8;" text="ACEPTAR" />
+      <Button fx:id="cancelarBOTON" layoutX="176.0" layoutY="449.0" mnemonicParsing="false" onAction="#cancelarBOTONclick" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #00C8F8;" text="CANCELAR" />
+      <DatePicker fx:id="fechaNacimiento" layoutX="88.0" layoutY="406.0" prefHeight="25.0" prefWidth="175.0" promptText="Fecha de nacimiento" style="-fx-background-color: #00C8F8;" />
+      <ImageView fitHeight="63.0" fitWidth="104.0" layoutX="137.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/logo.png" />
          </image>
       </ImageView>
+      <Label layoutX="91.0" layoutY="494.0" style="-fx-background-color: #00C8F8;" text="PATROCINADORES">
+         <font>
+            <Font name="Cooper Black" size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

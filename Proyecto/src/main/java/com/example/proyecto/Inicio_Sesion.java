@@ -54,7 +54,6 @@ public class Inicio_Sesion
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-
     }
 
     @javafx.fxml.FXML
