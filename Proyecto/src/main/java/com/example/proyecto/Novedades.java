@@ -18,11 +18,13 @@ public class Novedades {
     @javafx.fxml.FXML
     private Button novedadesBOTON;
     @javafx.fxml.FXML
-    private Button PerfilBOTON;
-    @javafx.fxml.FXML
     private Button alquileresBOTON;
     @javafx.fxml.FXML
     private Button eventosBOTON;
+    @javafx.fxml.FXML
+    private ImageView PerfilBOTON;
+    @javafx.fxml.FXML
+    private Button librosBOTON;
     @javafx.fxml.FXML
 
     
