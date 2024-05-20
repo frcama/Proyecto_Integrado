@@ -96,7 +96,7 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Ayuda">
             <items>
-              <MenuItem fx:id="chatNovedades" mnemonicParsing="false" text="Chat" />
+              <MenuItem fx:id="chatNovedades" mnemonicParsing="false" onAction="#chatNovedadesclick" text="Chat" />
             </items>
           </Menu>
         </menus>

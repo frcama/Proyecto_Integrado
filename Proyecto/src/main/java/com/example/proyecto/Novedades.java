@@ -85,17 +85,18 @@ public class Novedades {
 
     @FXML
     public void eventosBOTONclick(ActionEvent actionEvent) {
-        System.out.println("funciona");
+            System.out.println("funciona");
 
-        try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Eventos.fxml"));
-            this.PanelNovedades.getChildren().setAll(pane);
-        } catch (IOException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            try {
+                AnchorPane pane = FXMLLoader.load(getClass().getResource("Eventos.fxml"));
+                this.PanelNovedades.getChildren().setAll(pane);
+            } catch (IOException ex) {
+                Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+            }
     }
 
-    public void chatNovedades (){
+    @FXML
+    public void chatNovedadesclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
         try {
