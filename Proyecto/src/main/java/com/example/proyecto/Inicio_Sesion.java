@@ -30,20 +30,20 @@ public class Inicio_Sesion {
     @FXML
     private TextField email;
     @FXML
-    private AnchorPane panelInicioSesion;
-    @FXML
     private Button crearBOTON;
+    @FXML
+    private AnchorPane panelDeInicio;
 
     @FXML
     public void initialize() {
-
+System.out.println("el boton llega ");
     }
     @FXML
     public void inicioBOTONclick(ActionEvent actionEvent) {
             System.out.println("funciona bien");
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Terminos.fxml"));
-            this.panelInicioSesion.getChildren().setAll(pane);
+            this.panelDeInicio.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -55,7 +55,7 @@ public class Inicio_Sesion {
             System.out.println("funciona bien");
             try {
                 AnchorPane pane = FXMLLoader.load(getClass().getResource("Registro.fxml"));
-                this.panelInicioSesion.getChildren().setAll(pane);
+                this.panelDeInicio.getChildren().setAll(pane);
             } catch (IOException ex) {
                 Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
             }

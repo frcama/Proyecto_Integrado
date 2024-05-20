@@ -15,6 +15,7 @@ import java.util.logging.Logger;
 
 public class Registro extends Conexion{
 
+
     @FXML
     private Button aceptarBOTON;
     @FXML
@@ -28,6 +29,8 @@ public class Registro extends Conexion{
     @FXML
     private TextField RepeContrasenyaTF;
     @FXML
+    private AnchorPane PanelDeRegistro;
+    @FXML
     private Button cancelarBOTON;
     @FXML
     private TextField apellidosTF;
@@ -35,15 +38,11 @@ public class Registro extends Conexion{
     private TextField correoTF;
     @FXML
     private TextField telefonoTF;
+
     @FXML
-    private AnchorPane PanelDeRegistro;
-
-
-
-//la ruta esta be, me pasa pantalla a totes les clases menos a inicio de sesion
-    @FXML
-    public void aceptarBOTONclick(ActionEvent actionEvent) {
+    public void cancelarBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
+
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("inicio_sesion.fxml"));
             this.PanelDeRegistro.getChildren().setAll(pane);
@@ -52,21 +51,17 @@ public class Registro extends Conexion{
         }
     }
 
-
-    //la ruta esta be, me pasa pantalla a totes les clases menos a inicio de sesion
     @FXML
-    public void cancelarBOTONclick(ActionEvent actionEvent) {
+    public void aceptarBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
         try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Novedades.fxml"));
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("inicio_sesion.fxml"));
             this.PanelDeRegistro.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
-
 }
 
 

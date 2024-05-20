@@ -17,10 +17,10 @@
 
 <AnchorPane fx:id="PanelNovedades" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Novedades">
    <children>
-      <Button fx:id="novedadesBOTON" layoutX="14.0" layoutY="100.0" mnemonicParsing="false" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="NOVEDADES" />
-      <Button fx:id="librosBOTON" layoutX="103.0" layoutY="100.0" mnemonicParsing="false" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="LIBROS" />
-      <Button fx:id="alquileresBOTON" layoutX="167.0" layoutY="100.0" mnemonicParsing="false" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="ALQUILERES" />
-      <Button fx:id="eventosBOTON" layoutX="256.0" layoutY="100.0" mnemonicParsing="false" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="EVENTOS" />
+      <Button fx:id="novedadesBOTON" layoutX="14.0" layoutY="100.0" mnemonicParsing="false" onAction="#novedadesBOTONclick" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="NOVEDADES" />
+      <Button fx:id="librosBOTON" layoutX="103.0" layoutY="100.0" mnemonicParsing="false" onAction="#librosBOTONclick" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="LIBROS" />
+      <Button fx:id="alquileresBOTON" layoutX="167.0" layoutY="100.0" mnemonicParsing="false" onAction="#alquileresBOTONclick" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="ALQUILERES" />
+      <Button fx:id="eventosBOTON" layoutX="256.0" layoutY="100.0" mnemonicParsing="false" onAction="#eventosBOTONclick" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="EVENTOS" />
       <Label layoutX="117.0" layoutY="136.0" text="NOVEDADES">
          <font>
             <Font name="Impact" size="25.0" />
@@ -51,7 +51,7 @@
             <Image url="@../../../../../../../../../../imagenes/Image%20Pasted%202024-30-04%20at%2010.08.23.png" />
          </image>
       </ImageView>
-      <Button layoutX="278.0" layoutY="42.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0" style="-fx-background-image: &quot;@img/logo.png&quot;;">
+      <Button fx:id="perfilBOTON" layoutX="278.0" layoutY="42.0" mnemonicParsing="false" onAction="#perfilBOTONclick" prefHeight="32.0" prefWidth="34.0" style="-fx-background-image: &quot;@img/logo.png&quot;;">
          <graphic>
             <ImageView fx:id="PerfilBOTON" fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                <image>
