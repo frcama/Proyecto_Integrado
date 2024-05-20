@@ -60,6 +60,11 @@ System.out.println("el boton llega ");
                 Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        }
+
+    public void RecuperarContraseñaclick(ActionEvent actionEvent) {
+
+
+    }
+}
 
 
