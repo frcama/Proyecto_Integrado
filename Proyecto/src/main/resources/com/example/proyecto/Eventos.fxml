@@ -30,7 +30,7 @@
                   <Font name="Impact" size="25.0" />
                </font>
             </Label>
-            <Pane fx:id="panelDesplegableNOVEDADES" layoutX="5.0" layoutY="168.0" prefHeight="370.0" prefWidth="319.0" style="-fx-background-color: #00C8F8;">
+            <Pane fx:id="panelDesplegableEventos" layoutX="5.0" layoutY="168.0" prefHeight="370.0" prefWidth="319.0" style="-fx-background-color: #00C8F8;">
                <children>
                   <ScrollBar layoutX="304.0" orientation="VERTICAL" prefHeight="370.0" prefWidth="16.0" />
                </children>

@@ -38,8 +38,6 @@ public class Eventos  implements Initializable {
     @javafx.fxml.FXML
     private Button perfilBOTON;
     @javafx.fxml.FXML
-    private Pane panelDesplegableNOVEDADES;
-    @javafx.fxml.FXML
     private AnchorPane PanelNovedades;
     @javafx.fxml.FXML
     private MenuItem chatNovedades;
@@ -53,6 +51,8 @@ public class Eventos  implements Initializable {
     private Button alquileresBOTON;
     @javafx.fxml.FXML
     private Button librosBOTON;
+    @javafx.fxml.FXML
+    private Pane panelDesplegableEventos;
 
 
     @Override
