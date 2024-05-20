@@ -42,7 +42,7 @@ public class Inicio_Sesion {
     public void inicioBOTONclick(ActionEvent actionEvent) {
             System.out.println("funciona bien");
         try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Eventos.fxml"));
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Terminos.fxml"));
             this.panelInicioSesion.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);

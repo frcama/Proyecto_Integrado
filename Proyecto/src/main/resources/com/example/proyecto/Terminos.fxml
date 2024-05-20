@@ -2,36 +2,17 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Novedades">
+<AnchorPane fx:id="panelTerminos" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Terminos">
    <children>
-      <Button layoutX="14.0" layoutY="100.0" mnemonicParsing="false" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="NOVEDADES" />
-      <Button layoutX="103.0" layoutY="100.0" mnemonicParsing="false" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="LIBROS" />
-      <Button layoutX="167.0" layoutY="100.0" mnemonicParsing="false" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="ALQUILERES" />
-      <Button layoutX="256.0" layoutY="100.0" mnemonicParsing="false" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="EVENTOS" />
-      <Label layoutX="117.0" layoutY="136.0" text="NOVEDADES">
-         <font>
-            <Font name="Impact" size="25.0" />
-         </font>
-      </Label>
-      <Pane layoutX="12.0" layoutY="176.0" prefHeight="370.0" prefWidth="319.0" style="-fx-background-color: #00C8F8;">
-         <children>
-            <ScrollBar layoutX="304.0" orientation="VERTICAL" prefHeight="370.0" prefWidth="16.0" />
-         </children>
-      </Pane>
       <Label layoutX="123.0" layoutY="547.0" text="PATROCINADORES">
          <font>
             <Font name="Impact" size="12.0" />
@@ -52,18 +33,7 @@
             <Image url="@../../../../../../../../../../imagenes/Image%20Pasted%202024-30-04%20at%2010.08.23.png" />
          </image>
       </ImageView>
-      <Button layoutX="290.0" layoutY="28.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="26.0" text="Button" />
-      <ImageView fitHeight="54.0" fitWidth="66.0" layoutX="276.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@img/logo.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="286.0" layoutY="59.0" text="PERFIL">
-         <font>
-            <Font name="Poor Richard" size="12.0" />
-         </font>
-      </Label>
-      <Label layoutX="30.0" layoutY="34.0" text="ESTUBOOK" underline="true">
+      <Label layoutX="68.0" layoutY="7.0" text="ESTUBOOK" underline="true">
          <font>
             <Font name="Papyrus" size="25.0" />
          </font>
@@ -84,20 +54,9 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <MenuBar layoutX="-3.0" layoutY="1.0" prefHeight="26.0" prefWidth="160.0" style="-fx-border-color: dark;">
-        <menus>
-          <Menu mnemonicParsing="false" text="Modo Oscuro">
-            <items>
-              <MenuItem mnemonicParsing="false" text="blanco" />
-                  <MenuItem mnemonicParsing="false" text="negro" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Ayuda">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
+      <Label layoutX="93.0" layoutY="73.0" text="TERMINOS Y CONDICIONES" />
+      <Button fx:id="aceptarTerminosBOTON" layoutX="42.0" layoutY="472.0" mnemonicParsing="false" onAction="#aceptarTerminosBOTONclick" prefHeight="30.0" prefWidth="94.0" text="Aceptar" />
+      <Button fx:id="cancelarTerminosBOTON" layoutX="186.0" layoutY="472.0" mnemonicParsing="false" onAction="#cancelarTerminosBOTONclick" prefHeight="30.0" prefWidth="94.0" text="Cancelar" />
+      <TextArea layoutX="13.0" layoutY="106.0" prefHeight="346.0" prefWidth="310.0" style="-fx-background-color: CFCDCC;" text="1. Licencia de Uso:&#10;&#10;EstuBook otorga al usuario una licencia no exclusiva, no transferible y revocable para utilizar el software proporcionado únicamente de acuerdo con estos términos y condiciones.﻿&#10;3. Privacidad y Seguridad:&#10;&#10;EstuBook se compromete a proteger la privacidad y seguridad de los datos del usuario.&#10;El usuario acepta que EstuBook pueda recopilar y procesar ciertos datos con el fin de mejorar el software y proporcionar un mejor servicio.&#10;4. Actualizaciones y Mantenimiento:&#10;&#10;EstuBook se reserva el derecho de proporcionar actualizaciones periódicas del software con el fin de mejorar su funcionalidad y seguridad.&#10;El usuario acepta instalar estas actualizaciones para seguir utilizando el software de manera efectiva.&#10;5. Responsabilidad:&#10;&#10;EstuBook no será responsable de ningún daño directo, indirecto, incidental, especial o consecuente que surja del uso o la imposibilidad de utilizar el software.&#10;Al hacer clic en &quot;Aceptar&quot; o al utilizar el software proporcionado por EstuBook, el usuario indica su acuerdo con estos términos y condiciones." />
    </children>
 </AnchorPane>

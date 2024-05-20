@@ -39,10 +39,11 @@ public class Registro extends Conexion{
     private AnchorPane PanelDeRegistro;
 
 
+
+//la ruta esta be, me pasa pantalla a totes les clases menos a inicio de sesion
     @FXML
     public void aceptarBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
-
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("inicio_sesion.fxml"));
             this.PanelDeRegistro.getChildren().setAll(pane);
@@ -51,12 +52,14 @@ public class Registro extends Conexion{
         }
     }
 
+
+    //la ruta esta be, me pasa pantalla a totes les clases menos a inicio de sesion
     @FXML
     public void cancelarBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
         try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("inicio_sesion.fxml"));
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Novedades.fxml"));
             this.PanelDeRegistro.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
