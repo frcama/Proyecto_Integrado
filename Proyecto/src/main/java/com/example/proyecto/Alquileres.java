@@ -32,6 +32,13 @@ public class Alquileres {
 
     @FXML
     public void perfilBOTONclick(ActionEvent actionEvent) {
+        System.out.println("funciona");
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Perfil.fxml"));
+            this.PanelAlquileres.getChildren().setAll(pane);
+        } catch (IOException ex) {
+            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @FXML

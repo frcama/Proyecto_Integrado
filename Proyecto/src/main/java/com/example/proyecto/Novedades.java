@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -30,9 +31,18 @@ public class Novedades {
     private Button librosBOTON;
     @FXML
     private AnchorPane PanelNovedades;
+    @FXML
+    private MenuItem chatNovedades;
 
     @FXML
     public void perfilBOTONclick(ActionEvent actionEvent) {
+        System.out.println("funciona");
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Perfil.fxml"));
+            this.PanelNovedades.getChildren().setAll(pane);
+        } catch (IOException ex) {
+            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @FXML
@@ -79,6 +89,17 @@ public class Novedades {
 
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Eventos.fxml"));
+            this.PanelNovedades.getChildren().setAll(pane);
+        } catch (IOException ex) {
+            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void chatNovedades (){
+        System.out.println("funciona");
+
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Chat.fxml"));
             this.PanelNovedades.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);

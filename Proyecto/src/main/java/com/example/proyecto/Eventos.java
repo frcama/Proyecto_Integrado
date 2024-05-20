@@ -34,7 +34,7 @@ public class Eventos  implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        fileChooser.setInitialDirectory(new File("C:\\Users\\TSMR1\\Pictures"));
+       // fileChooser.setInitialDirectory(new File("C:\\Users\\TSMR1\\Pictures"));
     }
 
 
