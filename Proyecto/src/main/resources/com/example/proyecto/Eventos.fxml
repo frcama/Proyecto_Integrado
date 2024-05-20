@@ -30,12 +30,12 @@
                   <Font name="Impact" size="25.0" />
                </font>
             </Label>
-            <Pane fx:id="panelDesplegableEventos" layoutX="5.0" layoutY="168.0" prefHeight="370.0" prefWidth="319.0" style="-fx-background-color: #00C8F8;">
+            <Pane fx:id="panelDesplegableEventos" layoutX="5.0" layoutY="168.0" prefHeight="334.0" prefWidth="319.0" style="-fx-background-color: #00C8F8;">
                <children>
-                  <ScrollBar layoutX="304.0" orientation="VERTICAL" prefHeight="370.0" prefWidth="16.0" />
+                  <ScrollBar layoutX="304.0" orientation="VERTICAL" prefHeight="334.0" prefWidth="16.0" />
                </children>
             </Pane>
-            <Label layoutX="123.0" layoutY="547.0" text="PATROCINADORES">
+            <Label layoutX="125.0" layoutY="547.0" text="PATROCINADORES">
                <font>
                   <Font name="Impact" size="12.0" />
                </font>
@@ -105,8 +105,11 @@
                   </Menu>
                </menus>
             </MenuBar>
-            <Button fx:id="addButton" layoutX="239.0" layoutY="551.0" mnemonicParsing="false" onAction="#onAddClicked" text="Button" />
-            <Button fx:id="atrasEventosBOTON" layoutX="278.0" layoutY="1.0" mnemonicParsing="false" onAction="#atrasEventosBOTONclick" text="Atras" />
+            <Button fx:id="addButton" layoutX="146.0" layoutY="509.0" mnemonicParsing="false" onAction="#onAddClicked" prefHeight="37.0" prefWidth="43.0" style="-fx-background-radius: 360;" text="+">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>
