@@ -19,8 +19,6 @@ public class Novedades {
     @FXML
     private Pane panelDesplegableNOVEDADES;
     @FXML
-    private AnchorPane PanelNovedades;
-    @FXML
     private Button novedadesBOTON;
     @FXML
     private ImageView PerfilBOTON;
@@ -30,6 +28,8 @@ public class Novedades {
     private Button eventosBOTON;
     @FXML
     private Button librosBOTON;
+    @FXML
+    private AnchorPane PanelNovedades;
 
     @FXML
     public void perfilBOTONclick(ActionEvent actionEvent) {
