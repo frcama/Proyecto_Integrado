@@ -14,6 +14,8 @@ public class Perfil {
     private Button atrasDePerfilBOTON;
     @javafx.fxml.FXML
     private AnchorPane panelDePerfil;
+    @javafx.fxml.FXML
+    private Button EditarFotoPerfil;
 
     @javafx.fxml.FXML
     public void atrasDePerfilBOTONclick(ActionEvent actionEvent) {
@@ -25,5 +27,9 @@ public class Perfil {
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    @javafx.fxml.FXML
+    public void EditarFotoPerfilclick(ActionEvent actionEvent) {
     }
 }
