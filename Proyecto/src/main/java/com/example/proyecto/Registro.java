@@ -13,7 +13,7 @@ import java.security.cert.PolicyNode;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Registro extends Conexion{
+public class Registro extends Conexion {
 
 
     @FXML

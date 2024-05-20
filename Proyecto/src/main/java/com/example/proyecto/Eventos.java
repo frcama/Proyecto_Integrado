@@ -30,13 +30,29 @@ public class Eventos  implements Initializable {
     @javafx.fxml.FXML
     private TextField link;
     @javafx.fxml.FXML
-    private ImageView imagen;
-    @javafx.fxml.FXML
     private Button addButton;
     @javafx.fxml.FXML
     private Button atrasEventosBOTON;
     @javafx.fxml.FXML
     private AnchorPane panelEventos;
+    @javafx.fxml.FXML
+    private Button perfilBOTON;
+    @javafx.fxml.FXML
+    private Pane panelDesplegableNOVEDADES;
+    @javafx.fxml.FXML
+    private AnchorPane PanelNovedades;
+    @javafx.fxml.FXML
+    private MenuItem chatNovedades;
+    @javafx.fxml.FXML
+    private Button novedadesBOTON;
+    @javafx.fxml.FXML
+    private Button eventosBOTON;
+    @javafx.fxml.FXML
+    private ImageView PerfilBOTON;
+    @javafx.fxml.FXML
+    private Button alquileresBOTON;
+    @javafx.fxml.FXML
+    private Button librosBOTON;
 
 
     @Override
@@ -62,5 +78,29 @@ public class Eventos  implements Initializable {
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    @javafx.fxml.FXML
+    public void perfilBOTONclick(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void chatNovedadesclick(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void librosBOTONclick(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void alquileresBOTONclick(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void novedadesBOTONclick(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void eventosBOTONclick(ActionEvent actionEvent) {
     }
 }

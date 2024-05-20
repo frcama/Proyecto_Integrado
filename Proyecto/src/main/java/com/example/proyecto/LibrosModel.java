@@ -7,9 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class LibrosModel extends Conexion{
+public class LibrosModel extends Conexion {
 
-    public ArrayList<Libros> mostrarLibros(){
+    public ArrayList<Libros> mostrarLibros() {
 
         ArrayList<Libros> listaLibros = new ArrayList<>();
 
@@ -21,8 +21,8 @@ public class LibrosModel extends Conexion{
             ResultSet rs = ps.executeQuery();
 
 
-            while (rs.next()){
-                listaLibros.add(new Libros(rs.getString(1),rs.getString(2),rs.getString(3), rs.getDouble(4),rs.getInt(5)));
+            while (rs.next()) {
+                listaLibros.add(new Libros(rs.getString(1), rs.getString(2), rs.getString(3), rs.getDouble(4), rs.getInt(5)));
 
                 return listaLibros;
             }

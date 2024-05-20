@@ -7,6 +7,7 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
+
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
@@ -23,7 +24,7 @@ public class HelloApplication extends Application {
         try {
             file.createNewFile();
 
-        } catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
         launch(args);

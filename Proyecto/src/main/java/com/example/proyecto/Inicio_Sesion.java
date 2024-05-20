@@ -36,11 +36,12 @@ public class Inicio_Sesion {
 
     @FXML
     public void initialize() {
-System.out.println("el boton llega ");
+        System.out.println("el boton llega ");
     }
+
     @FXML
     public void inicioBOTONclick(ActionEvent actionEvent) {
-            System.out.println("funciona bien");
+        System.out.println("funciona bien");
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Terminos.fxml"));
             this.panelDeInicio.getChildren().setAll(pane);
@@ -52,18 +53,16 @@ System.out.println("el boton llega ");
 
     @FXML
     public void crearBOTONCLICK(ActionEvent actionEvent) {
-            System.out.println("funciona bien");
-            try {
-                AnchorPane pane = FXMLLoader.load(getClass().getResource("Registro.fxml"));
-                this.panelDeInicio.getChildren().setAll(pane);
-            } catch (IOException ex) {
-                Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-            }
+        System.out.println("funciona bien");
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Registro.fxml"));
+            this.panelDeInicio.getChildren().setAll(pane);
+        } catch (IOException ex) {
+            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
 
     public void RecuperarContraseñaclick(ActionEvent actionEvent) {
-
-
     }
 }
 
