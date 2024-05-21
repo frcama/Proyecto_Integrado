@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="599a3e3c-8dec-4e78-9449-a59b65385a10" name="Changes" comment="Filtros en alquileres">
+    <list default="true" id="599a3e3c-8dec-4e78-9449-a59b65385a10" name="Changes" comment="Mostrar Info de la base de datos en Alquileres">
       <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Alquileres.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Alquileres.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AlquileresController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AlquileresController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AlquileresModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AlquileresModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,12 +66,21 @@
       <option name="project" value="LOCAL" />
       <updated>1716312548370</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Mostrar Info de la base de datos en Alquileres">
+      <option name="closed" value="true" />
+      <created>1716313738036</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716313738036</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Filtros en alquileres" />
-    <option name="LAST_COMMIT_MESSAGE" value="Filtros en alquileres" />
+    <MESSAGE value="Mostrar Info de la base de datos en Alquileres" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mostrar Info de la base de datos en Alquileres" />
   </component>
 </project>

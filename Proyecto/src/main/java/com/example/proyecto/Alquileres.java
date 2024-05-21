@@ -18,6 +18,13 @@ public class Alquileres {
         this.metrosCuadrados = metrosCuadrados;
         this.imagen = imagen;
     }
+    public Alquileres( String lugar, String nombre, double precio, String metrosCuadrados, byte[] imagen) {
+        this.lugar = lugar;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.metrosCuadrados = metrosCuadrados;
+        this.imagen = imagen;
+    }
 
     public Alquileres(){
 
