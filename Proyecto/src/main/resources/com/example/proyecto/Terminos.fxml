@@ -18,21 +18,6 @@
             <Font name="Impact" size="12.0" />
          </font>
       </Label>
-      <ImageView fitHeight="52.0" fitWidth="94.0" layoutX="9.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../../../../../imagenes/Image%20Pasted%202024-30-04%20at%2010.07.26.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="37.0" fitWidth="54.0" layoutX="244.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../../../../../imagenes/Image%20Pasted%202024-30-04%20at%2010.07.48.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="37.0" fitWidth="114.0" layoutX="111.0" layoutY="562.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../../../../../imagenes/Image%20Pasted%202024-30-04%20at%2010.08.23.png" />
-         </image>
-      </ImageView>
       <Label layoutX="68.0" layoutY="7.0" text="ESTUBOOK" underline="true">
          <font>
             <Font name="Papyrus" size="25.0" />
@@ -58,5 +43,20 @@
       <Button fx:id="aceptarTerminosBOTON" layoutX="42.0" layoutY="472.0" mnemonicParsing="false" onAction="#aceptarTerminosBOTONclick" prefHeight="30.0" prefWidth="94.0" text="Aceptar" />
       <Button fx:id="cancelarTerminosBOTON" layoutX="186.0" layoutY="472.0" mnemonicParsing="false" onAction="#cancelarTerminosBOTONclick" prefHeight="30.0" prefWidth="94.0" text="Cancelar" />
       <TextArea layoutX="13.0" layoutY="106.0" prefHeight="346.0" prefWidth="310.0" style="-fx-background-color: CFCDCC;" text="1. Licencia de Uso:&#10;&#10;EstuBook otorga al usuario una licencia no exclusiva, no transferible y revocable para utilizar el software proporcionado únicamente de acuerdo con estos términos y condiciones.﻿&#10;3. Privacidad y Seguridad:&#10;&#10;EstuBook se compromete a proteger la privacidad y seguridad de los datos del usuario.&#10;El usuario acepta que EstuBook pueda recopilar y procesar ciertos datos con el fin de mejorar el software y proporcionar un mejor servicio.&#10;4. Actualizaciones y Mantenimiento:&#10;&#10;EstuBook se reserva el derecho de proporcionar actualizaciones periódicas del software con el fin de mejorar su funcionalidad y seguridad.&#10;El usuario acepta instalar estas actualizaciones para seguir utilizando el software de manera efectiva.&#10;5. Responsabilidad:&#10;&#10;EstuBook no será responsable de ningún daño directo, indirecto, incidental, especial o consecuente que surja del uso o la imposibilidad de utilizar el software.&#10;Al hacer clic en &quot;Aceptar&quot; o al utilizar el software proporcionado por EstuBook, el usuario indica su acuerdo con estos términos y condiciones." />
+      <ImageView fitHeight="18.0" fitWidth="128.0" layoutX="118.0" layoutY="568.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/Image%20Pasted%202024-30-04%20at%2010.08.23.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="94.0" layoutX="13.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/Image%20Pasted%202024-30-04%20at%2010.07.26.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="85.0" layoutX="230.0" layoutY="557.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/Image%20Pasted%202024-30-04%20at%2010.09.08.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
