@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -51,20 +53,6 @@
             <Image url="@../../../../../../../../../../imagenes/Image%20Pasted%202024-30-04%20at%2010.08.23.png" />
          </image>
       </ImageView>
-      <Button fx:id="perfilBOTON" layoutX="278.0" layoutY="42.0" mnemonicParsing="false" onAction="#perfilBOTONclick" prefHeight="32.0" prefWidth="34.0" style="-fx-background-image: &quot;@img/logo.png&quot;;">
-         <graphic>
-            <ImageView fx:id="PerfilBOTON" fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@img/logo.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Label layoutX="282.0" layoutY="77.0" text="PERFIL">
-         <font>
-            <Font name="Poor Richard" size="12.0" />
-         </font>
-      </Label>
       <Label layoutX="17.0" layoutY="34.0" text="ESTUBOOK" underline="true">
          <font>
             <Font name="Papyrus" size="25.0" />
@@ -101,5 +89,20 @@
           </Menu>
         </menus>
       </MenuBar>
+      <Button fx:id="perfilBOTON" alignment="CENTER" layoutX="289.0" layoutY="8.0" mnemonicParsing="false" onAction="#perfilBOTONclick" prefHeight="38.0" prefWidth="42.0" style="-fx-background-image: &quot;@img/logo.png&quot;; -fx-background-radius: 1000000;" textAlignment="JUSTIFY">
+         <graphic>
+            <ImageView fx:id="PerfilBOTON" fitHeight="33.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/boton%20perfil.png" />
+               </image>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
 </AnchorPane>
