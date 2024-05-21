@@ -7,14 +7,14 @@ public class Alquileres {
     private String lugar;
     private String nombre;
     private double precio;
-    private double metrosCuadrados;
+    private String metrosCuadrados;
 
-    public Alquileres(int id_Alquiler, String lugar, String nombre, double precio, double metrosCuadrados) {
+    public Alquileres(int id_Alquiler, String lugar, String nombre, double precio, String metrosCuadrados) {
         this.id_Alquiler = id_Alquiler;
         this.lugar = lugar;
         this.nombre = nombre;
         this.precio = precio;
-        this.metrosCuadrados = metrosCuadrados;
+        this.metrosCuadrados = String.valueOf(metrosCuadrados);
     }
 
     public Alquileres(){
@@ -53,11 +53,11 @@ public class Alquileres {
         this.precio = precio;
     }
 
-    public double getMetrosCuadrados() {
+    public String getMetrosCuadrados() {
         return metrosCuadrados;
     }
 
-    public void setMetrosCuadrados(double metrosCuadrados) {
+    public void setMetrosCuadrados(String metrosCuadrados) {
         this.metrosCuadrados = metrosCuadrados;
     }
 }
