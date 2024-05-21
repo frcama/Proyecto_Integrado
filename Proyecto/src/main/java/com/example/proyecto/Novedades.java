@@ -6,8 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.MenuItem;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -43,7 +42,12 @@ public class Novedades implements Initializable {
     private AnchorPane PanelNovedades;
     @FXML
     private MenuItem chatNovedades;
-
+    @FXML
+    private Menu menuAyuda;
+    @FXML
+    private Menu menuMO;
+    @FXML
+    private MenuBar menuMenuBar;
 
 
     @Override
