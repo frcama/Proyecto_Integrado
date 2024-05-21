@@ -52,9 +52,9 @@ public class Novedades implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        perfilBOTON.setStyle("-fx-background-color: #ffffff; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';");
+        perfilBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';");
         perfilBOTON.setOnMouseEntered(e -> perfilBOTON.setStyle("-fx-background-color: #00C9FF; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
-        perfilBOTON.setOnMouseExited(e -> perfilBOTON.setStyle("-fx-background-color: #ffffff; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
+        perfilBOTON.setOnMouseExited(e -> perfilBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
     }
 
 // #00C9FF

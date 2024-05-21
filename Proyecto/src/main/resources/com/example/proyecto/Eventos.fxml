@@ -16,7 +16,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="PanelEventos" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Eventos">
+<AnchorPane fx:id="PanelEventos" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.EventosController">
    <children>
       <Button fx:id="novedadesBOTON" layoutX="14.0" layoutY="100.0" mnemonicParsing="false" onAction="#novedadesBOTONclick" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="NOVEDADES" />
       <Button fx:id="librosBOTON" layoutX="103.0" layoutY="100.0" mnemonicParsing="false" onAction="#librosBOTONclick" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="LIBROS" />

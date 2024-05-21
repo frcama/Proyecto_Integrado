@@ -3,6 +3,7 @@ package com.example.proyecto;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
@@ -10,10 +11,12 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class AlquileresController {
+public class AlquileresController implements Initializable {
     @javafx.fxml.FXML
     private Button perfilBOTON;
     @javafx.fxml.FXML
@@ -22,8 +25,6 @@ public class AlquileresController {
     private Button novedadesBOTON;
     @javafx.fxml.FXML
     private AnchorPane PanelAlquileres;
-    @javafx.fxml.FXML
-    private ImageView PerfilBOTON;
     @javafx.fxml.FXML
     private Button alquileresBOTON;
     @javafx.fxml.FXML
@@ -34,6 +35,15 @@ public class AlquileresController {
     private MenuItem ChatAlquileres;
     @FXML
     private Button addButton11;
+    @FXML
+    private ImageView PerfilBOTON1;
+
+
+    public void initialize(URL location, ResourceBundle resources) {
+        perfilBOTON.setStyle("-fx-background-color: #F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';");
+        perfilBOTON.setOnMouseEntered(e -> perfilBOTON.setStyle("-fx-background-color: #00C9FF; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
+        perfilBOTON.setOnMouseExited(e -> perfilBOTON.setStyle("-fx-background-color: #F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
+    }
 
     @FXML
     public void perfilBOTONclick(ActionEvent actionEvent) {

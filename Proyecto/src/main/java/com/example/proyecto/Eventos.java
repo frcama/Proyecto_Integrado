@@ -1,125 +1,50 @@
 package com.example.proyecto;
 
+import java.util.Date;
 
-import javafx.event.ActionEvent;
-import javafx.event.Event;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
-import javafx.stage.FileChooser;
-import javafx.stage.Stage;
-
-import javax.swing.*;
-import java.awt.event.MouseEvent;
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-public class Eventos  implements Initializable {
-
-
-    FileChooser fileChooser = new FileChooser();
-
-    @javafx.fxml.FXML
-    private AnchorPane PanelEventos;
-    @javafx.fxml.FXML
-    private Button perfilBOTON;
-    @javafx.fxml.FXML
-    private MenuItem chatNovedades;
-    @javafx.fxml.FXML
-    private Button novedadesBOTON;
-    @javafx.fxml.FXML
-    private Pane panelDesplegableEventos;
-    @javafx.fxml.FXML
-    private ImageView PerfilBOTON;
-    @javafx.fxml.FXML
-    private Button alquileresBOTON;
-    @javafx.fxml.FXML
-    private Button eventosBOTON;
-    @javafx.fxml.FXML
-    private Button addButton;
-    @javafx.fxml.FXML
-    private Button librosBOTON;
-
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
+public class Eventos {
+    private int id_evento;
+    private String nombre;
+    private Date fecha;
+    private String lugar;
+    public Eventos(int id_evento, String nombre, Date fecha, String lugar) {
+        this.fecha = fecha;
+        this.id_evento = id_evento;
+        this.lugar = lugar;
+        this.nombre = nombre;
     }
 
 
-    @javafx.fxml.FXML
-    public void onAddClicked(ActionEvent actionEvent) {
 
-        try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("anadir.fxml"));
-            this.PanelEventos.getChildren().setAll(pane);
-        } catch (IOException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    public Date getFecha() {
+        return fecha;
     }
 
-
-    @javafx.fxml.FXML
-    public void perfilBOTONclick(ActionEvent actionEvent) {
-        try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Perfil.fxml"));
-            this.PanelEventos.getChildren().setAll(pane);
-        } catch (IOException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
 
-    @javafx.fxml.FXML
-    public void chatNovedadesclick(ActionEvent actionEvent) {
+    public int getId_evento() {
+        return id_evento;
     }
 
-    @javafx.fxml.FXML
-    public void librosBOTONclick(ActionEvent actionEvent) {
-        try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Libros.fxml"));
-            this.PanelEventos.getChildren().setAll(pane);
-        } catch (IOException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    public void setId_evento(int id_evento) {
+        this.id_evento = id_evento;
     }
 
-    @javafx.fxml.FXML
-    public void alquileresBOTONclick(ActionEvent actionEvent) {
-        try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Alquileres.fxml"));
-            this.PanelEventos.getChildren().setAll(pane);
-        } catch (IOException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    public String getLugar() {
+        return lugar;
     }
 
-    @javafx.fxml.FXML
-    public void novedadesBOTONclick(ActionEvent actionEvent) {
-        try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Novedades.fxml"));
-            this.PanelEventos.getChildren().setAll(pane);
-        } catch (IOException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    public void setLugar(String lugar) {
+        this.lugar = lugar;
     }
 
-    @javafx.fxml.FXML
-    public void eventosBOTONclick(ActionEvent actionEvent) {
-        try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Eventos.fxml"));
-            this.PanelEventos.getChildren().setAll(pane);
-        } catch (IOException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 }

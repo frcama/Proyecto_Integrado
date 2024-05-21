@@ -33,6 +33,8 @@ public class Inicio_Sesion {
     private Button crearBOTON;
     @FXML
     private AnchorPane panelDeInicio;
+    @FXML
+    private Button recu_contra;
 
     @FXML
     public void initialize() {
@@ -61,7 +63,8 @@ public class Inicio_Sesion {
         }
     }
 
-    public void RecuperarContraseñaclick(ActionEvent actionEvent) {
+    @FXML
+    public void recu_contraclick(ActionEvent actionEvent) {
     }
 }
 
