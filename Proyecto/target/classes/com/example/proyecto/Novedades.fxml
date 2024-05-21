@@ -8,6 +8,7 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollBar?>
 <?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -19,16 +20,28 @@
 
 <AnchorPane fx:id="PanelNovedades" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Novedades">
    <children>
-      <Button fx:id="novedadesBOTON" layoutX="14.0" layoutY="100.0" mnemonicParsing="false" onAction="#novedadesBOTONclick" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="NOVEDADES" />
-      <Button fx:id="librosBOTON" layoutX="103.0" layoutY="100.0" mnemonicParsing="false" onAction="#librosBOTONclick" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="LIBROS" />
-      <Button fx:id="alquileresBOTON" layoutX="167.0" layoutY="100.0" mnemonicParsing="false" onAction="#alquileresBOTONclick" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="ALQUILERES" />
-      <Button fx:id="eventosBOTON" layoutX="256.0" layoutY="100.0" mnemonicParsing="false" onAction="#eventosBOTONclick" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="EVENTOS" />
-      <Label layoutX="117.0" layoutY="136.0" text="NOVEDADES">
+      <Button fx:id="novedadesBOTON" layoutX="9.0" layoutY="58.0" mnemonicParsing="false" onAction="#novedadesBOTONclick" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="NOVEDADES">
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <Button fx:id="librosBOTON" layoutX="98.0" layoutY="58.0" mnemonicParsing="false" onAction="#librosBOTONclick" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="LIBROS">
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <Button fx:id="alquileresBOTON" layoutX="162.0" layoutY="58.0" mnemonicParsing="false" onAction="#alquileresBOTONclick" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="ALQUILERES">
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <Button fx:id="eventosBOTON" layoutX="251.0" layoutY="58.0" mnemonicParsing="false" onAction="#eventosBOTONclick" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="EVENTOS">
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <Label layoutX="111.0" layoutY="90.0" text="NOVEDADES">
          <font>
             <Font name="Impact" size="25.0" />
          </font>
       </Label>
-      <Pane fx:id="panelDesplegableNOVEDADES" layoutX="12.0" layoutY="176.0" prefHeight="370.0" prefWidth="319.0" style="-fx-background-color: #00C8F8;">
+      <Pane fx:id="panelDesplegableNOVEDADES" layoutX="12.0" layoutY="122.0" prefHeight="424.0" prefWidth="319.0" style="-fx-background-color: #00C8F8;">
          <children>
             <ScrollBar layoutX="304.0" orientation="VERTICAL" prefHeight="370.0" prefWidth="16.0" />
          </children>
@@ -53,7 +66,7 @@
             <Image url="@../../../../../../../../../../imagenes/Image%20Pasted%202024-30-04%20at%2010.08.23.png" />
          </image>
       </ImageView>
-      <Label layoutX="17.0" layoutY="34.0" text="ESTUBOOK" underline="true">
+      <Label layoutX="12.0" layoutY="3.0" text="ESTUBOOK" underline="true">
          <font>
             <Font name="Papyrus" size="25.0" />
          </font>
@@ -74,9 +87,9 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <MenuBar fx:id="menuMenuBar" layoutX="-3.0" layoutY="1.0" prefHeight="26.0" prefWidth="160.0" style="-fx-border-color: dark;">
+      <MenuBar fx:id="menuMenuBar" layoutX="151.0" layoutY="2.0" prefHeight="32.0" prefWidth="140.0" style="-fx-border-color: dark;">
         <menus>
-          <Menu fx:id="menuMO" mnemonicParsing="false" text="Modo Oscuro">
+          <Menu fx:id="menuMO" mnemonicParsing="false" text="Opciones">
             <items>
               <MenuItem mnemonicParsing="false" text="blanco" />
                   <MenuItem mnemonicParsing="false" text="negro" />
@@ -89,7 +102,7 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Button fx:id="perfilBOTON" alignment="CENTER" layoutX="289.0" layoutY="8.0" mnemonicParsing="false" onAction="#perfilBOTONclick" prefHeight="38.0" prefWidth="42.0" style="-fx-background-image: &quot;@img/logo.png&quot;; -fx-background-radius: 1000000;" textAlignment="JUSTIFY">
+      <Button fx:id="perfilBOTON" alignment="CENTER" layoutX="290.0" layoutY="2.0" mnemonicParsing="false" onAction="#perfilBOTONclick" prefHeight="32.0" prefWidth="43.0" style="-fx-background-image: &quot;@img/logo.png&quot;; -fx-background-radius: 1000000;" textAlignment="JUSTIFY">
          <graphic>
             <ImageView fx:id="PerfilBOTON" fitHeight="33.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                <image>
