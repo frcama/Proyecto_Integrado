@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -30,6 +31,8 @@ public class LibrosController {
     private Button librosBOTON;
     @FXML
     private AnchorPane PanelDeLibros;
+    @FXML
+    private MenuItem ChatLibros;
 
     @FXML
     public void perfilBOTONclick(ActionEvent actionEvent) {
@@ -91,4 +94,16 @@ public class LibrosController {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-}
+
+    public void ChatLibros(){
+        System.out.println("funciona");
+
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Chat.fxml"));
+            this.PanelDeLibros.getChildren().setAll(pane);
+        } catch (IOException ex) {
+            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    }
+
