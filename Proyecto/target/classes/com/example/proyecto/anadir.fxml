@@ -51,6 +51,7 @@
          </font>
       </Text>
       <Line endX="199.9000244140625" layoutX="117.0" layoutY="275.0" startX="-100.0" />
+      <ImageView fx:id="muestraImagen" fitHeight="120.0" fitWidth="181.0" layoutX="138.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
       <Text layoutX="21.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
       <TextField fx:id="nombreDescripcion" layoutX="105.0" layoutY="288.0" />
       <TextField fx:id="descripcion" layoutX="106.0" layoutY="323.0" prefHeight="82.0" prefWidth="150.0" />
@@ -62,5 +63,6 @@
       <Text layoutX="35.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio" />
       <Spinner fx:id="precioSpinner" layoutX="106.0" layoutY="510.0" />
       <Button fx:id="subirButton" layoutX="146.0" layoutY="560.0" mnemonicParsing="false" onAction="#onSubirButtonClick" text="Subir" />
+      <Button fx:id="atrasButton" layoutX="17.0" layoutY="36.0" mnemonicParsing="false" onAction="#onAtrasButtonClick" text="Atrás" />
    </children>
 </AnchorPane>
