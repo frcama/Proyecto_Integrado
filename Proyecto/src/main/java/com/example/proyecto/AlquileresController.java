@@ -32,6 +32,8 @@ public class AlquileresController {
     private Button librosBOTON;
     @FXML
     private MenuItem ChatAlquileres;
+    @FXML
+    private Button addButton11;
 
     @FXML
     public void perfilBOTONclick(ActionEvent actionEvent) {
@@ -92,5 +94,9 @@ public class AlquileresController {
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    @FXML
+    public void onAddClicked(ActionEvent actionEvent) {
     }
 }

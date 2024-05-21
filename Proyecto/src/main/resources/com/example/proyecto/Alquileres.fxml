@@ -26,11 +26,6 @@
             <Font name="Impact" size="25.0" />
          </font>
       </Label>
-      <Pane fx:id="panelDesplegableNOVEDADES" layoutX="12.0" layoutY="176.0" prefHeight="370.0" prefWidth="319.0" style="-fx-background-color: #00C8F8;">
-         <children>
-            <ScrollBar layoutX="304.0" orientation="VERTICAL" prefHeight="370.0" prefWidth="16.0" />
-         </children>
-      </Pane>
       <Label layoutX="123.0" layoutY="547.0" text="PATROCINADORES">
          <font>
             <Font name="Impact" size="12.0" />
@@ -101,5 +96,15 @@
             </Menu>
          </menus>
       </MenuBar>
+      <Pane fx:id="panelDesplegableNOVEDADES" layoutX="5.0" layoutY="168.0" prefHeight="331.0" prefWidth="319.0" style="-fx-background-color: #00C8F8;">
+         <children>
+            <ScrollBar layoutX="304.0" orientation="VERTICAL" prefHeight="331.0" prefWidth="16.0" />
+         </children>
+      </Pane>
+      <Button fx:id="addButton11" layoutX="145.0" layoutY="509.0" mnemonicParsing="false" onAction="#onAddClicked" prefHeight="37.0" prefWidth="43.0" style="-fx-background-radius: 360;" text="+">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

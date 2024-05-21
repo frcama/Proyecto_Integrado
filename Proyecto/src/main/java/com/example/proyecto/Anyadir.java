@@ -52,7 +52,7 @@ public class Anyadir implements Initializable {
         ObservableList<String> categoria  = FXCollections.observableArrayList();
 
         String c1= "Libros";
-        String c2= "Apuntes";
+        String c2= "Eventos";
         String c3= "Alquileres";
 
         categoria.add(c1);

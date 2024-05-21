@@ -30,28 +30,30 @@ public class Eventos  implements Initializable {
     FileChooser fileChooser = new FileChooser();
 
     @javafx.fxml.FXML
-    private Pane panelDesplegableNOVEDADES;
-    @javafx.fxml.FXML
-    private Button addButton11;
-    @javafx.fxml.FXML
-    private Button alquileresBOTON1;
-    @javafx.fxml.FXML
-    private ImageView PerfilBOTON1;
-    @javafx.fxml.FXML
-    private Button novedadesBOTON1;
-    @javafx.fxml.FXML
-    private Button eventosBOTON1;
-    @javafx.fxml.FXML
-    private Button librosBOTON1;
-    @javafx.fxml.FXML
-    private Button perfilBOTON1;
-    @javafx.fxml.FXML
     private AnchorPane PanelEventos;
+    @javafx.fxml.FXML
+    private Button perfilBOTON;
+    @javafx.fxml.FXML
+    private MenuItem chatNovedades;
+    @javafx.fxml.FXML
+    private Button novedadesBOTON;
+    @javafx.fxml.FXML
+    private Pane panelDesplegableEventos;
+    @javafx.fxml.FXML
+    private ImageView PerfilBOTON;
+    @javafx.fxml.FXML
+    private Button alquileresBOTON;
+    @javafx.fxml.FXML
+    private Button eventosBOTON;
+    @javafx.fxml.FXML
+    private Button addButton;
+    @javafx.fxml.FXML
+    private Button librosBOTON;
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-       // fileChooser.setInitialDirectory(new File("C:\\Users\\TSMR1\\Pictures"));
+
     }
 
 
@@ -77,7 +79,7 @@ public class Eventos  implements Initializable {
         }
     }
 
-    @Deprecated
+    @javafx.fxml.FXML
     public void chatNovedadesclick(ActionEvent actionEvent) {
     }
 
