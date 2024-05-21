@@ -1,96 +1,63 @@
 package com.example.proyecto;
 
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
-import javafx.scene.control.MenuItem;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
-
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 public class Alquileres {
-    @javafx.fxml.FXML
-    private Button perfilBOTON;
-    @javafx.fxml.FXML
-    private Pane panelDesplegableNOVEDADES;
-    @javafx.fxml.FXML
-    private Button novedadesBOTON;
-    @javafx.fxml.FXML
-    private AnchorPane PanelAlquileres;
-    @javafx.fxml.FXML
-    private ImageView PerfilBOTON;
-    @javafx.fxml.FXML
-    private Button alquileresBOTON;
-    @javafx.fxml.FXML
-    private Button eventosBOTON;
-    @javafx.fxml.FXML
-    private Button librosBOTON;
-    @FXML
-    private MenuItem ChatAlquileres;
 
-    @FXML
-    public void perfilBOTONclick(ActionEvent actionEvent) {
-        System.out.println("funciona");
-        try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Perfil.fxml"));
-            this.PanelAlquileres.getChildren().setAll(pane);
-        } catch (IOException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-        }
+
+    private int id_Alquiler;
+    private String lugar;
+    private String nombre;
+    private double precio;
+    private String metrosCuadrados;
+
+    public Alquileres(int id_Alquiler, String lugar, String nombre, double precio, String metrosCuadrados) {
+        this.id_Alquiler = id_Alquiler;
+        this.lugar = lugar;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.metrosCuadrados = String.valueOf(metrosCuadrados);
     }
 
-    @FXML
-    public void librosBOTONclick(ActionEvent actionEvent) {
-        System.out.println("funciona");
+    public Alquileres(){
 
-        try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Libros.fxml"));
-            this.PanelAlquileres.getChildren().setAll(pane);
-        } catch (IOException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }
 
-
-    @FXML
-    public void alquileresBOTONclick(ActionEvent actionEvent) {
-        System.out.println("funciona");
-
-        try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Alquileres.fxml"));
-            this.PanelAlquileres.getChildren().setAll(pane);
-        } catch (IOException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    public int getId_Alquiler() {
+        return id_Alquiler;
     }
 
-
-    @FXML
-    public void novedadesBOTONclick(ActionEvent actionEvent) {
-        System.out.println("funciona");
-
-        try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Novedades.fxml"));
-            this.PanelAlquileres.getChildren().setAll(pane);
-        } catch (IOException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    public void setId_Alquiler(int id_Alquiler) {
+        this.id_Alquiler = id_Alquiler;
     }
 
-    @FXML
-    public void eventosBOTONclick(ActionEvent actionEvent) {
-        System.out.println("funciona");
+    public String getLugar() {
+        return lugar;
+    }
 
-        try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Eventos.fxml"));
-            this.PanelAlquileres.getChildren().setAll(pane);
-        } catch (IOException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    public void setLugar(String lugar) {
+        this.lugar = lugar;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public String getMetrosCuadrados() {
+        return metrosCuadrados;
+    }
+
+    public void setMetrosCuadrados(String metrosCuadrados) {
+        this.metrosCuadrados = metrosCuadrados;
     }
 }

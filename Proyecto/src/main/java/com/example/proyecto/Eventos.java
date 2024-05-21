@@ -58,7 +58,12 @@ public class Eventos  implements Initializable {
     @javafx.fxml.FXML
     public void onAddClicked(ActionEvent actionEvent) {
 
-        File file = fileChooser.showOpenDialog(new Stage());
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("anadir.fxml"));
+            this.PanelEventos.getChildren().setAll(pane);
+        } catch (IOException ex) {
+            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
 

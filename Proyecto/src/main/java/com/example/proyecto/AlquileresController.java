@@ -8,43 +8,37 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import javafx.stage.FileChooser;
-import javafx.stage.Stage;
 
-import javax.swing.*;
-import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class LibrosController {
-
-
-    @FXML
+public class AlquileresController {
+    @javafx.fxml.FXML
     private Button perfilBOTON;
-    @FXML
+    @javafx.fxml.FXML
     private Pane panelDesplegableNOVEDADES;
-    @FXML
+    @javafx.fxml.FXML
     private Button novedadesBOTON;
-    @FXML
+    @javafx.fxml.FXML
+    private AnchorPane PanelAlquileres;
+    @javafx.fxml.FXML
     private ImageView PerfilBOTON;
-    @FXML
+    @javafx.fxml.FXML
     private Button alquileresBOTON;
-    @FXML
+    @javafx.fxml.FXML
     private Button eventosBOTON;
-    @FXML
+    @javafx.fxml.FXML
     private Button librosBOTON;
     @FXML
-    private AnchorPane PanelDeLibros;
-    @FXML
-    private Button addButton11;
+    private MenuItem ChatAlquileres;
 
     @FXML
     public void perfilBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Perfil.fxml"));
-            this.PanelDeLibros.getChildren().setAll(pane);
+            this.PanelAlquileres.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -56,7 +50,7 @@ public class LibrosController {
 
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Libros.fxml"));
-            this.PanelDeLibros.getChildren().setAll(pane);
+            this.PanelAlquileres.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -69,7 +63,7 @@ public class LibrosController {
 
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Alquileres.fxml"));
-            this.PanelDeLibros.getChildren().setAll(pane);
+            this.PanelAlquileres.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -82,7 +76,7 @@ public class LibrosController {
 
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Novedades.fxml"));
-            this.PanelDeLibros.getChildren().setAll(pane);
+            this.PanelAlquileres.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -94,32 +88,9 @@ public class LibrosController {
 
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Eventos.fxml"));
-            this.PanelDeLibros.getChildren().setAll(pane);
+            this.PanelAlquileres.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-
-    public void ChatLibros(){
-        System.out.println("funciona");
-
-        try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Chat.fxml"));
-            this.PanelDeLibros.getChildren().setAll(pane);
-        } catch (IOException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-
-    @FXML
-    public void onAddClicked(ActionEvent actionEvent) {
-        try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("anadir.fxml"));
-            this.PanelDeLibros.getChildren().setAll(pane);
-        } catch (IOException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
     }
 }
-
