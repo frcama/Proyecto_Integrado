@@ -26,7 +26,7 @@
             <Font name="Impact" size="25.0" />
          </font>
       </Label>
-      <Pane fx:id="panelDesplegableNOVEDADES" layoutX="7.0" layoutY="176.0" prefHeight="331.0" prefWidth="319.0" style="-fx-background-color: #00C8F8;">
+      <Pane fx:id="panelDesplegableNOVEDADES" layoutX="12.0" layoutY="176.0" prefHeight="331.0" prefWidth="319.0" style="-fx-background-color: #00C8F8;">
          <children>
             <ScrollBar layoutX="304.0" orientation="VERTICAL" prefHeight="331.0" prefWidth="16.0" />
             <Button fx:id="addButton11" layoutX="134.0" layoutY="335.0" mnemonicParsing="false" onAction="#onAddClicked" prefHeight="37.0" prefWidth="43.0" style="-fx-background-radius: 360;" text="+">
