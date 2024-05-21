@@ -8,12 +8,17 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
+import javax.swing.*;
+import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class LibrosController {
+
 
     @FXML
     private Button perfilBOTON;
@@ -32,7 +37,7 @@ public class LibrosController {
     @FXML
     private AnchorPane PanelDeLibros;
     @FXML
-    private MenuItem ChatLibros;
+    private Button addButton11;
 
     @FXML
     public void perfilBOTONclick(ActionEvent actionEvent) {
@@ -105,5 +110,16 @@ public class LibrosController {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+    @FXML
+    public void onAddClicked(ActionEvent actionEvent) {
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("anadir.fxml"));
+            this.PanelDeLibros.getChildren().setAll(pane);
+        } catch (IOException ex) {
+            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }
+}
 

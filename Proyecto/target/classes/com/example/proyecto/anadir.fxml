@@ -51,7 +51,6 @@
          </font>
       </Text>
       <Line endX="199.9000244140625" layoutX="117.0" layoutY="275.0" startX="-100.0" />
-      <ImageView fx:id="muestraImagenChoiceBox" fitHeight="120.0" fitWidth="181.0" layoutX="138.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
       <Text layoutX="21.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
       <TextField fx:id="nombreDescripcion" layoutX="105.0" layoutY="288.0" />
       <TextField fx:id="descripcion" layoutX="106.0" layoutY="323.0" prefHeight="82.0" prefWidth="150.0" />

@@ -22,7 +22,7 @@ public class AlquileresModel extends Conexion{
 
 
             while (rs.next()) {
-                listaAlquileres.add(new Alquileres(rs.getString(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getDouble(4), rs.getString(5));
+                listaAlquileres.add(new Alquileres(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getDouble(4), rs.getString(5)));
 
                 return listaAlquileres;
             }
