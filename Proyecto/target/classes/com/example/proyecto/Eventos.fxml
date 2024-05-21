@@ -6,7 +6,6 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollBar?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -16,101 +15,96 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="panelEventos" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="354.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Eventos">
+<AnchorPane fx:id="PanelEventos" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Eventos">
    <children>
-      <TextField fx:id="link" layoutX="92.0" layoutY="464.0" />
-      <AnchorPane fx:id="PanelNovedades" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0">
+      <Button fx:id="novedadesBOTON1" layoutX="14.0" layoutY="100.0" mnemonicParsing="false" onAction="#novedadesBOTONclick" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="NOVEDADES" />
+      <Button fx:id="librosBOTON1" layoutX="103.0" layoutY="100.0" mnemonicParsing="false" onAction="#librosBOTONclick" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="LIBROS" />
+      <Button fx:id="alquileresBOTON1" layoutX="167.0" layoutY="100.0" mnemonicParsing="false" onAction="#alquileresBOTONclick" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="ALQUILERES" />
+      <Button fx:id="eventosBOTON1" layoutX="256.0" layoutY="100.0" mnemonicParsing="false" onAction="#eventosBOTONclick" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="EVENTOS" />
+      <Label layoutX="122.0" layoutY="135.0" text="EVENTOS">
+         <font>
+            <Font name="Impact" size="25.0" />
+         </font>
+      </Label>
+      <Pane fx:id="panelDesplegableNOVEDADES" layoutX="12.0" layoutY="176.0" prefHeight="331.0" prefWidth="319.0" style="-fx-background-color: #00C8F8;">
          <children>
-            <Button fx:id="novedadesBOTON" layoutX="14.0" layoutY="100.0" mnemonicParsing="false" onAction="#novedadesBOTONclick" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="NOVEDADES" />
-            <Button fx:id="librosBOTON" layoutX="103.0" layoutY="100.0" mnemonicParsing="false" onAction="#librosBOTONclick" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="LIBROS" />
-            <Button fx:id="alquileresBOTON" layoutX="167.0" layoutY="100.0" mnemonicParsing="false" onAction="#alquileresBOTONclick" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="ALQUILERES" />
-            <Button fx:id="eventosBOTON" layoutX="256.0" layoutY="100.0" mnemonicParsing="false" onAction="#eventosBOTONclick" style="-fx-background-radius: 5; -fx-background-color: #00C8F8;" text="EVENTOS" />
-            <Label layoutX="125.0" layoutY="136.0" text="EVENTOS">
-               <font>
-                  <Font name="Impact" size="25.0" />
-               </font>
-            </Label>
-            <Pane fx:id="panelDesplegableEventos" layoutX="5.0" layoutY="168.0" prefHeight="334.0" prefWidth="319.0" style="-fx-background-color: #00C8F8;">
-               <children>
-                  <ScrollBar layoutX="304.0" orientation="VERTICAL" prefHeight="334.0" prefWidth="16.0" />
-               </children>
-            </Pane>
-            <Label layoutX="125.0" layoutY="547.0" text="PATROCINADORES">
-               <font>
-                  <Font name="Impact" size="12.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="52.0" fitWidth="94.0" layoutX="9.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../../../imagenes/Image%20Pasted%202024-30-04%20at%2010.07.26.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="37.0" fitWidth="54.0" layoutX="244.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../../../imagenes/Image%20Pasted%202024-30-04%20at%2010.07.48.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="37.0" fitWidth="114.0" layoutX="111.0" layoutY="562.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../../../imagenes/Image%20Pasted%202024-30-04%20at%2010.08.23.png" />
-               </image>
-            </ImageView>
-            <Button fx:id="perfilBOTON" layoutX="278.0" layoutY="42.0" mnemonicParsing="false" onAction="#perfilBOTONclick" prefHeight="32.0" prefWidth="34.0" style="-fx-background-image: &quot;@img/logo.png&quot;;">
-               <graphic>
-                  <ImageView fx:id="PerfilBOTON" fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@img/logo.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Label layoutX="282.0" layoutY="77.0" text="PERFIL">
-               <font>
-                  <Font name="Poor Richard" size="12.0" />
-               </font>
-            </Label>
-            <Label layoutX="17.0" layoutY="34.0" text="ESTUBOOK" underline="true">
-               <font>
-                  <Font name="Papyrus" size="25.0" />
-               </font>
-               <textFill>
-                  <LinearGradient endX="1.0" endY="1.0">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color green="1.0" blue="0.28333333134651184" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color green="0.7843137383460999" blue="0.9725490212440491" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </textFill>
-            </Label>
-            <MenuBar layoutX="-3.0" layoutY="1.0" prefHeight="26.0" prefWidth="160.0" style="-fx-border-color: dark;">
-               <menus>
-                  <Menu mnemonicParsing="false" text="Modo Oscuro">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="blanco" />
-                        <MenuItem mnemonicParsing="false" text="negro" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Ayuda">
-                     <items>
-                        <MenuItem fx:id="chatNovedades" mnemonicParsing="false" onAction="#chatNovedadesclick" text="Chat" />
-                     </items>
-                  </Menu>
-               </menus>
-            </MenuBar>
-            <Button fx:id="addButton" layoutX="146.0" layoutY="509.0" mnemonicParsing="false" onAction="#onAddClicked" prefHeight="37.0" prefWidth="43.0" style="-fx-background-radius: 360;" text="+">
+            <ScrollBar layoutX="304.0" orientation="VERTICAL" prefHeight="331.0" prefWidth="16.0" />
+            <Button fx:id="addButton11" layoutX="134.0" layoutY="335.0" mnemonicParsing="false" onAction="#onAddClicked" prefHeight="37.0" prefWidth="43.0" style="-fx-background-radius: 360;" text="+">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Button>
          </children>
-      </AnchorPane>
+      </Pane>
+      <Label layoutX="123.0" layoutY="547.0" text="PATROCINADORES">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="52.0" fitWidth="94.0" layoutX="9.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../imagenes/Image%20Pasted%202024-30-04%20at%2010.07.26.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="54.0" layoutX="244.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../imagenes/Image%20Pasted%202024-30-04%20at%2010.07.48.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="114.0" layoutX="111.0" layoutY="562.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../imagenes/Image%20Pasted%202024-30-04%20at%2010.08.23.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="perfilBOTON1" layoutX="278.0" layoutY="42.0" mnemonicParsing="false" onAction="#perfilBOTONclick" prefHeight="32.0" prefWidth="34.0" style="-fx-background-image: &quot;@img/logo.png&quot;;">
+         <graphic>
+            <ImageView fx:id="PerfilBOTON1" fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/logo.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="282.0" layoutY="77.0" text="PERFIL">
+         <font>
+            <Font name="Poor Richard" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="34.0" text="ESTUBOOK" underline="true">
+         <font>
+            <Font name="Papyrus" size="25.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="1.0" blue="0.28333333134651184" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color green="0.7843137383460999" blue="0.9725490212440491" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <MenuBar layoutX="-3.0" layoutY="1.0" prefHeight="26.0" prefWidth="160.0" style="-fx-border-color: dark;">
+         <menus>
+            <Menu mnemonicParsing="false" text="Modo Oscuro">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="blanco" />
+                  <MenuItem mnemonicParsing="false" text="negro" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ayuda">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Chat" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
    </children>
 </AnchorPane>

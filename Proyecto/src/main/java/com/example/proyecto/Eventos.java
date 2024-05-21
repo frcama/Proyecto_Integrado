@@ -30,29 +30,23 @@ public class Eventos  implements Initializable {
     FileChooser fileChooser = new FileChooser();
 
     @javafx.fxml.FXML
-    private TextField link;
+    private Pane panelDesplegableNOVEDADES;
     @javafx.fxml.FXML
-    private Button addButton;
+    private Button addButton11;
     @javafx.fxml.FXML
-    private AnchorPane panelEventos;
+    private Button alquileresBOTON1;
     @javafx.fxml.FXML
-    private Button perfilBOTON;
+    private ImageView PerfilBOTON1;
     @javafx.fxml.FXML
-    private AnchorPane PanelNovedades;
+    private Button novedadesBOTON1;
     @javafx.fxml.FXML
-    private Button novedadesBOTON;
+    private Button eventosBOTON1;
     @javafx.fxml.FXML
-    private Button eventosBOTON;
+    private Button librosBOTON1;
     @javafx.fxml.FXML
-    private ImageView PerfilBOTON;
+    private Button perfilBOTON1;
     @javafx.fxml.FXML
-    private Button alquileresBOTON;
-    @javafx.fxml.FXML
-    private Button librosBOTON;
-    @javafx.fxml.FXML
-    private Pane panelDesplegableEventos;
-    @javafx.fxml.FXML
-    private MenuItem chatNovedades;
+    private AnchorPane PanelEventos;
 
 
     @Override
@@ -72,13 +66,13 @@ public class Eventos  implements Initializable {
     public void perfilBOTONclick(ActionEvent actionEvent) {
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Perfil.fxml"));
-            this.panelEventos.getChildren().setAll(pane);
+            this.PanelEventos.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void chatNovedadesclick(ActionEvent actionEvent) {
     }
 
@@ -86,7 +80,7 @@ public class Eventos  implements Initializable {
     public void librosBOTONclick(ActionEvent actionEvent) {
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Libros.fxml"));
-            this.panelEventos.getChildren().setAll(pane);
+            this.PanelEventos.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -96,7 +90,7 @@ public class Eventos  implements Initializable {
     public void alquileresBOTONclick(ActionEvent actionEvent) {
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Alquileres.fxml"));
-            this.panelEventos.getChildren().setAll(pane);
+            this.PanelEventos.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -106,7 +100,7 @@ public class Eventos  implements Initializable {
     public void novedadesBOTONclick(ActionEvent actionEvent) {
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Novedades.fxml"));
-            this.panelEventos.getChildren().setAll(pane);
+            this.PanelEventos.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -116,7 +110,7 @@ public class Eventos  implements Initializable {
     public void eventosBOTONclick(ActionEvent actionEvent) {
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Eventos.fxml"));
-            this.panelEventos.getChildren().setAll(pane);
+            this.PanelEventos.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
