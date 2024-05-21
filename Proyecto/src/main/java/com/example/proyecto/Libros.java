@@ -1,5 +1,7 @@
 package com.example.proyecto;
 
+import java.awt.image.BufferedImage;
+
 public class Libros {
 
     private String titulo;
@@ -7,6 +9,7 @@ public class Libros {
     private String editorial;
     private double precio;
     private int curso;
+    private BufferedImage imagen;
 
     public String getTitulo() {
         return titulo;
@@ -48,12 +51,21 @@ public class Libros {
         this.curso = curso;
     }
 
-    public Libros(String titulo, String isbn, String editorial, double precio, int curso) {
+    public BufferedImage getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(BufferedImage imagen) {
+        this.imagen = imagen;
+    }
+
+    public Libros(String titulo, String isbn, String editorial, double precio, int curso, BufferedImage imagen) {
         this.titulo = titulo;
         this.isbn = isbn;
         this.editorial = editorial;
         this.precio = precio;
         this.curso = curso;
+        this.imagen = imagen;
     }
 
     public Libros() {

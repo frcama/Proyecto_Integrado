@@ -1,11 +1,11 @@
 package com.example.proyecto;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -14,11 +14,12 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Anyadir
-{
+public class Anyadir implements Initializable {
 
     FileChooser fileChooser = new FileChooser();
 
@@ -39,6 +40,31 @@ public class Anyadir
     @javafx.fxml.FXML
     private Button atrasButton;
 
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        SpinnerValueFactory<Integer> valueFactoryInteger =
+                new SpinnerValueFactory.IntegerSpinnerValueFactory(1,10000000,1,1);
+
+        precioSpinner.setValueFactory(valueFactoryInteger);
+
+        ObservableList<String> categoria  = FXCollections.observableArrayList();
+
+        String c1= "Libros";
+        String c2= "Apuntes";
+        String c3= "Alquileres";
+
+        categoria.add(c1);
+        categoria.add(c2);
+        categoria.add(c3);
+
+        categoriaChoiceBox.setItems(categoria);
+
+
+
+
+    }
 
     @javafx.fxml.FXML
     public void onSubirButtonClick(ActionEvent actionEvent) {
@@ -63,4 +89,6 @@ public class Anyadir
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+
 }
