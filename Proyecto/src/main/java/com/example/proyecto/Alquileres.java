@@ -8,17 +8,28 @@ public class Alquileres {
     private String nombre;
     private double precio;
     private String metrosCuadrados;
+    private byte[] imagen;
 
-    public Alquileres(int id_Alquiler, String lugar, String nombre, double precio, String metrosCuadrados) {
+    public Alquileres(int id_Alquiler, String lugar, String nombre, double precio, String metrosCuadrados, byte[] imagen) {
         this.id_Alquiler = id_Alquiler;
         this.lugar = lugar;
         this.nombre = nombre;
         this.precio = precio;
-        this.metrosCuadrados = String.valueOf(metrosCuadrados);
+        this.metrosCuadrados = metrosCuadrados;
+        this.imagen = imagen;
     }
 
     public Alquileres(){
 
+    }
+
+
+    public byte[] getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(byte[] imagen) {
+        this.imagen = imagen;
     }
 
     public int getId_Alquiler() {

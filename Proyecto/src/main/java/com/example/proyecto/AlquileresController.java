@@ -18,7 +18,7 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class AlquileresController implements Initializable {
+public class AlquileresController implements Initializable{
     @javafx.fxml.FXML
     private Button perfilBOTON;
     @javafx.fxml.FXML
@@ -200,5 +200,7 @@ public class AlquileresController implements Initializable {
 
     @FXML
     public void filtrarBottonClick(ActionEvent actionEvent) {
+
+
     }
 }
