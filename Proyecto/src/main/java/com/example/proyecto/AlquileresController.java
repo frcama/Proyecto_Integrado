@@ -10,10 +10,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -21,8 +23,6 @@ import java.util.logging.Logger;
 public class AlquileresController implements Initializable{
     @javafx.fxml.FXML
     private Button perfilBOTON;
-    @javafx.fxml.FXML
-    private Pane panelDesplegableNOVEDADES;
     @javafx.fxml.FXML
     private Button novedadesBOTON;
     @javafx.fxml.FXML
@@ -36,15 +36,9 @@ public class AlquileresController implements Initializable{
     @FXML
     private Button addButton11;
     @FXML
-    private Menu menuAyuda;
-    @FXML
     private ChoiceBox precioFiltroChoicebox;
     @FXML
     private ChoiceBox nHabitacioneschoiceBox;
-    @FXML
-    private Menu menuMO;
-    @FXML
-    private MenuItem chatNovedades;
     @FXML
     private Button filtrarButton;
     @FXML
@@ -52,7 +46,7 @@ public class AlquileresController implements Initializable{
     @FXML
     private ImageView PerfilBOTON;
     @FXML
-    private MenuBar menuMenuBar;
+    private GridPane alquileresGridPane;
 
 
     public void initialize(URL location, ResourceBundle resources) {
@@ -79,13 +73,6 @@ public class AlquileresController implements Initializable{
         eventosBOTON.setStyle("-fx-background-color: #c2c2c2;");
         eventosBOTON.setOnMouseEntered(e -> eventosBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);"));
         eventosBOTON.setOnMouseExited(e -> eventosBOTON.setStyle("-fx-background-color: #c2c2c2;"));
-
-
-
-
-
-
-
 
 
         ObservableList<String> preciosAlquiler = FXCollections.observableArrayList();
@@ -147,6 +134,15 @@ public class AlquileresController implements Initializable{
         precioFiltroChoicebox.setValue("$ Precio ");
         zonaFiltroChoicebox.setValue("Ubicación");
         nHabitacioneschoiceBox.setValue("Número Habitaciones");
+
+        AlquileresModel am = new AlquileresModel();
+        ArrayList<Alquileres> lista = am.mostrarAlquileres();
+
+
+        for (Alquileres a : lista){
+            System.out.println(a.getImagen());
+        }
+
     }
 
     @FXML
@@ -222,7 +218,7 @@ public class AlquileresController implements Initializable{
 
     }
 
-    @FXML
+    @Deprecated
     public void chatNovedadesclick(ActionEvent actionEvent) {
     }
 

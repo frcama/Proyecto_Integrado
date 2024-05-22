@@ -13,6 +13,8 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -26,8 +28,6 @@ public class Anyadir implements Initializable {
     @javafx.fxml.FXML
     private AnchorPane PanelAnyadir;
     @javafx.fxml.FXML
-    private TextField descripcion;
-    @javafx.fxml.FXML
     private Spinner precioSpinner;
     @javafx.fxml.FXML
     private TextField nombreDescripcion;
@@ -36,38 +36,53 @@ public class Anyadir implements Initializable {
     @javafx.fxml.FXML
     private ImageView muestraImagen;
     @javafx.fxml.FXML
-    private ChoiceBox categoriaChoiceBox;
-    @javafx.fxml.FXML
     private Button atrasButton;
+    @javafx.fxml.FXML
+    private Spinner nHabitacionesSpinner;
+    @javafx.fxml.FXML
+    private TextField ubiTextField;
+    @javafx.fxml.FXML
+    private TextField m2textField;
+    @javafx.fxml.FXML
+    private TextField descripciontextField;
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         SpinnerValueFactory<Integer> valueFactoryInteger =
-                new SpinnerValueFactory.IntegerSpinnerValueFactory(1,10000000,1,1);
+                new SpinnerValueFactory.IntegerSpinnerValueFactory(1,10000000,0,1);
 
         precioSpinner.setValueFactory(valueFactoryInteger);
 
-        ObservableList<String> categoria  = FXCollections.observableArrayList();
-
-        String c1= "Libros";
-        String c2= "Eventos";
-        String c3= "Alquileres";
-
-        categoria.add(c1);
-        categoria.add(c2);
-        categoria.add(c3);
-
-        categoriaChoiceBox.setItems(categoria);
 
 
+        SpinnerValueFactory<Integer> valueFactory =
+                new SpinnerValueFactory.IntegerSpinnerValueFactory(1,10,1,1);
+
+        nHabitacionesSpinner.setValueFactory(valueFactoryInteger);
 
 
     }
 
     @javafx.fxml.FXML
     public void onSubirButtonClick(ActionEvent actionEvent) {
+
+        AnyadirModel am = new AnyadirModel();
+
+
+        Image imagenSeleccionada = muestraImagen.getImage();
+        File imagen = new File(String.valueOf(imagenSeleccionada));
+        String nombre= nombreDescripcion.getText();
+        String descripcion = descripciontextField.getText();
+        String m2 = m2textField.getText();
+        String ubi = ubiTextField.getText();
+        int nHabs = (Integer) nHabitacionesSpinner.getValue();
+        int precio = (Integer) precioSpinner.getValue();
+
+        Alquileres a = new Alquileres(ubi, nombre,precio,m2,imagenSeleccionada,nHabs,descripcion );
+
+        am.AnyadirAlquiler(a);
     }
 
     @javafx.fxml.FXML
@@ -89,6 +104,4 @@ public class Anyadir implements Initializable {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
-
 }

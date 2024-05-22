@@ -1,0 +1,235 @@
+Index: Proyecto/src/main/java/com/example/proyecto/HelloApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.proyecto;\r\n\r\nimport javafx.application.Application;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.scene.Scene;\r\nimport javafx.stage.Stage;\r\n\r\nimport java.io.File;\r\nimport java.io.IOException;\r\npublic class HelloApplication extends Application {\r\n    @Override\r\n    public void start(Stage stage) throws IOException {\r\n        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(\"inicio_sesion.fxml\"));\r\n        Scene scene = new Scene(fxmlLoader.load(), 335, 600);\r\n        stage.setTitle(\"EstuBook\");\r\n        stage.setScene(scene);\r\n        stage.show();\r\n    }\r\n\r\n    public static void main(String[] args) {\r\n\r\n        File file = new File(\"src\\\\sample\\\\image.jpg\");\r\n        try {\r\n            file.createNewFile();\r\n\r\n        } catch (IOException e){\r\n            e.printStackTrace();\r\n        }\r\n        launch(args);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Proyecto/src/main/java/com/example/proyecto/HelloApplication.java b/Proyecto/src/main/java/com/example/proyecto/HelloApplication.java
+--- a/Proyecto/src/main/java/com/example/proyecto/HelloApplication.java	(revision 4603db2d84a31bf9d7a1b5d926c97515b3a00b4c)
++++ b/Proyecto/src/main/java/com/example/proyecto/HelloApplication.java	(date 1716198750948)
+@@ -7,6 +7,7 @@
+ 
+ import java.io.File;
+ import java.io.IOException;
++
+ public class HelloApplication extends Application {
+     @Override
+     public void start(Stage stage) throws IOException {
+@@ -23,7 +24,7 @@
+         try {
+             file.createNewFile();
+ 
+-        } catch (IOException e){
++        } catch (IOException e) {
+             e.printStackTrace();
+         }
+         launch(args);
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"openjdk-22\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 4603db2d84a31bf9d7a1b5d926c97515b3a00b4c)
++++ b/.idea/misc.xml	(date 1716198924490)
+@@ -1,6 +1,4 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" project-jdk-name="openjdk-22" project-jdk-type="JavaSDK">
+-    <output url="file://$PROJECT_DIR$/out" />
+-  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21" project-jdk-type="JavaSDK" />
+ </project>
+\ No newline at end of file
+Index: Proyecto/src/main/java/com/example/proyecto/LibrosModel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.proyecto;\r\n\r\nimport com.mysql.cj.xdevapi.PreparableStatement;\r\n\r\nimport java.sql.PreparedStatement;\r\nimport java.sql.ResultSet;\r\nimport java.sql.SQLException;\r\nimport java.util.ArrayList;\r\n\r\npublic class LibrosModel extends Conexion{\r\n\r\n    public ArrayList<Libros> mostrarLibros(){\r\n\r\n        ArrayList<Libros> listaLibros = new ArrayList<>();\r\n\r\n        try {\r\n            String sql = \"Select * from libros;\";\r\n\r\n            PreparedStatement ps = this.getConexion().prepareStatement(sql);\r\n\r\n            ResultSet rs = ps.executeQuery();\r\n\r\n\r\n            while (rs.next()){\r\n                listaLibros.add(new Libros(rs.getString(1),rs.getString(2),rs.getString(3), rs.getDouble(4),rs.getInt(5)));\r\n\r\n                return listaLibros;\r\n            }\r\n        } catch (SQLException e) {\r\n            e.getMessage().toString();\r\n        }\r\n        return listaLibros;\r\n\r\n    }\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Proyecto/src/main/java/com/example/proyecto/LibrosModel.java b/Proyecto/src/main/java/com/example/proyecto/LibrosModel.java
+--- a/Proyecto/src/main/java/com/example/proyecto/LibrosModel.java	(revision 4603db2d84a31bf9d7a1b5d926c97515b3a00b4c)
++++ b/Proyecto/src/main/java/com/example/proyecto/LibrosModel.java	(date 1716198750937)
+@@ -7,9 +7,9 @@
+ import java.sql.SQLException;
+ import java.util.ArrayList;
+ 
+-public class LibrosModel extends Conexion{
++public class LibrosModel extends Conexion {
+ 
+-    public ArrayList<Libros> mostrarLibros(){
++    public ArrayList<Libros> mostrarLibros() {
+ 
+         ArrayList<Libros> listaLibros = new ArrayList<>();
+ 
+@@ -21,8 +21,8 @@
+             ResultSet rs = ps.executeQuery();
+ 
+ 
+-            while (rs.next()){
+-                listaLibros.add(new Libros(rs.getString(1),rs.getString(2),rs.getString(3), rs.getDouble(4),rs.getInt(5)));
++            while (rs.next()) {
++                listaLibros.add(new Libros(rs.getString(1), rs.getString(2), rs.getString(3), rs.getDouble(4), rs.getInt(5)));
+ 
+                 return listaLibros;
+             }
+Index: Proyecto/src/main/java/com/example/proyecto/Inicio_Sesion.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.proyecto;\r\n\r\nimport javafx.event.ActionEvent;\r\nimport javafx.fxml.FXML;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.scene.control.Button;\r\nimport javafx.scene.control.TextField;\r\nimport javafx.scene.image.ImageView;\r\nimport javafx.scene.layout.AnchorPane;\r\nimport javafx.scene.layout.Pane;\r\nimport javafx.scene.text.Text;\r\n\r\nimport java.io.IOException;\r\nimport java.security.cert.PolicyNode;\r\nimport java.util.logging.Level;\r\nimport java.util.logging.Logger;\r\n\r\npublic class Inicio_Sesion {\r\n\r\n    @FXML\r\n    private Button inicioBOTON;\r\n    @FXML\r\n    private Text id_email;\r\n    @FXML\r\n    private TextField pass;\r\n    @FXML\r\n    private Text id_pass;\r\n    @FXML\r\n    private ImageView logo;\r\n    @FXML\r\n    private TextField email;\r\n    @FXML\r\n    private Button crearBOTON;\r\n    @FXML\r\n    private AnchorPane panelDeInicio;\r\n\r\n    @FXML\r\n    public void initialize() {\r\nSystem.out.println(\"el boton llega \");\r\n    }\r\n    @FXML\r\n    public void inicioBOTONclick(ActionEvent actionEvent) {\r\n            System.out.println(\"funciona bien\");\r\n        try {\r\n            AnchorPane pane = FXMLLoader.load(getClass().getResource(\"Terminos.fxml\"));\r\n            this.panelDeInicio.getChildren().setAll(pane);\r\n        } catch (IOException ex) {\r\n            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);\r\n        }\r\n\r\n    }\r\n\r\n    @FXML\r\n    public void crearBOTONCLICK(ActionEvent actionEvent) {\r\n            System.out.println(\"funciona bien\");\r\n            try {\r\n                AnchorPane pane = FXMLLoader.load(getClass().getResource(\"Registro.fxml\"));\r\n                this.panelDeInicio.getChildren().setAll(pane);\r\n            } catch (IOException ex) {\r\n                Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);\r\n            }\r\n        }\r\n        }\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Proyecto/src/main/java/com/example/proyecto/Inicio_Sesion.java b/Proyecto/src/main/java/com/example/proyecto/Inicio_Sesion.java
+--- a/Proyecto/src/main/java/com/example/proyecto/Inicio_Sesion.java	(revision 4603db2d84a31bf9d7a1b5d926c97515b3a00b4c)
++++ b/Proyecto/src/main/java/com/example/proyecto/Inicio_Sesion.java	(date 1716198750959)
+@@ -36,11 +36,12 @@
+ 
+     @FXML
+     public void initialize() {
+-System.out.println("el boton llega ");
++        System.out.println("el boton llega ");
+     }
++
+     @FXML
+     public void inicioBOTONclick(ActionEvent actionEvent) {
+-            System.out.println("funciona bien");
++        System.out.println("funciona bien");
+         try {
+             AnchorPane pane = FXMLLoader.load(getClass().getResource("Terminos.fxml"));
+             this.panelDeInicio.getChildren().setAll(pane);
+@@ -52,14 +53,14 @@
+ 
+     @FXML
+     public void crearBOTONCLICK(ActionEvent actionEvent) {
+-            System.out.println("funciona bien");
+-            try {
+-                AnchorPane pane = FXMLLoader.load(getClass().getResource("Registro.fxml"));
+-                this.panelDeInicio.getChildren().setAll(pane);
+-            } catch (IOException ex) {
+-                Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+-            }
+-        }
+-        }
++        System.out.println("funciona bien");
++        try {
++            AnchorPane pane = FXMLLoader.load(getClass().getResource("Registro.fxml"));
++            this.panelDeInicio.getChildren().setAll(pane);
++        } catch (IOException ex) {
++            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
++        }
++    }
++}
+ 
+ 
+Index: Proyecto/src/main/java/com/example/proyecto/Eventos.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.proyecto;\r\n\r\n\r\nimport javafx.event.ActionEvent;\r\nimport javafx.event.Event;\r\nimport javafx.fxml.Initializable;\r\nimport javafx.scene.control.Button;\r\nimport javafx.scene.control.TextField;\r\nimport javafx.scene.image.Image;\r\nimport javafx.scene.image.ImageView;\r\nimport javafx.stage.FileChooser;\r\nimport javafx.stage.Stage;\r\n\r\nimport javax.swing.*;\r\nimport java.awt.event.MouseEvent;\r\nimport java.io.File;\r\nimport java.net.URL;\r\nimport java.util.ResourceBundle;\r\n\r\npublic class Eventos  implements Initializable {\r\n\r\n\r\n    FileChooser fileChooser = new FileChooser();\r\n\r\n    @javafx.fxml.FXML\r\n    private TextField link;\r\n    @javafx.fxml.FXML\r\n    private ImageView imagen;\r\n    @javafx.fxml.FXML\r\n    private Button addButton;\r\n\r\n\r\n\r\n\r\n    @Override\r\n    public void initialize(URL url, ResourceBundle resourceBundle) {\r\n       // fileChooser.setInitialDirectory(new File(\"C:\\\\Users\\\\TSMR1\\\\Pictures\"));\r\n    }\r\n\r\n\r\n    @javafx.fxml.FXML\r\n    public void onAddClicked(ActionEvent actionEvent) {\r\n\r\n        File file = fileChooser.showOpenDialog(new Stage());\r\n    }\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Proyecto/src/main/java/com/example/proyecto/Eventos.java b/Proyecto/src/main/java/com/example/proyecto/Eventos.java
+--- a/Proyecto/src/main/java/com/example/proyecto/Eventos.java	(revision 4603db2d84a31bf9d7a1b5d926c97515b3a00b4c)
++++ b/Proyecto/src/main/java/com/example/proyecto/Eventos.java	(date 1716198750875)
+@@ -17,7 +17,7 @@
+ import java.net.URL;
+ import java.util.ResourceBundle;
+ 
+-public class Eventos  implements Initializable {
++public class Eventos implements Initializable {
+ 
+ 
+     FileChooser fileChooser = new FileChooser();
+@@ -30,11 +30,9 @@
+     private Button addButton;
+ 
+ 
+-
+-
+     @Override
+     public void initialize(URL url, ResourceBundle resourceBundle) {
+-       // fileChooser.setInitialDirectory(new File("C:\\Users\\TSMR1\\Pictures"));
++        // fileChooser.setInitialDirectory(new File("C:\\Users\\TSMR1\\Pictures"));
+     }
+ 
+ 
+Index: Proyecto/src/main/java/com/example/proyecto/Libros.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.proyecto;\r\n\r\npublic class Libros {\r\n\r\n    private String titulo;\r\n    private String isbn;\r\n    private String editorial;\r\n    private double precio;\r\n    private int curso;\r\n\r\n    public String getTitulo() {\r\n        return titulo;\r\n    }\r\n\r\n    public void setTitulo(String titulo) {\r\n        this.titulo = titulo;\r\n    }\r\n\r\n    public String getIsbn() {\r\n        return isbn;\r\n    }\r\n\r\n    public void setIsbn(String isbn) {\r\n        this.isbn = isbn;\r\n    }\r\n\r\n    public String getEditorial() {\r\n        return editorial;\r\n    }\r\n\r\n    public void setEditorial(String editorial) {\r\n        this.editorial = editorial;\r\n    }\r\n\r\n    public double getPrecio() {\r\n        return precio;\r\n    }\r\n\r\n    public void setPrecio(double precio) {\r\n        this.precio = precio;\r\n    }\r\n\r\n    public int getCurso() {\r\n        return curso;\r\n    }\r\n\r\n    public void setCurso(int curso) {\r\n        this.curso = curso;\r\n    }\r\n\r\n    public Libros(String titulo, String isbn, String editorial, double precio, int curso) {\r\n        this.titulo = titulo;\r\n        this.isbn = isbn;\r\n        this.editorial = editorial;\r\n        this.precio = precio;\r\n        this.curso = curso;\r\n    }\r\n    public Libros(){}\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Proyecto/src/main/java/com/example/proyecto/Libros.java b/Proyecto/src/main/java/com/example/proyecto/Libros.java
+--- a/Proyecto/src/main/java/com/example/proyecto/Libros.java	(revision 4603db2d84a31bf9d7a1b5d926c97515b3a00b4c)
++++ b/Proyecto/src/main/java/com/example/proyecto/Libros.java	(date 1716198750926)
+@@ -55,5 +55,7 @@
+         this.precio = precio;
+         this.curso = curso;
+     }
+-    public Libros(){}
++
++    public Libros() {
++    }
+ }
+Index: Proyecto/src/main/java/com/example/proyecto/Registro.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.proyecto;\r\n\r\nimport javafx.event.ActionEvent;\r\nimport javafx.fxml.FXML;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.scene.control.*;\r\nimport javafx.scene.layout.AnchorPane;\r\nimport javafx.scene.layout.Pane;\r\nimport javafx.scene.text.Text;\r\n\r\nimport java.io.IOException;\r\nimport java.security.cert.PolicyNode;\r\nimport java.util.logging.Level;\r\nimport java.util.logging.Logger;\r\n\r\npublic class Registro extends Conexion{\r\n\r\n\r\n    @FXML\r\n    private Button aceptarBOTON;\r\n    @FXML\r\n    private TextField contrasenyaTF;\r\n    @FXML\r\n    private TextField nombreTF;\r\n    @FXML\r\n    private TextField dniTF;\r\n    @FXML\r\n    private DatePicker fechaNacimiento;\r\n    @FXML\r\n    private TextField RepeContrasenyaTF;\r\n    @FXML\r\n    private AnchorPane PanelDeRegistro;\r\n    @FXML\r\n    private Button cancelarBOTON;\r\n    @FXML\r\n    private TextField apellidosTF;\r\n    @FXML\r\n    private TextField correoTF;\r\n    @FXML\r\n    private TextField telefonoTF;\r\n\r\n    @FXML\r\n    public void cancelarBOTONclick(ActionEvent actionEvent) {\r\n        System.out.println(\"funciona\");\r\n\r\n        try {\r\n            AnchorPane pane = FXMLLoader.load(getClass().getResource(\"inicio_sesion.fxml\"));\r\n            this.PanelDeRegistro.getChildren().setAll(pane);\r\n        } catch (IOException ex) {\r\n            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);\r\n        }\r\n    }\r\n\r\n    @FXML\r\n    public void aceptarBOTONclick(ActionEvent actionEvent) {\r\n        System.out.println(\"funciona\");\r\n\r\n        try {\r\n            AnchorPane pane = FXMLLoader.load(getClass().getResource(\"inicio_sesion.fxml\"));\r\n            this.PanelDeRegistro.getChildren().setAll(pane);\r\n        } catch (IOException ex) {\r\n            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);\r\n        }\r\n    }\r\n}\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Proyecto/src/main/java/com/example/proyecto/Registro.java b/Proyecto/src/main/java/com/example/proyecto/Registro.java
+--- a/Proyecto/src/main/java/com/example/proyecto/Registro.java	(revision 4603db2d84a31bf9d7a1b5d926c97515b3a00b4c)
++++ b/Proyecto/src/main/java/com/example/proyecto/Registro.java	(date 1716198750911)
+@@ -13,7 +13,7 @@
+ import java.util.logging.Level;
+ import java.util.logging.Logger;
+ 
+-public class Registro extends Conexion{
++public class Registro extends Conexion {
+ 
+ 
+     @FXML
+Index: Proyecto/src/main/java/com/example/proyecto/Novedades.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.proyecto;\r\n\r\nimport javafx.event.ActionEvent;\r\nimport javafx.fxml.FXML;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.scene.control.Button;\r\nimport javafx.scene.control.MenuItem;\r\nimport javafx.scene.image.ImageView;\r\nimport javafx.scene.layout.AnchorPane;\r\nimport javafx.scene.layout.Pane;\r\n\r\nimport java.io.IOException;\r\nimport java.util.logging.Level;\r\nimport java.util.logging.Logger;\r\n\r\npublic class Novedades {\r\n\r\n    @FXML\r\n    private Button perfilBOTON;\r\n    @FXML\r\n    private Pane panelDesplegableNOVEDADES;\r\n    @FXML\r\n    private Button novedadesBOTON;\r\n    @FXML\r\n    private ImageView PerfilBOTON;\r\n    @FXML\r\n    private Button alquileresBOTON;\r\n    @FXML\r\n    private Button eventosBOTON;\r\n    @FXML\r\n    private Button librosBOTON;\r\n    @FXML\r\n    private AnchorPane PanelNovedades;\r\n    @FXML\r\n    private MenuItem chatNovedades;\r\n\r\n    @FXML\r\n    public void perfilBOTONclick(ActionEvent actionEvent) {\r\n        System.out.println(\"funciona\");\r\n        try {\r\n            AnchorPane pane = FXMLLoader.load(getClass().getResource(\"Perfil.fxml\"));\r\n            this.PanelNovedades.getChildren().setAll(pane);\r\n        } catch (IOException ex) {\r\n            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);\r\n        }\r\n    }\r\n\r\n    @FXML\r\n    public void librosBOTONclick(ActionEvent actionEvent) {\r\n        System.out.println(\"funciona\");\r\n\r\n        try {\r\n            AnchorPane pane = FXMLLoader.load(getClass().getResource(\"Libros.fxml\"));\r\n            this.PanelNovedades.getChildren().setAll(pane);\r\n        } catch (IOException ex) {\r\n            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);\r\n        }\r\n    }\r\n\r\n\r\n    @FXML\r\n    public void alquileresBOTONclick(ActionEvent actionEvent) {\r\n        System.out.println(\"funciona\");\r\n\r\n        try {\r\n            AnchorPane pane = FXMLLoader.load(getClass().getResource(\"Alquileres.fxml\"));\r\n            this.PanelNovedades.getChildren().setAll(pane);\r\n        } catch (IOException ex) {\r\n            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);\r\n        }\r\n    }\r\n\r\n\r\n    @FXML\r\n    public void novedadesBOTONclick(ActionEvent actionEvent) {\r\n        System.out.println(\"funciona\");\r\n\r\n        try {\r\n            AnchorPane pane = FXMLLoader.load(getClass().getResource(\"Novedades.fxml\"));\r\n            this.PanelNovedades.getChildren().setAll(pane);\r\n        } catch (IOException ex) {\r\n            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);\r\n        }\r\n    }\r\n\r\n    @FXML\r\n    public void eventosBOTONclick(ActionEvent actionEvent) {\r\n        System.out.println(\"funciona\");\r\n\r\n        try {\r\n            AnchorPane pane = FXMLLoader.load(getClass().getResource(\"Eventos.fxml\"));\r\n            this.PanelNovedades.getChildren().setAll(pane);\r\n        } catch (IOException ex) {\r\n            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);\r\n        }\r\n    }\r\n\r\n    public void chatNovedades (){\r\n        System.out.println(\"funciona\");\r\n\r\n        try {\r\n            AnchorPane pane = FXMLLoader.load(getClass().getResource(\"Chat.fxml\"));\r\n            this.PanelNovedades.getChildren().setAll(pane);\r\n        } catch (IOException ex) {\r\n            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Proyecto/src/main/java/com/example/proyecto/Novedades.java b/Proyecto/src/main/java/com/example/proyecto/Novedades.java
+--- a/Proyecto/src/main/java/com/example/proyecto/Novedades.java	(revision 4603db2d84a31bf9d7a1b5d926c97515b3a00b4c)
++++ b/Proyecto/src/main/java/com/example/proyecto/Novedades.java	(date 1716198750898)
+@@ -95,7 +95,7 @@
+         }
+     }
+ 
+-    public void chatNovedades (){
++    public void chatNovedades() {
+         System.out.println("funciona");
+ 
+         try {
+Index: .idea/Proyecto_Integrado.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\" />\r\n    <orderEntry type=\"jdk\" jdkName=\"openjdk-22\" jdkType=\"JavaSDK\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/Proyecto_Integrado.iml b/.idea/Proyecto_Integrado.iml
+--- a/.idea/Proyecto_Integrado.iml	(revision 4603db2d84a31bf9d7a1b5d926c97515b3a00b4c)
++++ b/.idea/Proyecto_Integrado.iml	(date 1716195825741)
+@@ -5,5 +5,6 @@
+     <content url="file://$MODULE_DIR$" />
+     <orderEntry type="jdk" jdkName="openjdk-22" jdkType="JavaSDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="library" exported="" name="lib" level="project" />
+   </component>
+ </module>
+\ No newline at end of file
