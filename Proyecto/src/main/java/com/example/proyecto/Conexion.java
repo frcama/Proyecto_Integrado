@@ -11,7 +11,7 @@ public class Conexion {
     private java.sql.Connection conn;
     private String cadenaConexion = "jdbc:mysql://localhost:3306/estubook";
     private String nombreUsuario = "root";
-    private String password = "Quiarnesc160405" ;
+    private String password = "1234" ;
 
     public java.sql.Connection getConexion() {
 

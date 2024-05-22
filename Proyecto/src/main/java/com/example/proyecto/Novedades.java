@@ -81,7 +81,7 @@ public class Novedades implements Initializable {
     }
 
 
-    @Deprecated
+    @FXML
     public void alquileresBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 

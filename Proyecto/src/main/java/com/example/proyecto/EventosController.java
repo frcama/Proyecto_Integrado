@@ -5,9 +5,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.ColumnConstraints;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 
@@ -40,6 +43,20 @@ public class EventosController implements Initializable {
     private Button novedadesBOTON1;
     @javafx.fxml.FXML
     private ImageView novedadesBOTON;
+    @javafx.fxml.FXML
+    private ColumnConstraints col2GripPane;
+    @javafx.fxml.FXML
+    private ChoiceBox precioFiltroChoicebox;
+    @javafx.fxml.FXML
+    private ChoiceBox nHabitacioneschoiceBox;
+    @javafx.fxml.FXML
+    private ColumnConstraints col1GripPane;
+    @javafx.fxml.FXML
+    private GridPane cosasGripPane;
+    @javafx.fxml.FXML
+    private Button filtrarButton;
+    @javafx.fxml.FXML
+    private ChoiceBox zonaFiltroChoicebox;
 
 
     public void initialize(URL location, ResourceBundle resources) {
@@ -118,5 +135,9 @@ public class EventosController implements Initializable {
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    @javafx.fxml.FXML
+    public void filtrarBottonClick(ActionEvent actionEvent) {
     }
 }

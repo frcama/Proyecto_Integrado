@@ -5,9 +5,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.ColumnConstraints;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -26,8 +29,6 @@ public class LibrosController implements Initializable {
     @FXML
     private Button perfilBOTON;
     @FXML
-    private Pane panelDesplegableNOVEDADES;
-    @FXML
     private Button novedadesBOTON;
     @FXML
     private Button alquileresBOTON;
@@ -41,6 +42,20 @@ public class LibrosController implements Initializable {
     private ImageView PerfilBOTON1;
     @FXML
     private Button addButton;
+    @FXML
+    private ColumnConstraints col2GripPane;
+    @FXML
+    private ChoiceBox precioFiltroChoicebox;
+    @FXML
+    private ChoiceBox nHabitacioneschoiceBox;
+    @FXML
+    private ColumnConstraints col1GripPane;
+    @FXML
+    private GridPane cosasGripPane;
+    @FXML
+    private Button filtrarButton;
+    @FXML
+    private ChoiceBox zonaFiltroChoicebox;
 
 
     @Override
@@ -138,5 +153,8 @@ public class LibrosController implements Initializable {
 
     }
 
+    @FXML
+    public void filtrarBottonClick(ActionEvent actionEvent) {
+    }
 }
 
