@@ -11,12 +11,31 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="PanelNovedades" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Novedades">
    <children>
-      <Label layoutX="20.0" layoutY="14.0" text="NOVEDADES">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="62.0" layoutX="-3.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="341.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.12156862765550613" green="0.13725490868091583" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8533333539962769" green="0.20000000298023224" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="20.0" layoutY="14.0" text="NOVEDADES" textFill="WHITE">
          <font>
             <Font name="Impact" size="25.0" />
          </font>
@@ -43,25 +62,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="55.0" layoutX="-2.0" layoutY="546.0" stroke="BLACK" strokeType="INSIDE" width="341.0">
-         <fill>
-            <LinearGradient endX="1.0" endY="1.0">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="0.12156862765550613" green="0.13725490868091583" blue="1.0" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="0.8533333539962769" green="0.20000000298023224" blue="1.0" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </fill>
-      </Rectangle>
-      <Button fx:id="librosBOTON" layoutX="206.0" layoutY="551.0" mnemonicParsing="false" onAction="#librosBOTONclick" prefHeight="43.0" prefWidth="54.0" style="-fx-background-radius: 5; -fx-background-color: c2c2c2;">
+      <Button fx:id="librosBOTON" layoutX="206.0" layoutY="551.0" mnemonicParsing="false" onAction="#librosBOTONclick" prefHeight="43.0" prefWidth="54.0" style="-fx-background-radius: 5; -fx-background-color: white;">
          <effect>
             <DropShadow />
          </effect>
@@ -73,7 +74,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="alquileresBOTON" layoutX="77.0" layoutY="552.0" mnemonicParsing="false" onAction="#alquileresBOTONclick" prefHeight="35.0" prefWidth="43.0" style="-fx-background-radius: 5; -fx-background-color: c2c2c2;">
+      <Button fx:id="alquileresBOTON" layoutX="77.0" layoutY="552.0" mnemonicParsing="false" onAction="#alquileresBOTONclick" prefHeight="35.0" prefWidth="43.0" style="-fx-background-radius: 5; -fx-background-color: white;">
          <effect>
             <DropShadow />
          </effect>
@@ -85,7 +86,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="eventosBOTON" layoutX="271.0" layoutY="551.0" mnemonicParsing="false" onAction="#eventosBOTONclick" prefHeight="42.0" prefWidth="46.0" style="-fx-background-radius: 5; -fx-background-color: c2c2c2;">
+      <Button fx:id="eventosBOTON" layoutX="271.0" layoutY="551.0" mnemonicParsing="false" onAction="#eventosBOTONclick" prefHeight="42.0" prefWidth="46.0" style="-fx-background-radius: 5; -fx-background-color: white;">
          <effect>
             <DropShadow />
          </effect>
@@ -97,7 +98,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="novedadesBOTON" layoutX="13.0" layoutY="552.0" mnemonicParsing="false" onAction="#novedadesBOTONclick" prefHeight="37.0" prefWidth="51.0" style="-fx-background-radius: 5; -fx-background-color: c2c2c2;">
+      <Button fx:id="novedadesBOTON" layoutX="13.0" layoutY="552.0" mnemonicParsing="false" onAction="#novedadesBOTONclick" prefHeight="37.0" prefWidth="51.0" style="-fx-background-radius: 5; -fx-background-color: white;">
          <effect>
             <DropShadow />
          </effect>
@@ -109,7 +110,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="addButton11" layoutX="139.0" layoutY="551.0" mnemonicParsing="false" onAction="#onAddClicked" prefHeight="43.0" prefWidth="51.0" style="-fx-background-color: c2c2c2; -fx-background-radius: 5;">
+      <Button fx:id="addButton11" layoutX="139.0" layoutY="551.0" mnemonicParsing="false" onAction="#onAddClicked" prefHeight="43.0" prefWidth="51.0" style="-fx-background-color: white; -fx-background-radius: 5;">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -120,7 +121,11 @@
                </image>
             </ImageView>
          </graphic>
+         <effect>
+            <DropShadow />
+         </effect>
       </Button>
+      <Line endX="224.99996948242188" layoutX="110.0" layoutY="536.0" startX="-114.0000228881836" />
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />
