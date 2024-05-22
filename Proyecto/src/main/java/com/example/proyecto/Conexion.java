@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Conexion {
-    Connection conexion;
+    boolean conexion;
 
     private java.sql.Connection conn;
     private String cadenaConexion = "jdbc:mysql://localhost:3306/estubook";

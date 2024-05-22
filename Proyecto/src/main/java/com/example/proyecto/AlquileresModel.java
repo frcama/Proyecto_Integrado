@@ -24,7 +24,7 @@ public class AlquileresModel extends Conexion{
 
 
     public ArrayList<Alquileres> mostrarAlquileres() {
-
+this.conexion = true;
         ArrayList<Alquileres> alquileresLista = new ArrayList<>();
 
         try {
@@ -40,10 +40,14 @@ public class AlquileresModel extends Conexion{
 
             rs.close();
             ps.close();
-            conexion.close();
-        } catch (SQLException | IOException e) {
+
+        } catch (SQLException e) {
             e.printStackTrace();
+        }finally {
+//se cierra conexion
+            this.cerrarConexion();
         }
         return alquileresLista;
         }
+
 }

@@ -50,28 +50,10 @@ public class Novedades implements Initializable {
 
         //funciones de botones
 
-        novedadesBOTON.setStyle("-fx-background-color: #c2c2c2;");
-        novedadesBOTON.setOnMouseEntered(e -> novedadesBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);"));
-        novedadesBOTON.setOnMouseExited(e -> novedadesBOTON.setStyle("-fx-background-color: #c2c2c2;"));
-
-        alquileresBOTON.setStyle("-fx-background-color: #c2c2c2;");
-        alquileresBOTON.setOnMouseEntered(e -> alquileresBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);"));
-        alquileresBOTON.setOnMouseExited(e -> alquileresBOTON.setStyle("-fx-background-color: #c2c2c2;"));
-
-        librosBOTON.setStyle("-fx-background-color: #c2c2c2;");
-        librosBOTON.setOnMouseEntered(e -> librosBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);"));
-        librosBOTON.setOnMouseExited(e -> librosBOTON.setStyle("-fx-background-color: #c2c2c2;"));
-        eventosBOTON.setStyle("-fx-background-color: #c2c2c2;");
-        eventosBOTON.setOnMouseEntered(e -> eventosBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);"));
-        eventosBOTON.setOnMouseExited(e -> eventosBOTON.setStyle("-fx-background-color: #c2c2c2;"));
-
-        addButton11.setStyle("-fx-background-color: #c2c2c2;");
-        addButton11.setOnMouseEntered(e -> addButton11.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);"));
-        addButton11.setOnMouseExited(e -> addButton11.setStyle("-fx-background-color: #c2c2c2;"));
+        novedadesBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);");
 
     }
 
-// #00C9FF
     @FXML
     public void perfilBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
