@@ -23,8 +23,8 @@
       <TextField fx:id="correoTF" layoutX="85.0" layoutY="282.0" prefHeight="25.0" prefWidth="181.0" promptText="Correo electronico" style="-fx-border-color: #00C8F8;" />
       <TextField fx:id="contrasenyaTF" layoutX="85.0" layoutY="323.0" prefHeight="25.0" prefWidth="181.0" promptText="Contraseña" style="-fx-border-color: #00C8F8;" />
       <TextField fx:id="RepeContrasenyaTF" layoutX="85.0" layoutY="363.0" prefHeight="25.0" prefWidth="181.0" promptText="Repite Contraseña" style="-fx-border-color: #00C8F8;" />
-      <Button fx:id="aceptarBOTON" layoutX="94.0" layoutY="449.0" mnemonicParsing="false" onAction="#aceptarBOTONclick" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #00C8F8;" text="ACEPTAR" />
-      <Button fx:id="cancelarBOTON" layoutX="176.0" layoutY="449.0" mnemonicParsing="false" onAction="#cancelarBOTONclick" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #00C8F8;" text="CANCELAR" />
+      <Button fx:id="aceptarBOTON" layoutX="94.0" layoutY="449.0" mnemonicParsing="false" onAction="#aceptarBOTONclick" prefHeight="25.0" prefWidth="74.0" style="-fx-border-color: BLACK;" text="ACEPTAR" />
+      <Button fx:id="cancelarBOTON" layoutX="176.0" layoutY="449.0" mnemonicParsing="false" onAction="#cancelarBOTONclick" prefHeight="27.0" prefWidth="81.0" style="-fx-border-color: BLACK;" text="CANCELAR" />
       <DatePicker fx:id="fechaNacimiento" layoutX="88.0" layoutY="406.0" prefHeight="25.0" prefWidth="175.0" promptText="Fecha de nacimiento" style="-fx-background-color: #00C8F8;" />
       <ImageView fitHeight="63.0" fitWidth="104.0" layoutX="137.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
          <image>

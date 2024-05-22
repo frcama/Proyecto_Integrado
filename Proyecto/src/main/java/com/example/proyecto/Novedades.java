@@ -71,10 +71,13 @@ public class Novedades implements Initializable {
         librosBOTON.setStyle("-fx-background-color: #c2c2c2;");
         librosBOTON.setOnMouseEntered(e -> librosBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);"));
         librosBOTON.setOnMouseExited(e -> librosBOTON.setStyle("-fx-background-color: #c2c2c2;"));
-
         eventosBOTON.setStyle("-fx-background-color: #c2c2c2;");
         eventosBOTON.setOnMouseEntered(e -> eventosBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);"));
         eventosBOTON.setOnMouseExited(e -> eventosBOTON.setStyle("-fx-background-color: #c2c2c2;"));
+
+        addButton11.setStyle("-fx-background-color: #c2c2c2;");
+        addButton11.setOnMouseEntered(e -> addButton11.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);"));
+        addButton11.setOnMouseExited(e -> addButton11.setStyle("-fx-background-color: #c2c2c2;"));
 
     }
 

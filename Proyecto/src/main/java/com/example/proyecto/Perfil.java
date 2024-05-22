@@ -38,6 +38,8 @@ public class Perfil {
     private PasswordField contrsaenaPerfil;
     @javafx.fxml.FXML
     private ImageView fotoPerfil;
+    @javafx.fxml.FXML
+    private Button CerrarSesionBOTON;
 
     @javafx.fxml.FXML
     public void atrasDePerfilBOTONclick(ActionEvent actionEvent) {
@@ -59,6 +61,18 @@ public class Perfil {
         if (file != null) {
             Image image = new Image(file.toURI().toString());
             fotoPerfil.setImage(image);
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void CerrarSesionBOTONCLICK(ActionEvent actionEvent) {
+        System.out.println("funciona");
+
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("inicio_sesion.fxml"));
+            this.panelDePerfil.getChildren().setAll(pane);
+        } catch (IOException ex) {
+            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }
