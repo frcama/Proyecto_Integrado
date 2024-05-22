@@ -73,5 +73,11 @@
       <TextField fx:id="descripccionPerfil" layoutX="154.0" layoutY="300.0" prefHeight="50.0" prefWidth="150.0" />
       <PasswordField fx:id="contrsaenaPerfil" layoutX="155.0" layoutY="483.0" />
       <DatePicker fx:id="fechaNacimientoPerfil" layoutX="158.0" layoutY="397.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="14.0" layoutY="555.0" text="Cerrar Sesión">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="CerrarSesionBOTON" layoutX="160.0" layoutY="558.0" mnemonicParsing="false" onAction="#CerrarSesionBOTONCLICK" prefHeight="26.0" prefWidth="150.0" text="Cerrar Sesión" />
    </children>
 </AnchorPane>

@@ -21,6 +21,14 @@ public class Terminos {
 
     @javafx.fxml.FXML
     public void cancelarTerminosBOTONclick(ActionEvent actionEvent) {
+        System.out.println("funciona bien");
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("inicio_sesion.fxml"));
+            this.panelTerminos.getChildren().setAll(pane);
+        } catch (IOException ex) {
+            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
 
     }
 

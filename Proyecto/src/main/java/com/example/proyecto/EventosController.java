@@ -27,12 +27,6 @@ public class EventosController implements Initializable {
     @javafx.fxml.FXML
     private Button perfilBOTON;
     @javafx.fxml.FXML
-    private MenuItem chatNovedades;
-    @javafx.fxml.FXML
-    private Button novedadesBOTON;
-    @javafx.fxml.FXML
-    private Pane panelDesplegableEventos;
-    @javafx.fxml.FXML
     private ImageView PerfilBOTON;
     @javafx.fxml.FXML
     private Button alquileresBOTON;
@@ -42,6 +36,10 @@ public class EventosController implements Initializable {
     private Button addButton;
     @javafx.fxml.FXML
     private Button librosBOTON;
+    @javafx.fxml.FXML
+    private Button novedadesBOTON1;
+    @javafx.fxml.FXML
+    private ImageView novedadesBOTON;
 
 
     public void initialize(URL location, ResourceBundle resources) {
@@ -93,7 +91,7 @@ public class EventosController implements Initializable {
         }
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void chatNovedadesclick(ActionEvent actionEvent) {
     }
 

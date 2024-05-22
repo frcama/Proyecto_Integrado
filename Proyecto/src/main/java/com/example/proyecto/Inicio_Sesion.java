@@ -39,6 +39,7 @@ public class Inicio_Sesion {
     @FXML
     public void initialize() {
         System.out.println("el boton llega ");
+
     }
 
     @FXML
