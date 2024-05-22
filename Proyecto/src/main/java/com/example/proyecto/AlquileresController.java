@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 
@@ -45,6 +46,12 @@ public class AlquileresController implements Initializable{
     private ChoiceBox zonaFiltroChoicebox;
     @FXML
     private ImageView PerfilBOTON;
+    @FXML
+    private ColumnConstraints col2GripPane;
+    @FXML
+    private ColumnConstraints col1GripPane;
+    @FXML
+    private GridPane cosasGripPane;
 
 
     public void initialize(URL location, ResourceBundle resources) {

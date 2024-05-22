@@ -16,6 +16,7 @@ public class Alquileres{
     private int nHabitaciones;
     private String Descripcion;
     private File imageFile;
+    private byte[] arrayImagen;
 
     public Alquileres(int id_Alquiler, String ubicacion, String nombre, double precio, String metrosCuadrados, Image imagen, int nHabitaciones) {
         this.id_Alquiler = id_Alquiler;
@@ -38,6 +39,16 @@ public class Alquileres{
         this.Descripcion= descripcion;
     }
 
+    public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados, byte[] arrayImagen, int nHabitaciones, String descripcion) {
+        this.ubicacion = ubicacion;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.metrosCuadrados = metrosCuadrados;
+        this.arrayImagen = arrayImagen;
+        this.nHabitaciones = nHabitaciones;
+        Descripcion = descripcion;
+    }
+
     public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados, javafx.scene.image.Image combertir, int nHabitaciones){
 
     }
@@ -48,6 +59,14 @@ public class Alquileres{
     public Alquileres(String ubi, String nombre, int precio, String m2, File imagen, javafx.scene.image.Image imagenSeleccionada, int nHabs, String descripcion) {
 
 
+    }
+
+    public byte[] getArrayImagen() {
+        return arrayImagen;
+    }
+
+    public void setArrayImagen(byte[] arrayImagen) {
+        this.arrayImagen = arrayImagen;
     }
 
     public String getDescripcion() {

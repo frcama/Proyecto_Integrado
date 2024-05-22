@@ -12,10 +12,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -65,7 +64,7 @@ public class Anyadir implements Initializable {
 
     }
 
-    @javafx.fxml.FXML
+
     public void onSubirButtonClick(ActionEvent actionEvent) {
 
         AnyadirModel am = new AnyadirModel();
@@ -73,6 +72,16 @@ public class Anyadir implements Initializable {
 
         Image imagenSeleccionada = muestraImagen.getImage();
         File imagen = new File(String.valueOf(imagenSeleccionada));
+        // Convertir la imagen a un array de bytes
+        byte[] imagenBytes = null;
+        try {
+            BufferedImage bImage = ImageIO.read(imagen);
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            ImageIO.write(bImage, "jpg", bos);
+            imagenBytes = bos.toByteArray();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         String nombre= nombreDescripcion.getText();
         String descripcion = descripciontextField.getText();
@@ -81,7 +90,7 @@ public class Anyadir implements Initializable {
         int nHabs = (Integer) nHabitacionesSpinner.getValue();
         int precio = (Integer) precioSpinner.getValue();
 
-        Alquileres a = new Alquileres(ubi, nombre,precio,m2,imagen,imagenSeleccionada,nHabs,descripcion );
+        Alquileres a = new Alquileres(ubi, nombre,precio,m2,imagenBytes,nHabs,descripcion );
 
         am.AnyadirAlquiler(a);
     }
@@ -90,9 +99,26 @@ public class Anyadir implements Initializable {
     public void OnSubirImagenbutton(ActionEvent actionEvent) {
         File file = fileChooser.showOpenDialog(new Stage());
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.jpeg"));
-        if (file != null) {
-            Image image = new Image(file.toURI().toString());
-            muestraImagen.setImage(image);
+
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Seleccione una imagen");
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Archivos de imagen", "*.png", "*.jpg", "*.jpeg", "*.gif"));
+        File selectedFile = fileChooser.showOpenDialog(null);
+        if (selectedFile != null) {
+            // Convertir el archivo de imagen en un array de bytes
+            byte[] imagenBytes = null;
+            try {
+                BufferedImage bImage = ImageIO.read(selectedFile);
+                ByteArrayOutputStream bos = new ByteArrayOutputStream();
+                ImageIO.write(bImage, "jpg", bos);
+                imagenBytes = bos.toByteArray();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            if (file != null) {
+                Image image = new Image(file.toURI().toString());
+                muestraImagen.setImage(image);
+            }
         }
     }
 

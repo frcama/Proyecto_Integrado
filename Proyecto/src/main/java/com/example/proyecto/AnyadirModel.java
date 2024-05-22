@@ -17,34 +17,27 @@ import java.util.ArrayList;
 
 public class AnyadirModel extends Conexion{
 
-    public void AnyadirAlquiler(Alquileres a) {
+        public void AnyadirAlquiler(Alquileres a) {
 
 
-        try {
-            String sql = "INSERT INTO alquileres (Ubicacion, nombre, precio, MetrosCuadrados, imagen, NumHabitaciones, Descripcion)" +
-                    "VALUES '?', ?, ?, ?, ?, ?, ?, ?);";
+            try {
+                String sql = "INSERT INTO Nuevos_alquileres (Ubicacion, nombre, precio, MetrosCuadrados, imagen, NumHabitaciones, Descripcion)" +
+                        "VALUES (?, ?, ?, ?, ?, ?, ?);";
 
+                PreparedStatement ps = this.getConexion().prepareStatement(sql);
 
-            PreparedStatement ps = this.getConexion().prepareStatement(sql);
-            ps.setString(1, a.getUbicacion());
-            ps.setString(2, a.getNombre());
-            ps.setString(3,String.valueOf(a.getPrecio()));
-            ps.setString(4, String.valueOf(a.getMetrosCuadrados()));
-
-            File imagen = a.getImageFile();
-            FileInputStream FIS = new FileInputStream(imagen);
-
-            ps.setBinaryStream(5, FIS, (int) imagen.length());
-            ps.setInt(7, a.getnHabitaciones());
-            ps.setString(8, a.getDescripcion());
-            ResultSet rs = ps.executeQuery();
-
-
-        } catch (SQLException |FileNotFoundException e) {
-            System.out.println("Error SQL: " + e.getMessage());
+                    ps.setString(1, a.getUbicacion());
+                    ps.setString(2, a.getNombre());
+                    ps.setDouble(3, a.getPrecio());
+                    ps.setString(4, a.getMetrosCuadrados());
+                    ps.setBytes(5, a.getArrayImagen());
+                    ps.setInt(6, a.getnHabitaciones());
+                    ps.setString(7, a.getDescripcion());
+                    ps.executeUpdate();
+                    System.out.println("Alquiler añadido con éxito");
+                } catch (SQLException e) {
+                    System.out.println("Error SQL: " + e.getMessage());
+                }
         }
-
-    }
-
 
 }
