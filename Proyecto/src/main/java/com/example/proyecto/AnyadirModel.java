@@ -31,7 +31,7 @@ public class AnyadirModel extends Conexion{
             ps.setString(3,String.valueOf(a.getPrecio()));
             ps.setString(4, String.valueOf(a.getMetrosCuadrados()));
 
-            File imagen = new File(String.valueOf(a.getImagen()));
+            File imagen = a.getImageFile();
             FileInputStream FIS = new FileInputStream(imagen);
 
             ps.setBinaryStream(5, FIS, (int) imagen.length());

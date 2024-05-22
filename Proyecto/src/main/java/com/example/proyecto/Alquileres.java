@@ -1,6 +1,7 @@
 package com.example.proyecto;
 
 import java.awt.*;
+import java.io.File;
 
 public class Alquileres {
 
@@ -13,6 +14,7 @@ public class Alquileres {
     private Image imagen;
     private int nHabitaciones;
     private String Descripcion;
+    private File imageFile;
 
     public Alquileres(int id_Alquiler, String ubicacion, String nombre, double precio, String metrosCuadrados, Image imagen, int nHabitaciones) {
         this.id_Alquiler = id_Alquiler;
@@ -24,12 +26,13 @@ public class Alquileres {
         this.nHabitaciones = nHabitaciones;
     }
 
-    public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados, Image imagen, int nHabitaciones, String descripcion) {
+    public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados,File imageFile, Image imagen, int nHabitaciones, String descripcion) {
         this.ubicacion = ubicacion;
         this.nombre = nombre;
         this.precio = precio;
         this.metrosCuadrados = metrosCuadrados;
         this.imagen = imagen;
+        this.imageFile=imageFile;
         this.nHabitaciones = nHabitaciones;
         this.Descripcion= descripcion;
     }
@@ -39,6 +42,11 @@ public class Alquileres {
     }
 
     public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados, javafx.scene.image.Image combertir, int nHabitaciones, String descripcion) {
+    }
+
+    public Alquileres(String ubi, String nombre, int precio, String m2, File imagen, javafx.scene.image.Image imagenSeleccionada, int nHabs, String descripcion) {
+
+
     }
 
     public String getDescripcion() {
@@ -79,6 +87,14 @@ public class Alquileres {
 
     public void setUbicacion(String ubicacion) {
         this.ubicacion = ubicacion;
+    }
+
+    public File getImageFile() {
+        return imageFile;
+    }
+
+    public void setImageFile(File imageFile) {
+        this.imageFile = imageFile;
     }
 
     public String getNombre() {

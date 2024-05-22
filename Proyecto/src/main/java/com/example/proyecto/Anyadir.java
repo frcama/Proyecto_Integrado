@@ -60,7 +60,7 @@ public class Anyadir implements Initializable {
         SpinnerValueFactory<Integer> valueFactory =
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(1,10,1,1);
 
-        nHabitacionesSpinner.setValueFactory(valueFactoryInteger);
+        nHabitacionesSpinner.setValueFactory(valueFactory);
 
 
     }
@@ -73,6 +73,7 @@ public class Anyadir implements Initializable {
 
         Image imagenSeleccionada = muestraImagen.getImage();
         File imagen = new File(String.valueOf(imagenSeleccionada));
+
         String nombre= nombreDescripcion.getText();
         String descripcion = descripciontextField.getText();
         String m2 = m2textField.getText();
@@ -80,7 +81,7 @@ public class Anyadir implements Initializable {
         int nHabs = (Integer) nHabitacionesSpinner.getValue();
         int precio = (Integer) precioSpinner.getValue();
 
-        Alquileres a = new Alquileres(ubi, nombre,precio,m2,imagenSeleccionada,nHabs,descripcion );
+        Alquileres a = new Alquileres(ubi, nombre,precio,m2,imagen,imagenSeleccionada,nHabs,descripcion );
 
         am.AnyadirAlquiler(a);
     }
