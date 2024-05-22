@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="PanelAlquileres" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.AlquileresController">
+<AnchorPane fx:id="PanelAlquileres" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: #222222;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.AlquileresOS">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="65.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="342.0">
          <fill>
@@ -81,7 +81,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="alquileresBOTON" layoutX="78.0" layoutY="553.0" mnemonicParsing="false" onAction="#alquileresBOTONclick" prefHeight="35.0" prefWidth="43.0" style="-fx-background-radius: 5; -fx-background-color: c2c2c2;">
+      <Button fx:id="alquileresBOTON_OS" layoutX="78.0" layoutY="553.0" mnemonicParsing="false" onAction="#alquileresBOTONclick_OS" prefHeight="35.0" prefWidth="43.0" style="-fx-background-radius: 5; -fx-background-color: c2c2c2;">
          <effect>
             <DropShadow />
          </effect>

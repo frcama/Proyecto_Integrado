@@ -27,8 +27,6 @@ public class Novedades implements Initializable {
     @FXML
     private Button perfilBOTON;
     @FXML
-    private Pane panelDesplegableNOVEDADES;
-    @FXML
     private Button novedadesBOTON;
     @FXML
     private ImageView PerfilBOTON;
@@ -40,14 +38,6 @@ public class Novedades implements Initializable {
     private Button librosBOTON;
     @FXML
     private AnchorPane PanelNovedades;
-    @FXML
-    private MenuItem chatNovedades;
-    @FXML
-    private Menu menuAyuda;
-    @FXML
-    private Menu menuMO;
-    @FXML
-    private MenuBar menuMenuBar;
     @FXML
     private Button addButton11;
 
@@ -109,7 +99,7 @@ public class Novedades implements Initializable {
     }
 
 
-    @FXML
+    @Deprecated
     public void alquileresBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -146,7 +136,7 @@ public class Novedades implements Initializable {
             }
     }
 
-    @FXML
+    @Deprecated
     public void chatNovedadesclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 

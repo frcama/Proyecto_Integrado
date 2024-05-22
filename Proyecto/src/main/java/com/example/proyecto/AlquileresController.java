@@ -45,8 +45,6 @@ public class AlquileresController implements Initializable{
     private ChoiceBox zonaFiltroChoicebox;
     @FXML
     private ImageView PerfilBOTON;
-    @FXML
-    private GridPane alquileresGridPane;
 
 
     public void initialize(URL location, ResourceBundle resources) {

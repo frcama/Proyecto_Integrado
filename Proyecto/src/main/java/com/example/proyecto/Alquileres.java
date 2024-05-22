@@ -1,9 +1,10 @@
 package com.example.proyecto;
 
-import java.awt.*;
+
+import javafx.scene.image.Image;
 import java.io.File;
 
-public class Alquileres {
+public class Alquileres{
 
 
     private int id_Alquiler;
