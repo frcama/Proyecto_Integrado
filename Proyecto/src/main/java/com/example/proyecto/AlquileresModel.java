@@ -54,8 +54,8 @@ public class AlquileresModel extends Conexion{
 
 
                 // Crear un nuevo producto y añadirlo a la lista
-                Alquileres.add(new Alquileres(imagenBytes, descripcion, precio, nombre, categoria));
-                Alquileres.add( new Alquileres(, nombre, precio, , imagenBytes);
+              /*  Alquileres.add(new Alquileres(imagenBytes, descripcion, precio, nombre, categoria));
+                Alquileres.add( new Alquileres(, nombre, precio, , imagenBytes);*/
             }
 
             // Crear el marco y añadir el panel
