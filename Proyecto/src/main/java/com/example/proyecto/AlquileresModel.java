@@ -1,7 +1,18 @@
 package com.example.proyecto;
 
+import javafx.scene.image.Image;
+import javafx.scene.shape.Path;
+
+import javax.imageio.ImageIO;
 import javax.swing.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.math.BigDecimal;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.sql.Blob;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,52 +29,14 @@ public class AlquileresModel extends Conexion{
 
         try {
             String sql = "Select * from alquileres;";
-
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
-
             ResultSet rs = ps.executeQuery();
 
-
-            // Crear el panel
-            JPanel panel = new JPanel();
-            panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-
             while (rs.next()) {
-                // Extraer los datos
-                Blob imagenBlob = rs.getBlob("imagen");
-                String descripcion = rs.getString("descripcion");
-                double precio = rs.getDouble("precio");
-                String nombre = rs.getString("nombre");
-                String categoria = rs.getString("categoria");
-
-                // Convertir Blob a ImageIcon
-                byte[] imagenBytes = imagenBlob.getBytes(1, (int) imagenBlob.length());
-                ImageIcon imagen = new ImageIcon(imagenBytes);
-
-                // Crear un subpanel para cada objeto y añadir los datos
-                JPanel subPanel = new JPanel();
-                subPanel.add(new JLabel(imagen));
-                subPanel.add(new JLabel("Descripción: " + descripcion));
-                subPanel.add(new JLabel("Precio: " + precio));
-                subPanel.add(new JLabel("Nombre: " + nombre));
-                subPanel.add(new JLabel("Categoría: " + categoria));
-
-                // Añadir el subpanel al panel principal
-                panel.add(subPanel);
-
-
-
-                // Crear un nuevo producto y añadirlo a la lista
-              /*  Alquileres.add(new Alquileres(imagenBytes, descripcion, precio, nombre, categoria));
-                Alquileres.add( new Alquileres(, nombre, precio, , imagenBytes);*/
+                Image combertir = new Image(rs.getBlob("imagen").getBinaryStream());
+                Alquileres a = new Alquileres(rs.getString("ubicacion"), rs.getString("nombre"), rs.getDouble("precio"), rs.getString("metrosCuadrados"),combertir, rs.getInt("nHabitaciones"), rs.getString("Descripcion"));
+                alquileresLista.add(a);
             }
-
-            // Crear el marco y añadir el panel
-            JFrame frame = new JFrame("Datos de los productos");
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.getContentPane().add(panel);
-            frame.pack();
-            frame.setVisible(true);
 
             rs.close();
             ps.close();

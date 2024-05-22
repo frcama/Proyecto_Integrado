@@ -9,7 +9,7 @@ public class Conexion {
     Connection conexion = null;
 
     private java.sql.Connection conn;
-    private String cadenaConexion = "jdbc:mysql://localhost:3306/entregableProgramació";
+    private String cadenaConexion = "jdbc:mysql://localhost:3306/estubook";
     private String nombreUsuario = "root";
     private String password = "1234";
 

@@ -1,42 +1,68 @@
 package com.example.proyecto;
 
+import java.awt.*;
+
 public class Alquileres {
 
 
     private int id_Alquiler;
-    private String lugar;
+    private String ubicacion;
     private String nombre;
     private double precio;
     private String metrosCuadrados;
-    private byte[] imagen;
+    private Image imagen;
+    private int nHabitaciones;
+    private String Descripcion;
 
-    public Alquileres(int id_Alquiler, String lugar, String nombre, double precio, String metrosCuadrados, byte[] imagen) {
+    public Alquileres(int id_Alquiler, String ubicacion, String nombre, double precio, String metrosCuadrados, Image imagen, int nHabitaciones) {
         this.id_Alquiler = id_Alquiler;
-        this.lugar = lugar;
+        this.ubicacion = ubicacion;
         this.nombre = nombre;
         this.precio = precio;
         this.metrosCuadrados = metrosCuadrados;
         this.imagen = imagen;
+        this.nHabitaciones = nHabitaciones;
     }
-    public Alquileres( String lugar, String nombre, double precio, String metrosCuadrados, byte[] imagen) {
-        this.lugar = lugar;
+
+    public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados, Image imagen, int nHabitaciones, String descripcion) {
+        this.ubicacion = ubicacion;
         this.nombre = nombre;
         this.precio = precio;
         this.metrosCuadrados = metrosCuadrados;
         this.imagen = imagen;
+        this.nHabitaciones = nHabitaciones;
+        this.Descripcion= descripcion;
     }
 
-    public Alquileres(){
+    public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados, javafx.scene.image.Image combertir, int nHabitaciones){
 
     }
 
+    public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados, javafx.scene.image.Image combertir, int nHabitaciones, String descripcion) {
+    }
 
-    public byte[] getImagen() {
+    public String getDescripcion() {
+        return Descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        Descripcion = descripcion;
+    }
+
+    public Image getImagen() {
         return imagen;
     }
 
-    public void setImagen(byte[] imagen) {
+    public void setImagen(Image imagen) {
         this.imagen = imagen;
+    }
+
+    public int getnHabitaciones() {
+        return nHabitaciones;
+    }
+
+    public void setnHabitaciones(int nHabitaciones) {
+        this.nHabitaciones = nHabitaciones;
     }
 
     public int getId_Alquiler() {
@@ -47,12 +73,12 @@ public class Alquileres {
         this.id_Alquiler = id_Alquiler;
     }
 
-    public String getLugar() {
-        return lugar;
+    public String getUbicacion() {
+        return ubicacion;
     }
 
-    public void setLugar(String lugar) {
-        this.lugar = lugar;
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
     }
 
     public String getNombre() {
