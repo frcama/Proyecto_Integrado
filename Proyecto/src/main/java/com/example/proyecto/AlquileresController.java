@@ -25,8 +25,6 @@ public class AlquileresController implements Initializable{
     @FXML
     private AnchorPane PanelAlquileres;
     @FXML
-    private ChoiceBox precioFiltroChoicebox;
-    @FXML
     private Button filtrarButton;
     @FXML
     private ChoiceBox zonaFiltroChoicebox;
@@ -50,6 +48,12 @@ public class AlquileresController implements Initializable{
     private Button alquileresBOTON;
     @FXML
     private Button librosBOTON;
+    @FXML
+    private ChoiceBox NumHabChoiceBox;
+    @FXML
+    private TextField PrecioMaxTF;
+    @FXML
+    private TextField PrecioMinTF;
 
 
     public void initialize(URL location, ResourceBundle resources) {
@@ -65,60 +69,58 @@ public class AlquileresController implements Initializable{
         ObservableList<String> zonaAlquiler = FXCollections.observableArrayList();
         ObservableList<String> nHabitacionesAlquiler = FXCollections.observableArrayList();
 
-        String precios1= "0-50";
-        String precios2= "50-75";
-        String precios3= "75-100";
-        String precios4= "100-200";
-        String precios5= "200-300";
-        String precios6= "+ de 300";
+        String precios1= "1 Habitación";
+        String precios2= "2 Habitaciones";
+        String precios3= "3 Habitaciones";
+        String precios4= "4 Habitaciones";
+        String precios5= "5 Habitaciones";
+
 
         preciosAlquiler.add(precios1);
         preciosAlquiler.add(precios2);
         preciosAlquiler.add(precios3);
         preciosAlquiler.add(precios4);
         preciosAlquiler.add(precios5);
-        preciosAlquiler.add(precios6);
 
-        precioFiltroChoicebox.setItems(preciosAlquiler);
+        NumHabChoiceBox.setItems(preciosAlquiler);
 
 
-        String zona1= "";
-        String zona2= "50-75";
-        String zona3= "75-100";
-        String zona4= "100-200";
-        String zona5= "200-300";
-        String zona6= "+ de 300";
+        String zona1= "Zona centro";
+        String zona2= "Cerca de playa";
+        String zona3= "Cerca de Universidades";
+        String zona4="Afueras";
+        String zona5= "Cerca de Ocio";
+
 
         zonaAlquiler.add(zona1);
         zonaAlquiler.add(zona2);
         zonaAlquiler.add(zona3);
         zonaAlquiler.add(zona4);
         zonaAlquiler.add(zona5);
-        zonaAlquiler.add(zona6);
 
         zonaFiltroChoicebox.setItems(zonaAlquiler);
 
 
-        String nh1= "1 Habitación";
-        String nh2= "2 Habitaciones";
-        String nh3= "3 Habitaciones";
-        String nh4= "4 Habitaciones";
-        String nh5= "5 Habitaciones";
-        String nh6= "+ de 5 Habitaciones";
+        String nh1= "Zona centro";
+        String nh2= "Cerca de playa";
+        String nh3= "Cerca de Universidades";
+        String nh4= "Afueras";
+        String nh5= "Cerca de Ocio";
+
 
         nHabitacionesAlquiler.add(nh1);
         nHabitacionesAlquiler.add(nh2);
         nHabitacionesAlquiler.add(nh3);
         nHabitacionesAlquiler.add(nh4);
         nHabitacionesAlquiler.add(nh5);
-        nHabitacionesAlquiler.add(nh6);
+
 
         ChoiceBox<String> nHabitacioneschoiceBox = new ChoiceBox<>();
         nHabitacioneschoiceBox.setItems(nHabitacionesAlquiler);
 
 
 
-        precioFiltroChoicebox.setValue("$ Precio ");
+        NumHabChoiceBox.setValue("Nº Hab");
         zonaFiltroChoicebox.setValue("Ubicación");
         nHabitacioneschoiceBox.setValue("Número Habitaciones");
 
