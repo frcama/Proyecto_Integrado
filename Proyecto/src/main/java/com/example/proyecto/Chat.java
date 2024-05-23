@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 import java.util.logging.Level;
@@ -14,6 +15,8 @@ public class Chat {
     private AnchorPane panelDelChat;
     @javafx.fxml.FXML
     private Button atrasChatBOTON;
+    @javafx.fxml.FXML
+    private Pane panelCHAT;
 
     @javafx.fxml.FXML
     public void atrasChatBOTONclick(ActionEvent actionEvent) {

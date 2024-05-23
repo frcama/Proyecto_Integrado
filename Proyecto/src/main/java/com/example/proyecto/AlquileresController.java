@@ -22,12 +22,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class AlquileresController implements Initializable{
-    @javafx.fxml.FXML
+    @FXML
     private AnchorPane PanelAlquileres;
     @FXML
     private ChoiceBox precioFiltroChoicebox;
-    @FXML
-    private ChoiceBox nHabitacioneschoiceBox;
     @FXML
     private Button filtrarButton;
     @FXML
@@ -115,6 +113,7 @@ public class AlquileresController implements Initializable{
         nHabitacionesAlquiler.add(nh5);
         nHabitacionesAlquiler.add(nh6);
 
+        ChoiceBox<String> nHabitacioneschoiceBox = new ChoiceBox<>();
         nHabitacioneschoiceBox.setItems(nHabitacionesAlquiler);
 
 
@@ -205,38 +204,10 @@ public class AlquileresController implements Initializable{
         }
 
     }
-
-    @Deprecated
-    public void chatNovedadesclick(ActionEvent actionEvent) {
-    }
-
     @FXML
     public void filtrarBottonClick(ActionEvent actionEvent) {
 
 
     }
 
-    @Deprecated
-    public void perfilBOTON2click(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void eventosBOTON2click(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void librosBOTON2click(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void onAdd2Clicked(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void alquileresBOTON2click(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void novedadesBOTON2click(ActionEvent actionEvent) {
-    }
 }
