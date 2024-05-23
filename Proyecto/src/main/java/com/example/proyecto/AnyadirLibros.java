@@ -79,29 +79,16 @@ public class AnyadirLibros {
 
     @FXML
     public void OnSubirImagenbutton(ActionEvent actionEvent) {
-        FileChooser fileChooser = null;
-        File file = fileChooser.showOpenDialog(new Stage());
+        FileChooser fileChooser = new FileChooser();
+
+        // Configurar los filtros de extensión antes de mostrar el diálogo
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.jpeg"));
 
-        fileChooser = new FileChooser();
-        fileChooser.setTitle("Seleccione una imagen");
-        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Archivos de imagen", "*.png", "*.jpg", "*.jpeg", "*.gif"));
-        File selectedFile = fileChooser.showOpenDialog(null);
-        if (selectedFile != null) {
-            // Convertir el archivo de imagen en un array de bytes
-            byte[] imagenBytes = null;
-            try {
-                BufferedImage bImage = ImageIO.read(selectedFile);
-                ByteArrayOutputStream bos = new ByteArrayOutputStream();
-                ImageIO.write(bImage, "jpg", bos);
-                imagenBytes = bos.toByteArray();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            if (file != null) {
-                Image image = new Image(file.toURI().toString());
-                muestraImagen.setImage(image);
-            }
+        File file = fileChooser.showOpenDialog(new Stage());
+
+        if (file != null) {
+            Image image = new Image(file.toURI().toString());
+            muestraImagen.setImage(image);
         }
     }
 }

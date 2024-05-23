@@ -41,10 +41,11 @@ public class AnyadirAlquileres implements Initializable {
     @javafx.fxml.FXML
     private TextField descripciontextField;
     private Pane PanelAnyadir;
+    private Pane PanelAnyadirALQUILERES;
     @javafx.fxml.FXML
-    private AnchorPane PanelAnyadirALQUILERES;
+    private AnchorPane PanelAnyadirEVENTOS;
     @javafx.fxml.FXML
-    private Button atrasBOTON;
+    private Button atrasButton;
 
 
     @Override
@@ -90,18 +91,24 @@ public class AnyadirAlquileres implements Initializable {
 
     @javafx.fxml.FXML
     public void OnSubirImagenbutton(ActionEvent actionEvent) {
-        File file = fileChooser.showOpenDialog(new Stage());
+        FileChooser fileChooser = new FileChooser();
+
+        // Configurar los filtros de extensión antes de mostrar el diálogo
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.jpeg"));
 
-            if (file != null) {
-                Image image = new Image(file.toURI().toString());
-                muestraImagen.setImage(image);
-            }
+        File file = fileChooser.showOpenDialog(new Stage());
+
+        if (file != null) {
+            Image image = new Image(file.toURI().toString());
+            muestraImagen.setImage(image);
         }
+    }
 
 
 
-    @Deprecated
+
+
+    @javafx.fxml.FXML
     public void onAtrasButtonClick(ActionEvent actionEvent) {
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Alquileres.fxml"));
@@ -109,9 +116,5 @@ public class AnyadirAlquileres implements Initializable {
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-
-    @javafx.fxml.FXML
-    public void atrasBOTONclick(ActionEvent actionEvent) {
     }
 }

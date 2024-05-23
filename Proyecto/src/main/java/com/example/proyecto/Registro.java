@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.security.cert.PolicyNode;
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -74,6 +75,7 @@ public class Registro extends Conexion implements Initializable {
     public void regisrtarseBOTONclick(ActionEvent actionEvent) {
 
         Usuario u = new Usuario();
+        RegistroModel rm = new RegistroModel();
 
         System.out.println("funciona");
         String nombre =nombreTF.getText();
@@ -86,7 +88,7 @@ public class Registro extends Conexion implements Initializable {
         String contra = contrasenyaTF.getText();
         String contra2 = RepeContrasenyaTF.getText();
 
-        if ( contra2== contra){
+        if ( contra2.equals(contra)){
             contra = contra2;
         }
         else{
@@ -94,9 +96,18 @@ public class Registro extends Conexion implements Initializable {
             a.setContentText("Las contraseñas no coinciden");
             a.showAndWait();
         }
+
+
         LocalDate FechaNacimiento = fechaNacimiento.getValue();
-        int edad = 0;
-        Usuario us = new Usuario(nombre,apellido,correo,DNI,edad);
+        LocalDate fechaHoy = LocalDate.now();
+        int edad = Period.between(FechaNacimiento, fechaHoy).getYears();
+
+
+        Usuario us = new Usuario(nombre,apellido,correo,DNI,edad,numTel,FechaNacimiento,contra);
+
+
+        rm.anyadirResgistro(us);
+
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Terminos.fxml"));
             this.PanelDeRegistro.getChildren().setAll(pane);

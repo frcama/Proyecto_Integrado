@@ -1,5 +1,8 @@
 package com.example.proyecto;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 public class Usuario {
 
     private String nombre;
@@ -7,13 +10,43 @@ public class Usuario {
     private String correo;
     private String DNI;
     private int edad;
+    private int telefono;
+    private LocalDate fechanacimiento;
+    private String contra;
 
-    public Usuario(String nombre, String apellido, String correo, String DNI, int edad) {
+    public Usuario(String nombre, String apellido, String correo, String DNI, int edad, int telefono, LocalDate fechanacimiento, String contra) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
         this.DNI = DNI;
         this.edad = edad;
+        this.telefono = telefono;
+        this.fechanacimiento = fechanacimiento;
+        this.contra = contra;
+    }
+
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+
+    public LocalDate getFechanacimiento() {
+        return fechanacimiento;
+    }
+
+    public void setFechanacimiento(LocalDate fechanacimiento) {
+        this.fechanacimiento = fechanacimiento;
+    }
+
+    public String getContra() {
+        return contra;
+    }
+
+    public void setContra(String contra) {
+        this.contra = contra;
     }
 
     public Usuario(){}
