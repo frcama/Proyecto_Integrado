@@ -62,17 +62,7 @@ public class AnyadirLibros {
 
 
         Image imagenSeleccionada = muestraImagen.getImage();
-        File imagen = new File(String.valueOf(imagenSeleccionada));
-        // Convertir la imagen a un array de bytes
-        byte[] imagenBytes = null;
-        try {
-            BufferedImage bImage = ImageIO.read(imagen);
-            ByteArrayOutputStream bos = new ByteArrayOutputStream();
-            ImageIO.write(bImage, "jpg", bos);
-            imagenBytes = bos.toByteArray();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        File imagen = new File(imagenSeleccionada.getUrl());
 
         String nombre= nombreDescripcion.getText();
         String descripcion = descripciontextField.getText();
@@ -81,7 +71,7 @@ public class AnyadirLibros {
         int nHabs = (Integer) nHabitacionesSpinner.getValue();
         int precio = (Integer) precioSpinner.getValue();
 
-        Alquileres a = new Alquileres(ubi, nombre,precio,m2,imagenBytes,nHabs,descripcion );
+        Alquileres a = new Alquileres(ubi, nombre,precio,m2,imagen,nHabs,descripcion );
 
         am.AnyadirAlquiler(a);
 

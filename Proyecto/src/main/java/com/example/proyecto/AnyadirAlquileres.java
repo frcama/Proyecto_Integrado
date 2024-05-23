@@ -73,18 +73,9 @@ public class AnyadirAlquileres implements Initializable {
         AnyadirAlquileresModel am = new AnyadirAlquileresModel();
 
 
+
         Image imagenSeleccionada = muestraImagen.getImage();
-        File imagen = new File(String.valueOf(imagenSeleccionada));
-        // Convertir la imagen a un array de bytes
-        byte[] imagenBytes = null;
-        try {
-            BufferedImage bImage = ImageIO.read(imagen);
-            ByteArrayOutputStream bos = new ByteArrayOutputStream();
-            ImageIO.write(bImage, "jpg", bos);
-            imagenBytes = bos.toByteArray();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        File imagen = new File(imagenSeleccionada.getUrl());
 
         String nombre= nombreDescripcion.getText();
         String descripcion = descripciontextField.getText();
@@ -93,7 +84,7 @@ public class AnyadirAlquileres implements Initializable {
         int nHabs = (Integer) nHabitacionesSpinner.getValue();
         int precio = (Integer) precioSpinner.getValue();
 
-        Alquileres a = new Alquileres(ubi, nombre,precio,m2,imagenBytes,nHabs,descripcion );
+        Alquileres a = new Alquileres(ubi, nombre,precio,m2,imagen,nHabs,descripcion );
 
         am.AnyadirAlquiler(a);
     }
@@ -103,21 +94,6 @@ public class AnyadirAlquileres implements Initializable {
         File file = fileChooser.showOpenDialog(new Stage());
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.jpeg"));
 
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Seleccione una imagen");
-        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Archivos de imagen", "*.png", "*.jpg", "*.jpeg", "*.gif"));
-        File selectedFile = fileChooser.showOpenDialog(null);
-        if (selectedFile != null) {
-            // Convertir el archivo de imagen en un array de bytes
-            byte[] imagenBytes = null;
-            try {
-                BufferedImage bImage = ImageIO.read(selectedFile);
-                ByteArrayOutputStream bos = new ByteArrayOutputStream();
-                ImageIO.write(bImage, "jpg", bos);
-                imagenBytes = bos.toByteArray();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
             if (file != null) {
                 Image image = new Image(file.toURI().toString());
                 muestraImagen.setImage(image);
