@@ -45,7 +45,7 @@ public class Inicio_Sesion {
     @FXML
     public void inicioBOTONclick(ActionEvent actionEvent) {
         try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Terminos.fxml"));
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Novedades.fxml"));
             this.panelDeInicio.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
