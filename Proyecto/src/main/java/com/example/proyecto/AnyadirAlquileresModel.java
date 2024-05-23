@@ -12,7 +12,7 @@ public class AnyadirAlquileresModel extends Conexion{
 
 
             try {
-                String sql = "INSERT INTO Nuevos_alquileres (Ubicacion, nombre, precio, MetrosCuadrados, imagen, NumHabitaciones, Descripcion)" +
+                String sql = "INSERT INTO alquileres (Ubicacion, nombre, precio, MetrosCuadrados, imagen, NumHabitaciones, Descripcion)" +
                         "VALUES (?, ?, ?, ?, ?, ?, ?);";
 
                 PreparedStatement ps = this.getConexion().prepareStatement(sql);
@@ -21,6 +21,7 @@ public class AnyadirAlquileresModel extends Conexion{
                     ps.setString(2, a.getNombre());
                     ps.setDouble(3, a.getPrecio());
                     ps.setString(4, a.getMetrosCuadrados());
+
 
                     File imagen = a.getImageFile();
                     FileInputStream FIS = new FileInputStream(imagen);

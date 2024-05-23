@@ -97,14 +97,11 @@ public class Registro extends Conexion implements Initializable {
             a.showAndWait();
         }
 
-
         LocalDate FechaNacimiento = fechaNacimiento.getValue();
         LocalDate fechaHoy = LocalDate.now();
         int edad = Period.between(FechaNacimiento, fechaHoy).getYears();
 
-
         Usuario us = new Usuario(nombre,apellido,correo,DNI,edad,numTel,FechaNacimiento,contra);
-
 
         rm.anyadirResgistro(us);
 

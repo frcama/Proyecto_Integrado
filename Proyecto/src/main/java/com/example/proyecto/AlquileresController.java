@@ -124,14 +124,14 @@ public class AlquileresController implements Initializable{
         zonaFiltroChoicebox.setValue("Ubicación");
         nHabitacioneschoiceBox.setValue("Número Habitaciones");
 
-        AlquileresModel am = new AlquileresModel();
-        ArrayList<Alquileres> lista = am.mostrarAlquileres();
+        //AlquileresModel am = new AlquileresModel();
+        //ArrayList<Alquileres> lista = am.mostrarAlquileres();
 
 
-        for (Alquileres a : lista){
+       /* for (Alquileres a : lista){
             System.out.println(a.getImagen());
         }
-
+        */
     }
 
     @FXML

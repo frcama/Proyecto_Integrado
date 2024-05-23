@@ -44,6 +44,7 @@ public class Inicio_Sesion {
 
     @FXML
     public void inicioBOTONclick(ActionEvent actionEvent) {
+
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Novedades.fxml"));
             this.panelDeInicio.getChildren().setAll(pane);

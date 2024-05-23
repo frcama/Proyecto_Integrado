@@ -33,19 +33,17 @@ public class AnyadirAlquileres implements Initializable {
     @javafx.fxml.FXML
     private ImageView muestraImagen;
     @javafx.fxml.FXML
-    private Spinner nHabitacionesSpinner;
-    @javafx.fxml.FXML
     private TextField ubiTextField;
     @javafx.fxml.FXML
     private TextField m2textField;
     @javafx.fxml.FXML
+    private AnchorPane PanelAnyadirALQUILERES;
+    @javafx.fxml.FXML
     private TextField descripciontextField;
-    private Pane PanelAnyadir;
-    private Pane PanelAnyadirALQUILERES;
     @javafx.fxml.FXML
-    private AnchorPane PanelAnyadirEVENTOS;
+    private Button atrasBOTON;
     @javafx.fxml.FXML
-    private Button atrasButton;
+    private Spinner nHabitacionesSpinner;
 
 
     @Override
@@ -57,12 +55,10 @@ public class AnyadirAlquileres implements Initializable {
         precioSpinner.setValueFactory(valueFactoryInteger);
 
 
-
         SpinnerValueFactory<Integer> valueFactory =
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(1,10,1,1);
 
         nHabitacionesSpinner.setValueFactory(valueFactory);
-
 
     }
 
@@ -72,10 +68,9 @@ public class AnyadirAlquileres implements Initializable {
 
         AnyadirAlquileresModel am = new AnyadirAlquileresModel();
 
-
-
         Image imagenSeleccionada = muestraImagen.getImage();
-        File imagen = new File(imagenSeleccionada.getUrl());
+        //File imagen = new File(imagenSeleccionada.getUrl());
+        File imagen = new File ( "c:\\descarga.jpg");
 
         String nombre= nombreDescripcion.getText();
         String descripcion = descripciontextField.getText();
@@ -104,12 +99,8 @@ public class AnyadirAlquileres implements Initializable {
         }
     }
 
-
-
-
-
     @javafx.fxml.FXML
-    public void onAtrasButtonClick(ActionEvent actionEvent) {
+    public void atrasBOTONclick(ActionEvent actionEvent) {
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Alquileres.fxml"));
             this.PanelAnyadirALQUILERES.getChildren().setAll(pane);
