@@ -23,19 +23,7 @@ import java.util.logging.Logger;
 
 public class AlquileresController implements Initializable{
     @javafx.fxml.FXML
-    private Button perfilBOTON;
-    @javafx.fxml.FXML
-    private Button novedadesBOTON;
-    @javafx.fxml.FXML
     private AnchorPane PanelAlquileres;
-    @javafx.fxml.FXML
-    private Button alquileresBOTON;
-    @javafx.fxml.FXML
-    private Button eventosBOTON;
-    @javafx.fxml.FXML
-    private Button librosBOTON;
-    @FXML
-    private Button addButton11;
     @FXML
     private ChoiceBox precioFiltroChoicebox;
     @FXML
@@ -52,6 +40,18 @@ public class AlquileresController implements Initializable{
     private ColumnConstraints col1GripPane;
     @FXML
     private GridPane cosasGripPane;
+    @FXML
+    private Button eventosBOTON2;
+    @FXML
+    private Button novedadesBOTON2;
+    @FXML
+    private Button addButton112;
+    @FXML
+    private Button perfilBOTON2;
+    @FXML
+    private Button alquileresBOTON2;
+    @FXML
+    private Button librosBOTON2;
 
 
     public void initialize(URL location, ResourceBundle resources) {
@@ -133,7 +133,7 @@ public class AlquileresController implements Initializable{
 
     }
 
-    @FXML
+    @Deprecated
     public void perfilBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
         try {
@@ -144,7 +144,7 @@ public class AlquileresController implements Initializable{
         }
     }
 
-    @FXML
+    @Deprecated
     public void librosBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -157,7 +157,7 @@ public class AlquileresController implements Initializable{
     }
 
 
-    @FXML
+    @Deprecated
     public void alquileresBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -170,7 +170,7 @@ public class AlquileresController implements Initializable{
     }
 
 
-    @FXML
+    @Deprecated
     public void novedadesBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -182,7 +182,7 @@ public class AlquileresController implements Initializable{
         }
     }
 
-    @FXML
+    @Deprecated
     public void eventosBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -194,7 +194,7 @@ public class AlquileresController implements Initializable{
         }
     }
 
-    @FXML
+    @Deprecated
     public void onAddClicked(ActionEvent actionEvent) {
 
         try {
@@ -214,5 +214,29 @@ public class AlquileresController implements Initializable{
     public void filtrarBottonClick(ActionEvent actionEvent) {
 
 
+    }
+
+    @FXML
+    public void perfilBOTON2click(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void eventosBOTON2click(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void librosBOTON2click(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void onAdd2Clicked(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void alquileresBOTON2click(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void novedadesBOTON2click(ActionEvent actionEvent) {
     }
 }

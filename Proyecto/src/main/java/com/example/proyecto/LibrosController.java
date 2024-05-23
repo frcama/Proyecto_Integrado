@@ -29,19 +29,9 @@ public class LibrosController implements Initializable {
     @FXML
     private Button perfilBOTON;
     @FXML
-    private Button novedadesBOTON;
-    @FXML
-    private Button alquileresBOTON;
-    @FXML
-    private Button eventosBOTON;
-    @FXML
-    private Button librosBOTON;
-    @FXML
     private AnchorPane PanelDeLibros;
     @FXML
     private ImageView PerfilBOTON1;
-    @FXML
-    private Button addButton;
     @FXML
     private ColumnConstraints col2GripPane;
     @FXML
@@ -56,6 +46,16 @@ public class LibrosController implements Initializable {
     private Button filtrarButton;
     @FXML
     private ChoiceBox zonaFiltroChoicebox;
+    @FXML
+    private Button eventosBOTON2;
+    @FXML
+    private Button novedadesBOTON2;
+    @FXML
+    private Button alquileresBOTON2;
+    @FXML
+    private Button librosBOTON2;
+    @FXML
+    private Button addButton2;
 
 
     @Override
@@ -84,7 +84,7 @@ public class LibrosController implements Initializable {
 
     }
 
-    @FXML
+    @Deprecated
     public void librosBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -97,7 +97,7 @@ public class LibrosController implements Initializable {
     }
 
 
-    @FXML
+    @Deprecated
     public void alquileresBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -110,7 +110,7 @@ public class LibrosController implements Initializable {
     }
 
 
-    @FXML
+    @Deprecated
     public void novedadesBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -122,7 +122,7 @@ public class LibrosController implements Initializable {
         }
     }
 
-    @FXML
+    @Deprecated
     public void eventosBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -145,7 +145,7 @@ public class LibrosController implements Initializable {
         }
     }
 
-    @FXML
+    @Deprecated
     public void onAddClicked(ActionEvent actionEvent) {
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("AnyadirLibros.fxml"));
@@ -158,6 +158,26 @@ public class LibrosController implements Initializable {
 
     @FXML
     public void filtrarBottonClick(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void eventosBOTON2click(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void librosBOTON2click(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void onAdd2Clicked(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void alquileresBOTON2click(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void novedadesBOTON2click(ActionEvent actionEvent) {
     }
 }
 

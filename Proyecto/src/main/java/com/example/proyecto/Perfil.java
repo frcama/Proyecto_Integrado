@@ -1,7 +1,6 @@
 package com.example.proyecto;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
@@ -21,28 +20,28 @@ import java.util.logging.Logger;
 public class Perfil {
     FileChooser fileChooser = new FileChooser();
 
-    @FXML
+    @javafx.fxml.FXML
     private Button atrasDePerfilBOTON;
-    @FXML
+    @javafx.fxml.FXML
     private AnchorPane panelDePerfil;
-    @FXML
+    @javafx.fxml.FXML
+    private Button EditarFotoPerfil;
+    @javafx.fxml.FXML
     private TextField nombreusuarioPerfil;
-    @FXML
+    @javafx.fxml.FXML
     private TextField descripccionPerfil;
-    @FXML
+    @javafx.fxml.FXML
     private TextField nombrePerfil;
-    @FXML
+    @javafx.fxml.FXML
     private DatePicker fechaNacimientoPerfil;
-    @FXML
+    @javafx.fxml.FXML
     private PasswordField contrsaenaPerfil;
-    @FXML
+    @javafx.fxml.FXML
     private ImageView fotoPerfil;
-    @FXML
+    @javafx.fxml.FXML
     private Button CerrarSesionBOTON;
-    @FXML
-    private Button editarPerfil;
 
-    @FXML
+    @javafx.fxml.FXML
     public void atrasDePerfilBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -54,24 +53,23 @@ public class Perfil {
         }
     }
 
+    @javafx.fxml.FXML
+    public void EditarFotoPerfilclick(ActionEvent actionEvent) {
 
-    @FXML
+        File file = fileChooser.showOpenDialog(new Stage());
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.jpeg"));
+        if (file != null) {
+            Image image = new Image(file.toURI().toString());
+            fotoPerfil.setImage(image);
+        }
+    }
+
+    @javafx.fxml.FXML
     public void CerrarSesionBOTONCLICK(ActionEvent actionEvent) {
         System.out.println("funciona");
 
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("inicio_sesion.fxml"));
-            this.panelDePerfil.getChildren().setAll(pane);
-        } catch (IOException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-
-    @FXML
-    public void editarPerfilclick(ActionEvent actionEvent) {
-        System.out.println("funciona");
-        try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("EditarPerfil.fxml"));
             this.panelDePerfil.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);

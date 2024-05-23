@@ -28,19 +28,7 @@ public class EventosController implements Initializable {
     @javafx.fxml.FXML
     private AnchorPane PanelEventos;
     @javafx.fxml.FXML
-    private Button perfilBOTON;
-    @javafx.fxml.FXML
     private ImageView PerfilBOTON;
-    @javafx.fxml.FXML
-    private Button alquileresBOTON;
-    @javafx.fxml.FXML
-    private Button eventosBOTON;
-    @javafx.fxml.FXML
-    private Button addButton;
-    @javafx.fxml.FXML
-    private Button librosBOTON;
-    @javafx.fxml.FXML
-    private Button novedadesBOTON1;
     @javafx.fxml.FXML
     private ImageView novedadesBOTON;
     @javafx.fxml.FXML
@@ -57,6 +45,18 @@ public class EventosController implements Initializable {
     private Button filtrarButton;
     @javafx.fxml.FXML
     private ChoiceBox zonaFiltroChoicebox;
+    @javafx.fxml.FXML
+    private Button eventosBOTON2;
+    @javafx.fxml.FXML
+    private Button novedadesBOTON2;
+    @javafx.fxml.FXML
+    private Button perfilBOTON2;
+    @javafx.fxml.FXML
+    private Button alquileresBOTON2;
+    @javafx.fxml.FXML
+    private Button librosBOTON2;
+    @javafx.fxml.FXML
+    private Button addButton2;
 
 
     public void initialize(URL location, ResourceBundle resources) {
@@ -69,7 +69,7 @@ public class EventosController implements Initializable {
     }
 
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void onAddClicked(ActionEvent actionEvent) {
 
         try {
@@ -80,7 +80,7 @@ public class EventosController implements Initializable {
         }
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void perfilBOTONclick(ActionEvent actionEvent) {
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Perfil.fxml"));
@@ -94,7 +94,7 @@ public class EventosController implements Initializable {
     public void chatNovedadesclick(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void librosBOTONclick(ActionEvent actionEvent) {
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Libros.fxml"));
@@ -104,7 +104,7 @@ public class EventosController implements Initializable {
         }
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void alquileresBOTONclick(ActionEvent actionEvent) {
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Alquileres.fxml"));
@@ -124,7 +124,7 @@ public class EventosController implements Initializable {
         }
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void eventosBOTONclick(ActionEvent actionEvent) {
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Eventos.fxml"));
@@ -136,5 +136,29 @@ public class EventosController implements Initializable {
 
     @javafx.fxml.FXML
     public void filtrarBottonClick(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void perfilBOTON2click(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void eventosBOTON2click(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void librosBOTON2click(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void onAdd2Clicked(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void alquileresBOTON2click(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void novedadesBOTON2click(ActionEvent actionEvent) {
     }
 }

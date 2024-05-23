@@ -25,21 +25,21 @@ import javafx.util.Duration;
 public class Novedades implements Initializable {
 
     @FXML
-    private Button perfilBOTON;
-    @FXML
-    private Button novedadesBOTON;
-    @FXML
     private ImageView PerfilBOTON;
-    @FXML
-    private Button alquileresBOTON;
-    @FXML
-    private Button eventosBOTON;
-    @FXML
-    private Button librosBOTON;
     @FXML
     private AnchorPane PanelNovedades;
     @FXML
-    private Button addButton11;
+    private Button perfilBOTON2;
+    @FXML
+    private Button eventosBOTON2;
+    @FXML
+    private Button alquileresBOTON2;
+    @FXML
+    private Button novedadesBOTON2;
+    @FXML
+    private Button librosBOTON2;
+    @FXML
+    private Button addButton112;
 
 
     @Override
@@ -55,7 +55,7 @@ public class Novedades implements Initializable {
 
     }
 
-    @FXML
+    @Deprecated
     public void perfilBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
         try {
@@ -69,7 +69,7 @@ public class Novedades implements Initializable {
 
 
 
-    @FXML
+    @Deprecated
     public void librosBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -82,7 +82,7 @@ public class Novedades implements Initializable {
     }
 
 
-    @FXML
+    @Deprecated
     public void alquileresBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -95,7 +95,7 @@ public class Novedades implements Initializable {
     }
 
 
-    @FXML
+    @Deprecated
     public void novedadesBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -107,7 +107,7 @@ public class Novedades implements Initializable {
         }
     }
 
-    @FXML
+    @Deprecated
     public void eventosBOTONclick(ActionEvent actionEvent) {
             System.out.println("funciona");
 
@@ -132,7 +132,31 @@ public class Novedades implements Initializable {
     }
 
 
-    @FXML
+    @Deprecated
     public void onAddClicked(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void perfilBOTON2click(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void eventosBOTON2click(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void librosBOTON2click(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void onAdd2Clicked(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void alquileresBOTON2click(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void novedadesBOTON2click(ActionEvent actionEvent) {
     }
 }
