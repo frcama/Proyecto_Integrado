@@ -61,12 +61,10 @@ public class EventosController implements Initializable {
 
     public void initialize(URL location, ResourceBundle resources) {
         perfilBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';");
-        perfilBOTON.setOnMouseEntered(e -> perfilBOTON.setStyle("-fx-background-color: linear-gradient(to right, #0000FF, #EE82EE); -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
+        perfilBOTON.setOnMouseEntered(e -> perfilBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000); -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
         perfilBOTON.setOnMouseExited(e -> perfilBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
 
         eventosBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);");
-
-
 
     }
 
@@ -75,13 +73,12 @@ public class EventosController implements Initializable {
     public void onAddClicked(ActionEvent actionEvent) {
 
         try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("anadir.fxml"));
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("AnyadirEventos.fxml"));
             this.PanelEventos.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
 
     @javafx.fxml.FXML
     public void perfilBOTONclick(ActionEvent actionEvent) {

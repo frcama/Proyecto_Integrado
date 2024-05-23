@@ -198,7 +198,7 @@ public class AlquileresController implements Initializable{
     public void onAddClicked(ActionEvent actionEvent) {
 
         try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("anadir.fxml"));
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("AnyadirAlquileres.fxml"));
             this.PanelAlquileres.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);

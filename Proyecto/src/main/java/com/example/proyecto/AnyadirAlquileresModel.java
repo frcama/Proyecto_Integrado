@@ -1,21 +1,9 @@
 package com.example.proyecto;
 
-import javafx.collections.ObservableList;
-import javafx.scene.image.Image;
-import javafx.scene.shape.Path;
-
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.*;
-import java.math.BigDecimal;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
-public class AnyadirModel extends Conexion{
+public class AnyadirAlquileresModel extends Conexion{
 
         public void AnyadirAlquiler(Alquileres a) {
 

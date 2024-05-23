@@ -22,7 +22,7 @@
 
 <AnchorPane fx:id="PanelNovedades" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Novedades">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="62.0" layoutX="-6.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="341.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="68.0" layoutX="-6.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="347.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -134,7 +134,7 @@
             </ImageView>
          </graphic>
       </MenuButton>
-      <GridPane gridLinesVisible="true" layoutX="-3.0" layoutY="58.0" prefHeight="478.0" prefWidth="340.0" style="-fx-background-color: D6D6D6;">
+      <GridPane gridLinesVisible="true" layoutX="-3.0" layoutY="64.0" prefHeight="472.0" prefWidth="340.0" style="-fx-background-color: D6D6D6;">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.79998779296875" minWidth="10.0" prefWidth="128.4000244140625" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="242.00000762939453" minWidth="10.0" prefWidth="211.5999755859375" />

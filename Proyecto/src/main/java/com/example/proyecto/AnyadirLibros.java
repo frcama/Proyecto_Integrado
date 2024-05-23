@@ -1,11 +1,10 @@
 package com.example.proyecto;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Spinner;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -14,60 +13,51 @@ import javafx.stage.Stage;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
-import java.io.*;
-import java.net.URL;
-import java.util.ResourceBundle;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
+import java.security.cert.PolicyNode;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Anyadir implements Initializable {
-
-    FileChooser fileChooser = new FileChooser();
-
-    @javafx.fxml.FXML
-    private AnchorPane PanelAnyadir;
+public class AnyadirLibros {
     @javafx.fxml.FXML
     private Spinner precioSpinner;
     @javafx.fxml.FXML
+    private TextField ubiTextField;
+    @javafx.fxml.FXML
     private TextField nombreDescripcion;
+    @javafx.fxml.FXML
+    private TextField m2textField;
     @javafx.fxml.FXML
     private Button subirButton;
     @javafx.fxml.FXML
     private ImageView muestraImagen;
     @javafx.fxml.FXML
-    private Button atrasButton;
+    private TextField descripciontextField;
     @javafx.fxml.FXML
     private Spinner nHabitacionesSpinner;
     @javafx.fxml.FXML
-    private TextField ubiTextField;
+    private AnchorPane PanelAnyadirLIBROS;
     @javafx.fxml.FXML
-    private TextField m2textField;
+    private Button atrasBOTON;
+    private AnchorPane PanelAnyadirALQUILERES;
+
     @javafx.fxml.FXML
-    private TextField descripciontextField;
-
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        SpinnerValueFactory<Integer> valueFactoryInteger =
-                new SpinnerValueFactory.IntegerSpinnerValueFactory(1,10000000,0,1);
-
-        precioSpinner.setValueFactory(valueFactoryInteger);
-
-
-
-        SpinnerValueFactory<Integer> valueFactory =
-                new SpinnerValueFactory.IntegerSpinnerValueFactory(1,10,1,1);
-
-        nHabitacionesSpinner.setValueFactory(valueFactory);
-
-
+    public void atrasBOTONclick(ActionEvent actionEvent) {
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Libros.fxml"));
+            this.PanelAnyadirALQUILERES.getChildren().setAll(pane);
+        } catch (IOException ex) {
+            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
 
+    @javafx.fxml.FXML
     public void onSubirButtonClick(ActionEvent actionEvent) {
 
-        AnyadirModel am = new AnyadirModel();
+        AnyadirAlquileresModel am = new AnyadirAlquileresModel();
 
 
         Image imagenSeleccionada = muestraImagen.getImage();
@@ -93,14 +83,16 @@ public class Anyadir implements Initializable {
         Alquileres a = new Alquileres(ubi, nombre,precio,m2,imagenBytes,nHabs,descripcion );
 
         am.AnyadirAlquiler(a);
+
     }
 
     @javafx.fxml.FXML
     public void OnSubirImagenbutton(ActionEvent actionEvent) {
+        FileChooser fileChooser = null;
         File file = fileChooser.showOpenDialog(new Stage());
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.jpeg"));
 
-        FileChooser fileChooser = new FileChooser();
+        fileChooser = new FileChooser();
         fileChooser.setTitle("Seleccione una imagen");
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Archivos de imagen", "*.png", "*.jpg", "*.jpeg", "*.gif"));
         File selectedFile = fileChooser.showOpenDialog(null);
@@ -119,16 +111,6 @@ public class Anyadir implements Initializable {
                 Image image = new Image(file.toURI().toString());
                 muestraImagen.setImage(image);
             }
-        }
-    }
-
-    @javafx.fxml.FXML
-    public void onAtrasButtonClick(ActionEvent actionEvent) {
-        try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Novedades.fxml"));
-            this.PanelAnyadir.getChildren().setAll(pane);
-        } catch (IOException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

@@ -26,7 +26,6 @@ public class Conexion {
         }
     }
 
-
     public void cerrarConexion() {
         try {
             this.conn.close();

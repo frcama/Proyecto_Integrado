@@ -13,29 +13,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="PanelAnyadir" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Anyadir">
+<AnchorPane fx:id="PanelAnyadirLIBROS" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.AnyadirLibros">
    <children>
-      <Label layoutX="106.0" layoutY="13.0" text="ESTUBOOK" underline="true">
-         <font>
-            <Font name="Papyrus" size="25.0" />
-         </font>
-         <textFill>
-            <LinearGradient endX="1.0" endY="1.0">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color green="1.0" blue="0.28333333134651184" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color green="0.7843137383460999" blue="0.9725490212440491" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </textFill>
-      </Label>
       <Text layoutX="16.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subir Articulo">
          <font>
             <Font size="18.0" />
@@ -59,11 +38,32 @@
       <Text layoutX="35.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio" />
       <Spinner fx:id="precioSpinner" layoutX="140.0" layoutY="510.0" />
       <Button fx:id="subirButton" layoutX="146.0" layoutY="560.0" mnemonicParsing="false" onAction="#onSubirButtonClick" text="Subir" />
-      <Button fx:id="atrasButton" layoutX="21.0" layoutY="18.0" mnemonicParsing="false" onAction="#onAtrasButtonClick" text="Atrás" />
+      <Button fx:id="atrasBOTON" layoutX="21.0" layoutY="18.0" mnemonicParsing="false" onAction="#atrasBOTONclick" text="Atrás" />
       <Text layoutX="16.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ubicación" />
       <Text layoutX="16.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Metros cuadrados" />
       <Spinner fx:id="nHabitacionesSpinner" layoutX="141.0" layoutY="445.0" />
       <TextField fx:id="m2textField" layoutX="141.0" layoutY="354.0" />
       <TextField fx:id="ubiTextField" layoutX="140.0" layoutY="401.0" />
+      <Label layoutX="214.0" layoutY="-3.0" prefHeight="42.0" prefWidth="181.0" text="LIBROS" underline="true">
+         <font>
+            <Font name="Papyrus" size="20.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
    </children>
 </AnchorPane>
