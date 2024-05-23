@@ -20,7 +20,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="PanelNovedades" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Novedades">
+<AnchorPane fx:id="PanelNovedadesOscuro" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.NovedadesOS">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="62.0" layoutX="-6.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="341.0">
          <fill>
@@ -86,7 +86,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="novedadesBOTON2" layoutX="13.0" layoutY="552.0" mnemonicParsing="false" onAction="#novedadesBOTON2click" prefHeight="37.0" prefWidth="51.0" style="-fx-background-radius: 5; -fx-background-color: #000000;">
+      <Button fx:id="BOTONNOVEDADES2" layoutX="13.0" layoutY="552.0" mnemonicParsing="false" onAction="#BOTONNOVEDADES2CLICK" prefHeight="37.0" prefWidth="51.0" style="-fx-background-radius: 5; -fx-background-color: #000000;">
          <effect>
             <DropShadow />
          </effect>
@@ -116,8 +116,9 @@
       <Line endX="224.99996948242188" layoutX="110.0" layoutY="536.0" startX="-114.0000228881836" />
       <MenuButton alignment="TOP_CENTER" layoutX="4.0" layoutY="4.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="27.0" style="-fx-background-color: #1f23ff;">
         <items>
-          <MenuItem mnemonicParsing="false" text="Caambiar fondo" />
-          <MenuItem mnemonicParsing="false" text="Chat de ayuda" />
+          <MenuItem fx:id="FondoBlancoOS" mnemonicParsing="false" onAction="#FondoBlancoOS" text="Cambiar fondo a Blanco" />
+          <MenuItem fx:id="FondoOscuroOS" mnemonicParsing="false" onAction="#FondoOscuroOSclick" text="Cambiar fondo a Oscuro" />
+            <MenuItem fx:id="ChatAyudaOS" mnemonicParsing="false" onAction="#ChatAyudaOSclick" text="Chat de ayuda" />
         </items>
          <graphic>
             <ImageView fitHeight="44.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">

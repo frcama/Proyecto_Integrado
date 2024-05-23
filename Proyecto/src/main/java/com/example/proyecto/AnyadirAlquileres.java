@@ -41,11 +41,10 @@ public class AnyadirAlquileres implements Initializable {
     @javafx.fxml.FXML
     private TextField descripciontextField;
     private Pane PanelAnyadir;
-    private Pane PanelAnyadirALQUILERES;
     @javafx.fxml.FXML
-    private AnchorPane PanelAnyadirEVENTOS;
+    private AnchorPane PanelAnyadirALQUILERES;
     @javafx.fxml.FXML
-    private Button atrasButton;
+    private Button atrasBOTON;
 
 
     @Override
@@ -99,11 +98,11 @@ public class AnyadirAlquileres implements Initializable {
                 muestraImagen.setImage(image);
             }
         }
-    }
+
 
 
     @Deprecated
-    public void atrasBOTONclick(ActionEvent actionEvent) {
+    public void onAtrasButtonClick(ActionEvent actionEvent) {
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Alquileres.fxml"));
             this.PanelAnyadirALQUILERES.getChildren().setAll(pane);
@@ -113,6 +112,6 @@ public class AnyadirAlquileres implements Initializable {
     }
 
     @javafx.fxml.FXML
-    public void onAtrasButtonClick(ActionEvent actionEvent) {
+    public void atrasBOTONclick(ActionEvent actionEvent) {
     }
 }

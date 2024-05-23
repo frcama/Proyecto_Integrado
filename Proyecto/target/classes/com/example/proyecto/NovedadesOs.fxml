@@ -20,7 +20,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="PanelNovedades" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Novedades">
+<AnchorPane fx:id="PanelNovedadesOscuro" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.NovedadesOS">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="62.0" layoutX="-6.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="341.0">
          <fill>
@@ -49,7 +49,7 @@
          <graphic>
             <ImageView fx:id="PerfilBOTON" fitHeight="40.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/boton%20perfil.png" />
+                  <Image url="@img/boton%20perfil2.png" />
                </image>
                <effect>
                   <ColorAdjust />
@@ -61,13 +61,6 @@
          <effect>
             <DropShadow />
          </effect>
-         <graphic>
-            <ImageView fitHeight="33.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@img/libro.png" />
-               </image>
-            </ImageView>
-         </graphic>
       </Button>
       <Button fx:id="alquileresBOTON2" layoutX="77.0" layoutY="552.0" mnemonicParsing="false" onAction="#alquileresBOTON2click" prefHeight="35.0" prefWidth="43.0" style="-fx-background-radius: 5; -fx-background-color: #000000;">
          <effect>
@@ -76,7 +69,7 @@
          <graphic>
             <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/CASAboton.png" />
+                  <Image url="@img/CASAboton2.png" />
                </image>
             </ImageView>
          </graphic>
@@ -88,19 +81,19 @@
          <graphic>
             <ImageView fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/calendario.png" />
+                  <Image url="@img/calendario2.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="novedadesBOTON2" layoutX="13.0" layoutY="552.0" mnemonicParsing="false" onAction="#novedadesBOTON2click" prefHeight="37.0" prefWidth="51.0" style="-fx-background-radius: 5; -fx-background-color: #000000;">
+      <Button fx:id="BOTONNOVEDADES2" layoutX="13.0" layoutY="552.0" mnemonicParsing="false" onAction="#BOTONNOVEDADES2CLICK" prefHeight="37.0" prefWidth="51.0" style="-fx-background-radius: 5; -fx-background-color: #000000;">
          <effect>
             <DropShadow />
          </effect>
          <graphic>
             <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/bombilla.png" />
+                  <Image url="@img/bombilla.2.png" />
                </image>
             </ImageView>
          </graphic>
@@ -112,7 +105,7 @@
          <graphic>
             <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/añadir.png" />
+                  <Image url="@img/añadir2.png" />
                </image>
             </ImageView>
          </graphic>
@@ -123,8 +116,9 @@
       <Line endX="224.99996948242188" layoutX="110.0" layoutY="536.0" startX="-114.0000228881836" />
       <MenuButton alignment="TOP_CENTER" layoutX="4.0" layoutY="4.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="27.0" style="-fx-background-color: #1f23ff;">
         <items>
-          <MenuItem mnemonicParsing="false" text="Caambiar fondo" />
-          <MenuItem mnemonicParsing="false" text="Chat de ayuda" />
+          <MenuItem fx:id="FondoBlancoOS" mnemonicParsing="false" onAction="#FondoBlancoOS" text="Cambiar fondo a Blanco" />
+          <MenuItem fx:id="FondoOscuroOS" mnemonicParsing="false" onAction="#FondoOscuroOSclick" text="Cambiar fondo a Oscuro" />
+            <MenuItem fx:id="ChatAyudaOS" mnemonicParsing="false" onAction="#ChatAyudaOSclick" text="Chat de ayuda" />
         </items>
          <graphic>
             <ImageView fitHeight="44.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
@@ -145,6 +139,11 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
       </GridPane>
+      <ImageView fitHeight="33.0" fitWidth="56.0" layoutX="217.0" layoutY="556.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/libro2.png" />
+         </image>
+      </ImageView>
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />

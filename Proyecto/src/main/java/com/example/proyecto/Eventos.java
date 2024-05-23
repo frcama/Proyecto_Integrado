@@ -14,8 +14,6 @@ public class Eventos {
         this.nombre = nombre;
     }
 
-
-
     public Date getFecha() {
         return fecha;
     }

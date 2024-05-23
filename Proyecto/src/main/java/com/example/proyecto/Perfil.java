@@ -25,8 +25,6 @@ public class Perfil {
     @javafx.fxml.FXML
     private AnchorPane panelDePerfil;
     @javafx.fxml.FXML
-    private Button EditarFotoPerfil;
-    @javafx.fxml.FXML
     private TextField nombreusuarioPerfil;
     @javafx.fxml.FXML
     private TextField descripccionPerfil;
@@ -40,6 +38,8 @@ public class Perfil {
     private ImageView fotoPerfil;
     @javafx.fxml.FXML
     private Button CerrarSesionBOTON;
+    @javafx.fxml.FXML
+    private Button EditarFotoPerfil;
 
     @javafx.fxml.FXML
     public void atrasDePerfilBOTONclick(ActionEvent actionEvent) {
@@ -74,5 +74,9 @@ public class Perfil {
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    @Deprecated
+    public void editarPerfilclick(ActionEvent actionEvent) {
     }
 }

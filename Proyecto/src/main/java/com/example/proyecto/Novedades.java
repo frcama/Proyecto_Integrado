@@ -27,19 +27,25 @@ public class Novedades implements Initializable {
     @FXML
     private ImageView PerfilBOTON;
     @FXML
+    private Button perfilBOTON;
+    @FXML
+    private Button addButton11;
+    @FXML
     private AnchorPane PanelNovedades;
     @FXML
-    private Button perfilBOTON2;
+    private MenuItem FondoBlanco;
     @FXML
-    private Button eventosBOTON2;
+    private Button novedadesBOTON;
     @FXML
-    private Button alquileresBOTON2;
+    private MenuItem FondoOscuro;
     @FXML
-    private Button novedadesBOTON2;
+    private Button alquileresBOTON;
     @FXML
-    private Button librosBOTON2;
+    private Button eventosBOTON;
     @FXML
-    private Button addButton112;
+    private MenuItem ChatAyuda;
+    @FXML
+    private Button librosBOTON;
 
 
     @Override
@@ -55,7 +61,7 @@ public class Novedades implements Initializable {
 
     }
 
-    @Deprecated
+    @FXML
     public void perfilBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
         try {
@@ -69,7 +75,7 @@ public class Novedades implements Initializable {
 
 
 
-    @Deprecated
+    @FXML
     public void librosBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -82,7 +88,7 @@ public class Novedades implements Initializable {
     }
 
 
-    @Deprecated
+    @FXML
     public void alquileresBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -95,7 +101,7 @@ public class Novedades implements Initializable {
     }
 
 
-    @Deprecated
+    @FXML
     public void novedadesBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -107,7 +113,7 @@ public class Novedades implements Initializable {
         }
     }
 
-    @Deprecated
+    @FXML
     public void eventosBOTONclick(ActionEvent actionEvent) {
             System.out.println("funciona");
 
@@ -132,31 +138,75 @@ public class Novedades implements Initializable {
     }
 
 
-    @Deprecated
+    @FXML
     public void onAddClicked(ActionEvent actionEvent) {
     }
 
-    @FXML
+    @Deprecated
     public void perfilBOTON2click(ActionEvent actionEvent) {
     }
 
-    @FXML
+    @Deprecated
     public void eventosBOTON2click(ActionEvent actionEvent) {
     }
 
-    @FXML
+    @Deprecated
     public void librosBOTON2click(ActionEvent actionEvent) {
     }
 
-    @FXML
+    @Deprecated
     public void onAdd2Clicked(ActionEvent actionEvent) {
     }
 
-    @FXML
+    @Deprecated
     public void alquileresBOTON2click(ActionEvent actionEvent) {
     }
 
-    @FXML
+    @Deprecated
     public void novedadesBOTON2click(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void FondoBlancoclick(ActionEvent actionEvent) {
+        System.out.println("funciona");
+
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Novedades.fxml"));
+            this.PanelNovedades.getChildren().setAll(pane);
+        } catch (IOException ex) {
+            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    @FXML
+    public void FondoOscuroclick(ActionEvent actionEvent) {
+        System.out.println("funciona");
+
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("NovedadesOs.fxml"));
+            this.PanelNovedades.getChildren().setAll(pane);
+        } catch (IOException ex) {
+            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    @FXML
+    public void ChatAyudaclick(ActionEvent actionEvent) {
+    }
+
+    @Deprecated
+    public void FondoOscuroOSclick(ActionEvent actionEvent) {
+    }
+
+    @Deprecated
+    public void FondoBlancoOS(ActionEvent actionEvent) {
+    }
+
+    @Deprecated
+    public void ChatAyudaOSclick(ActionEvent actionEvent) {
+    }
+
+    @Deprecated
+    public void BOTONNOVEDADES2CLICK(ActionEvent actionEvent) {
     }
 }

@@ -49,5 +49,31 @@ public class AlquileresModel extends Conexion{
         }
         return alquileresLista;
         }
+//---------------------------------------------------------------------------------------------------------
+public ArrayList<Alquileres> PorPreciosEntre() {
+    this.conexion = true;
+    ArrayList<Alquileres> alquileresLista = new ArrayList<>();
 
+    try {
+        String sql = "Select * from alquileres where precio between (?,?)";
+        PreparedStatement ps = this.getConexion().prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+
+        while (rs.next()) {
+            Image combertir = new Image(rs.getBlob("imagen").getBinaryStream());
+            Alquileres a = new Alquileres(rs.getString("ubicacion"), rs.getString("nombre"), rs.getDouble("precio"), rs.getString("metrosCuadrados"),combertir, rs.getInt("nHabitaciones"), rs.getString("Descripcion"));
+            alquileresLista.add(a);
+        }
+
+        rs.close();
+        ps.close();
+
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }finally {
+        //se cierra conexion
+        this.cerrarConexion();
+    }
+    return alquileresLista;
+}
 }

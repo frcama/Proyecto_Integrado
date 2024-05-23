@@ -57,18 +57,7 @@
             <Image url="@../../../../../../../../../../imagenes/Image%20Pasted%202024-30-04%20at%2010.08.23.png" />
          </image>
       </ImageView>
-      <Button fx:id="perfilBOTON" alignment="CENTER" layoutX="280.0" layoutY="3.0" mnemonicParsing="false" onAction="#perfilBOTONclick" prefHeight="52.0" prefWidth="54.0" style="-fx-background-image: &quot;@img/logo.png&quot;; -fx-background-radius: 1000000; -fx-background-color: black;" textAlignment="JUSTIFY">
-         <graphic>
-            <ImageView fx:id="PerfilBOTON1" fitHeight="40.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@img/boton%20perfil.png" />
-               </image>
-               <effect>
-                  <ColorAdjust />
-               </effect>
-            </ImageView>
-         </graphic>
-      </Button>
+      <Button fx:id="perfilBOTON" alignment="CENTER" layoutX="280.0" layoutY="3.0" mnemonicParsing="false" onAction="#perfilBOTONclick" prefHeight="52.0" prefWidth="54.0" style="-fx-background-image: &quot;@img/logo.png&quot;; -fx-background-radius: 1000000; -fx-background-color: black;" textAlignment="JUSTIFY" />
       <Button fx:id="librosBOTON2" layoutX="203.0" layoutY="551.0" mnemonicParsing="false" onAction="#librosBOTON2click" prefHeight="43.0" prefWidth="54.0" style="-fx-background-radius: 5; -fx-background-color: black;">
          <effect>
             <DropShadow />
@@ -76,7 +65,7 @@
          <graphic>
             <ImageView fitHeight="33.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/libro.png" />
+                  <Image url="@img/libro2.png" />
                </image>
             </ImageView>
          </graphic>
@@ -88,7 +77,7 @@
          <graphic>
             <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/CASAboton.png" />
+                  <Image url="@img/CASAboton2.png" />
                </image>
             </ImageView>
          </graphic>
@@ -100,7 +89,7 @@
          <graphic>
             <ImageView fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/calendario.png" />
+                  <Image url="@img/calendario2.png" />
                </image>
             </ImageView>
          </graphic>
@@ -112,7 +101,7 @@
          <graphic>
             <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/bombilla.png" />
+                  <Image url="@img/bombilla.2.png" />
                </image>
             </ImageView>
          </graphic>
@@ -124,7 +113,7 @@
          <graphic>
             <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/añadir.png" />
+                  <Image url="@img/añadir2.png" />
                </image>
             </ImageView>
          </graphic>
@@ -145,5 +134,13 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
+      <ImageView fx:id="PerfilBOTON1" fitHeight="40.0" fitWidth="36.0" layoutX="291.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/boton%20perfil2.png" />
+         </image>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </ImageView>
    </children>
 </AnchorPane>

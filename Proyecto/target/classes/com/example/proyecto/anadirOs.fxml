@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextField?>
@@ -13,9 +14,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="PanelAnyadir" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Anyadir">
+<AnchorPane fx:id="PanelAnyadir" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.AnyadirAlquileres">
    <children>
-      <Label layoutX="106.0" layoutY="13.0" text="ESTUBOOK" underline="true">
+      <Label layoutX="105.0" layoutY="30.0" text="ESTUBOOK" underline="true">
          <font>
             <Font name="Papyrus" size="25.0" />
          </font>
@@ -36,34 +37,32 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <Text layoutX="16.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subir Articulo">
+      <Text layoutX="14.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subir Articulo">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Line endX="199.9000244140625" layoutX="112.0" layoutY="72.0" startX="-100.0" />
-      <Button layoutX="24.0" layoutY="120.0" mnemonicParsing="false" onAction="#OnSubirImagenbutton" text="+ Subir foto" />
-      <Text layoutX="18.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripción">
+      <Line endX="199.9000244140625" layoutX="114.0" layoutY="108.0" startX="-100.0" />
+      <Button layoutX="30.0" layoutY="157.0" mnemonicParsing="false" onAction="#OnSubirImagenbutton" text="+ Subir foto" />
+      <Line endX="199.9000244140625" layoutX="117.0" layoutY="233.0" startX="-100.0" />
+      <Text layoutX="21.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripción">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Line endX="199.9000244140625" layoutX="111.0" layoutY="205.0" startX="-100.0" />
-      <ImageView fx:id="muestraImagen" fitHeight="120.0" fitWidth="181.0" layoutX="124.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" />
-      <Text layoutX="21.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
-      <TextField fx:id="nombreDescripcion" layoutX="140.0" layoutY="222.0" />
-      <TextField fx:id="descripciontextField" layoutX="140.0" layoutY="259.0" prefHeight="82.0" prefWidth="150.0" />
-      <Text layoutX="20.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripción" />
-      <Text layoutX="21.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nº Habitaciones" />
+      <Line endX="199.9000244140625" layoutX="117.0" layoutY="275.0" startX="-100.0" />
+      <ImageView fx:id="muestraImagen" fitHeight="120.0" fitWidth="181.0" layoutX="138.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
+      <Text layoutX="21.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
+      <TextField fx:id="nombreDescripcion" layoutX="105.0" layoutY="288.0" />
+      <TextField fx:id="descripcion" layoutX="106.0" layoutY="323.0" prefHeight="82.0" prefWidth="150.0" />
+      <Text layoutX="21.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripción" />
+      <Line endX="199.9000244140625" layoutX="113.0" layoutY="427.0" startX="-100.0" />
+      <Text layoutX="26.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria" />
+      <ChoiceBox fx:id="categoriaChoiceBox" layoutX="106.0" layoutY="445.0" prefWidth="150.0" />
       <Line endX="199.9000244140625" layoutX="117.0" layoutY="487.0" startX="-100.0" />
       <Text layoutX="35.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio" />
-      <Spinner fx:id="precioSpinner" layoutX="140.0" layoutY="510.0" />
+      <Spinner fx:id="precioSpinner" layoutX="106.0" layoutY="510.0" />
       <Button fx:id="subirButton" layoutX="146.0" layoutY="560.0" mnemonicParsing="false" onAction="#onSubirButtonClick" text="Subir" />
-      <Button fx:id="atrasButton" layoutX="21.0" layoutY="18.0" mnemonicParsing="false" onAction="#onAtrasButtonClick" text="Atrás" />
-      <Text layoutX="16.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ubicación" />
-      <Text layoutX="16.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Metros cuadrados" />
-      <Spinner fx:id="nHabitacionesSpinner" layoutX="141.0" layoutY="445.0" />
-      <TextField fx:id="m2textField" layoutX="141.0" layoutY="354.0" />
-      <TextField fx:id="ubiTextField" layoutX="140.0" layoutY="401.0" />
+      <Button fx:id="atrasButton" layoutX="17.0" layoutY="36.0" mnemonicParsing="false" onAction="#onAtrasButtonClick" text="Atrás" />
    </children>
 </AnchorPane>

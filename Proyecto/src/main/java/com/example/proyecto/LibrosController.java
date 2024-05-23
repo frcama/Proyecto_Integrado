@@ -47,15 +47,15 @@ public class LibrosController implements Initializable {
     @FXML
     private ChoiceBox zonaFiltroChoicebox;
     @FXML
-    private Button eventosBOTON2;
+    private Button novedadesBOTON;
     @FXML
-    private Button novedadesBOTON2;
+    private Button eventosBOTON;
     @FXML
-    private Button alquileresBOTON2;
+    private Button addButton;
     @FXML
-    private Button librosBOTON2;
+    private Button alquileresBOTON;
     @FXML
-    private Button addButton2;
+    private Button librosBOTON;
 
 
     @Override
@@ -84,7 +84,7 @@ public class LibrosController implements Initializable {
 
     }
 
-    @Deprecated
+    @FXML
     public void librosBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -97,7 +97,7 @@ public class LibrosController implements Initializable {
     }
 
 
-    @Deprecated
+    @FXML
     public void alquileresBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -110,7 +110,7 @@ public class LibrosController implements Initializable {
     }
 
 
-    @Deprecated
+    @FXML
     public void novedadesBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -122,7 +122,7 @@ public class LibrosController implements Initializable {
         }
     }
 
-    @Deprecated
+    @FXML
     public void eventosBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -145,7 +145,7 @@ public class LibrosController implements Initializable {
         }
     }
 
-    @Deprecated
+    @FXML
     public void onAddClicked(ActionEvent actionEvent) {
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("AnyadirLibros.fxml"));
@@ -160,23 +160,23 @@ public class LibrosController implements Initializable {
     public void filtrarBottonClick(ActionEvent actionEvent) {
     }
 
-    @FXML
+    @Deprecated
     public void eventosBOTON2click(ActionEvent actionEvent) {
     }
 
-    @FXML
+    @Deprecated
     public void librosBOTON2click(ActionEvent actionEvent) {
     }
 
-    @FXML
+    @Deprecated
     public void onAdd2Clicked(ActionEvent actionEvent) {
     }
 
-    @FXML
+    @Deprecated
     public void alquileresBOTON2click(ActionEvent actionEvent) {
     }
 
-    @FXML
+    @Deprecated
     public void novedadesBOTON2click(ActionEvent actionEvent) {
     }
 }

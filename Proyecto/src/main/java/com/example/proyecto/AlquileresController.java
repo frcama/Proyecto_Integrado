@@ -41,17 +41,17 @@ public class AlquileresController implements Initializable{
     @FXML
     private GridPane cosasGripPane;
     @FXML
-    private Button eventosBOTON2;
+    private Button perfilBOTON;
     @FXML
-    private Button novedadesBOTON2;
+    private Button novedadesBOTON;
     @FXML
-    private Button addButton112;
+    private Button eventosBOTON;
     @FXML
-    private Button perfilBOTON2;
+    private Button addButton11;
     @FXML
-    private Button alquileresBOTON2;
+    private Button alquileresBOTON;
     @FXML
-    private Button librosBOTON2;
+    private Button librosBOTON;
 
 
     public void initialize(URL location, ResourceBundle resources) {
@@ -133,7 +133,7 @@ public class AlquileresController implements Initializable{
 
     }
 
-    @Deprecated
+    @FXML
     public void perfilBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
         try {
@@ -144,7 +144,7 @@ public class AlquileresController implements Initializable{
         }
     }
 
-    @Deprecated
+    @FXML
     public void librosBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -157,7 +157,7 @@ public class AlquileresController implements Initializable{
     }
 
 
-    @Deprecated
+    @FXML
     public void alquileresBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -170,7 +170,7 @@ public class AlquileresController implements Initializable{
     }
 
 
-    @Deprecated
+    @FXML
     public void novedadesBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -182,7 +182,7 @@ public class AlquileresController implements Initializable{
         }
     }
 
-    @Deprecated
+    @FXML
     public void eventosBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -194,7 +194,7 @@ public class AlquileresController implements Initializable{
         }
     }
 
-    @Deprecated
+    @FXML
     public void onAddClicked(ActionEvent actionEvent) {
 
         try {
@@ -216,27 +216,27 @@ public class AlquileresController implements Initializable{
 
     }
 
-    @FXML
+    @Deprecated
     public void perfilBOTON2click(ActionEvent actionEvent) {
     }
 
-    @FXML
+    @Deprecated
     public void eventosBOTON2click(ActionEvent actionEvent) {
     }
 
-    @FXML
+    @Deprecated
     public void librosBOTON2click(ActionEvent actionEvent) {
     }
 
-    @FXML
+    @Deprecated
     public void onAdd2Clicked(ActionEvent actionEvent) {
     }
 
-    @FXML
+    @Deprecated
     public void alquileresBOTON2click(ActionEvent actionEvent) {
     }
 
-    @FXML
+    @Deprecated
     public void novedadesBOTON2click(ActionEvent actionEvent) {
     }
 }
