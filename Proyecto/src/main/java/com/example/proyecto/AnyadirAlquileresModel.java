@@ -23,9 +23,9 @@ public class AnyadirAlquileresModel extends Conexion{
                     ps.setString(4, a.getMetrosCuadrados());
 
 
-                    File imagen = a.getImageFile();
-                    FileInputStream FIS = new FileInputStream(imagen);
-                    ps.setBinaryStream(5, FIS, (int) imagen.length());
+                        File imagen = a.getImageFile();
+                        FileInputStream FIS = new FileInputStream(imagen);
+                        ps.setBinaryStream(5, FIS, (int) imagen.length());
 
                     ps.setInt(6, a.getnHabitaciones());
                     ps.setString(7, a.getDescripcion());

@@ -6,10 +6,7 @@ import javafx.scene.shape.Path;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.math.BigDecimal;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -33,7 +30,10 @@ public class AlquileresModel extends Conexion{
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
-                Image combertir = new Image(rs.getBlob("imagen").getBinaryStream());
+                Image combertir = null;
+                if( rs.getBlob("imagen")!= null){
+                    combertir = new Image(rs.getBlob("imagen").getBinaryStream());
+                }
                 Alquileres a = new Alquileres(rs.getString("ubicacion"), rs.getString("nombre"), rs.getDouble("precio"), rs.getString("metrosCuadrados"),combertir, rs.getInt("nHabitaciones"), rs.getString("Descripcion"));
                 alquileresLista.add(a);
             }
@@ -43,7 +43,8 @@ public class AlquileresModel extends Conexion{
 
         } catch (SQLException e) {
             e.printStackTrace();
-        }finally {
+
+        } finally {
         //se cierra conexion
             this.cerrarConexion();
         }
