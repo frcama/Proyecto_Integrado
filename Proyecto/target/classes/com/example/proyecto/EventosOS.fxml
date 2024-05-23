@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="PanelEventos" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.EventosOS">
+<AnchorPane fx:id="PanelEventos" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.EventosController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="55.0" layoutX="-6.0" layoutY="546.0" stroke="BLACK" strokeType="INSIDE" width="342.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="65.0" layoutX="-3.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="342.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -33,14 +38,14 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <Label layoutX="32.0" layoutY="11.0" text="EVENTOS">
+      <Label layoutX="12.0" layoutY="9.0" text="EVENTOS" textFill="WHITE">
          <font>
-            <Font name="Impact" size="25.0" />
+            <Font name="Impact" size="30.0" />
          </font>
       </Label>
-      <Button fx:id="perfilBOTON" alignment="CENTER" layoutX="289.0" layoutY="8.0" mnemonicParsing="false" onAction="#perfilBOTONclick" prefHeight="38.0" prefWidth="42.0" style="-fx-background-image: &quot;@img/logo.png&quot;; -fx-background-radius: 1000000;" textAlignment="JUSTIFY">
+      <Button fx:id="perfilBOTON" alignment="CENTER" layoutX="279.0" layoutY="1.0" mnemonicParsing="false" onAction="#perfilBOTONclick" prefHeight="51.0" prefWidth="54.0" style="-fx-background-image: &quot;@img/logo.png&quot;; -fx-background-radius: 1000000;" textAlignment="JUSTIFY">
          <graphic>
-            <ImageView fx:id="PerfilBOTON" fitHeight="33.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="PerfilBOTON" fitHeight="41.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@img/boton%20perfil.png" />
                </image>
@@ -50,7 +55,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="librosBOTON" layoutX="206.0" layoutY="552.0" mnemonicParsing="false" onAction="#librosBOTONclick" prefHeight="43.0" prefWidth="54.0" style="-fx-background-radius: 5; -fx-background-color: c2c2c2;">
+      <Button fx:id="librosBOTON" layoutX="206.0" layoutY="552.0" mnemonicParsing="false" onAction="#librosBOTONclick" prefHeight="43.0" prefWidth="54.0" style="-fx-background-radius: 5; -fx-background-color: white;">
          <effect>
             <DropShadow />
          </effect>
@@ -62,7 +67,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="alquileresBOTON" layoutX="77.0" layoutY="553.0" mnemonicParsing="false" onAction="#alquileresBOTONclick" prefHeight="35.0" prefWidth="43.0" style="-fx-background-radius: 5; -fx-background-color: c2c2c2;">
+      <Button fx:id="alquileresBOTON" layoutX="77.0" layoutY="553.0" mnemonicParsing="false" onAction="#alquileresBOTONclick" prefHeight="35.0" prefWidth="43.0" style="-fx-background-radius: 5; -fx-background-color: white;">
          <effect>
             <DropShadow />
          </effect>
@@ -74,7 +79,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="eventosBOTON" layoutX="271.0" layoutY="552.0" mnemonicParsing="false" onAction="#eventosBOTONclick" prefHeight="42.0" prefWidth="46.0" style="-fx-background-radius: 5; -fx-background-color: c2c2c2;">
+      <Button fx:id="eventosBOTON" layoutX="271.0" layoutY="552.0" mnemonicParsing="false" onAction="#eventosBOTONclick" prefHeight="42.0" prefWidth="46.0" style="-fx-background-radius: 5; -fx-background-color: white;">
          <effect>
             <DropShadow />
          </effect>
@@ -86,7 +91,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="novedadesBOTON1" layoutX="13.0" layoutY="553.0" mnemonicParsing="false" onAction="#novedadesBOTONclick" prefHeight="37.0" prefWidth="51.0" style="-fx-background-radius: 5; -fx-background-color: c2c2c2;">
+      <Button fx:id="novedadesBOTON1" layoutX="13.0" layoutY="553.0" mnemonicParsing="false" onAction="#novedadesBOTONclick" prefHeight="37.0" prefWidth="51.0" style="-fx-background-radius: 5; -fx-background-color: white;">
          <effect>
             <DropShadow />
          </effect>
@@ -98,7 +103,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="addButton" layoutX="139.0" layoutY="552.0" mnemonicParsing="false" onAction="#onAddClicked" prefHeight="43.0" prefWidth="51.0" style="-fx-background-color: c2c2c2; -fx-background-radius: 5;">
+      <Button fx:id="addButton" layoutX="139.0" layoutY="552.0" mnemonicParsing="false" onAction="#onAddClicked" prefHeight="43.0" prefWidth="51.0" style="-fx-background-color: white; -fx-background-radius: 5;">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -109,6 +114,24 @@
                </image>
             </ImageView>
          </graphic>
+         <effect>
+            <DropShadow />
+         </effect>
       </Button>
+      <Line endX="224.99996948242188" layoutX="120.0" layoutY="544.0" startX="-126.49994659423828" />
+      <ChoiceBox fx:id="precioFiltroChoicebox" layoutX="11.0" layoutY="68.0" prefHeight="25.0" prefWidth="88.0" />
+      <ChoiceBox fx:id="nHabitacioneschoiceBox" layoutX="121.0" layoutY="68.0" prefHeight="25.0" prefWidth="88.0" />
+      <ChoiceBox fx:id="zonaFiltroChoicebox" layoutX="231.0" layoutY="68.0" prefHeight="25.0" prefWidth="88.0" />
+      <Button fx:id="filtrarButton" layoutX="123.0" layoutY="101.0" mnemonicParsing="false" onAction="#filtrarBottonClick" text="Aplicar Filtros" />
+      <Line endX="224.99996948242188" layoutX="109.0" layoutY="530.0" startX="-114.0000228881836" />
+      <GridPane fx:id="cosasGripPane" gridLinesVisible="true" layoutX="-2.0" layoutY="143.0" prefHeight="386.0" prefWidth="342.0" style="-fx-background-color: D6D6D6;">
+         <columnConstraints>
+            <ColumnConstraints fx:id="col1GripPane" hgrow="SOMETIMES" maxWidth="154.0" minWidth="10.0" prefWidth="119.60004425048828" />
+            <ColumnConstraints fx:id="col2GripPane" hgrow="SOMETIMES" maxWidth="213.99999237060547" minWidth="10.0" prefWidth="204.39995574951172" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
    </children>
 </AnchorPane>
