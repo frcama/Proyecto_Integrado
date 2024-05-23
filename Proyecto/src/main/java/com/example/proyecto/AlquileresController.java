@@ -114,7 +114,7 @@ public class AlquileresController implements Initializable{
         nHabitacionesAlquiler.add(nh4);
         nHabitacionesAlquiler.add(nh5);
 
-
+//quique es gey
         ChoiceBox<String> nHabitacioneschoiceBox = new ChoiceBox<>();
         nHabitacioneschoiceBox.setItems(nHabitacionesAlquiler);
 
