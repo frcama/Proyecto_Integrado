@@ -39,7 +39,7 @@ public class Perfil {
     @javafx.fxml.FXML
     private Button CerrarSesionBOTON;
     @javafx.fxml.FXML
-    private Button EditarFotoPerfil;
+    private Button editarPerfil;
 
     @javafx.fxml.FXML
     public void atrasDePerfilBOTONclick(ActionEvent actionEvent) {
@@ -53,7 +53,7 @@ public class Perfil {
         }
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void EditarFotoPerfilclick(ActionEvent actionEvent) {
 
         File file = fileChooser.showOpenDialog(new Stage());
@@ -76,7 +76,7 @@ public class Perfil {
         }
     }
 
-    @Deprecated
+    @javafx.fxml.FXML
     public void editarPerfilclick(ActionEvent actionEvent) {
     }
 }

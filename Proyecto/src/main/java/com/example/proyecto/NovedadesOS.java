@@ -59,6 +59,13 @@ public class NovedadesOS implements Initializable {
 
     @Deprecated
     public void chatNovedadesclick(ActionEvent actionEvent) {
+        System.out.println("funciona");
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Chat.fxml"));
+            this.PanelNovedadesOscuro.getChildren().setAll(pane);
+        } catch (IOException ex) {
+            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @Deprecated
@@ -80,9 +87,9 @@ public class NovedadesOS implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        BOTONNOVEDADES2.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';");
-        BOTONNOVEDADES2.setOnMouseEntered(e -> BOTONNOVEDADES2.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000); -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
-        BOTONNOVEDADES2.setOnMouseExited(e -> BOTONNOVEDADES2.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
+        perfilBOTON2.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';");
+        perfilBOTON2.setOnMouseEntered(e -> perfilBOTON2.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000); -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
+        perfilBOTON2.setOnMouseExited(e -> perfilBOTON2.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
 
         //funciones de botones
 
@@ -128,6 +135,14 @@ public class NovedadesOS implements Initializable {
 
     @javafx.fxml.FXML
     public void ChatAyudaOSclick(ActionEvent actionEvent) {
+        System.out.println("funciona");
+
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Chat.fxml"));
+            this.PanelNovedadesOscuro.getChildren().setAll(pane);
+        } catch (IOException ex) {
+            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @javafx.fxml.FXML
