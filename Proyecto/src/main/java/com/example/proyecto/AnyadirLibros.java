@@ -1,6 +1,7 @@
 package com.example.proyecto;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Spinner;
@@ -21,29 +22,29 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class AnyadirLibros {
-    @javafx.fxml.FXML
+    @FXML
     private Spinner precioSpinner;
-    @javafx.fxml.FXML
+    @FXML
     private TextField ubiTextField;
-    @javafx.fxml.FXML
+    @FXML
     private TextField nombreDescripcion;
-    @javafx.fxml.FXML
+    @FXML
     private TextField m2textField;
-    @javafx.fxml.FXML
+    @FXML
     private Button subirButton;
-    @javafx.fxml.FXML
+    @FXML
     private ImageView muestraImagen;
-    @javafx.fxml.FXML
+    @FXML
     private TextField descripciontextField;
-    @javafx.fxml.FXML
+    @FXML
     private Spinner nHabitacionesSpinner;
-    @javafx.fxml.FXML
+    @FXML
     private AnchorPane PanelAnyadirLIBROS;
-    @javafx.fxml.FXML
+    @FXML
     private Button atrasBOTON;
     private AnchorPane PanelAnyadirALQUILERES;
 
-    @javafx.fxml.FXML
+    @FXML
     public void atrasBOTONclick(ActionEvent actionEvent) {
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Libros.fxml"));
@@ -54,7 +55,7 @@ public class AnyadirLibros {
     }
 
 
-    @javafx.fxml.FXML
+    @FXML
     public void onSubirButtonClick(ActionEvent actionEvent) {
 
         AnyadirAlquileresModel am = new AnyadirAlquileresModel();
@@ -86,7 +87,7 @@ public class AnyadirLibros {
 
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void OnSubirImagenbutton(ActionEvent actionEvent) {
         FileChooser fileChooser = null;
         File file = fileChooser.showOpenDialog(new Stage());
