@@ -123,7 +123,7 @@
       <ChoiceBox fx:id="nHabitacioneschoiceBox" layoutX="118.0" layoutY="71.0" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: black;" />
       <ChoiceBox fx:id="zonaFiltroChoicebox" layoutX="228.0" layoutY="71.0" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: black;" />
       <Button fx:id="filtrarButton2" layoutX="120.0" layoutY="104.0" mnemonicParsing="false" onAction="#filtrarBotton2Click" style="-fx-background-color: black;" text="Aplicar Filtros" textFill="WHITE" />
-      <GridPane fx:id="cosasGripPane" gridLinesVisible="true" layoutX="-2.0" layoutY="141.0" prefHeight="398.0" prefWidth="342.0" style="-fx-background-color: D6D6D6;">
+      <GridPane fx:id="cosasGripPane" gridLinesVisible="true" layoutX="-2.0" layoutY="141.0" prefHeight="398.0" prefWidth="342.0" style="-fx-background-color: black;">
          <columnConstraints>
             <ColumnConstraints fx:id="col1GripPane" hgrow="SOMETIMES" maxWidth="154.0" minWidth="10.0" prefWidth="119.60004425048828" />
             <ColumnConstraints fx:id="col2GripPane" hgrow="SOMETIMES" maxWidth="213.99999237060547" minWidth="10.0" prefWidth="204.39995574951172" />
