@@ -1,5 +1,13 @@
 package com.example.proyecto;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.ColumnConstraints;
+import javafx.scene.layout.GridPane;
+
 public class LibrosOS {
     @javafx.fxml.FXML
     private ColumnConstraints col2GripPane;

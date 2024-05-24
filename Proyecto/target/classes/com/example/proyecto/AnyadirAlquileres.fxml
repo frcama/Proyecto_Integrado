@@ -44,7 +44,7 @@
       <Spinner fx:id="nHabitacionesSpinner" layoutX="141.0" layoutY="445.0" />
       <TextField fx:id="m2textField" layoutX="141.0" layoutY="354.0" />
       <TextField fx:id="ubiTextField" layoutX="140.0" layoutY="401.0" />
-      <Label layoutX="140.0" layoutY="-3.0" prefHeight="42.0" prefWidth="181.0" text="ALQUILERES" underline="true">
+      <Label layoutX="140.0" layoutY="-3.0" prefHeight="42.0" prefWidth="162.0" text="ALQUILERES" underline="true">
          <font>
             <Font name="Papyrus" size="20.0" />
          </font>
