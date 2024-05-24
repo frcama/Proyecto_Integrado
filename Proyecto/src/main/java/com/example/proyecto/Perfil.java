@@ -21,8 +21,6 @@ public class Perfil {
     FileChooser fileChooser = new FileChooser();
 
     @javafx.fxml.FXML
-    private Button atrasDePerfilBOTON;
-    @javafx.fxml.FXML
     private AnchorPane panelDePerfil;
     @javafx.fxml.FXML
     private TextField nombreusuarioPerfil;
@@ -37,11 +35,13 @@ public class Perfil {
     @javafx.fxml.FXML
     private ImageView fotoPerfil;
     @javafx.fxml.FXML
-    private Button CerrarSesionBOTON;
+    private Button CerrarSesionBOTON2;
     @javafx.fxml.FXML
-    private Button editarPerfil;
+    private Button atrasDePerfilBOTON2;
+    @javafx.fxml.FXML
+    private Button EditarFotoPerfil2;
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void atrasDePerfilBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -64,7 +64,7 @@ public class Perfil {
         }
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void CerrarSesionBOTONCLICK(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -76,7 +76,19 @@ public class Perfil {
         }
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void editarPerfilclick(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void atrasDePerfilBOTON2click(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void EditarFotoPerfil2click(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void CerrarSesionBOTON2CLICK(ActionEvent actionEvent) {
     }
 }
