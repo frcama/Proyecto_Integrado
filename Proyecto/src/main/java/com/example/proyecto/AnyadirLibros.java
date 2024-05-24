@@ -39,10 +39,10 @@ public class AnyadirLibros {
     @FXML
     private Spinner nHabitacionesSpinner;
     @FXML
-    private AnchorPane PanelAnyadirLIBROS;
-    @FXML
     private Button atrasBOTON;
     private AnchorPane PanelAnyadirALQUILERES;
+    @FXML
+    private AnchorPane PanelAnyadirLIBROSOs;
 
     @FXML
     public void atrasBOTONclick(ActionEvent actionEvent) {

@@ -33,13 +33,13 @@ public class Perfil {
     @javafx.fxml.FXML
     private ImageView fotoPerfil;
     @javafx.fxml.FXML
-    private AnchorPane panelDePerfilOs;
-    @javafx.fxml.FXML
     private Button atrasDePerfilBOTON;
     @javafx.fxml.FXML
     private Button CerrarSesionBOTON;
     @javafx.fxml.FXML
     private Button editarPerfil;
+    @javafx.fxml.FXML
+    private AnchorPane panelDePerfil;
 
     @javafx.fxml.FXML
     public void atrasDePerfilBOTONclick(ActionEvent actionEvent) {
