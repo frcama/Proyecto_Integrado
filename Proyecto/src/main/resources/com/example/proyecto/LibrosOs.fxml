@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="PanelDeLibros" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.LibrosOS">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="64.0" layoutX="-2.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="341.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.12156862765550613" green="0.13725490868091583" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8533333539962769" green="0.20000000298023224" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="122.0" layoutY="14.0" text="LIBROS">
+         <font>
+            <Font name="Impact" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="perfilBOTON2" alignment="CENTER" layoutX="280.0" layoutY="3.0" mnemonicParsing="false" onAction="#perfilBOTON2click" prefHeight="52.0" prefWidth="54.0" style="-fx-background-image: &quot;@img/logo.png&quot;; -fx-background-radius: 1000000; -fx-background-color: black;" textAlignment="JUSTIFY">
+         <graphic>
+            <ImageView fx:id="PerfilBOTON1" fitHeight="40.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/boton%20perfil2.png" />
+               </image>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="librosBOTON2" layoutX="203.0" layoutY="551.0" mnemonicParsing="false" onAction="#librosBOTON2click" prefHeight="43.0" prefWidth="54.0" style="-fx-background-radius: 5; -fx-background-color: black;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/libro2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="alquileresBOTON2" layoutX="74.0" layoutY="552.0" mnemonicParsing="false" onAction="#alquileresBOTON2click" prefHeight="35.0" prefWidth="43.0" style="-fx-background-radius: 5; -fx-background-color: black;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/CASAboton2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="eventosBOTON2" layoutX="268.0" layoutY="551.0" mnemonicParsing="false" onAction="#eventosBOTON2click" prefHeight="42.0" prefWidth="46.0" style="-fx-background-radius: 5; -fx-background-color: black;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/calendario2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="novedadesBOTON2" layoutX="10.0" layoutY="552.0" mnemonicParsing="false" onAction="#novedadesBOTON2click" prefHeight="37.0" prefWidth="51.0" style="-fx-background-radius: 5; -fx-background-color: black;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/bombilla.2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="addButton2" layoutX="136.0" layoutY="551.0" mnemonicParsing="false" onAction="#onAdd2Clicked" prefHeight="43.0" prefWidth="51.0" style="-fx-background-color: black; -fx-background-radius: 5;">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/añadir2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <ChoiceBox fx:id="precioFiltroChoicebox" layoutX="8.0" layoutY="71.0" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: black;" />
+      <ChoiceBox fx:id="nHabitacioneschoiceBox" layoutX="118.0" layoutY="71.0" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: black;" />
+      <ChoiceBox fx:id="zonaFiltroChoicebox" layoutX="228.0" layoutY="71.0" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: black;" />
+      <Button fx:id="filtrarButton2" layoutX="120.0" layoutY="104.0" mnemonicParsing="false" onAction="#filtrarBotton2Click" style="-fx-background-color: black;" text="Aplicar Filtros" textFill="WHITE" />
+      <GridPane fx:id="cosasGripPane" gridLinesVisible="true" layoutX="-2.0" layoutY="141.0" prefHeight="398.0" prefWidth="342.0" style="-fx-background-color: D6D6D6;">
+         <columnConstraints>
+            <ColumnConstraints fx:id="col1GripPane" hgrow="SOMETIMES" maxWidth="154.0" minWidth="10.0" prefWidth="119.60004425048828" />
+            <ColumnConstraints fx:id="col2GripPane" hgrow="SOMETIMES" maxWidth="213.99999237060547" minWidth="10.0" prefWidth="204.39995574951172" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <MenuButton alignment="TOP_CENTER" layoutX="-2.0" layoutY="7.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="27.0" style="-fx-background-color: #1f23ff;">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Caambiar fondo" />
+            <MenuItem mnemonicParsing="false" text="Chat de ayuda" />
+         </items>
+         <graphic>
+            <ImageView fitHeight="44.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/opciones2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </MenuButton>
+   </children>
+</AnchorPane>
