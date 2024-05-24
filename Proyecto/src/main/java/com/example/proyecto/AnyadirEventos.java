@@ -25,9 +25,9 @@ public class AnyadirEventos {
     @javafx.fxml.FXML
     private Spinner nHabitacionesSpinner;
     @javafx.fxml.FXML
-    private AnchorPane PanelAnyadirEVENTOS;
-    @javafx.fxml.FXML
     private Button atrasButton;
+    @javafx.fxml.FXML
+    private AnchorPane PanelAnyadirEVENTOSOs;
 
     @javafx.fxml.FXML
     public void onSubirButtonClick(ActionEvent actionEvent) {

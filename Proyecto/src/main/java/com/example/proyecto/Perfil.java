@@ -33,15 +33,15 @@ public class Perfil {
     @javafx.fxml.FXML
     private ImageView fotoPerfil;
     @javafx.fxml.FXML
-    private AnchorPane panelDePerfilOs;
+    private Button atrasDePerfilBOTON;
     @javafx.fxml.FXML
-    private Button CerrarSesionBOTON2;
+    private Button CerrarSesionBOTON;
     @javafx.fxml.FXML
-    private Button atrasDePerfilBOTON2;
+    private Button editarPerfil;
     @javafx.fxml.FXML
-    private Button EditarFotoPerfil2;
+    private AnchorPane panelDePerfil;
 
-    @Deprecated
+    @javafx.fxml.FXML
     public void atrasDePerfilBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -64,7 +64,7 @@ public class Perfil {
         }
     }
 
-    @Deprecated
+    @javafx.fxml.FXML
     public void CerrarSesionBOTONCLICK(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -76,19 +76,19 @@ public class Perfil {
         }
     }
 
-    @Deprecated
+    @javafx.fxml.FXML
     public void editarPerfilclick(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void atrasDePerfilBOTON2click(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void EditarFotoPerfil2click(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void CerrarSesionBOTON2CLICK(ActionEvent actionEvent) {
     }
 }
