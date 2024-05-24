@@ -60,7 +60,7 @@ public class InicioSesionModel extends Conexion {
                 System.out.println("El email y la contraseña no se encontraron en la base de datos.");
             }
         } catch (SQLException e) {
-            System.out.println("Error al conectar con la base de datos: ");
+            System.out.println("Error al conectar con la base de datos: !");
         }finally {
             this.cerrarConexion();
         }
