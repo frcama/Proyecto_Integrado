@@ -36,7 +36,7 @@ public class AlquileresModel extends Conexion{
                     InputStream inputStream = blob.getBinaryStream();
                     imagen = new Image(inputStream);
                 }
-                Alquileres a = new Alquileres(rs.getString("ubicacion"), rs.getString("nombre"), rs.getDouble("precio"), rs.getString("metrosCuadrados"), imagen, rs.getInt("NumHabitaciones"), rs.getString("Descripcion"), rs.getDate("fechaPublicacion"));
+                Alquileres a = new Alquileres(rs.getString("Ubicacion"), rs.getString("nombre"), rs.getDouble("precio"), rs.getString("MetrosCuadrados"), imagen, rs.getInt("NumHabitaciones"), rs.getString("Descripcion"), rs.getDate("FechaPublicacion"));
                 alquileresLista.add(a);
             }
 
@@ -64,7 +64,7 @@ public ArrayList<Alquileres> PorPreciosEntre() {
 
         while (rs.next()) {
             Image combertir = new Image(rs.getBlob("imagen").getBinaryStream());
-            Alquileres a = new Alquileres(rs.getString("ubicacion"), rs.getString("nombre"), rs.getDouble("precio"), rs.getString("metrosCuadrados"),combertir, rs.getInt("nHabitaciones"), rs.getString("Descripcion"));
+            Alquileres a = new Alquileres(rs.getString("ubicacion"), rs.getString("nombre"), rs.getDouble("precio"), rs.getString("metrosCuadrados"),combertir, rs.getInt("NumHabitaciones"), rs.getString("Descripcion"));
             alquileresLista.add(a);
         }
 

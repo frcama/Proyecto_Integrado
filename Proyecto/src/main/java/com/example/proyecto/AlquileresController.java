@@ -47,8 +47,6 @@ public class AlquileresController implements Initializable{
     @FXML
     private TextField PrecioMinTF;
     @FXML
-    private HBox panelHBox;
-    @FXML
     private GridPane cosasGripPane;
 
 
