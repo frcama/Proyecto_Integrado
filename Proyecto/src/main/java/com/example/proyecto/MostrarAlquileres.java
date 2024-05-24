@@ -35,7 +35,6 @@ public class MostrarAlquileres extends Conexion{
              ubiAlquilerLabel.setText(al.getUbicacion());
              metrosAlquilerLabel.setText(al.getMetrosCuadrados());
              nHabsAlquilerLabel.setText(String.valueOf(al.getnHabitaciones()));
-             imagenalquilerImageView.setImage(al.getImagen());
              descripcionAlquilerLabel.setText(al.getDescripcion());
              precioAlquilerLabel.setText(String.valueOf(al.getPrecio()));
         }
