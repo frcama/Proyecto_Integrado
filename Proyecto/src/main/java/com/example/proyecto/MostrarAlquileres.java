@@ -5,7 +5,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
-import java.io.File;
 import java.util.ArrayList;
 
 public class MostrarAlquileres extends Conexion{
@@ -27,7 +26,7 @@ public class MostrarAlquileres extends Conexion{
     private Label descripcionAlquilerLabel;
 
     @javafx.fxml.FXML
-    public void initialize() {
+    public void listar(String ubi, String nom, Double Precio, String m2, Image Image, int nHabs, String descripcion) {
 
         AlquileresModel am= new AlquileresModel();
 
@@ -52,13 +51,7 @@ public class MostrarAlquileres extends Conexion{
              descripcionAlquilerLabel.setText(Descripcion);
 
 
-
         }
-
-
-
     }
-
-
 
 }

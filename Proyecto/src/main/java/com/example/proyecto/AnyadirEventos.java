@@ -9,25 +9,25 @@ import javafx.scene.layout.AnchorPane;
 
 public class AnyadirEventos {
     @javafx.fxml.FXML
-    private Spinner precioSpinner;
-    @javafx.fxml.FXML
-    private TextField ubiTextField;
-    @javafx.fxml.FXML
-    private TextField nombreDescripcion;
-    @javafx.fxml.FXML
-    private TextField m2textField;
-    @javafx.fxml.FXML
     private Button subirButton;
     @javafx.fxml.FXML
     private ImageView muestraImagen;
     @javafx.fxml.FXML
-    private TextField descripciontextField;
-    @javafx.fxml.FXML
-    private Spinner nHabitacionesSpinner;
-    @javafx.fxml.FXML
     private AnchorPane PanelAnyadirEVENTOS;
     @javafx.fxml.FXML
     private Button atrasButton;
+    @javafx.fxml.FXML
+    private DatePicker fechaEventos;
+    @javafx.fxml.FXML
+    private TextField descripcionEventos;
+    @javafx.fxml.FXML
+    private TextField nombreEventos;
+    @javafx.fxml.FXML
+    private Spinner precioEventos;
+    @javafx.fxml.FXML
+    private TextField ubicacionEventos;
+    @javafx.fxml.FXML
+    private TextField tipoEventos;
 
     @javafx.fxml.FXML
     public void onSubirButtonClick(ActionEvent actionEvent) {
