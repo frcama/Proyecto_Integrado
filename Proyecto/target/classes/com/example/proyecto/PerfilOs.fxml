@@ -11,59 +11,59 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="panelDePerfil" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Perfil">
+<AnchorPane fx:id="panelDePerfilOs" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.PerfilOs">
    <children>
-      <Label layoutX="14.0" layoutY="150.0" text="Nombre">
+      <Label layoutX="14.0" layoutY="150.0" text="Nombre" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="14.0" layoutY="300.0" prefHeight="42.0" prefWidth="124.0" text="Descripción">
+      <Label layoutX="14.0" layoutY="300.0" prefHeight="42.0" prefWidth="124.0" text="Descripción" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="14.0" layoutY="230.0" prefHeight="42.0" prefWidth="112.0" text="de Usuario">
+      <Label layoutX="14.0" layoutY="230.0" prefHeight="42.0" prefWidth="112.0" text="de Usuario" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Line endX="231.99996948242188" layoutX="103.0" layoutY="128.0" startX="-109.30000305175781" />
-      <Line endX="219.0" endY="-1.52587890625E-5" layoutX="116.0" layoutY="201.0" startX="-116.0000228881836" startY="-1.52587890625E-5" />
-      <Line endX="219.0" endY="-1.52587890625E-5" layoutX="116.0" layoutY="281.0" startX="-116.0000228881836" startY="-1.52587890625E-5" />
-      <Line endX="219.0" endY="-1.52587890625E-5" layoutX="116.0" layoutY="369.0" startX="-116.0000228881836" startY="-1.52587890625E-5" />
-      <Line endX="219.0" endY="-1.52587890625E-5" layoutX="116.0" layoutY="454.0" startX="-116.0000228881836" startY="-1.52587890625E-5" />
-      <Label layoutX="14.0" layoutY="215.0" text="Nombre">
+      <Line endX="231.99996948242188" layoutX="103.0" layoutY="128.0" startX="-109.30000305175781" stroke="WHITE" />
+      <Line endX="219.0" endY="-1.52587890625E-5" layoutX="116.0" layoutY="201.0" startX="-116.0000228881836" startY="-1.52587890625E-5" stroke="WHITE" />
+      <Line endX="219.0" endY="-1.52587890625E-5" fill="BLACK" layoutX="116.0" layoutY="281.0" startX="-116.0000228881836" startY="-1.52587890625E-5" stroke="WHITE" />
+      <Line endX="219.0" endY="-1.52587890625E-5" layoutX="116.0" layoutY="369.0" startX="-116.0000228881836" startY="-1.52587890625E-5" stroke="WHITE" />
+      <Line endX="219.0" endY="-1.52587890625E-5" fill="WHITE" layoutX="116.0" layoutY="454.0" startX="-116.0000228881836" startY="-1.52587890625E-5" stroke="WHITE" />
+      <Label layoutX="14.0" layoutY="215.0" text="Nombre" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="14.0" layoutY="376.0" prefHeight="42.0" prefWidth="59.0" text="Fecha ">
+      <Label layoutX="14.0" layoutY="376.0" prefHeight="42.0" prefWidth="59.0" text="Fecha " textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="13.0" layoutY="397.0" prefHeight="42.0" prefWidth="130.0" text="nacimiento">
+      <Label layoutX="13.0" layoutY="397.0" prefHeight="42.0" prefWidth="130.0" text="nacimiento" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="13.0" layoutY="424.0" prefHeight="30.0" prefWidth="96.0" text="(Opcional)">
+      <Label layoutX="13.0" layoutY="424.0" prefHeight="30.0" prefWidth="96.0" text="(Opcional)" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="206.0" layoutY="47.0" text="PERFIL">
+      <Label layoutX="206.0" layoutY="47.0" text="PERFIL" textFill="WHITE">
          <font>
             <Font name="Cooper Black" size="25.0" />
          </font>
       </Label>
       <Circle fill="DODGERBLUE" layoutX="143.0" layoutY="62.0" radius="43.0" stroke="BLACK" strokeType="INSIDE" />
-      <Button fx:id="atrasDePerfilBOTON" layoutX="18.0" layoutY="22.0" mnemonicParsing="false" onAction="#atrasDePerfilBOTONclick" text="ATRAS" />
+      <Button fx:id="atrasDePerfilBOTON2" layoutX="18.0" layoutY="22.0" mnemonicParsing="false" onAction="#atrasDePerfilBOTON2click" style="-fx-background-color: black; -fx-border-color: white;" text="ATRAS" textFill="WHITE" />
       <ImageView fx:id="fotoPerfil" fitHeight="80.0" fitWidth="86.0" layoutX="100.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="EditarFotoPerfil" layoutX="206.0" layoutY="89.0" mnemonicParsing="false" onAction="#EditarFotoPerfilclick" prefHeight="26.0" prefWidth="96.0" text="EDITAR FOTO " />
-      <Line endX="219.0" endY="-1.52587890625E-5" layoutX="116.0" layoutY="536.0" startX="-116.0000228881836" startY="-1.52587890625E-5" />
-      <Label layoutX="16.0" layoutY="483.0" prefHeight="30.0" prefWidth="104.0" text="Contraseña">
+      <Button fx:id="EditarFotoPerfil2" layoutX="206.0" layoutY="89.0" mnemonicParsing="false" onAction="#EditarFotoPerfil2click" prefHeight="26.0" prefWidth="96.0" style="-fx-background-color: black; -fx-border-color: white;" text="EDITAR FOTO " textFill="WHITE" />
+      <Line endX="219.0" endY="-1.52587890625E-5" layoutX="116.0" layoutY="536.0" startX="-116.0000228881836" startY="-1.52587890625E-5" stroke="WHITE" />
+      <Label layoutX="16.0" layoutY="483.0" prefHeight="30.0" prefWidth="104.0" text="Contraseña" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
@@ -73,11 +73,11 @@
       <TextField fx:id="descripccionPerfil" layoutX="154.0" layoutY="300.0" prefHeight="50.0" prefWidth="150.0" />
       <PasswordField fx:id="contrsaenaPerfil" layoutX="155.0" layoutY="483.0" />
       <DatePicker fx:id="fechaNacimientoPerfil" layoutX="158.0" layoutY="397.0" prefHeight="26.0" prefWidth="150.0" />
-      <Label layoutX="14.0" layoutY="555.0" text="Cerrar Sesión">
+      <Label layoutX="14.0" layoutY="555.0" text="Cerrar Sesión" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Button fx:id="CerrarSesionBOTON" layoutX="160.0" layoutY="558.0" mnemonicParsing="false" onAction="#CerrarSesionBOTONCLICK" prefHeight="26.0" prefWidth="150.0" text="Cerrar Sesión" />
+      <Button fx:id="CerrarSesionBOTON2" layoutX="160.0" layoutY="558.0" mnemonicParsing="false" onAction="#CerrarSesionBOTON2CLICK" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: black; -fx-border-color: white;" text="Cerrar Sesión" textFill="WHITE" />
    </children>
 </AnchorPane>
