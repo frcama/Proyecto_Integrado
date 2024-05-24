@@ -104,7 +104,7 @@ public class Alquileres{
     }
 
     public File getImageFile() {
-        return imageFile;
+         return imageFile;
     }
 
     public void setImageFile(File imageFile) {

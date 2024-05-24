@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.effect.DropShadow?>
@@ -13,7 +15,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
@@ -130,15 +132,6 @@
          </effect>
       </Button>
       <Line endX="224.99996948242188" layoutX="110.0" layoutY="534.0" startX="-114.0000228881836" />
-      <GridPane fx:id="cosasGripPane" gridLinesVisible="true" layoutX="-4.0" layoutY="142.0" prefHeight="393.0" prefWidth="342.0" style="-fx-background-color: D6D6D6;">
-         <columnConstraints>
-            <ColumnConstraints fx:id="col1GripPane" hgrow="SOMETIMES" maxWidth="154.0" minWidth="10.0" prefWidth="119.60004425048828" />
-            <ColumnConstraints fx:id="col2GripPane" hgrow="SOMETIMES" maxWidth="213.99999237060547" minWidth="10.0" prefWidth="204.39995574951172" />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-         </rowConstraints>
-      </GridPane>
       <MenuButton alignment="TOP_CENTER" layoutX="1.0" layoutY="7.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="27.0" style="-fx-background-color: #1f23ff;">
          <items>
             <MenuItem mnemonicParsing="false" text="Cambiar fondo" />
@@ -164,5 +157,21 @@
             <Font size="15.0" />
          </font>
       </Label>
+      <HBox fx:id="panelHBox" layoutX="3.0" layoutY="164.0" prefHeight="346.0" prefWidth="328.0">
+         <children>
+            <ScrollPane prefHeight="346.0" prefWidth="330.0">
+               <content>
+                  <GridPane fx:id="muesrtaGRidPane" prefHeight="0.0" prefWidth="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                  </GridPane>
+               </content>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </ScrollPane>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

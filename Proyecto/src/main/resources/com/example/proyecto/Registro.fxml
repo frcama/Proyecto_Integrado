@@ -23,7 +23,7 @@
       <TextField fx:id="correoTF" layoutX="76.0" layoutY="300.0" prefHeight="25.0" prefWidth="181.0" promptText="Correo electronico" style="-fx-border-color: #00C8F8;" />
       <TextField fx:id="contrasenyaTF" layoutX="77.0" layoutY="348.0" prefHeight="25.0" prefWidth="181.0" promptText="Contraseña" style="-fx-border-color: #00C8F8;" />
       <TextField fx:id="RepeContrasenyaTF" layoutX="78.0" layoutY="406.0" prefHeight="25.0" prefWidth="181.0" promptText="Repite Contraseña" style="-fx-border-color: #00C8F8;" />
-      <Button fx:id="regisrtarseBOTON" layoutX="80.0" layoutY="531.0" mnemonicParsing="false" onAction="#regisrtarseBOTONclick" prefHeight="27.0" prefWidth="82.0" style="-fx-border-color: BLACK;" text="REGISTRATE" />
+      <Button fx:id="aceptarBOTON" layoutX="80.0" layoutY="531.0" mnemonicParsing="false" onAction="#aceptarBOTONclick" prefHeight="25.0" prefWidth="74.0" style="-fx-border-color: BLACK;" text="ACEPTAR" />
       <Button fx:id="cancelarBOTON" layoutX="180.0" layoutY="531.0" mnemonicParsing="false" onAction="#cancelarBOTONclick" prefHeight="27.0" prefWidth="81.0" style="-fx-border-color: BLACK;" text="CANCELAR" />
       <DatePicker fx:id="fechaNacimiento" layoutX="77.0" layoutY="456.0" prefHeight="26.0" prefWidth="182.0" promptText="Fecha de nacimiento" style="-fx-background-color: #00C8F8;" />
       <ImageView fitHeight="63.0" fitWidth="104.0" layoutX="267.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">

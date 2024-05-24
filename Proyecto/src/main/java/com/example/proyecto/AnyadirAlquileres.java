@@ -37,13 +37,13 @@ public class AnyadirAlquileres implements Initializable {
     @javafx.fxml.FXML
     private TextField m2textField;
     @javafx.fxml.FXML
-    private AnchorPane PanelAnyadirALQUILERES;
-    @javafx.fxml.FXML
     private TextField descripciontextField;
     @javafx.fxml.FXML
-    private Button atrasBOTON;
-    @javafx.fxml.FXML
     private Spinner nHabitacionesSpinner;
+    @javafx.fxml.FXML
+    private AnchorPane PanelAnyadirALQUILERES;
+    @javafx.fxml.FXML
+    private Button atrasBOTON;
 
 
     @Override
@@ -108,4 +108,6 @@ public class AnyadirAlquileres implements Initializable {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+
 }

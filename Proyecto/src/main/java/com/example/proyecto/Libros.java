@@ -1,6 +1,7 @@
 package com.example.proyecto;
 
 import java.awt.image.BufferedImage;
+import java.time.LocalDate;
 
 public class Libros {
 
@@ -10,6 +11,15 @@ public class Libros {
     private double precio;
     private int curso;
     private BufferedImage imagen;
+    private LocalDate fechaPublicacion;
+
+    public LocalDate getFechaPublicacion() {
+        return fechaPublicacion;
+    }
+
+    public void setFechaPublicacion(LocalDate fechaPublicacion) {
+        this.fechaPublicacion = fechaPublicacion;
+    }
 
     public String getTitulo() {
         return titulo;
@@ -59,13 +69,14 @@ public class Libros {
         this.imagen = imagen;
     }
 
-    public Libros(String titulo, String isbn, String editorial, double precio, int curso, BufferedImage imagen) {
+    public Libros(String titulo, String isbn, String editorial, double precio, int curso, BufferedImage imagen, LocalDate fechaPublicacion) {
         this.titulo = titulo;
         this.isbn = isbn;
         this.editorial = editorial;
         this.precio = precio;
         this.curso = curso;
         this.imagen = imagen;
+        this.fechaPublicacion = fechaPublicacion;
     }
 
     public Libros() {

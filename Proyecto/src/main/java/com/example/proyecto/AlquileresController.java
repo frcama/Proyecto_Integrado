@@ -64,16 +64,15 @@ public class AlquileresController implements Initializable{
         alquileresBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);");
 
 
-
         ObservableList<String> preciosAlquiler = FXCollections.observableArrayList();
         ObservableList<String> zonaAlquiler = FXCollections.observableArrayList();
         ObservableList<String> nHabitacionesAlquiler = FXCollections.observableArrayList();
 
-        String precios1= "1 Habitación";
-        String precios2= "2 Habitaciones";
-        String precios3= "3 Habitaciones";
-        String precios4= "4 Habitaciones";
-        String precios5= "5 Habitaciones";
+        String precios1 = "1 Habitación";
+        String precios2 = "2 Habitaciones";
+        String precios3 = "3 Habitaciones";
+        String precios4 = "4 Habitaciones";
+        String precios5 = "5 Habitaciones";
 
 
         preciosAlquiler.add(precios1);
@@ -85,11 +84,11 @@ public class AlquileresController implements Initializable{
         NumHabChoiceBox.setItems(preciosAlquiler);
 
 
-        String zona1= "Zona centro";
-        String zona2= "Cerca de playa";
-        String zona3= "Cerca de Universidades";
-        String zona4="Afueras";
-        String zona5= "Cerca de Ocio";
+        String zona1 = "Zona centro";
+        String zona2 = "Cerca de playa";
+        String zona3 = "Cerca de Universidades";
+        String zona4 = "Afueras";
+        String zona5 = "Cerca de Ocio";
 
 
         zonaAlquiler.add(zona1);
@@ -101,11 +100,11 @@ public class AlquileresController implements Initializable{
         zonaFiltroChoicebox.setItems(zonaAlquiler);
 
 
-        String nh1= "Zona centro";
-        String nh2= "Cerca de playa";
-        String nh3= "Cerca de Universidades";
-        String nh4= "Afueras";
-        String nh5= "Cerca de Ocio";
+        String nh1 = "Zona centro";
+        String nh2 = "Cerca de playa";
+        String nh3 = "Cerca de Universidades";
+        String nh4 = "Afueras";
+        String nh5 = "Cerca de Ocio";
 
 
         nHabitacionesAlquiler.add(nh1);
@@ -114,24 +113,16 @@ public class AlquileresController implements Initializable{
         nHabitacionesAlquiler.add(nh4);
         nHabitacionesAlquiler.add(nh5);
 
-//quique es gey
         ChoiceBox<String> nHabitacioneschoiceBox = new ChoiceBox<>();
         nHabitacioneschoiceBox.setItems(nHabitacionesAlquiler);
-
 
 
         NumHabChoiceBox.setValue("Nº Hab");
         zonaFiltroChoicebox.setValue("Ubicación");
         nHabitacioneschoiceBox.setValue("Número Habitaciones");
 
-        //AlquileresModel am = new AlquileresModel();
-        //ArrayList<Alquileres> lista = am.mostrarAlquileres();
 
 
-       /* for (Alquileres a : lista){
-            System.out.println(a.getImagen());
-        }
-        */
     }
 
     @FXML
