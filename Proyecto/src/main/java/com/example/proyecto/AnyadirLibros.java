@@ -71,9 +71,7 @@ public class AnyadirLibros {
         int nHabs = (Integer) nHabitacionesSpinner.getValue();
         int precio = (Integer) precioSpinner.getValue();
 
-        Alquileres a = new Alquileres(ubi, nombre,precio,m2,imagen,nHabs,descripcion );
 
-        am.AnyadirAlquiler(a);
 
     }
 

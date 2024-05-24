@@ -26,32 +26,17 @@ public class MostrarAlquileres extends Conexion{
     private Label descripcionAlquilerLabel;
 
     @javafx.fxml.FXML
-    public void listar(String ubi, String nom, Double Precio, String m2, Image Image, int nHabs, String descripcion) {
-
-        AlquileresModel am= new AlquileresModel();
-
-        ArrayList<Alquileres> listaAlquileres = am.mostrarAlquileres();
-
-        for ( Alquileres al : listaAlquileres){
+    public void listar(Alquileres al) {
 
 
-             String ubicacion= al.getUbicacion();
-             String nombre = al.getNombre();
-             String precio = String.valueOf(al.getPrecio());
-             String metrosCuadrados = al.getMetrosCuadrados();
-             Image imagen = al.getImagen();
-             String nHabitaciones = String.valueOf(al.getnHabitaciones());
-             String Descripcion  = al.getDescripcion();
-
-             nombreAlquilerLabel.setText(nombre);
-             ubiAlquilerLabel.setText(ubicacion);
-             metrosAlquilerLabel.setText(metrosCuadrados);
-             nHabsAlquilerLabel.setText(nHabitaciones);
-             imagenalquilerImageView.setImage(imagen);
-             descripcionAlquilerLabel.setText(Descripcion);
-
-
+             nombreAlquilerLabel.setText(al.getNombre());
+             ubiAlquilerLabel.setText(al.getUbicacion());
+             metrosAlquilerLabel.setText(al.getMetrosCuadrados());
+             nHabsAlquilerLabel.setText(String.valueOf(al.getnHabitaciones()));
+        Image image =  new Image(getClass().getResourceAsStream(al.getImgSrc()));
+             imagenalquilerImageView.setImage(al.getImagen());
+             descripcionAlquilerLabel.setText(al.getDescripcion());
+             precioAlquilerLabel.setText(String.valueOf(al.getPrecio()));
         }
     }
 
-}

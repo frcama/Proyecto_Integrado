@@ -16,6 +16,8 @@ import java.awt.image.BufferedImage;
 import java.io.*;
 import java.net.URL;
 import java.security.cert.PolicyNode;
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -69,8 +71,8 @@ public class AnyadirAlquileres implements Initializable {
         AnyadirAlquileresModel am = new AnyadirAlquileresModel();
 
         Image imagenSeleccionada = muestraImagen.getImage();
-        //File imagen = new File(imagenSeleccionada.getUrl());
-        File imagen = new File ( "c:\\descarga.jpg");
+        String imageUrl = imagenSeleccionada.getUrl().replace("file:", "");
+        File imagen = new File(imageUrl);
 
         String nombre= nombreDescripcion.getText();
         String descripcion = descripciontextField.getText();
@@ -78,8 +80,9 @@ public class AnyadirAlquileres implements Initializable {
         String ubi = ubiTextField.getText();
         int nHabs = (Integer) nHabitacionesSpinner.getValue();
         int precio = (Integer) precioSpinner.getValue();
+        Date d = Date.valueOf(LocalDate.now());
 
-        Alquileres a = new Alquileres(ubi, nombre,precio,m2,imagen,nHabs,descripcion );
+        Alquileres a = new Alquileres(ubi, nombre,precio,m2,imagen,nHabs,descripcion,d);
 
         am.AnyadirAlquiler(a);
     }

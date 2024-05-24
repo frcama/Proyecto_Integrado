@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -126,6 +127,34 @@ public class AlquileresController implements Initializable{
 
 */
 
+        AlquileresModel am = new AlquileresModel();
+        ArrayList<Alquileres> mostrarAlquileres = am.mostrarAlquileres();
+        int fila = 0;
+        int columna = 0;
+
+        try {
+            for(Alquileres a : mostrarAlquileres) {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("MostrarAlquileres.fxml"));
+                AnchorPane anchorPane = fxmlLoader.load();
+                MostrarAlquileres prueba = new MostrarAlquileres();
+
+                prueba.listar(a);
+
+                if(columna == 1){
+                    columna=0;
+                    fila++;
+                }
+
+                columna++;
+
+                cosasGripPane.add(anchorPane,columna,fila);
+                GridPane.setMargin(anchorPane, new Insets(10));
+            }
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 

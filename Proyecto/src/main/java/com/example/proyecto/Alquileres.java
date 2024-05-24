@@ -1,11 +1,11 @@
 package com.example.proyecto;
 
-
 import javafx.scene.image.Image;
 import java.io.File;
+import java.sql.Date;
+import java.time.LocalDate;
 
 public class Alquileres{
-
 
     private int id_Alquiler;
     private String ubicacion;
@@ -16,6 +16,8 @@ public class Alquileres{
     private int nHabitaciones;
     private String Descripcion;
     private File imageFile;
+    private Date fechaPublicacion;
+
 
 
     public Alquileres(int id_Alquiler, String ubicacion, String nombre, double precio, String metrosCuadrados, Image imagen, int nHabitaciones) {
@@ -39,7 +41,7 @@ public class Alquileres{
         this.Descripcion= descripcion;
     }
 
-    public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados, File imageFile, int nHabitaciones, String descripcion) {
+    public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados, File imageFile, int nHabitaciones, String descripcion, Date fechaPublicacion) {
         this.ubicacion = ubicacion;
         this.nombre = nombre;
         this.precio = precio;
@@ -47,20 +49,24 @@ public class Alquileres{
         this.imageFile= imageFile;
         this.nHabitaciones = nHabitaciones;
         Descripcion = descripcion;
+        this.fechaPublicacion= fechaPublicacion;
     }
 
-    public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados, javafx.scene.image.Image combertir, int nHabitaciones){
-
+    public Date getFechaPublicacion() {
+        return fechaPublicacion;
     }
 
-    public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados, javafx.scene.image.Image combertir, int nHabitaciones, String descripcion) {
+    public void setFechaPublicacion(Date fechaPublicacion) {
+        this.fechaPublicacion = fechaPublicacion;
     }
 
-    public Alquileres(String ubi, String nombre, int precio, String m2, File imagen, javafx.scene.image.Image imagenSeleccionada, int nHabs, String descripcion) {
+    public Alquileres(){}
 
-
+    public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados, Image convertir, int nHabitaciones, String descripcion, Date fechaPublicacion) {
     }
 
+    public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados, Image combertir, int nHabitaciones, String descripcion) {
+    }
 
 
     public String getDescripcion() {

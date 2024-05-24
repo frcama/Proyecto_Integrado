@@ -34,7 +34,7 @@ public class AlquileresModel extends Conexion{
                 if( rs.getBlob("imagen")!= null){
                     convertir = new Image(rs.getBlob("imagen").getBinaryStream());
                 }
-                Alquileres a = new Alquileres(rs.getString("ubicacion"), rs.getString("nombre"), rs.getDouble("precio"), rs.getString("metrosCuadrados"),convertir, rs.getInt("nHabitaciones"), rs.getString("Descripcion"));
+                Alquileres a = new Alquileres(rs.getString("ubicacion"), rs.getString("nombre"), rs.getDouble("precio"), rs.getString("metrosCuadrados"),convertir, rs.getInt("nHabitaciones"), rs.getString("Descripcion"), rs.getDate("fechaPublicacion"));
                 alquileresLista.add(a);
             }
 

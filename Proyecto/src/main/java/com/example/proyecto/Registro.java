@@ -112,6 +112,8 @@ public class Registro extends Conexion implements Initializable {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+
 }
 
 

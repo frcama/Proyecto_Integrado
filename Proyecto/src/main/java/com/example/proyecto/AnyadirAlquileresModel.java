@@ -12,8 +12,8 @@ public class AnyadirAlquileresModel extends Conexion{
 
 
             try {
-                String sql = "INSERT INTO alquileres (Ubicacion, nombre, precio, MetrosCuadrados, imagen, NumHabitaciones, Descripcion)" +
-                        "VALUES (?, ?, ?, ?, ?, ?, ?);";
+                String sql = "INSERT INTO alquileres (Ubicacion, nombre, precio, MetrosCuadrados, imagen,FechaPublicacion, NumHabitaciones, Descripcion)" +
+                        "VALUES (?, ?, ?, ?, ?, ?, ?,?);";
 
                 PreparedStatement ps = this.getConexion().prepareStatement(sql);
 
@@ -23,12 +23,13 @@ public class AnyadirAlquileresModel extends Conexion{
                     ps.setString(4, a.getMetrosCuadrados());
 
 
-                        File imagen = a.getImageFile();
-                        FileInputStream FIS = new FileInputStream(imagen);
-                        ps.setBinaryStream(5, FIS, (int) imagen.length());
+                    File imagen = a.getImageFile();
+                    FileInputStream FIS = new FileInputStream(imagen);
+                    ps.setBinaryStream(5, FIS, (int) imagen.length());
 
-                    ps.setInt(6, a.getnHabitaciones());
-                    ps.setString(7, a.getDescripcion());
+                    ps.setDate(6, a.getFechaPublicacion());
+                    ps.setInt(7, a.getnHabitaciones());
+                    ps.setString(8, a.getDescripcion());
                     ps.executeUpdate();
                     System.out.println("Alquiler añadido con éxito");
                 } catch (SQLException e) {
