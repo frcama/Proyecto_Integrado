@@ -21,8 +21,6 @@ public class Perfil {
     FileChooser fileChooser = new FileChooser();
 
     @javafx.fxml.FXML
-    private AnchorPane panelDePerfil;
-    @javafx.fxml.FXML
     private TextField nombreusuarioPerfil;
     @javafx.fxml.FXML
     private TextField descripccionPerfil;
@@ -34,6 +32,8 @@ public class Perfil {
     private PasswordField contrsaenaPerfil;
     @javafx.fxml.FXML
     private ImageView fotoPerfil;
+    @javafx.fxml.FXML
+    private AnchorPane panelDePerfilOs;
     @javafx.fxml.FXML
     private Button CerrarSesionBOTON2;
     @javafx.fxml.FXML
