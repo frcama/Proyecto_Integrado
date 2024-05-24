@@ -120,33 +120,11 @@ public class AlquileresController implements Initializable{
         NumHabChoiceBox.setValue("Nº Hab");
         zonaFiltroChoicebox.setValue("Ubicación");
         nHabitacioneschoiceBox.setValue("Número Habitaciones");
-
+/*
         MostrarAlquileres ma = new MostrarAlquileres();
         ArrayList<Alquileres> listaAlquileres= ma.listar();
 
-
-
-        try {
-            for(Alquileres a : listaAlquileres) {
-                FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("MostrarAlquileres.fxml"));
-                AnchorPane anchorPane = fxmlLoader.load();
-                MostrarAlquileres prueba = new MostrarAlquileres();
-
-                prueba.listar(a.getUbicacion(), a.getNombre(),a.getPrecio(),a.getMetrosCuadrados(),a.getImagen(),a.getnHabitaciones(),a.getDescripcion());
-
-                if(colu){
-
-                }
-
-            }
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-
-
+*/
 
 
     }
