@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="panelMostrarAlquiler" prefHeight="187.0" prefWidth="326.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.MostrarAlquileres">
+   <children>
+      <Label fx:id="nombreAlquilerLabel" layoutX="14.0" layoutY="14.0" text="Nombre Alquiler" />
+      <ImageView fx:id="imagenalquilerImageView" fitHeight="116.0" fitWidth="159.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="descripcionAlquilerLabel" layoutX="156.0" layoutY="32.0" prefHeight="63.0" prefWidth="166.0" text="Descripcion alquileres" />
+      <Label fx:id="precioAlquilerLabel" layoutX="156.0" layoutY="95.0" text="Precio Alquleres" />
+      <Label fx:id="nHabsAlquilerLabel" layoutX="156.0" layoutY="113.0" text="nHabitaciones Alquiler" />
+      <Label fx:id="ubiAlquilerLabel" layoutX="156.0" layoutY="135.0" text="Ubicacion Alquiler" />
+      <Label fx:id="metrosAlquilerLabel" layoutX="156.0" layoutY="153.0" text="Metros Alquiler" />
+   </children>
+</AnchorPane>

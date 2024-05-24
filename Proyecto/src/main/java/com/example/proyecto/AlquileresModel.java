@@ -30,11 +30,13 @@ public class AlquileresModel extends Conexion{
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
-                Image convertir = null;
-                if( rs.getBlob("imagen")!= null){
-                    convertir = new Image(rs.getBlob("imagen").getBinaryStream());
+                Image imagen = null;
+                if (rs.getBlob("imagen") != null) {
+                    Blob blob = rs.getBlob("imagen");
+                    InputStream inputStream = blob.getBinaryStream();
+                    imagen = new Image(inputStream);
                 }
-                Alquileres a = new Alquileres(rs.getString("ubicacion"), rs.getString("nombre"), rs.getDouble("precio"), rs.getString("metrosCuadrados"),convertir, rs.getInt("nHabitaciones"), rs.getString("Descripcion"), rs.getDate("fechaPublicacion"));
+                Alquileres a = new Alquileres(rs.getString("ubicacion"), rs.getString("nombre"), rs.getDouble("precio"), rs.getString("metrosCuadrados"), imagen, rs.getInt("nHabitaciones"), rs.getString("Descripcion"), rs.getDate("fechaPublicacion"));
                 alquileresLista.add(a);
             }
 
