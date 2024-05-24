@@ -10,10 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.ColumnConstraints;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -32,12 +29,6 @@ public class AlquileresController implements Initializable{
     @FXML
     private ImageView PerfilBOTON;
     @FXML
-    private ColumnConstraints col2GripPane;
-    @FXML
-    private ColumnConstraints col1GripPane;
-    @FXML
-    private GridPane cosasGripPane;
-    @FXML
     private Button perfilBOTON;
     @FXML
     private Button novedadesBOTON;
@@ -55,6 +46,10 @@ public class AlquileresController implements Initializable{
     private TextField PrecioMaxTF;
     @FXML
     private TextField PrecioMinTF;
+    @FXML
+    private HBox panelHBox;
+    @FXML
+    private GridPane cosasGripPane;
 
 
     public void initialize(URL location, ResourceBundle resources) {

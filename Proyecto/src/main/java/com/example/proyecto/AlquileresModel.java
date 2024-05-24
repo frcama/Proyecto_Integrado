@@ -36,7 +36,7 @@ public class AlquileresModel extends Conexion{
                     InputStream inputStream = blob.getBinaryStream();
                     imagen = new Image(inputStream);
                 }
-                Alquileres a = new Alquileres(rs.getString("ubicacion"), rs.getString("nombre"), rs.getDouble("precio"), rs.getString("metrosCuadrados"), imagen, rs.getInt("nHabitaciones"), rs.getString("Descripcion"), rs.getDate("fechaPublicacion"));
+                Alquileres a = new Alquileres(rs.getString("ubicacion"), rs.getString("nombre"), rs.getDouble("precio"), rs.getString("metrosCuadrados"), imagen, rs.getInt("NumHabitaciones"), rs.getString("Descripcion"), rs.getDate("fechaPublicacion"));
                 alquileresLista.add(a);
             }
 
