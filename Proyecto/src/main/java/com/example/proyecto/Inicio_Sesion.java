@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -24,8 +25,6 @@ public class Inicio_Sesion{
     @FXML
     private Text id_email;
     @FXML
-    private TextField pass;
-    @FXML
     private Text id_pass;
     @FXML
     private ImageView logo;
@@ -37,6 +36,8 @@ public class Inicio_Sesion{
     private AnchorPane panelDeInicio;
     @FXML
     private Button recu_contra;
+    @FXML
+    private PasswordField pass;
 
     @FXML
     public void initialize() {
