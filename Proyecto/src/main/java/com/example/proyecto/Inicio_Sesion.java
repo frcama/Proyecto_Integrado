@@ -47,6 +47,8 @@ public class Inicio_Sesion{
 
     @FXML
     public void inicioBOTONclick(ActionEvent actionEvent) {
+
+      /*
         Usuario u = new Usuario();
         InicioSesionModel ism = new InicioSesionModel();
         ArrayList<Usuario> listaUsuarios = ism.loginUsuario(email, pass);
@@ -77,8 +79,13 @@ public class Inicio_Sesion{
 
 
         }
-
-
+*/
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Novedades.fxml"));
+            this.panelDeInicio.getChildren().setAll(pane);
+        } catch (IOException ex) {
+            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
 //dentro del if
 

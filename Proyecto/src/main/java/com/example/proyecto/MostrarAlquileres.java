@@ -5,9 +5,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
-import java.io.File;
-import java.util.ArrayList;
-
 public class MostrarAlquileres extends Conexion{
     @javafx.fxml.FXML
     private Label nombreAlquilerLabel;
@@ -26,17 +23,18 @@ public class MostrarAlquileres extends Conexion{
     @javafx.fxml.FXML
     private Label descripcionAlquilerLabel;
 
+    Alquileres alquiler = new Alquileres();
 
-    public void listar(Alquileres al) {
-
-             nombreAlquilerLabel.setText(al.getNombre());
-             ubiAlquilerLabel.setText(al.getUbicacion());
-             metrosAlquilerLabel.setText(al.getMetrosCuadrados());
-             nHabsAlquilerLabel.setText(String.valueOf(al.getnHabitaciones()));
-             descripcionAlquilerLabel.setText(al.getDescripcion());
-             precioAlquilerLabel.setText(String.valueOf(al.getPrecio()));
-             imagenalquilerImageView.setImage(al.getImagen());
-
-        }
+    public void setData(Alquileres alquiler) {
+        this.alquiler = alquiler;
+        nombreAlquilerLabel.setText(alquiler.getNombre());
+        precioAlquilerLabel.setText(String.valueOf(alquiler.getPrecio()+"€"));
+        //Image image = new Image(getClass().getResourceAsStream(alquiler.getImgSrc()));
+        //imagenalquilerImageView.setImage(image);
+        metrosAlquilerLabel.setText(alquiler.getMetrosCuadrados() + " metros cuadrados");
+        ubiAlquilerLabel.setText(alquiler.getUbicacion());
+        descripcionAlquilerLabel.setText(alquiler.getDescripcion());
+        nHabsAlquilerLabel.setText(String.valueOf(alquiler.getnHabitaciones() + " núm Habitaciones"));
     }
+}
 

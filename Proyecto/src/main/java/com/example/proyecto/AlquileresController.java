@@ -1,6 +1,5 @@
 package com.example.proyecto;
 
-import javafx.beans.value.ObservableListValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -9,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 
@@ -49,7 +49,12 @@ public class AlquileresController implements Initializable{
     @FXML
     private HBox panelHBox;
     @FXML
-    private Button filtrosButton;
+    private Button filtrarButton;
+
+    private ArrayList<Alquileres> alquileresArrayList;
+    private MyListener myListener;
+    @FXML
+    private ScrollPane alquileresScollPane;
 
 
     public void initialize(URL location, ResourceBundle resources) {
@@ -120,40 +125,60 @@ public class AlquileresController implements Initializable{
 
 
         AlquileresModel am = new AlquileresModel();
-        ArrayList<Alquileres> mostrarAlquileres = am.mostrarAlquileres();
+        alquileresArrayList = am.mostrarAlquileres();
 
-        int fila = 0;
-        int columna = 0;
+        for ( Alquileres alquileres : alquileresArrayList){
 
-        try {
-            for(Alquileres a : mostrarAlquileres) {
+            String ubi = alquileres.getUbicacion();
+            String nombre = alquileres.getNombre();
+            Double precio = alquileres.getPrecio();
+            String m2 = alquileres.getMetrosCuadrados();
+            Integer nh = alquileres.getnHabitaciones();
+            String desc = alquileres.getDescripcion();
+           //Image image = alquileres.getImagen();
 
+            Alquileres a = new Alquileres(ubi,nombre,precio,m2,nh,desc);
 
-                FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("MostrarAlquileres.fxml"));
-
-
-                AnchorPane anchorPane = fxmlLoader.load();
-                MostrarAlquileres prueba = new MostrarAlquileres();
-
-
-                prueba.listar(a);
-
-
-                if(columna == 1){
-                    columna=0;
-                    fila++;
-                }
-
-                columna++;
-                cosasGripPane.add(anchorPane,columna,fila);
-                GridPane.setMargin(anchorPane, new Insets(10));
-            }
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
 
+
+
+        int column = 0;
+        int row = 0;
+
+
+        for (int i = 0; i < alquileresArrayList.size(); i++) {
+            try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(getClass().getResource("MostrarAlquileres.fxml"));
+
+                AnchorPane anchorPane = fxmlLoader.load();
+
+
+            MostrarAlquileres ma = fxmlLoader.getController();
+            ma.setData(alquileresArrayList.get(i));
+
+            if (column == 1) {
+                column = 0;
+                row++;
+            }
+
+            cosasGripPane.add(anchorPane, column++, row); //(child,column,row)
+            //set grid width
+            cosasGripPane.setMinWidth(Region.USE_COMPUTED_SIZE);
+            cosasGripPane.setPrefWidth(Region.USE_COMPUTED_SIZE);
+            cosasGripPane.setMaxWidth(Region.USE_PREF_SIZE);
+
+            //set grid height
+            cosasGripPane.setMinHeight(Region.USE_COMPUTED_SIZE);
+            cosasGripPane.setPrefHeight(Region.USE_COMPUTED_SIZE);
+            cosasGripPane.setMaxHeight(Region.USE_PREF_SIZE);
+
+            GridPane.setMargin(anchorPane, new Insets(10));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
     @FXML

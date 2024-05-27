@@ -10,10 +10,7 @@ import java.io.*;
 import java.math.BigDecimal;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.sql.Blob;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class AlquileresModel extends Conexion{
@@ -23,7 +20,7 @@ public class AlquileresModel extends Conexion{
         ArrayList<Alquileres> alquileresLista = new ArrayList<>();
 
         try {
-            String sql = "Select * from alquileres;";
+            String sql = "SELECT  Ubicacion, nombre, precio, MetrosCuadrados, imagen, NumHabitaciones, Descripcion FROM alquileres";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
 
@@ -34,7 +31,16 @@ public class AlquileresModel extends Conexion{
                     InputStream inputStream = blob.getBinaryStream();
                     imagen = new Image(inputStream);
                 }
-                Alquileres a = new Alquileres(rs.getString("Ubicacion"), rs.getString("nombre"), rs.getDouble("precio"), rs.getString("MetrosCuadrados"), imagen, rs.getInt("NumHabitaciones"), rs.getString("Descripcion"), rs.getDate("FechaPublicacion"));
+
+                String ubicacion = rs.getString("Ubicacion");
+                String nombre =  rs.getString("nombre");
+                Double precio = rs.getDouble("precio");
+                String mc = rs.getString("MetrosCuadrados");
+                Integer nh = rs.getInt("NumHabitaciones");
+                String d = rs.getString("Descripcion");
+
+
+                Alquileres a = new Alquileres(ubicacion,nombre,precio,mc,nh,d);
                 alquileresLista.add(a);
             }
 
@@ -51,7 +57,7 @@ public class AlquileresModel extends Conexion{
         return alquileresLista;
         }
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+/*
 public ArrayList<Alquileres> PorPreciosEntre() {
     this.conexion = true;
     ArrayList<Alquileres> alquileresLista = new ArrayList<>();
@@ -78,4 +84,6 @@ public ArrayList<Alquileres> PorPreciosEntre() {
     }
     return alquileresLista;
 }
+
+ */
 }
