@@ -1,11 +1,9 @@
 package com.example.proyecto;
 
+
+
 import javafx.scene.image.Image;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
@@ -25,11 +23,11 @@ public class EventosModel extends Conexion{
 
             while (rs.next()) {
 
-                Image imagen = null;
+                Image Imagen = null;
                 if (rs.getBlob("imagen") != null) {
                     Blob blob = rs.getBlob("imagen");
                     InputStream inputStream = blob.getBinaryStream();
-                    imagen = new Image(inputStream);
+                    Imagen = new Image(inputStream);
                 }
 
                 String ubicacion = rs.getString("ubicacion");
@@ -38,7 +36,7 @@ public class EventosModel extends Conexion{
                 Date fechaEvento = rs.getDate("fecha");
                 String d = rs.getString("Descripcion");
 
-            Eventos e = new Eventos(nombre,fechaEvento,ubicacion,);
+                Eventos e = new Eventos(nombre,fechaEvento,ubicacion,fechaEvento,Imagen,d,precio);
 
             }
         } catch (SQLException e) {
