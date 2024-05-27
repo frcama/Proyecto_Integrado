@@ -14,21 +14,21 @@ public class AnyadirEventos {
     @javafx.fxml.FXML
     private ImageView muestraImagen;
     @javafx.fxml.FXML
-    private AnchorPane PanelAnyadirEVENTOS;
-    @javafx.fxml.FXML
     private Button atrasButton;
     @javafx.fxml.FXML
-    private DatePicker fechaEventos;
+    private Spinner precioSpinner;
     @javafx.fxml.FXML
-    private TextField descripcionEventos;
+    private TextField ubiTextField;
     @javafx.fxml.FXML
-    private TextField nombreEventos;
+    private TextField nombreDescripcion;
     @javafx.fxml.FXML
-    private Spinner precioEventos;
+    private TextField m2textField;
     @javafx.fxml.FXML
-    private TextField ubicacionEventos;
+    private TextField descripciontextField;
     @javafx.fxml.FXML
-    private TextField tipoEventos;
+    private Spinner nHabitacionesSpinner;
+    @javafx.fxml.FXML
+    private AnchorPane PanelAnyadirEVENTOSOs;
 
     @javafx.fxml.FXML
     public void onSubirButtonClick(ActionEvent actionEvent) {
