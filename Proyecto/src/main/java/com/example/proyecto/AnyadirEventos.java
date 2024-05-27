@@ -45,10 +45,6 @@ public class AnyadirEventos {
     @javafx.fxml.FXML
     public void onSubirButtonClick(ActionEvent actionEvent) {
 
-        module tu.modulo {
-            requires javafx.base;
-            // otras declaraciones de requires...
-        }
 
         Image imagenSeleccionada = muestraImagen.getImage();
         String imageUrl = imagenSeleccionada.getUrl().replace("file:", "");
