@@ -52,7 +52,6 @@ public class AlquileresController implements Initializable{
     private Button filtrarButton;
 
     private ArrayList<Alquileres> alquileresArrayList;
-    private MyListener myListener;
     @FXML
     private ScrollPane alquileresScollPane;
 

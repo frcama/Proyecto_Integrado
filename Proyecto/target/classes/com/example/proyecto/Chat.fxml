@@ -2,8 +2,11 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="panelDelChat" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Chat">
@@ -13,7 +16,25 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Button fx:id="atrasChatBOTON" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#atrasChatBOTONclick" text="Atras" />
-      <Pane fx:id="panelCHAT" layoutX="14.0" layoutY="86.0" prefHeight="491.0" prefWidth="306.0" style="-fx-background-color: #00FF00;" />
+      <Button fx:id="atrasChatBOTON" layoutX="3.0" layoutY="14.0" mnemonicParsing="false" onAction="#atrasChatBOTONclick" prefHeight="30.0" prefWidth="66.0" text="Atras" />
+    <AnchorPane layoutX="3.0" layoutY="69.0" minHeight="0.0" minWidth="0.0" prefHeight="494.0" prefWidth="326.0">
+         <children>
+            <ScrollPane fx:id="panelCHAT" layoutX="-5.0" layoutY="14.0" prefHeight="443.0" prefWidth="335.0">
+               <content>
+                  <Label fx:id="label" prefHeight="444.0" prefWidth="160.0" />
+               </content>
+            </ScrollPane>
+            <TextField fx:id="MensajeTF" layoutX="-7.0" layoutY="454.0" prefHeight="39.0" prefWidth="269.0" promptText="Introduce tu pregunta..." />
+            <Button fx:id="EnviarBOTON" layoutX="262.0" layoutY="454.0" mnemonicParsing="false" onAction="#EnviarBOTONclick" prefHeight="39.0" prefWidth="72.0">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/Enviar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
