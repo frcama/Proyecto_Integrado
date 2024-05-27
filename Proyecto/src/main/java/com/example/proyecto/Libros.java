@@ -1,6 +1,8 @@
 package com.example.proyecto;
 
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.sql.Date;
 import java.time.LocalDate;
 
 public class Libros {
@@ -9,16 +11,25 @@ public class Libros {
     private String isbn;
     private String editorial;
     private double precio;
-    private int curso;
+    private String curso;
     private BufferedImage imagen;
-    private LocalDate fechaPublicacion;
+    private File image;
+    private Date d;
 
-    public LocalDate getFechaPublicacion() {
-        return fechaPublicacion;
+    public File getImage() {
+        return image;
     }
 
-    public void setFechaPublicacion(LocalDate fechaPublicacion) {
-        this.fechaPublicacion = fechaPublicacion;
+    public void setImage(File image) {
+        this.image = image;
+    }
+
+    public Date getFechaPublicacion() {
+        return d;
+    }
+
+    public void setFechaPublicacion(Date fechaPublicacion) {
+        this.d = fechaPublicacion;
     }
 
     public String getTitulo() {
@@ -53,11 +64,11 @@ public class Libros {
         this.precio = precio;
     }
 
-    public int getCurso() {
+    public String getCurso() {
         return curso;
     }
 
-    public void setCurso(int curso) {
+    public void setCurso(String curso) {
         this.curso = curso;
     }
 
@@ -69,14 +80,36 @@ public class Libros {
         this.imagen = imagen;
     }
 
-    public Libros(String titulo, String isbn, String editorial, double precio, int curso, BufferedImage imagen, LocalDate fechaPublicacion) {
+    public Libros(String titulo, String isbn, String editorial, double precio, String curso, BufferedImage imagen, Date d) {
         this.titulo = titulo;
         this.isbn = isbn;
         this.editorial = editorial;
         this.precio = precio;
         this.curso = curso;
         this.imagen = imagen;
-        this.fechaPublicacion = fechaPublicacion;
+        this.d = d;
+    }
+
+    public Libros(String titulo, String isbn, String editorial, double precio, String curso, File image) {
+
+        this.titulo = titulo;
+        this.isbn = isbn;
+        this.editorial = editorial;
+        this.precio = precio;
+        this.curso = curso;
+        this.image = image;
+
+    }
+
+    public Libros(String titulo, String isbn, String editorial, double precio, String curso, File image, Date d) {
+
+        this.titulo = titulo;
+        this.isbn = isbn;
+        this.editorial = editorial;
+        this.precio = precio;
+        this.curso = curso;
+        this.image = image;
+        this.d = d;
     }
 
     public Libros() {
