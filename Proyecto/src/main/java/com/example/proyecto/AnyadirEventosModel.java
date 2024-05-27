@@ -10,7 +10,7 @@ public class AnyadirEventosModel extends Conexion{
 
     public void AnyadirAlquiler(Eventos e) {
 
-
+/*
         try {
             String sql = "INSERT INTO eventos_culturales (Ubicacion, nombre, precio, MetrosCuadrados, imagen,FechaPublicacion, NumHabitaciones, Descripcion)VALUES (?, ?, ?, ?, ?, ?, ?,?);";
 
@@ -32,5 +32,7 @@ public class AnyadirEventosModel extends Conexion{
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
+        */
+
     }
 }
