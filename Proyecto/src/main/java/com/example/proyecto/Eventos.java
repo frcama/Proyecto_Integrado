@@ -1,6 +1,7 @@
 package com.example.proyecto;
 
 import java.awt.*;
+import java.io.File;
 import java.util.Date;
 
 public class Eventos {
@@ -9,31 +10,42 @@ public class Eventos {
     private Date fechaEvento;
     private String ubicacion;
     private Date fecha_anyadido;
-    private Image imagen;
+    private Image Imagen;
     private String descripcion;
     private double precio;
+    private String tipo;
+    private File imageFile;
 
-    public Eventos(int id_evento, String nombre, Date fechaEvento, String ubicacion, Date fecha_anyadido, Image imagen, String descripcion, double precio) {
+    public Eventos(int id_evento, String nombre, Date fechaEvento, String ubicacion, Date fecha_anyadido, Image Imagen, String descripcion, double precio) {
         this.id_evento = id_evento;
         this.nombre = nombre;
         this.fechaEvento = fechaEvento;
         this.ubicacion = ubicacion;
         this.fecha_anyadido = fecha_anyadido;
-        this.imagen = imagen;
+        this.Imagen = Imagen;
         this.descripcion = descripcion;
         this.precio = precio;
     }
 
-    public Eventos( String nombre, Date fechaEvento, String ubicacion, Date fecha_anyadido, Image imagen, String descripcion, double precio) {
+    public Eventos( String nombre, Date fechaEvento, String ubicacion, Date fecha_anyadido, Image Imagen, String descripcion, double precio, String tipo) {
         this.nombre = nombre;
         this.fechaEvento = fechaEvento;
         this.ubicacion = ubicacion;
         this.fecha_anyadido = fecha_anyadido;
-        this.imagen = imagen;
+        this.Imagen = Imagen;
         this.descripcion = descripcion;
         this.precio = precio;
+        this.tipo = tipo;
     }
 
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 
     public double getPrecio() {
         return precio;
@@ -52,11 +64,11 @@ public class Eventos {
     }
 
     public Image getImagen() {
-        return imagen;
+        return Imagen;
     }
 
     public void setImagen(Image imagen) {
-        this.imagen = imagen;
+        this.Imagen = imagen;
     }
 
     public String getDescripcion() {
