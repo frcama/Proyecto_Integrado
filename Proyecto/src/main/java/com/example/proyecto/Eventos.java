@@ -25,6 +25,7 @@ public class Eventos {
         this.Imagen = Imagen;
         this.descripcion = descripcion;
         this.precio = precio;
+
     }
 
     public Eventos( String nombre, Date fechaEvento, String ubicacion, Date fecha_anyadido, Image Imagen, String descripcion, double precio, String tipo) {
