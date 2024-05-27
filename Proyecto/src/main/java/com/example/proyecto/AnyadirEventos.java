@@ -45,6 +45,10 @@ public class AnyadirEventos {
     @javafx.fxml.FXML
     public void onSubirButtonClick(ActionEvent actionEvent) {
 
+        module tu.modulo {
+            requires javafx.base;
+            // otras declaraciones de requires...
+        }
 
         Image imagenSeleccionada = muestraImagen.getImage();
         String imageUrl = imagenSeleccionada.getUrl().replace("file:", "");
@@ -60,7 +64,7 @@ public class AnyadirEventos {
         String p = String.valueOf(precioEventos.getValue());
         double precio = Double.valueOf(p);
 
-        Eventos e = new Eventos(nombre,fechaEvento,ubi,d,imagen,descripcion,precio,tipo);
+        //Eventos e = new Eventos(nombre,fechaEvento,ubi,d,imagen,descripcion,precio,tipo);
 
     }
 
