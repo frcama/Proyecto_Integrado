@@ -6,64 +6,45 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="PanelAnyadirALQUILERES" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.AnyadirAlquileres">
+<AnchorPane fx:id="PanelAnyadirALQUILERES" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.AnyadirAlquileresOs">
    <children>
-      <Text layoutX="16.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subir Articulo">
+      <Text fill="WHITE" layoutX="16.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subir Articulo">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Line endX="199.9000244140625" layoutX="112.0" layoutY="72.0" startX="-100.0" />
-      <Button layoutX="24.0" layoutY="120.0" mnemonicParsing="false" onAction="#OnSubirImagenbutton" text="+ Subir foto" />
-      <Text layoutX="18.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripción">
+      <Line endX="199.9000244140625" layoutX="112.0" layoutY="72.0" startX="-100.0" stroke="WHITE" />
+      <Button fx:id="SubirImagen2" layoutX="24.0" layoutY="120.0" mnemonicParsing="false" onAction="#OnSubirImagen2button" style="-fx-background-color: white;" text="+ Subir foto" />
+      <Text fill="WHITE" layoutX="18.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripción">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Line endX="199.9000244140625" layoutX="111.0" layoutY="205.0" startX="-100.0" />
+      <Line endX="199.9000244140625" layoutX="111.0" layoutY="205.0" startX="-100.0" stroke="WHITE" />
       <ImageView fx:id="muestraImagen" fitHeight="120.0" fitWidth="181.0" layoutX="124.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" />
-      <Text layoutX="21.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
+      <Text fill="WHITE" layoutX="21.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
       <TextField fx:id="nombreDescripcion" layoutX="140.0" layoutY="222.0" />
       <TextField fx:id="descripciontextField" layoutX="140.0" layoutY="259.0" prefHeight="82.0" prefWidth="150.0" />
-      <Text layoutX="20.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripción" />
-      <Text layoutX="21.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nº Habitaciones" />
-      <Line endX="199.9000244140625" layoutX="117.0" layoutY="487.0" startX="-100.0" />
-      <Text layoutX="35.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio" />
+      <Text fill="WHITE" layoutX="20.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripción" />
+      <Text fill="WHITE" layoutX="21.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nº Habitaciones" />
+      <Line endX="199.9000244140625" layoutX="117.0" layoutY="487.0" startX="-100.0" stroke="WHITE" />
+      <Text fill="WHITE" layoutX="35.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio" />
       <Spinner fx:id="precioSpinner" layoutX="140.0" layoutY="510.0" />
-      <Button fx:id="subirButton" layoutX="146.0" layoutY="560.0" mnemonicParsing="false" onAction="#onSubirButtonClick" text="Subir" />
-      <Button fx:id="atrasBOTON" layoutX="21.0" layoutY="18.0" mnemonicParsing="false" onAction="#atrasBOTONclick" text="Atrás" />
-      <Text layoutX="16.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ubicación" />
-      <Text layoutX="16.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Metros cuadrados" />
+      <Button fx:id="subirButton2" layoutX="146.0" layoutY="560.0" mnemonicParsing="false" onAction="#onSubirButton2Click" text="Subir" />
+      <Button fx:id="atrasBOTON2" layoutX="21.0" layoutY="18.0" mnemonicParsing="false" onAction="#atrasBOTON2click" text="Atrás" />
+      <Text fill="WHITE" layoutX="16.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ubicación" />
+      <Text fill="WHITE" layoutX="16.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Metros cuadrados" />
       <Spinner fx:id="nHabitacionesSpinner" layoutX="141.0" layoutY="445.0" />
       <TextField fx:id="m2textField" layoutX="141.0" layoutY="354.0" />
       <TextField fx:id="ubiTextField" layoutX="140.0" layoutY="401.0" />
-      <Label layoutX="140.0" layoutY="-3.0" prefHeight="42.0" prefWidth="162.0" text="ALQUILERES" underline="true">
+      <Label layoutX="140.0" layoutY="-3.0" prefHeight="42.0" prefWidth="162.0" text="ALQUILERES" textFill="WHITE" underline="true">
          <font>
             <Font name="Papyrus" size="20.0" />
          </font>
-         <textFill>
-            <LinearGradient endX="1.0" endY="1.0">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </textFill>
       </Label>
    </children>
 </AnchorPane>

@@ -18,8 +18,6 @@ import java.util.ArrayList;
 
 public class AlquileresModel extends Conexion{
 
-
-
     public ArrayList<Alquileres> mostrarAlquileres() {
         this.conexion = true;
         ArrayList<Alquileres> alquileresLista = new ArrayList<>();

@@ -27,8 +27,6 @@ public class MostrarAlquileres extends Conexion{
     private Label descripcionAlquilerLabel;
 
 
-
-    @javafx.fxml.FXML
     public void listar(Alquileres al) {
 
              nombreAlquilerLabel.setText(al.getNombre());
@@ -37,9 +35,8 @@ public class MostrarAlquileres extends Conexion{
              nHabsAlquilerLabel.setText(String.valueOf(al.getnHabitaciones()));
              descripcionAlquilerLabel.setText(al.getDescripcion());
              precioAlquilerLabel.setText(String.valueOf(al.getPrecio()));
-        if (al.getImagen() != null) {
-            imagenalquilerImageView.setImage(al.getImagen());
-        }
+             imagenalquilerImageView.setImage(al.getImagen());
+
         }
     }
 

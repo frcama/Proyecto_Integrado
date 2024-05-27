@@ -14,6 +14,7 @@ public class Conexion {
     private String password = "1234";
 
     public java.sql.Connection getConexion() {
+        this.conn=null;
 
         try {
             DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
