@@ -2,10 +2,7 @@ package com.example.proyecto;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -21,16 +18,6 @@ public class Perfil {
     FileChooser fileChooser = new FileChooser();
 
     @javafx.fxml.FXML
-    private TextField nombreusuarioPerfil;
-    @javafx.fxml.FXML
-    private TextField descripccionPerfil;
-    @javafx.fxml.FXML
-    private TextField nombrePerfil;
-    @javafx.fxml.FXML
-    private DatePicker fechaNacimientoPerfil;
-    @javafx.fxml.FXML
-    private PasswordField contrsaenaPerfil;
-    @javafx.fxml.FXML
     private ImageView fotoPerfil;
     @javafx.fxml.FXML
     private Button atrasDePerfilBOTON;
@@ -40,6 +27,16 @@ public class Perfil {
     private Button editarPerfil;
     @javafx.fxml.FXML
     private AnchorPane panelDePerfil;
+    @javafx.fxml.FXML
+    private Label nombreusuarioPerfil;
+    @javafx.fxml.FXML
+    private Label descripccionPerfil;
+    @javafx.fxml.FXML
+    private Label nombrePerfil;
+    @javafx.fxml.FXML
+    private Label fechaNacimientoPerfil;
+    @javafx.fxml.FXML
+    private Label contrsaenaPerfil;
 
     @javafx.fxml.FXML
     public void atrasDePerfilBOTONclick(ActionEvent actionEvent) {

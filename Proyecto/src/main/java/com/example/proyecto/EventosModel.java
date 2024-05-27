@@ -1,13 +1,13 @@
 package com.example.proyecto;
 
+import javafx.scene.image.Image;
+
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class EventosModel extends Conexion{
@@ -23,21 +23,26 @@ public class EventosModel extends Conexion{
 
             ResultSet rs = ps.executeQuery();
 
-
             while (rs.next()) {
 
-                byte[] imgBytes = rs.getBytes(6);
-                // Convertir bytes a BufferedImage
-                InputStream in = new ByteArrayInputStream(imgBytes);
-                BufferedImage img = ImageIO.read(in);
-                listaEventos.add(new Eventos(rs.getInt(1),rs.getString(2),rs.getDate(3), rs.getString(4)));
+                Image imagen = null;
+                if (rs.getBlob("imagen") != null) {
+                    Blob blob = rs.getBlob("imagen");
+                    InputStream inputStream = blob.getBinaryStream();
+                    imagen = new Image(inputStream);
+                }
 
-                return listaEventos;
+                String ubicacion = rs.getString("ubicacion");
+                String nombre =  rs.getString("nombre");
+                Double precio = rs.getDouble("precio");
+                Date fechaEvento = rs.getDate("fecha");
+                String d = rs.getString("Descripcion");
+
+            Eventos e = new Eventos(nombre,fechaEvento,ubicacion,);
+
             }
         } catch (SQLException e) {
             System.out.println("Error SQL: " + e.getMessage());
-        } catch (IOException e) {
-            System.out.println("Error al leer la imagen: " + e.getMessage());
         }
 
         return listaEventos;

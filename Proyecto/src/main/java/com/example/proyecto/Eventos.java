@@ -1,25 +1,78 @@
 package com.example.proyecto;
 
+import java.awt.*;
 import java.util.Date;
 
 public class Eventos {
     private int id_evento;
     private String nombre;
-    private Date fecha;
-    private String lugar;
-    public Eventos(int id_evento, String nombre, Date fecha, String lugar) {
-        this.fecha = fecha;
+    private Date fechaEvento;
+    private String ubicacion;
+    private Date fecha_anyadido;
+    private Image imagen;
+    private String descripcion;
+    private double precio;
+
+    public Eventos(int id_evento, String nombre, Date fechaEvento, String ubicacion, Date fecha_anyadido, Image imagen, String descripcion, double precio) {
         this.id_evento = id_evento;
-        this.lugar = lugar;
         this.nombre = nombre;
+        this.fechaEvento = fechaEvento;
+        this.ubicacion = ubicacion;
+        this.fecha_anyadido = fecha_anyadido;
+        this.imagen = imagen;
+        this.descripcion = descripcion;
+        this.precio = precio;
     }
 
-    public Date getFecha() {
-        return fecha;
+    public Eventos( String nombre, Date fechaEvento, String ubicacion, Date fecha_anyadido, Image imagen, String descripcion, double precio) {
+        this.nombre = nombre;
+        this.fechaEvento = fechaEvento;
+        this.ubicacion = ubicacion;
+        this.fecha_anyadido = fecha_anyadido;
+        this.imagen = imagen;
+        this.descripcion = descripcion;
+        this.precio = precio;
     }
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public Date getFecha_anyadido() {
+        return fecha_anyadido;
+    }
+
+    public void setFecha_anyadido(Date fecha_anyadido) {
+        this.fecha_anyadido = fecha_anyadido;
+    }
+
+    public Image getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(Image imagen) {
+        this.imagen = imagen;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public Date getFechaEvento() {
+        return fechaEvento;
+    }
+
+    public void setFechaEvento(Date fechaEvento) {
+        this.fechaEvento = fechaEvento;
     }
 
     public int getId_evento() {
@@ -30,12 +83,12 @@ public class Eventos {
         this.id_evento = id_evento;
     }
 
-    public String getLugar() {
-        return lugar;
+    public String getUbicacion() {
+        return ubicacion;
     }
 
-    public void setLugar(String lugar) {
-        this.lugar = lugar;
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
     }
 
     public String getNombre() {

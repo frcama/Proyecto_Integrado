@@ -66,6 +66,9 @@ public class EventosController implements Initializable {
 
         eventosBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);");
 
+
+
+
     }
 
 

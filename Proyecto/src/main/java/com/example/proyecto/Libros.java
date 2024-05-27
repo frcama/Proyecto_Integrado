@@ -14,7 +14,9 @@ public class Libros {
     private String curso;
     private BufferedImage imagen;
     private File image;
-    private Date d;
+    private Date fechaPublicacion;
+    private String asignatura;
+
 
     public File getImage() {
         return image;
@@ -25,11 +27,11 @@ public class Libros {
     }
 
     public Date getFechaPublicacion() {
-        return d;
+        return fechaPublicacion;
     }
 
     public void setFechaPublicacion(Date fechaPublicacion) {
-        this.d = fechaPublicacion;
+        this.fechaPublicacion = fechaPublicacion;
     }
 
     public String getTitulo() {
@@ -80,14 +82,14 @@ public class Libros {
         this.imagen = imagen;
     }
 
-    public Libros(String titulo, String isbn, String editorial, double precio, String curso, BufferedImage imagen, Date d) {
+    public Libros(String titulo, String isbn, String editorial, double precio, String curso, BufferedImage imagen, Date fechaPublicacion) {
         this.titulo = titulo;
         this.isbn = isbn;
         this.editorial = editorial;
         this.precio = precio;
         this.curso = curso;
         this.imagen = imagen;
-        this.d = d;
+        this.fechaPublicacion = fechaPublicacion;
     }
 
     public Libros(String titulo, String isbn, String editorial, double precio, String curso, File image) {
@@ -101,7 +103,7 @@ public class Libros {
 
     }
 
-    public Libros(String titulo, String isbn, String editorial, double precio, String curso, File image, Date d) {
+    public Libros(String titulo, String isbn, String editorial, double precio, String curso, File image, Date fechaPublicacion) {
 
         this.titulo = titulo;
         this.isbn = isbn;
@@ -109,7 +111,7 @@ public class Libros {
         this.precio = precio;
         this.curso = curso;
         this.image = image;
-        this.d = d;
+        this.fechaPublicacion = fechaPublicacion;
     }
 
     public Libros() {
