@@ -1,5 +1,7 @@
 package com.example.proyecto;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -35,8 +37,6 @@ public class AnyadirAlquileres implements Initializable {
     @javafx.fxml.FXML
     private ImageView muestraImagen;
     @javafx.fxml.FXML
-    private TextField ubiTextField;
-    @javafx.fxml.FXML
     private TextField m2textField;
     @javafx.fxml.FXML
     private TextField descripciontextField;
@@ -46,6 +46,8 @@ public class AnyadirAlquileres implements Initializable {
     private AnchorPane PanelAnyadirALQUILERES;
     @javafx.fxml.FXML
     private Button atrasBOTON;
+    @javafx.fxml.FXML
+    private ChoiceBox ubicacionChoiceBox;
 
 
     @Override
@@ -62,6 +64,24 @@ public class AnyadirAlquileres implements Initializable {
 
         nHabitacionesSpinner.setValueFactory(valueFactory);
 
+
+        ObservableList<String> zonaAlquiler = FXCollections.observableArrayList();
+
+        String zona1 = "Zona centro";
+        String zona2 = "Cerca de playa";
+        String zona3 = "Cerca de Universidades";
+        String zona4 = "Afueras";
+        String zona5 = "Cerca de Ocio";
+
+
+        zonaAlquiler.add(zona1);
+        zonaAlquiler.add(zona2);
+        zonaAlquiler.add(zona3);
+        zonaAlquiler.add(zona4);
+        zonaAlquiler.add(zona5);
+
+        ubicacionChoiceBox.setItems(zonaAlquiler);
+
     }
 
 
@@ -77,7 +97,7 @@ public class AnyadirAlquileres implements Initializable {
         String nombre= nombreDescripcion.getText();
         String descripcion = descripciontextField.getText();
         String m2 = m2textField.getText();
-        String ubi = ubiTextField.getText();
+        String ubi = String.valueOf(ubicacionChoiceBox.getValue());
         int nHabs = (Integer) nHabitacionesSpinner.getValue();
         int precio = (Integer) precioSpinner.getValue();
         Date d = Date.valueOf(LocalDate.now());

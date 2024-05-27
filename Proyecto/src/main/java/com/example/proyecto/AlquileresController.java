@@ -52,7 +52,6 @@ public class AlquileresController implements Initializable{
     private Button filtrarButton;
 
     private ArrayList<Alquileres> alquileresArrayList;
-    private MyListener myListener;
     @FXML
     private ScrollPane alquileresScollPane;
 
@@ -102,18 +101,7 @@ public class AlquileresController implements Initializable{
         zonaFiltroChoicebox.setItems(zonaAlquiler);
 
 
-        String nh1 = "Zona centro";
-        String nh2 = "Cerca de playa";
-        String nh3 = "Cerca de Universidades";
-        String nh4 = "Afueras";
-        String nh5 = "Cerca de Ocio";
 
-
-        nHabitacionesAlquiler.add(nh1);
-        nHabitacionesAlquiler.add(nh2);
-        nHabitacionesAlquiler.add(nh3);
-        nHabitacionesAlquiler.add(nh4);
-        nHabitacionesAlquiler.add(nh5);
 
         ChoiceBox<String> nHabitacioneschoiceBox = new ChoiceBox<>();
         nHabitacioneschoiceBox.setItems(nHabitacionesAlquiler);
