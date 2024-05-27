@@ -10,35 +10,49 @@ import javafx.scene.layout.AnchorPane;
 
 public class AnyadirEventosOs {
     @javafx.fxml.FXML
-    private Button subirButton;
-    @javafx.fxml.FXML
     private ImageView muestraImagen;
     @javafx.fxml.FXML
-    private AnchorPane PanelAnyadirEVENTOS;
+    private Spinner precioSpinner;
     @javafx.fxml.FXML
-    private Button atrasButton;
+    private TextField ubiTextField;
     @javafx.fxml.FXML
-    private DatePicker fechaEventos;
+    private TextField nombreDescripcion;
     @javafx.fxml.FXML
-    private TextField descripcionEventos;
+    private TextField m2textField;
     @javafx.fxml.FXML
-    private TextField nombreEventos;
+    private Button subirButton2;
     @javafx.fxml.FXML
-    private Spinner precioEventos;
+    private Button SubirImagen2;
     @javafx.fxml.FXML
-    private TextField ubicacionEventos;
+    private TextField descripciontextField;
     @javafx.fxml.FXML
-    private TextField tipoEventos;
+    private Spinner nHabitacionesSpinner;
+    @javafx.fxml.FXML
+    private Button atrasButton2;
+    @javafx.fxml.FXML
+    private AnchorPane PanelAnyadirEVENTOSOs;
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void onSubirButtonClick(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void onAtrasButtonClick(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void OnSubirImagenbutton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void OnSubirImagen2button(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void onAtrasButton2Click(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void onSubirButton2Click(ActionEvent actionEvent) {
     }
 }

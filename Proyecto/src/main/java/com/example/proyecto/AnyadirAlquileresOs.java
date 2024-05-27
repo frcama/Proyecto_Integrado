@@ -31,8 +31,6 @@ public class AnyadirAlquileresOs implements Initializable {
     @javafx.fxml.FXML
     private TextField nombreDescripcion;
     @javafx.fxml.FXML
-    private Button subirButton;
-    @javafx.fxml.FXML
     private ImageView muestraImagen;
     @javafx.fxml.FXML
     private TextField ubiTextField;
@@ -45,7 +43,11 @@ public class AnyadirAlquileresOs implements Initializable {
     @javafx.fxml.FXML
     private AnchorPane PanelAnyadirALQUILERES;
     @javafx.fxml.FXML
-    private Button atrasBOTON;
+    private Button subirButton2;
+    @javafx.fxml.FXML
+    private Button SubirImagen2;
+    @javafx.fxml.FXML
+    private Button atrasBOTON2;
 
 
     @Override
@@ -65,7 +67,7 @@ public class AnyadirAlquileresOs implements Initializable {
     }
 
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void onSubirButtonClick(ActionEvent actionEvent) {
 
         AnyadirAlquileresModel am = new AnyadirAlquileresModel();
@@ -87,7 +89,7 @@ public class AnyadirAlquileresOs implements Initializable {
         am.AnyadirAlquiler(a);
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void OnSubirImagenbutton(ActionEvent actionEvent) {
         FileChooser fileChooser = new FileChooser();
 
@@ -102,7 +104,7 @@ public class AnyadirAlquileresOs implements Initializable {
         }
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void atrasBOTONclick(ActionEvent actionEvent) {
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Alquileres.fxml"));
@@ -113,4 +115,15 @@ public class AnyadirAlquileresOs implements Initializable {
     }
 
 
+    @javafx.fxml.FXML
+    public void OnSubirImagen2button(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void atrasBOTON2click(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void onSubirButton2Click(ActionEvent actionEvent) {
+    }
 }

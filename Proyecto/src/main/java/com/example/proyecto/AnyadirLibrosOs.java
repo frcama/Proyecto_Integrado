@@ -27,18 +27,20 @@ public class AnyadirLibrosOs {
     @FXML
     private TextField m2textField;
     @FXML
-    private Button subirButton;
-    @FXML
     private ImageView muestraImagen;
     @FXML
     private TextField descripciontextField;
     @FXML
     private Spinner nHabitacionesSpinner;
-    @FXML
-    private Button atrasBOTON;
     private AnchorPane PanelAnyadirALQUILERES;
     @FXML
     private AnchorPane PanelAnyadirLIBROSOs;
+    @FXML
+    private Button subirButton2;
+    @FXML
+    private Button SubirImagen2;
+    @FXML
+    private Button atrasBOTON2;
 
     @FXML
     public void atrasBOTONclick(ActionEvent actionEvent) {
@@ -51,7 +53,7 @@ public class AnyadirLibrosOs {
     }
 
 
-    @FXML
+    @Deprecated
     public void onSubirButtonClick(ActionEvent actionEvent) {
 
         AnyadirAlquileresModel am = new AnyadirAlquileresModel();
@@ -71,7 +73,7 @@ public class AnyadirLibrosOs {
 
     }
 
-    @FXML
+    @Deprecated
     public void OnSubirImagenbutton(ActionEvent actionEvent) {
         FileChooser fileChooser = new FileChooser();
 
@@ -84,5 +86,13 @@ public class AnyadirLibrosOs {
             Image image = new Image(file.toURI().toString());
             muestraImagen.setImage(image);
         }
+    }
+
+    @FXML
+    public void OnSubirImagen2button(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void onSubirButton2Click(ActionEvent actionEvent) {
     }
 }
