@@ -36,7 +36,7 @@ public class EventosModel extends Conexion{
                 Date fechaEvento = rs.getDate("fecha");
                 String d = rs.getString("Descripcion");
 
-                Eventos e = new Eventos(nombre,fechaEvento,ubicacion,fechaEvento,Imagen,d,precio);
+                //Eventos e = new Eventos(nombre,fechaEvento,ubicacion,fechaEvento,Imagen,d,precio);
 
             }
         } catch (SQLException e) {

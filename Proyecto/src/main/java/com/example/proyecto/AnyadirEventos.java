@@ -60,7 +60,7 @@ public class AnyadirEventos {
         String p = String.valueOf(precioEventos.getValue());
         double precio = Double.valueOf(p);
 
-        Eventos e = new Eventos(nombre,fechaEvento,ubi,d,imagen,descripcion,precio,tipo);
+        //Eventos e = new Eventos(nombre,fechaEvento,ubi,d,imagen,descripcion,precio,tipo);
 
     }
 
