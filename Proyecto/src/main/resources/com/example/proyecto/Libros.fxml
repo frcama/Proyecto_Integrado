@@ -134,9 +134,9 @@
             <DropShadow />
          </effect>
       </Button>
-      <ChoiceBox fx:id="precioFiltroChoicebox" layoutX="8.0" layoutY="71.0" prefHeight="25.0" prefWidth="88.0" />
-      <ChoiceBox fx:id="nHabitacioneschoiceBox" layoutX="118.0" layoutY="71.0" prefHeight="25.0" prefWidth="88.0" />
-      <ChoiceBox fx:id="zonaFiltroChoicebox" layoutX="228.0" layoutY="71.0" prefHeight="25.0" prefWidth="88.0" />
+      <ChoiceBox fx:id="editorialChoiceBox" layoutX="8.0" layoutY="71.0" prefHeight="25.0" prefWidth="88.0" />
+      <ChoiceBox fx:id="asignaturaChoiceBox" layoutX="118.0" layoutY="71.0" prefHeight="25.0" prefWidth="88.0" />
+      <ChoiceBox fx:id="cursoChoiceBox" layoutX="228.0" layoutY="71.0" prefHeight="25.0" prefWidth="88.0" />
       <Button fx:id="filtrarButton" layoutX="120.0" layoutY="104.0" mnemonicParsing="false" onAction="#filtrarBottonClick" text="Aplicar Filtros" />
       <GridPane fx:id="cosasGripPane" gridLinesVisible="true" layoutX="-2.0" layoutY="141.0" prefHeight="398.0" prefWidth="342.0" style="-fx-background-color: D6D6D6;">
          <columnConstraints>

@@ -1,17 +1,17 @@
 package com.example.proyecto;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.ColumnConstraints;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.*;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -19,6 +19,7 @@ import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -34,17 +35,11 @@ public class LibrosController implements Initializable {
     @FXML
     private ColumnConstraints col2GripPane;
     @FXML
-    private ChoiceBox precioFiltroChoicebox;
-    @FXML
-    private ChoiceBox nHabitacioneschoiceBox;
-    @FXML
     private ColumnConstraints col1GripPane;
     @FXML
     private GridPane cosasGripPane;
     @FXML
     private Button filtrarButton;
-    @FXML
-    private ChoiceBox zonaFiltroChoicebox;
     @FXML
     private Button novedadesBOTON;
     @FXML
@@ -55,6 +50,14 @@ public class LibrosController implements Initializable {
     private Button alquileresBOTON;
     @FXML
     private Button librosBOTON;
+    @FXML
+    private ChoiceBox editorialChoiceBox;
+    @FXML
+    private ChoiceBox cursoChoiceBox;
+
+    private ArrayList<Libros> librosArrayList;
+    @FXML
+    private ChoiceBox asignaturaChoiceBox;
 
 
     @Override
@@ -65,6 +68,104 @@ public class LibrosController implements Initializable {
 
         librosBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);");
 
+        ObservableList<String> editoriales = FXCollections.observableArrayList();
+        ObservableList<String> cursolibro = FXCollections.observableArrayList();
+        ObservableList<String> asignaturas = FXCollections.observableArrayList();
+
+
+        String editorial1 = "tompare";
+        String editorial2 = "Bromera";
+        String editorial3 = "Escribi";
+        String editorial4 = "Quiqueeditoriales";
+
+        editoriales.add(editorial1);
+        editoriales.add(editorial2);
+        editoriales.add(editorial3);
+        editoriales.add(editorial4);
+
+        editorialChoiceBox.setItems(editoriales);
+
+        String curso1 = "Primer curso";
+        String curso2 = "Segundo curso";
+        String curso3 = "Tercer curso";
+        String curso4 = "Cuarto curso";
+
+        cursolibro.add(curso1);
+        cursolibro.add(curso2);
+        cursolibro.add(curso3);
+        cursolibro.add(curso4);
+
+        cursoChoiceBox.setItems(cursolibro);
+
+        String asig1 = "Matematicas";
+        String asig2 = "Lengua Castellana";
+        String asig3 = "Fisica";
+        String asig4 = "Biologia";
+
+        asignaturas.add(asig1);
+        asignaturas.add(asig2);
+        asignaturas.add(asig3);
+        asignaturas.add(asig4);
+
+        asignaturaChoiceBox.setItems(asignaturas);
+
+        editorialChoiceBox.setValue("Editorial");
+        cursoChoiceBox.setValue("Curso");
+        asignaturaChoiceBox.setValue("Asignatura");
+
+        LibrosModel lm = new LibrosModel();
+        librosArrayList = lm.mostrarLibros();
+
+        for ( Libros libros : librosArrayList){
+
+            String titulo = libros.getTitulo() ;
+            String isbn = libros.getIsbn();
+            Double precio = libros.getPrecio();
+            String curso = libros.getCurso();
+            String editorial = libros.getEditorial();
+            String asignatura = libros.getAsignatura();
+            //Image image = alquileres.getImagen();
+
+            Libros l = new Libros(isbn, titulo, precio, curso, editorial, asignatura);
+
+        }
+
+        int column = 0;
+        int row = 0;
+
+
+        for (int i = 0; i < librosArrayList.size(); i++) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("MostrarAlquileres.fxml"));
+
+                AnchorPane anchorPane = fxmlLoader.load();
+
+
+                MostrarAlquileres ma = fxmlLoader.getController();
+                ma.setData(librosArrayList.get(i));
+
+                if (column == 1) {
+                    column = 0;
+                    row++;
+                }
+
+                cosasGripPane.add(anchorPane, column++, row); //(child,column,row)
+                //set grid width
+                cosasGripPane.setMinWidth(Region.USE_COMPUTED_SIZE);
+                cosasGripPane.setPrefWidth(Region.USE_COMPUTED_SIZE);
+                cosasGripPane.setMaxWidth(Region.USE_PREF_SIZE);
+
+                //set grid height
+                cosasGripPane.setMinHeight(Region.USE_COMPUTED_SIZE);
+                cosasGripPane.setPrefHeight(Region.USE_COMPUTED_SIZE);
+                cosasGripPane.setMaxHeight(Region.USE_PREF_SIZE);
+
+                GridPane.setMargin(anchorPane, new Insets(10));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
 

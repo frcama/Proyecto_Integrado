@@ -14,9 +14,26 @@ public class Libros {
     private String curso;
     private BufferedImage imagen;
     private File image;
-    private Date fechaPublicacion;
+    private Date d;
     private String asignatura;
 
+
+
+    public Date getD() {
+        return d;
+    }
+
+    public void setD(Date d) {
+        this.d = d;
+    }
+
+    public String getAsignatura() {
+        return asignatura;
+    }
+
+    public void setAsignatura(String asignatura) {
+        this.asignatura = asignatura;
+    }
 
     public File getImage() {
         return image;
@@ -27,11 +44,11 @@ public class Libros {
     }
 
     public Date getFechaPublicacion() {
-        return fechaPublicacion;
+        return d;
     }
 
     public void setFechaPublicacion(Date fechaPublicacion) {
-        this.fechaPublicacion = fechaPublicacion;
+        this.d = fechaPublicacion;
     }
 
     public String getTitulo() {
@@ -82,14 +99,14 @@ public class Libros {
         this.imagen = imagen;
     }
 
-    public Libros(String titulo, String isbn, String editorial, double precio, String curso, BufferedImage imagen, Date fechaPublicacion) {
+    public Libros(String titulo, String isbn, String editorial, double precio, String curso, BufferedImage imagen, Date d) {
         this.titulo = titulo;
         this.isbn = isbn;
         this.editorial = editorial;
         this.precio = precio;
         this.curso = curso;
         this.imagen = imagen;
-        this.fechaPublicacion = fechaPublicacion;
+        this.d = d;
     }
 
     public Libros(String titulo, String isbn, String editorial, double precio, String curso, File image) {
@@ -103,7 +120,7 @@ public class Libros {
 
     }
 
-    public Libros(String titulo, String isbn, String editorial, double precio, String curso, File image, Date fechaPublicacion) {
+    public Libros(String titulo, String isbn, String editorial, double precio, String curso, File image, Date d) {
 
         this.titulo = titulo;
         this.isbn = isbn;
@@ -111,7 +128,10 @@ public class Libros {
         this.precio = precio;
         this.curso = curso;
         this.image = image;
-        this.fechaPublicacion = fechaPublicacion;
+        this.d = d;
+    }
+
+    public Libros(String isbn, String titulo, Double precio, String curso, String editorial, String asignatura) {
     }
 
     public Libros() {

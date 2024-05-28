@@ -11,7 +11,8 @@ public class AnyadirLibrosModel extends Conexion{
     public void AnyadirLibros(Libros l) {
 
         try {
-            String sql = "INSERT INTO libros (isbn, editorial, precio, curso,Titulo, imagen,fecha_anyadido) VALUES (?, ?, ?, ?, ?, ?,?);";
+            String sql = "INSERT INTO libros (isbn, editorial, precio, curso, Titulo, imagen, fecha_añadido)" +
+                    "VALUES (?, ?, ?, ?, ?, ?, ?);";
 
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
 

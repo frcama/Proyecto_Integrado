@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class LibrosModel extends Conexion {
 
-   /* public ArrayList<Libros> mostrarLibros() {
+    public ArrayList<Libros> mostrarLibros() {
 
         ArrayList<Libros> listaLibros = new ArrayList<>();
 
@@ -45,6 +45,6 @@ public class LibrosModel extends Conexion {
         return listaLibros;
 
     }
-*/
+
 
 }
