@@ -1,5 +1,4 @@
 package com.example.proyecto;
 
-public class Novedades {
-
+public class ChatGPTAPIExample {
 }

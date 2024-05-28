@@ -72,6 +72,7 @@ public class AlquileresController implements Initializable{
         String n2 = "2 Habitaciones";
         String n3 = "3 Habitaciones";
         String n4 = "4 Habitaciones";
+
         String n5 = "5 Habitaciones";
 
 

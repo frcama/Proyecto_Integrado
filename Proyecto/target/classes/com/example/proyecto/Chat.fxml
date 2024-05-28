@@ -10,10 +10,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
-
 <?import javafx.scene.text.TextFlow?>
+
 <AnchorPane fx:id="panelDelChat" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.Chat">
    <children>
+      <TextFlow fx:id="textFlow" layoutX="10" layoutY="10" prefHeight="200" prefWidth="300.0" />
       <Label layoutY="-4.0" prefHeight="86.0" prefWidth="335.0" style="-fx-background-color: #00AAFF;" text="                      CHAT DE AYUDA" textFill="WHITE">
          <font>
             <Font name="Franklin Gothic Heavy" size="25.0" />
@@ -30,14 +31,14 @@
                </cursor>
             </ImageView>
          </graphic></Button>
-    <AnchorPane layoutX="3.0" layoutY="69.0" minHeight="0.0" minWidth="0.0" prefHeight="494.0" prefWidth="326.0">
+    <AnchorPane layoutX="3.0" layoutY="69.0" minHeight="0.0" minWidth="0.0" prefHeight="494.0" prefWidth="316.0">
          <children>
             <ScrollPane fx:id="panelCHAT" layoutX="-5.0" layoutY="14.0" prefHeight="443.0" prefWidth="335.0">
                <content>
-                  <Label fx:id="label" prefHeight="444.0" prefWidth="318.0" />
+                  <Label fx:id="label" prefHeight="436.0" prefWidth="337.0" />
                </content>
             </ScrollPane>
-            <TextField fx:id="MensajeTF" layoutX="-4.0" layoutY="454.0" prefHeight="43.0" prefWidth="275.0" promptText="Introduce tu pregunta..." />
+            <TextField fx:id="MensajeTF" layoutX="-4.0" layoutY="454.0" prefHeight="43.0" prefWidth="275.0" promptText=" Introduce tu pregunta..." />
             <Button fx:id="EnviarBOTON" layoutX="270.0" layoutY="454.0" mnemonicParsing="false" onAction="#EnviarBOTONclick" prefHeight="43.0" prefWidth="64.0">
                <graphic>
                   <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
@@ -62,6 +63,5 @@
       </Label>
       <Line endX="284.0" layoutX="58.0" layoutY="566.0" startX="-100.0" />
    </children>
-   <TextFlow fx:id="textFlow" layoutX="10" layoutY="10" prefHeight="200" prefWidth="300" />
 
 </AnchorPane>

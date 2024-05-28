@@ -71,7 +71,7 @@ public class Chat
         PauseTransition pause = new PauseTransition(Duration.seconds(1));
         pause.setOnFinished(event -> {
             if (texto.contains("hola")) {
-                mensajes.add(" Bot: ¡Hola!");
+                mensajes.add(" Bot: ¡Hola! ¿En que puedo ayudarte?");
             }
             if (texto.contains("adios")) {
                 mensajes.add(" Bot: ¡Hasta Luego!");
@@ -241,6 +241,30 @@ public class Chat
             if (texto.contains("literatura")) {
                 mensajes.add(" Bot: La Literatura puede ser muy inspiradora. ¿Estás buscando literatura clásica, moderna o de algún autor en particular?");
             }
+
+            // Contains para alquileres y viviendas en Valencia o solo la ciudad
+            if (texto.contains("alquileres en Valencia") || texto.contains("viviendas en Valencia") || texto.contains("Valencia")) {
+                mensajes.add(" Bot: Puedo ayudarte con información sobre alquileres, viviendas o cualquier otra consulta sobre Valencia. ¿Qué necesitas saber?");
+            }
+
+// Contains para alquileres y viviendas en Barcelona o solo la ciudad
+            if (texto.contains("alquileres en Barcelona") || texto.contains("viviendas en Barcelona") || texto.contains("Barcelona")) {
+                mensajes.add(" Bot: Ya sea alquileres, viviendas o detalles generales, puedo proporcionarte información sobre Barcelona. ¿Cuál es tu consulta?");
+            }
+
+// Contains para alquileres y viviendas en Madrid o solo la ciudad
+            if (texto.contains("alquileres en Madrid") || texto.contains("viviendas en Madrid") || texto.contains("Madrid")) {
+                mensajes.add(" Bot: Estoy aquí para ayudarte con temas de alquileres, viviendas o cualquier pregunta sobre Madrid. ¿Qué estás buscando?");
+            }
+
+// Contains para alquileres y viviendas en Sevilla o solo la ciudad
+            if (texto.contains("alquileres en Sevilla") || texto.contains("viviendas en Sevilla") || texto.contains("Sevilla")) {
+                mensajes.add(" Bot: Puedo asistirte con información sobre alquileres, viviendas o cualquier otro tema relacionado con Sevilla. ¿En qué puedo ayudarte?");
+            }
+
+
+
+
 // Contains para cuando no se entiende el mensaje
             if (!texto.contains("hola") && !texto.contains("adios") && !texto.contains("ubicacion") &&
                     !texto.contains("eventos") && !texto.contains("precios") && !texto.contains("alquileres") &&
@@ -257,12 +281,10 @@ public class Chat
                     !texto.contains("libro de Historia") && !texto.contains("libro de Literatura") &&
                     !texto.contains("Matemáticas") && !texto.contains("Física") &&
                     !texto.contains("Química") && !texto.contains("Historia") &&
-                    !texto.contains("literatura")) {
+                    !texto.contains("literatura") && !texto.contains("valencia") && !texto.contains("barcelona")
+                    && !texto.contains("madrid") && !texto.contains("sevilla")) {
                 mensajes.add(" Bot: No he entendido tu mensaje. ¿Puedes proporcionar más detalles o reformular tu pregunta?");
             }
-
-
-
             actualizarMensajes();
         });
         pause.play();
