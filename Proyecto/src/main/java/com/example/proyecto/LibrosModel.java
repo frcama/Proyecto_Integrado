@@ -1,12 +1,10 @@
 package com.example.proyecto;
 
-import com.mysql.cj.xdevapi.PreparableStatement;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
+import javafx.scene.image.Image;
+
 import java.io.InputStream;
+import java.sql.Blob;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -19,31 +17,41 @@ public class LibrosModel extends Conexion {
         ArrayList<Libros> listaLibros = new ArrayList<>();
 
         try {
-            String sql = "Select * from libros;";
-
+            String sql = "SELECT  isbn, Titulo, curso, asignatura, editorial, precio, imagen FROM libros";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
-
             ResultSet rs = ps.executeQuery();
 
-
             while (rs.next()) {
+                Image imagen = null;
+                if (rs.getBlob("imagen") != null) {
+                    Blob blob = rs.getBlob("imagen");
+                    InputStream inputStream = blob.getBinaryStream();
+                    imagen = new Image(inputStream);
+                }
 
-                byte[] imgBytes = rs.getBytes(6);
-                // Convertir bytes a BufferedImage
-                InputStream in = new ByteArrayInputStream(imgBytes);
-                BufferedImage img = ImageIO.read(in);
-               // listaLibros.add(new Libros(rs.getString(1), rs.getString(2), rs.getString(3), rs.getDouble(4), rs.getInt(5), img));
+                String ISBN = rs.getString("isbn");
+                String Titulo =  rs.getString("Titulo");
+                String Curso = rs.getString("curso");
+                String asignautra = rs.getString("asignatura");
+                String editorial = rs.getString("editorial");
+                double precio = rs.getDouble("precio");
 
-                return listaLibros;
+
+                Libros l = new Libros(ISBN ,Titulo ,Curso , asignautra, editorial, precio);
+                listaLibros.add(l);
             }
+
+            rs.close();
+            ps.close();
+
         } catch (SQLException e) {
-            System.out.println("Error SQL: " + e.getMessage());
-        } catch (IOException e) {
-            System.out.println("Error al leer la imagen: " + e.getMessage());
+            e.printStackTrace();
+
+        } finally {
+            //se cierra conexion
+            this.cerrarConexion();
         }
-
         return listaLibros;
-
     }
 
 

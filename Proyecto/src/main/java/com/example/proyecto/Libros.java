@@ -3,7 +3,6 @@ package com.example.proyecto;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.sql.Date;
-import java.time.LocalDate;
 
 public class Libros {
 
@@ -16,8 +15,6 @@ public class Libros {
     private File image;
     private Date d;
     private String asignatura;
-
-
 
     public Date getD() {
         return d;
@@ -132,6 +129,22 @@ public class Libros {
     }
 
     public Libros(String isbn, String titulo, Double precio, String curso, String editorial, String asignatura) {
+        this.titulo = titulo;
+        this.isbn = isbn;
+        this.editorial = editorial;
+        this.precio = precio;
+        this.curso = curso;
+        this.asignatura = asignatura;
+    }
+
+
+    public Libros(String isbn, String titulo, String curso, String asig, String editorial, double precio) {
+        this.titulo = titulo;
+        this.isbn = isbn;
+        this.editorial = editorial;
+        this.precio = precio;
+        this.curso = curso;
+        this.asignatura = asig;
     }
 
     public Libros() {

@@ -62,7 +62,7 @@ public class AnyadirLibros implements Initializable {
     public void atrasBOTONclick(ActionEvent actionEvent) {
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Libros.fxml"));
-            this.PanelAnyadirALQUILERES.getChildren().setAll(pane);
+            this.PanelAnyadirLIBROS.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }

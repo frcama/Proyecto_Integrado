@@ -10,6 +10,7 @@ import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.stage.FileChooser;
@@ -33,10 +34,6 @@ public class LibrosController implements Initializable {
     @FXML
     private ImageView PerfilBOTON1;
     @FXML
-    private ColumnConstraints col2GripPane;
-    @FXML
-    private ColumnConstraints col1GripPane;
-    @FXML
     private GridPane cosasGripPane;
     @FXML
     private Button filtrarButton;
@@ -58,6 +55,10 @@ public class LibrosController implements Initializable {
     private ArrayList<Libros> librosArrayList;
     @FXML
     private ChoiceBox asignaturaChoiceBox;
+    @FXML
+    private ScrollPane librosScrollPane;
+    @FXML
+    private HBox panelHBox;
 
 
     @Override
@@ -116,7 +117,7 @@ public class LibrosController implements Initializable {
         LibrosModel lm = new LibrosModel();
         librosArrayList = lm.mostrarLibros();
 
-        for ( Libros libros : librosArrayList){
+        for ( Libros libros : librosArrayList ){
 
             String titulo = libros.getTitulo() ;
             String isbn = libros.getIsbn();
@@ -137,13 +138,13 @@ public class LibrosController implements Initializable {
         for (int i = 0; i < librosArrayList.size(); i++) {
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("MostrarAlquileres.fxml"));
+                fxmlLoader.setLocation(getClass().getResource("MostrarLibros.fxml"));
 
                 AnchorPane anchorPane = fxmlLoader.load();
 
 
-                MostrarAlquileres ma = fxmlLoader.getController();
-               // ma.setData(librosArrayList.get(i));
+                MostrarLibros ml = fxmlLoader.getController();
+                ml.setData(librosArrayList.get(i));
 
                 if (column == 1) {
                     column = 0;
