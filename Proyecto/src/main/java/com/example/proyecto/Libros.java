@@ -138,13 +138,24 @@ public class Libros {
     }
 
 
-    public Libros(String isbn, String titulo, String curso, String asig, String editorial, double precio) {
+    public Libros(String isbn, String titulo, String curso, String asignatura, String editorial, double precio) {
         this.titulo = titulo;
         this.isbn = isbn;
         this.editorial = editorial;
         this.precio = precio;
         this.curso = curso;
-        this.asignatura = asig;
+        this.asignatura = asignatura;
+    }
+
+    public Libros(String titulo, String isbn, String editorial, double precio, String asignatura, String curso, File imagen, Date d) {
+        this.titulo = titulo;
+        this.isbn = isbn;
+        this.editorial = editorial;
+        this.precio = precio;
+        this.curso = curso;
+        this.asignatura = asignatura;
+        this.image = imagen;
+        this.d = d;
     }
 
     public Libros() {

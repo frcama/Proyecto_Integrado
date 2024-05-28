@@ -36,7 +36,6 @@ public class AnyadirLibros implements Initializable {
     private ImageView muestraImagen;
     @FXML
     private Button atrasBOTON;
-    private AnchorPane PanelAnyadirALQUILERES;
     @FXML
     private TextField editorialTextField;
     @FXML
@@ -47,6 +46,8 @@ public class AnyadirLibros implements Initializable {
     private TextField tituloTextField;
     @FXML
     private TextField isbnTextField;
+    @FXML
+    private TextField asignaturaTextField;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -84,9 +85,10 @@ public class AnyadirLibros implements Initializable {
         String isbn = isbnTextField.getText();
         String curso = cursoTextField.getText();
         double precio = (Integer) precioSpinner.getValue();
+        String asignatura = asignaturaTextField.getText();
         Date d = Date.valueOf(LocalDate.now());
 
-        Libros l = new Libros(titulo, isbn, editorial, precio, curso, imagen, d);
+        Libros l = new Libros(titulo, isbn, editorial, precio, asignatura, curso, imagen, d);
 
         al.AnyadirLibros(l);
 
