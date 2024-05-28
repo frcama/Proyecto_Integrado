@@ -1,12 +1,11 @@
 package com.example.proyecto;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -15,12 +14,14 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class AnyadirEventos {
+public class AnyadirEventos  implements Initializable {
     @javafx.fxml.FXML
     private Button subirButton;
     @javafx.fxml.FXML
@@ -40,12 +41,45 @@ public class AnyadirEventos {
     @javafx.fxml.FXML
     private TextField ubicacionEventos;
     @javafx.fxml.FXML
-    private TextField tipoEventos;
+    private ChoiceBox tipoEventoChoiceBox;
 
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+
+        SpinnerValueFactory<Integer> valueFactoryInteger =
+                new SpinnerValueFactory.IntegerSpinnerValueFactory(1,10000000,0,1);
+
+        precioEventos.setValueFactory(valueFactoryInteger);
+
+
+
+        ObservableList<String> tipoEvento = FXCollections.observableArrayList();
+
+
+        String t1 = "Festival";
+        String t2 = "Charla";
+        String t3 = "Paellas Universitarias";
+        String t4 = "Monologos";
+        String t5 = "Congresos";
+
+
+        tipoEvento.add(t1);
+        tipoEvento.add(t2);
+        tipoEvento.add(t3);
+        tipoEvento.add(t4);
+        tipoEvento.add(t5);
+
+        tipoEventoChoiceBox.setItems(tipoEvento);
+        tipoEventoChoiceBox.setValue("TipoEvento");
+
+    }
     @javafx.fxml.FXML
     public void onSubirButtonClick(ActionEvent actionEvent) {
 
 
+        AnyadirEventosModel aem = new AnyadirEventosModel();
         Image imagenSeleccionada = muestraImagen.getImage();
         String imageUrl = imagenSeleccionada.getUrl().replace("file:", "");
         File imagen = new File(imageUrl);
@@ -60,8 +94,9 @@ public class AnyadirEventos {
         String p = String.valueOf(precioEventos.getValue());
         double precio = Double.valueOf(p);
 
-        //Eventos e = new Eventos(nombre,fechaEvento,ubi,d,imagen,descripcion,precio,tipo);
+        Eventos e = new Eventos(nombre,fechaEvento,ubi,d,imagenSeleccionada,imagen,descripcion,precio,tipo);
 
+        aem.AnyadirAlquiler(e);
     }
 
     @javafx.fxml.FXML
@@ -88,4 +123,6 @@ public class AnyadirEventos {
             muestraImagen.setImage(image);
         }
     }
+
+
 }

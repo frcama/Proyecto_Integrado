@@ -1,11 +1,15 @@
 package com.example.proyecto;
 
 import javafx.scene.image.Image;
+
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.sql.Date;
 
 public class Alquileres{
 
+
+    private BufferedImage Bimagen;
     private int id_Alquiler;
     private String ubicacion;
     private String nombre;
@@ -17,6 +21,7 @@ public class Alquileres{
     private File imageFile;
     private Date fechaPublicacion;
     private String imgSrc;
+    private String Ciudad;
 
 
 
@@ -65,8 +70,21 @@ public class Alquileres{
 
     }
 
+    public BufferedImage getBimagen() {
+        return Bimagen;
+    }
 
+    public void setBimagen(BufferedImage bimagen) {
+        Bimagen = bimagen;
+    }
 
+    public String getCiudad() {
+        return Ciudad;
+    }
+
+    public void setCiudad(String ciudad) {
+        Ciudad = ciudad;
+    }
 
     public String getImgSrc() {
         return imgSrc;

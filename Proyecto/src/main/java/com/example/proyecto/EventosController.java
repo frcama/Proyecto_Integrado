@@ -6,18 +6,18 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.stage.FileChooser;
-
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Date;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.sql.Date;
 
 public class EventosController implements Initializable {
 
@@ -55,6 +55,8 @@ public class EventosController implements Initializable {
     @javafx.fxml.FXML
     private GridPane cosasGripPaneEvento;
 
+    ArrayList<Eventos> eventosArrayList = new ArrayList<>();
+
     public void initialize(URL location, ResourceBundle resources) {
         perfilBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';");
         perfilBOTON.setOnMouseEntered(e -> perfilBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000); -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
@@ -84,21 +86,63 @@ public class EventosController implements Initializable {
         maxPreciofiltroEvento.setText("Precio Max");
 
         EventosModel em = new EventosModel();
-        ArrayList<Eventos> eventosArrayList = em.mostrarEventos();
-/*
-        for ( Eventos eventos : eventosArrayList){
+        eventosArrayList = em.mostrarEventos();
+
+        for ( Eventos eventos : eventosArrayList) {
 
             String ubi = eventos.getUbicacion();
             String nombre = eventos.getNombre();
             Double precio = eventos.getPrecio();
             String desc = eventos.getDescripcion();
-            Date fecha
+            Date fecha = eventos.getFechaEvento();
             //Image image = eventos.getImagen();
+            String tipo = eventos.getTipo();
 
-            Alquileres a = new Alquileres(ubi,nombre,precio,m2,nh,desc);
+            Eventos ev = new Eventos(nombre, fecha, ubi, desc, precio, tipo);
 
         }
-*/
+
+
+        int column = 0;
+        int row = 0;
+
+
+        for (int i = 0; i < eventosArrayList.size(); i++) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("MostrarEventos.fxml"));
+
+                AnchorPane anchorPane = fxmlLoader.load();
+
+
+                Usuario u = new Usuario();
+                PerfilModel pm= new PerfilModel();
+                u = pm.perfilModel(u.getCorreo(),u.getContra());
+
+                MostrarEventos me = fxmlLoader.getController();
+                me.setData(eventosArrayList.get(i));
+
+                if (column == 1) {
+                    column = 0;
+                    row++;
+                }
+
+                cosasGripPaneEvento.add(anchorPane, column++, row); //(child,column,row)
+                //set grid width
+                cosasGripPaneEvento.setMinWidth(Region.USE_COMPUTED_SIZE);
+                cosasGripPaneEvento.setPrefWidth(Region.USE_COMPUTED_SIZE);
+                cosasGripPaneEvento.setMaxWidth(Region.USE_PREF_SIZE);
+
+                //set grid height
+                cosasGripPaneEvento.setMinHeight(Region.USE_COMPUTED_SIZE);
+                cosasGripPaneEvento.setPrefHeight(Region.USE_COMPUTED_SIZE);
+                cosasGripPaneEvento.setMaxHeight(Region.USE_PREF_SIZE);
+
+                GridPane.setMargin(anchorPane, new Insets(10));
+            }catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
 
@@ -170,31 +214,7 @@ public class EventosController implements Initializable {
     @javafx.fxml.FXML
     public void filtrarBottonClick(ActionEvent actionEvent) {
 
-
-
     }
 
-    @Deprecated
-    public void perfilBOTON2click(ActionEvent actionEvent) {
-    }
 
-    @Deprecated
-    public void eventosBOTON2click(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void librosBOTON2click(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void onAdd2Clicked(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void alquileresBOTON2click(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void novedadesBOTON2click(ActionEvent actionEvent) {
-    }
 }

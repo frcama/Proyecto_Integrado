@@ -35,7 +35,7 @@ public class MostrarLibros extends Conexion{
         //imagenalquilerImageView.setImage(image);
         editorialLabel.setText(libros.getEditorial());
         asignaturaLabel.setText(libros.getAsignatura());
-        cursoLabel.setText(libros.getCurso());
+        cursoLabel.setText(libros.getCurso() + " Curso");
         isbnLabel.setText(libros.getIsbn());
 
     }

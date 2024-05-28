@@ -21,12 +21,12 @@ public class MostrarEventos {
     private AnchorPane panelMostrarAlquiler;
 
 
-
     Alquileres alquiler = new Alquileres();
     @javafx.fxml.FXML
-    private Label nombrePublicadoEvento;
+    private Label nombrePropietario;
 
-    public void setData(Eventos evento,String nombre) {
+
+    public void setData(Eventos evento) {
 
         PerfilModel pm= new PerfilModel();
         Usuario u = new Usuario();
@@ -40,7 +40,7 @@ public class MostrarEventos {
         ubiEventoLabel.setText(evento.getUbicacion());
         descripcionEventoLabel.setText(evento.getDescripcion());
         fechaEventoLabel.setText(String.valueOf(evento.getFechaEvento()));
-        nombrePublicadoEvento.setText(u.getNombre());
+        nombrePropietario.setText(u.getNombre());
 
     }
 }

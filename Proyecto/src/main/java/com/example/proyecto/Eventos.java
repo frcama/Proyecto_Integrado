@@ -1,8 +1,9 @@
 package com.example.proyecto;
 
-import java.awt.*;
 import java.io.File;
-import java.util.Date;
+import java.sql.Date;
+
+import javafx.scene.image.Image;
 
 public class Eventos {
     private int id_evento;
@@ -25,9 +26,23 @@ public class Eventos {
         this.Imagen = Imagen;
         this.descripcion = descripcion;
         this.precio = precio;
-
     }
 
+    public Eventos( String nombre, Date fechaEvento, String ubicacion, Date fecha_anyadido, Image Imagen, File imageFile, String descripcion, double precio, String tipo) {
+        this.nombre = nombre;
+        this.fechaEvento = fechaEvento;
+        this.ubicacion = ubicacion;
+        this.fecha_anyadido = fecha_anyadido;
+        this.Imagen = Imagen;
+        this.imageFile=imageFile;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.tipo = tipo;
+    }
+
+    public Eventos(){
+
+    }
     public Eventos( String nombre, Date fechaEvento, String ubicacion, Date fecha_anyadido, Image Imagen, String descripcion, double precio, String tipo) {
         this.nombre = nombre;
         this.fechaEvento = fechaEvento;
@@ -39,8 +54,35 @@ public class Eventos {
         this.tipo = tipo;
     }
 
+    public Eventos( String nombre, Date fechaEvento, String ubicacion, String descripcion, double precio, String tipo) {
+        this.nombre = nombre;
+        this.fechaEvento = fechaEvento;
+        this.ubicacion = ubicacion;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.tipo = tipo;
+    }
 
 
+
+    public Eventos( String nombre, Date fechaEvento, String ubicacion, String descripcion, double precio, String tipo, File imageFile) {
+        this.nombre = nombre;
+        this.fechaEvento = fechaEvento;
+        this.ubicacion = ubicacion;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.tipo = tipo;
+        this.imageFile=imageFile;
+    }
+
+
+    public File getImageFile() {
+        return imageFile;
+    }
+
+    public void setImageFile(File imageFile) {
+        this.imageFile = imageFile;
+    }
 
     public String getTipo() {
         return tipo;

@@ -48,6 +48,8 @@ public class AnyadirAlquileres implements Initializable {
     private Button atrasBOTON;
     @javafx.fxml.FXML
     private ChoiceBox ubicacionChoiceBox;
+    @javafx.fxml.FXML
+    private ChoiceBox ciudadChoiceBox;
 
 
     @Override

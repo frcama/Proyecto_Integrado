@@ -65,7 +65,7 @@
          <graphic>
             <ImageView fx:id="PerfilBOTON1" fitHeight="40.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/boton%20perfil.png" />
+                  <Image url="@img/boton_perfil.png" />
                </image>
                <effect>
                   <ColorAdjust />

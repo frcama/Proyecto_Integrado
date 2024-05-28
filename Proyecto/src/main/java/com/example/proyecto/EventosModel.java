@@ -36,8 +36,8 @@ public class EventosModel extends Conexion{
                 String d = rs.getString("Descripcion");
                 String tipo = rs.getString("tipoEvento");
 
-                //Eventos e = new Eventos(nombre,fechaEvento,ubicacion,fechaEvento,Imagen,d,precio,tipo);
-
+                Eventos e = new Eventos(nombre,fechaEvento,ubicacion,fechaEvento,Imagen,d,precio,tipo);
+                listaEventos.add(e);
             }
         } catch (SQLException e) {
             System.out.println("Error SQL: " + e.getMessage());

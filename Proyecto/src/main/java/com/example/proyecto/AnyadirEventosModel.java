@@ -5,34 +5,39 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import javafx.scene.image.Image;
+
 
 public class AnyadirEventosModel extends Conexion{
 
-    public void AnyadirAlquiler(Eventos e) {
+    public void AnyadirAlquiler(Eventos ev) {
 
-/*
+
         try {
-            String sql = "INSERT INTO eventos_culturales (Ubicacion, nombre, precio, MetrosCuadrados, imagen,FechaPublicacion, NumHabitaciones, Descripcion)VALUES (?, ?, ?, ?, ?, ?, ?,?);";
+            String sql = "INSERT INTO eventos_culturales (nombre, fecha, ubicacion, fecha_anyadido,imagen,Descripcion, precio,tipoEvento)VALUES (?, ?, ?, ?, ?, ?, ?,?);";
 
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
 
+            ps.setString(1,ev.getNombre());
+            ps.setDate(2,ev.getFechaEvento());
+            ps.setString(3,ev.getUbicacion());
+            ps.setDate(4,ev.getFecha_anyadido());
 
-
-            File imagen = e.getImageFile();
+            File imagen = ev.getImageFile();
             FileInputStream FIS = new FileInputStream(imagen);
             ps.setBinaryStream(5, FIS, (int) imagen.length());
 
-            ps.setDate(6, a.getFechaPublicacion());
-            ps.setInt(7, a.getnHabitaciones());
-            ps.setString(8, a.getDescripcion());
+            ps.setString(6, ev.getDescripcion());
+            ps.setDouble(7,ev.getPrecio());
+            ps.setString(8,ev.getTipo());
             ps.executeUpdate();
-            System.out.println("Alquiler añadido con éxito");
+            System.out.println("Evento añadido con éxito");
         } catch (SQLException e) {
             System.out.println("Error SQL: " + e.getMessage());
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
-        */
+
 
     }
 }

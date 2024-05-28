@@ -68,6 +68,9 @@ public class AlquileresController implements Initializable{
         ObservableList<String> zonaAlquiler = FXCollections.observableArrayList();
         ObservableList<String> nHabitacionesAlquiler = FXCollections.observableArrayList();
 
+
+
+        String n = "";
         String n1 = "1 Habitación";
         String n2 = "2 Habitaciones";
         String n3 = "3 Habitaciones";
@@ -75,7 +78,7 @@ public class AlquileresController implements Initializable{
 
         String n5 = "5 Habitaciones";
 
-
+        nHabitacionesAlquiler.add(n);
         nHabitacionesAlquiler.add(n1);
         nHabitacionesAlquiler.add(n2);
         nHabitacionesAlquiler.add(n3);
@@ -84,14 +87,14 @@ public class AlquileresController implements Initializable{
 
         NumHabChoiceBox.setItems(nHabitacionesAlquiler);
 
-
+        String zona = "";
         String zona1 = "Zona centro";
         String zona2 = "Cerca de playa";
         String zona3 = "Cerca de Universidades";
         String zona4 = "Afueras";
         String zona5 = "Cerca de Ocio";
 
-
+        zonaAlquiler.add(zona);
         zonaAlquiler.add(zona1);
         zonaAlquiler.add(zona2);
         zonaAlquiler.add(zona3);
@@ -99,7 +102,6 @@ public class AlquileresController implements Initializable{
         zonaAlquiler.add(zona5);
 
         zonaFiltroChoicebox.setItems(zonaAlquiler);
-
 
 
         ChoiceBox<String> nHabitacioneschoiceBox = new ChoiceBox<>();
@@ -245,6 +247,35 @@ public class AlquileresController implements Initializable{
     @FXML
     public void filtrarBottonClick(ActionEvent actionEvent) {
 
+        Double preciomax= Double.valueOf(PrecioMaxTF.getText());
+        Double preciomin= Double.valueOf(PrecioMinTF.getText());
+        String nhabs = String.valueOf(NumHabChoiceBox.getValue());
+        String nh ="";
+
+        if(nhabs.equals("1 Habitación")){
+            nh="1";
+
+        }
+        if(nhabs.equals("2 Habitaciones")){
+            nh="2";
+
+        }
+        if(nhabs.equals("3 Habitaciones")){
+            nh="3";
+
+        }
+        if(nhabs.equals("4 Habitaciones")){
+            nh="4";
+
+        }
+        if(nhabs.equals("5 Habitaciones")){
+            nh="5";
+
+        }
+        String ubicacion = String.valueOf(zonaFiltroChoicebox.getValue());
+
+        AlquileresModel am = new AlquileresModel();
+        am.filtrosAlquiler(ubicacion,preciomin,preciomax,nh);
 
     }
 

@@ -20,7 +20,7 @@ public class AlquileresModel extends Conexion{
         ArrayList<Alquileres> alquileresLista = new ArrayList<>();
 
         try {
-            String sql = "SELECT  Ubicacion, nombre, precio, MetrosCuadrados, imagen, NumHabitaciones, Descripcion FROM alquileres";
+            String sql = "SELECT Ubicacion, nombre, precio, MetrosCuadrados, imagen, NumHabitaciones, Descripcion FROM alquileres ORDER BY FechaPublicacion DESC;";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
 
@@ -57,33 +57,77 @@ public class AlquileresModel extends Conexion{
         return alquileresLista;
         }
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-/*
-public ArrayList<Alquileres> PorPreciosEntre() {
-    this.conexion = true;
-    ArrayList<Alquileres> alquileresLista = new ArrayList<>();
 
-    try {
-        String sql = "Select * from alquileres where precio between (?,?)";
-        PreparedStatement ps = this.getConexion().prepareStatement(sql);
-        ResultSet rs = ps.executeQuery();
+    public ArrayList<Alquileres> filtrosAlquiler(String zona, Double min, Double max, String habs) {
+        this.conexion = true;
+        ArrayList<Alquileres> alquileresLista = new ArrayList<>();
 
-        while (rs.next()) {
-            Image combertir = new Image(rs.getBlob("imagen").getBinaryStream());
-            Alquileres a = new Alquileres(rs.getString("ubicacion"), rs.getString("nombre"), rs.getDouble("precio"), rs.getString("metrosCuadrados"),combertir, rs.getInt("NumHabitaciones"), rs.getString("Descripcion"));
-            alquileresLista.add(a);
+        try {
+            String sql = "SELECT * FROM alquileres WHERE 1 = 1;";
+            if (habs != null) {
+                sql += " AND NumHabitaciones = ?";
+            }
+            if (min != null) {
+                sql += " AND precio >= ?";
+            }
+            if (max != null) {
+                sql += " AND precio <= ?";
+            }
+            if (zona != null && !zona.isEmpty()) {
+                sql += " AND Ubicacion = ?";
+            }
+
+            PreparedStatement ps = this.getConexion().prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+            int paramIndex = 1;
+            if (habs != null) {
+                ps.setString(paramIndex++, habs);
+            }
+            if (min != null) {
+                ps.setDouble(paramIndex++, min);
+            }
+            if (max != null) {
+                ps.setDouble(paramIndex++, max);
+            }
+            if (zona != null && !zona.isEmpty()) {
+                ps.setString(paramIndex++, zona);
+            }
+
+
+
+            while (rs.next()) {
+                Image imagen = null;
+                if (rs.getBlob("imagen") != null) {
+                    Blob blob = rs.getBlob("imagen");
+                    InputStream inputStream = blob.getBinaryStream();
+                    imagen = new Image(inputStream);
+                }
+
+                String ubicacion = rs.getString("Ubicacion");
+                String nombre =  rs.getString("nombre");
+                Double precio = rs.getDouble("precio");
+                String mc = rs.getString("MetrosCuadrados");
+                String fileImagen = rs.getString("imagen");
+                Integer nh = rs.getInt("NumHabitaciones");
+                String d = rs.getString("Descripcion");
+
+
+                Alquileres a = new Alquileres(ubicacion,nombre,precio,mc,nh,d);
+                alquileresLista.add(a);
+            }
+
+            rs.close();
+            ps.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            //se cierra conexion
+            this.cerrarConexion();
         }
-
-        rs.close();
-        ps.close();
-
-    } catch (SQLException e) {
-        e.printStackTrace();
-    }finally {
-        //se cierra conexion
-        this.cerrarConexion();
+        return alquileresLista;
     }
-    return alquileresLista;
-}
 
- */
+
 }
