@@ -6,15 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="599a3e3c-8dec-4e78-9449-a59b65385a10" name="Changes" comment="Arreglos cosas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AnyadirLibros.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AnyadirLibros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Eventos.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Eventos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/MostrarLibros.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/MostrarLibros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/AnyadirLibros.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/AnyadirLibros.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/AnyadirLibros.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/AnyadirLibros.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/AnyadirLibros.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/AnyadirLibros.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/AnyadirLibrosModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/AnyadirLibrosModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Eventos.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Eventos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarLibros.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarLibros.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716839661794</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Arreglos cosas">
+      <option name="closed" value="true" />
+      <created>1716919792429</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1716919792429</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -157,11 +157,6 @@
           <properties class="java.sql.SQLException" package="java.sql" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AnyadirLibrosModel.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AnyadirLibros.java</url>
           <line>88</line>
@@ -170,6 +165,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AnyadirLibrosModel.java</url>
+          <line>10</line>
+          <properties class="com.example.proyecto.AnyadirLibrosModel" method="AnyadirLibros">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

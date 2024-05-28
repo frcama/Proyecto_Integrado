@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="panelMostrarLibros" prefHeight="187.0" prefWidth="326.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.MostrarLibros">
+<AnchorPane fx:id="panelMostrarLibros" prefHeight="187.0" prefWidth="326.0" style="-fx-border-color: 000; -fx-border-style: solid;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.MostrarLibros">
    <children>
       <Label fx:id="tituloLibroLabel" layoutX="24.0" layoutY="24.0" text="Título Libro" underline="true">
          <font>
