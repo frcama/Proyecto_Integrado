@@ -28,6 +28,7 @@ public class Eventos {
         this.precio = precio;
     }
 
+
     public Eventos( String nombre, Date fechaEvento, String ubicacion, Date fecha_anyadido, Image Imagen, File imageFile, String descripcion, double precio, String tipo) {
         this.nombre = nombre;
         this.fechaEvento = fechaEvento;
@@ -43,6 +44,8 @@ public class Eventos {
     public Eventos(){
 
     }
+
+
     public Eventos( String nombre, Date fechaEvento, String ubicacion, Date fecha_anyadido, Image Imagen, String descripcion, double precio, String tipo) {
         this.nombre = nombre;
         this.fechaEvento = fechaEvento;
@@ -53,6 +56,7 @@ public class Eventos {
         this.precio = precio;
         this.tipo = tipo;
     }
+
 
     public Eventos( String nombre, Date fechaEvento, String ubicacion, String descripcion, double precio, String tipo) {
         this.nombre = nombre;
