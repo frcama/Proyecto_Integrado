@@ -58,7 +58,7 @@ public class Alquileres{
         this.fechaPublicacion= fechaPublicacion;
     }
 
-    public Alquileres(String ubicacion, String nombre, Double precio, String mc, Integer nh, String d) {
+    public Alquileres(String ubicacion, String nombre, Double precio, String mc, Integer nh, String d, Image imagen) {
 
         this.ubicacion = ubicacion;
         this.nombre = nombre;
@@ -66,7 +66,7 @@ public class Alquileres{
         this.metrosCuadrados = mc;
         this.nHabitaciones = nh;
         this.Descripcion = d;
-
+        this.imagen=imagen;
 
     }
 

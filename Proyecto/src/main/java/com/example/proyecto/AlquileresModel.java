@@ -29,7 +29,8 @@ public class AlquileresModel extends Conexion{
                 if (rs.getBlob("imagen") != null) {
                     Blob blob = rs.getBlob("imagen");
                     InputStream inputStream = blob.getBinaryStream();
-                    imagen = new Image(inputStream);
+                    imagen = new Image(inputStream); //crea imagen en javaFX
+
                 }
 
                 String ubicacion = rs.getString("Ubicacion");
@@ -40,7 +41,7 @@ public class AlquileresModel extends Conexion{
                 String d = rs.getString("Descripcion");
 
 
-                Alquileres a = new Alquileres(ubicacion,nombre,precio,mc,nh,d);
+                Alquileres a = new Alquileres(ubicacion,nombre,precio,mc,nh,d,imagen);
                 alquileresLista.add(a);
             }
 
@@ -63,7 +64,8 @@ public class AlquileresModel extends Conexion{
         ArrayList<Alquileres> alquileresLista = new ArrayList<>();
 
         try {
-            String sql = "SELECT * FROM alquileres WHERE 1 = 1;";
+            // Construye la consulta SQL
+            String sql = "SELECT * FROM alquileres WHERE 1 = 1";
             if (habs != null) {
                 sql += " AND NumHabitaciones = ?";
             }
@@ -77,9 +79,10 @@ public class AlquileresModel extends Conexion{
                 sql += " AND Ubicacion = ?";
             }
 
+            // Prepara la consulta
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
-            ResultSet rs = ps.executeQuery();
 
+            // Establece los parámetros de la consulta
             int paramIndex = 1;
             if (habs != null) {
                 ps.setString(paramIndex++, habs);
@@ -94,8 +97,10 @@ public class AlquileresModel extends Conexion{
                 ps.setString(paramIndex++, zona);
             }
 
+            // Ejecuta la consulta
+            ResultSet rs = ps.executeQuery();
 
-
+            // Procesa los resultados
             while (rs.next()) {
                 Image imagen = null;
                 if (rs.getBlob("imagen") != null) {
@@ -105,25 +110,25 @@ public class AlquileresModel extends Conexion{
                 }
 
                 String ubicacion = rs.getString("Ubicacion");
-                String nombre =  rs.getString("nombre");
+                String nombre = rs.getString("nombre");
                 Double precio = rs.getDouble("precio");
                 String mc = rs.getString("MetrosCuadrados");
                 String fileImagen = rs.getString("imagen");
                 Integer nh = rs.getInt("NumHabitaciones");
                 String d = rs.getString("Descripcion");
 
-
-                Alquileres a = new Alquileres(ubicacion,nombre,precio,mc,nh,d);
+                Alquileres a = new Alquileres(ubicacion, nombre, precio, mc, nh, d,imagen);
                 alquileresLista.add(a);
             }
 
+            // Cierra el ResultSet y PreparedStatement
             rs.close();
             ps.close();
 
         } catch (SQLException e) {
             e.printStackTrace();
-        }finally {
-            //se cierra conexion
+        } finally {
+            // Cierra la conexión
             this.cerrarConexion();
         }
         return alquileresLista;

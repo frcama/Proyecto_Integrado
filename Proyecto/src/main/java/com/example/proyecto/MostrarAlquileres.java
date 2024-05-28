@@ -25,9 +25,9 @@ public class MostrarAlquileres extends Conexion{
 
     Alquileres alquiler = new Alquileres();
     @javafx.fxml.FXML
-    private Label nombrePublicadoAlquiler;
+    private Label ciudadAlquiler;
 
-    public void setData(Alquileres alquiler,String nombre) {
+    public void setData(Alquileres alquiler) {
 
         this.alquiler = alquiler;
         PerfilModel pm= new PerfilModel();
@@ -42,8 +42,12 @@ public class MostrarAlquileres extends Conexion{
         ubiAlquilerLabel.setText(alquiler.getUbicacion());
         descripcionAlquilerLabel.setText(alquiler.getDescripcion());
         nHabsAlquilerLabel.setText(String.valueOf(alquiler.getnHabitaciones() + " núm Habitaciones"));
-        nombrePublicadoAlquiler.setText(u.getNombre());
+        ciudadAlquiler.setText(alquiler.getCiudad());
 
+        // Establecer la imagen en el ImageView
+        if (alquiler.getImagen() != null) {
+            imagenalquilerImageView.setImage(alquiler.getImagen());
+        }
     }
 }
 

@@ -12,7 +12,7 @@ public class AnyadirAlquileresModel extends Conexion{
 
 
             try {
-                String sql = "INSERT INTO alquileres (Ubicacion, nombre, precio, MetrosCuadrados, imagen,FechaPublicacion, NumHabitaciones, Descripcion)VALUES (?, ?, ?, ?, ?, ?, ?,?);";
+                String sql = "INSERT INTO alquileres (Ubicacion, nombre, precio, MetrosCuadrados, imagen,FechaPublicacion, NumHabitaciones, Descripcion, ciudad)VALUES (?, ?, ?, ?, ?, ?, ?,?,?);";
 
                 PreparedStatement ps = this.getConexion().prepareStatement(sql);
 
@@ -29,6 +29,7 @@ public class AnyadirAlquileresModel extends Conexion{
                     ps.setDate(6, a.getFechaPublicacion());
                     ps.setInt(7, a.getnHabitaciones());
                     ps.setString(8, a.getDescripcion());
+                    ps.setString(9, a.getCiudad());
                     ps.executeUpdate();
                     System.out.println("Alquiler añadido con éxito");
                 } catch (SQLException e) {

@@ -25,10 +25,15 @@ public class Usuario {
         this.contra = contra;
     }
 
+
+
+
     public Usuario(String nombre,String correo){
         this.nombre = nombre;
         this.correo = correo;
     }
+
+
 
     public int getTelefono() {
         return telefono;
@@ -43,6 +48,7 @@ public class Usuario {
     }
 
     public void setFechanacimiento(LocalDate fechanacimiento) {
+
         this.fechanacimiento = fechanacimiento;
     }
 

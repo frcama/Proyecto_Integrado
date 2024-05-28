@@ -43,12 +43,15 @@ public class Inicio_Sesion{
     public void initialize() {
         System.out.println("el boton llega ");
 
+
+        Usuario u = new Usuario();
+
     }
 
     @FXML
     public void inicioBOTONclick(ActionEvent actionEvent) {
 
-      /*
+
         Usuario u = new Usuario();
         InicioSesionModel ism = new InicioSesionModel();
         ArrayList<Usuario> listaUsuarios = ism.loginUsuario(email, pass);
@@ -79,7 +82,7 @@ public class Inicio_Sesion{
 
 
         }
-*/
+
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Novedades.fxml"));
             this.panelDeInicio.getChildren().setAll(pane);
@@ -111,5 +114,32 @@ public class Inicio_Sesion{
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    public Usuario infoUsuario(){
+        Usuario u = new Usuario();
+        InicioSesionModel ism = new InicioSesionModel();
+        ArrayList<Usuario> listaUsuarios = ism.loginUsuario(email, pass);
+
+        String emailUsuario = email.getText();
+        String contraUsuario = pass.getText();
+        String emailBDA;
+        String passBDA;
+        for (Usuario us : listaUsuarios) {
+            emailBDA = us.getCorreo();
+            passBDA = us.getContra();
+
+            if (emailBDA != null && emailBDA.equals(emailUsuario) && passBDA.equals(contraUsuario)){
+                //cambio de pantalla
+                System.out.println("el if entra y compara");
+                PerfilModel pm = new PerfilModel();
+                u = pm.perfilModel(emailBDA,passBDA);
+
+            }else{
+
+            }
+        }
+
+        return u;
     }
 }
