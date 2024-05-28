@@ -18,7 +18,6 @@ public class EventosModel extends Conexion{
             String sql = "Select * from eventos_culturales";
 
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
-
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
@@ -35,8 +34,9 @@ public class EventosModel extends Conexion{
                 Double precio = rs.getDouble("precio");
                 Date fechaEvento = rs.getDate("fecha");
                 String d = rs.getString("Descripcion");
+                String tipo = rs.getString("tipoEvento");
 
-                //Eventos e = new Eventos(nombre,fechaEvento,ubicacion,fechaEvento,Imagen,d,precio);
+                //Eventos e = new Eventos(nombre,fechaEvento,ubicacion,fechaEvento,Imagen,d,precio,tipo);
 
             }
         } catch (SQLException e) {

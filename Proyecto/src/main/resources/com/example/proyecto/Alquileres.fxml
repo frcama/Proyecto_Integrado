@@ -157,7 +157,7 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <HBox fx:id="panelHBox" layoutX="3.0" layoutY="164.0" prefHeight="346.0" prefWidth="328.0">
+      <HBox fx:id="panelHBox" layoutX="3.0" layoutY="147.0" prefHeight="363.0" prefWidth="328.0">
          <children>
             <ScrollPane fx:id="alquileresScollPane" prefHeight="346.0" prefWidth="330.0">
                <content>

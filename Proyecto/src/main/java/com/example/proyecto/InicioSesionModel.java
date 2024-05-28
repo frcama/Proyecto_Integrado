@@ -8,30 +8,6 @@ import java.util.ArrayList;
 
 public class InicioSesionModel extends Conexion {
 
-    public ArrayList<Usuario> anyadirResgistro() {
-
-        ArrayList<Usuario> usuarios = new ArrayList<>();
-
-        try {
-            String sql = "select * from estudiantes";
-
-            PreparedStatement ps = this.getConexion().prepareStatement(sql);
-            ResultSet rs = ps.executeQuery();
-
-            while (rs.next()) {
-                // Usuario a = new Usuario(rs.getString("nombre"),rs.getString("apellido"),rs.getString("correo"),rs.getString("DNI"),rs.getInt("edad"), rs.getInt("telefono"),);
-                // usuarios.add(a);
-            }
-            ps.execute();
-            System.out.println("");
-        } catch (SQLException e) {
-            System.out.println("Error SQL: " + e.getMessage());
-
-        }
-        return usuarios;
-    }
-
-
     public ArrayList<Usuario> loginUsuario(TextField email, TextField contra) {
         ArrayList<Usuario> listaUsuarios = new ArrayList<>();
 

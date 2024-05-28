@@ -9,6 +9,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 
 import java.io.IOException;
@@ -46,9 +48,15 @@ private Button eventosBOTON;
 private MenuItem ChatAyuda;
 @FXML
 private Button librosBOTON;
+@FXML
+private ScrollPane novedadesScollPane;
+@FXML
+private GridPane cosasGripPaneNovedades;
+@FXML
+private HBox panelHBoxNovedades;
 
 
-@Override
+    @Override
 public void initialize(URL location, ResourceBundle resources) {
 
     perfilBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';");

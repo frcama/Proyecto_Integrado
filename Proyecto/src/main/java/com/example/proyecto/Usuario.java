@@ -25,6 +25,11 @@ public class Usuario {
         this.contra = contra;
     }
 
+    public Usuario(String nombre,String correo){
+        this.nombre = nombre;
+        this.correo = correo;
+    }
+
     public int getTelefono() {
         return telefono;
     }

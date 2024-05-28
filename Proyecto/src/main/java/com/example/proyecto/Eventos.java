@@ -40,6 +40,8 @@ public class Eventos {
     }
 
 
+
+
     public String getTipo() {
         return tipo;
     }

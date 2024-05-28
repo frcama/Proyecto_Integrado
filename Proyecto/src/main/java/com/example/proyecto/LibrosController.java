@@ -25,7 +25,6 @@ import java.util.logging.Logger;
 
 public class LibrosController implements Initializable {
 
-
     @FXML
     private Button perfilBOTON;
     @FXML

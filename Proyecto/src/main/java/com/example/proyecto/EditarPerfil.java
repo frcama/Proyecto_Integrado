@@ -39,6 +39,8 @@ public class EditarPerfil {
     private DatePicker fechaNacimientoPerfil;
     @FXML
     private PasswordField contrsaenaPerfil;
+    @FXML
+    private Button cambiosbutton;
 
     @FXML
     public void EditarFotoclick(ActionEvent actionEvent) {
@@ -75,5 +77,12 @@ public class EditarPerfil {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+    @FXML
+    public void cambiosButtonClick(ActionEvent actionEvent) {
+
+
+
     }
+}
 

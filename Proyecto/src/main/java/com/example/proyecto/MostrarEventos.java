@@ -23,8 +23,15 @@ public class MostrarEventos {
 
 
     Alquileres alquiler = new Alquileres();
+    @javafx.fxml.FXML
+    private Label nombrePublicadoEvento;
 
-    public void setData(Eventos evento) {
+    public void setData(Eventos evento,String nombre) {
+
+        PerfilModel pm= new PerfilModel();
+        Usuario u = new Usuario();
+        u = pm.perfilModel(u.getCorreo(),u.getContra());
+
 
         nombreLibroLabel.setText(evento.getNombre());
         precioEventoLabel.setText(String.valueOf(evento.getPrecio()+"€"));
@@ -33,5 +40,7 @@ public class MostrarEventos {
         ubiEventoLabel.setText(evento.getUbicacion());
         descripcionEventoLabel.setText(evento.getDescripcion());
         fechaEventoLabel.setText(String.valueOf(evento.getFechaEvento()));
+        nombrePublicadoEvento.setText(u.getNombre());
+
     }
 }

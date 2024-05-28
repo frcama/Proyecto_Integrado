@@ -65,24 +65,23 @@ public class AlquileresController implements Initializable{
         alquileresBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);");
 
 
-        ObservableList<String> preciosAlquiler = FXCollections.observableArrayList();
         ObservableList<String> zonaAlquiler = FXCollections.observableArrayList();
         ObservableList<String> nHabitacionesAlquiler = FXCollections.observableArrayList();
 
-        String precios1 = "1 Habitación";
-        String precios2 = "2 Habitaciones";
-        String precios3 = "3 Habitaciones";
-        String precios4 = "4 Habitaciones";
-        String precios5 = "5 Habitaciones";
+        String n1 = "1 Habitación";
+        String n2 = "2 Habitaciones";
+        String n3 = "3 Habitaciones";
+        String n4 = "4 Habitaciones";
+        String n5 = "5 Habitaciones";
 
 
-        preciosAlquiler.add(precios1);
-        preciosAlquiler.add(precios2);
-        preciosAlquiler.add(precios3);
-        preciosAlquiler.add(precios4);
-        preciosAlquiler.add(precios5);
+        nHabitacionesAlquiler.add(n1);
+        nHabitacionesAlquiler.add(n2);
+        nHabitacionesAlquiler.add(n3);
+        nHabitacionesAlquiler.add(n4);
+        nHabitacionesAlquiler.add(n5);
 
-        NumHabChoiceBox.setItems(preciosAlquiler);
+        NumHabChoiceBox.setItems(nHabitacionesAlquiler);
 
 
         String zona1 = "Zona centro";
@@ -99,7 +98,6 @@ public class AlquileresController implements Initializable{
         zonaAlquiler.add(zona5);
 
         zonaFiltroChoicebox.setItems(zonaAlquiler);
-
 
 
 
@@ -129,41 +127,43 @@ public class AlquileresController implements Initializable{
 
         }
 
-
-
         int column = 0;
         int row = 0;
 
 
         for (int i = 0; i < alquileresArrayList.size(); i++) {
             try {
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("MostrarAlquileres.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("MostrarAlquileres.fxml"));
 
                 AnchorPane anchorPane = fxmlLoader.load();
 
+                Usuario u = new Usuario();
+                PerfilModel pm= new PerfilModel();
+                u = pm.perfilModel(u.getCorreo(),u.getContra());
 
-            MostrarAlquileres ma = fxmlLoader.getController();
-            ma.setData(alquileresArrayList.get(i));
 
-            if (column == 1) {
-                column = 0;
-                row++;
-            }
+                MostrarAlquileres ma = fxmlLoader.getController();
+                ma.setData(alquileresArrayList.get(i),u.getNombre());
 
-            cosasGripPane.add(anchorPane, column++, row); //(child,column,row)
-            //set grid width
-            cosasGripPane.setMinWidth(Region.USE_COMPUTED_SIZE);
-            cosasGripPane.setPrefWidth(Region.USE_COMPUTED_SIZE);
-            cosasGripPane.setMaxWidth(Region.USE_PREF_SIZE);
+                if (column == 1) {
+                    column = 0;
+                    row++;
+                }
 
-            //set grid height
-            cosasGripPane.setMinHeight(Region.USE_COMPUTED_SIZE);
-            cosasGripPane.setPrefHeight(Region.USE_COMPUTED_SIZE);
-            cosasGripPane.setMaxHeight(Region.USE_PREF_SIZE);
+                cosasGripPane.add(anchorPane, column++, row); //(child,column,row)
+                //set grid width
+                cosasGripPane.setMinWidth(Region.USE_COMPUTED_SIZE);
+                cosasGripPane.setPrefWidth(Region.USE_COMPUTED_SIZE);
+                cosasGripPane.setMaxWidth(Region.USE_PREF_SIZE);
 
-            GridPane.setMargin(anchorPane, new Insets(10));
-            } catch (IOException e) {
+                //set grid height
+                cosasGripPane.setMinHeight(Region.USE_COMPUTED_SIZE);
+                cosasGripPane.setPrefHeight(Region.USE_COMPUTED_SIZE);
+                cosasGripPane.setMaxHeight(Region.USE_PREF_SIZE);
+
+                GridPane.setMargin(anchorPane, new Insets(10));
+            }catch (IOException e) {
                 throw new RuntimeException(e);
             }
         }
