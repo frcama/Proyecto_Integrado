@@ -143,7 +143,7 @@ public class LibrosController implements Initializable {
 
 
                 MostrarAlquileres ma = fxmlLoader.getController();
-                ma.setData(librosArrayList.get(i));
+               // ma.setData(librosArrayList.get(i));
 
                 if (column == 1) {
                     column = 0;

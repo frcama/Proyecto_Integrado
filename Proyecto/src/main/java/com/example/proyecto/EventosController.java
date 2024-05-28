@@ -85,7 +85,7 @@ public class EventosController implements Initializable {
 
         EventosModel em = new EventosModel();
         ArrayList<Eventos> eventosArrayList = em.mostrarEventos();
-
+/*
         for ( Eventos eventos : eventosArrayList){
 
             String ubi = eventos.getUbicacion();
@@ -98,7 +98,7 @@ public class EventosController implements Initializable {
             Alquileres a = new Alquileres(ubi,nombre,precio,m2,nh,desc);
 
         }
-
+*/
     }
 
 

@@ -32,7 +32,7 @@ public class LibrosModel extends Conexion {
                 // Convertir bytes a BufferedImage
                 InputStream in = new ByteArrayInputStream(imgBytes);
                 BufferedImage img = ImageIO.read(in);
-                listaLibros.add(new Libros(rs.getString(1), rs.getString(2), rs.getString(3), rs.getDouble(4), rs.getInt(5), img));
+               // listaLibros.add(new Libros(rs.getString(1), rs.getString(2), rs.getString(3), rs.getDouble(4), rs.getInt(5), img));
 
                 return listaLibros;
             }

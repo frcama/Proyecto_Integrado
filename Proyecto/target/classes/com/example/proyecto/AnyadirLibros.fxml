@@ -31,15 +31,15 @@
       <ImageView fx:id="muestraImagen" fitHeight="120.0" fitWidth="181.0" layoutX="124.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" />
       <Text layoutX="15.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Título" />
       <TextField fx:id="tituloTextField" layoutX="140.0" layoutY="235.0" />
-      <Text layoutX="20.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Curso" />
+      <Text layoutX="20.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Curso" />
       <Line endX="199.9000244140625" layoutX="117.0" layoutY="487.0" startX="-100.0" />
       <Text layoutX="35.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio" />
       <Spinner fx:id="precioSpinner" layoutX="140.0" layoutY="510.0" />
       <Button fx:id="subirButton" layoutX="146.0" layoutY="560.0" mnemonicParsing="false" onAction="#onSubirButtonClick" text="Subir" />
       <Button fx:id="atrasBOTON" layoutX="21.0" layoutY="18.0" mnemonicParsing="false" onAction="#atrasBOTONclick" text="Atrás" />
       <Text layoutX="17.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN" />
-      <Text layoutX="13.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Editorial" />
-      <TextField fx:id="editorialTextField" layoutX="140.0" layoutY="356.0" />
+      <Text layoutX="13.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Editorial" />
+      <TextField fx:id="editorialTextField" layoutX="140.0" layoutY="335.0" />
       <TextField fx:id="isbnTextField" layoutX="140.0" layoutY="288.0" />
       <Label layoutX="214.0" layoutY="-3.0" prefHeight="42.0" prefWidth="181.0" text="LIBROS" underline="true">
          <font>
@@ -62,6 +62,8 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <TextField fx:id="cursoTextField" layoutX="140.0" layoutY="415.0" />
+      <TextField fx:id="cursoTextField" layoutX="140.0" layoutY="380.0" />
+      <TextField fx:id="asignaturaTextField" layoutX="140.0" layoutY="430.0" />
+      <Text layoutX="20.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Asignatura" />
    </children>
 </AnchorPane>

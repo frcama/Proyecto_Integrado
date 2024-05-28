@@ -21,5 +21,6 @@
       <Label fx:id="nHabsAlquilerLabel" layoutX="156.0" layoutY="113.0" prefHeight="18.0" prefWidth="166.0" text="nHabitaciones Alquiler" wrapText="true" />
       <Label fx:id="ubiAlquilerLabel" layoutX="156.0" layoutY="135.0" prefHeight="18.0" prefWidth="166.0" text="Ubicacion Alquiler" wrapText="true" />
       <Label fx:id="metrosAlquilerLabel" layoutX="156.0" layoutY="153.0" prefHeight="20.0" prefWidth="159.0" text="Metros Alquiler" wrapText="true" />
+      <Label fx:id="nombrePublicadoAlquiler" layoutX="14.0" layoutY="155.0" prefHeight="18.0" prefWidth="129.0" text="Label" />
    </children>
 </AnchorPane>
