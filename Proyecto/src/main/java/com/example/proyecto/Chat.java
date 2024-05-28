@@ -21,8 +21,18 @@ import javafx.scene.text.TextFlow;
 import javafx.util.Duration;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URI;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 
 public class Chat
 {
@@ -48,10 +58,11 @@ public class Chat
     @FXML
     private void initialize() {
         // Configuración del tamaño de la fuente de la respuesta y negrita
-        label.setStyle("-fx-font-size: 13px; -fx-font-weight: bold; -fx-fill: blue");
+        label.setStyle("-fx-font-size: 12px; -fx-font-weight: bold; -fx-fill: blue");
 
         // Añadir mensaje de bienvenida del bot en azul
-        mensajes.add("            ¡Hola! Soy EstuBot ¡Bienvenid@ al chat!");
+        mensajes.add("¡Hola! Soy EstuBot ¡Bienvenid@ al chat!\n\n¿Que tipo de información necessitas?\n\nAlquileres // libros // Eventos");
+
 
         // Ajustar el padding del TextFlow
         textFlow.setPadding(new Insets(90, 0, 0, 0));
@@ -59,6 +70,8 @@ public class Chat
         // Actualizar mensajes para mostrar el mensaje de bienvenida
         actualizarMensajes();
     }
+
+
 
 
     @FXML
@@ -70,225 +83,69 @@ public class Chat
 
         PauseTransition pause = new PauseTransition(Duration.seconds(1));
         pause.setOnFinished(event -> {
-            if (texto.contains("hola")) {
-                mensajes.add(" Bot: ¡Hola! ¿En que puedo ayudarte?");
-            }
-            if (texto.contains("adios")) {
-                mensajes.add(" Bot: ¡Hasta Luego!");
-            }
-            if (texto.contains("ubicacion de alquiler")) {
-                mensajes.add(" Bot: Puedo ayudarte a encontrar alquileres. ¿Qué tipo de propiedad buscas?");
-
-            } else if (texto.contains("ubicacion de libros")) {
-                mensajes.add(" Bot: Los libros que buscas pueden estar en la biblioteca o en una librería cercana.");
-            }
-            else if (texto.contains("ubicacion de eventos")) {
-                mensajes.add(" Bot:¿Hay algún evento en particular que buscas?");
-            }
-            if (texto.contains("eventos")) {
-                mensajes.add(" Bot: Hay varios eventos próximos. ¿Te interesan eventos culturales, deportivos o sociales?");
-            }
-            if (texto.contains("precios de libros")) {
-                mensajes.add(" Bot: El precio de los libros varía. ¿Buscas algún libro en particular?");
-            } else if (texto.contains("precios de alquileres")) {
-                mensajes.add(" Bot: Los precios de alquiler pueden variar según la ubicación y el tipo de propiedad. ¿En qué área estás interesado?");
-            } else if (texto.contains("precios de libros")) {
-                mensajes.add(" Bot: El costo de los libros depende del género y la novedad. ¿Hay algún título específico que te interese?");
-            }
-            if (texto.contains("alquileres")) {
-                mensajes.add(" Bot: Tengo información sobre alquileres de viviendas, oficinas y locales comerciales. ¿Qué necesitas?");
-            }
-            if (texto.contains("libros")) {
-                mensajes.add(" Bot: Puedo recomendarte libros basados en tus intereses. ¿Qué géneros prefieres?");
-            }
-
-            if (texto.contains("fecha de eventos")) {
-                mensajes.add(" Bot: Puedo informarte sobre las fechas de los próximos eventos. ¿Qué tipo de evento buscas?");
-            }
-            if (texto.contains("habitaciones de alquiler")) {
-                mensajes.add(" Bot: Tengo información sobre habitaciones disponibles para alquilar. ¿Prefieres una zona en particular?");
-            }
-            if (texto.contains("ayuda con el perfil")) {
-                mensajes.add(" Bot: Puedo asistirte con la configuración de tu perfil. ¿Qué necesitas ajustar?");
-            }
-            if (texto.contains("cambiar contraseña")) {
-                mensajes.add(" Bot: Cambiar tu contraseña regularmente mejora la seguridad. ¿Quieres que te guíe en el proceso?");
-            }
-            if (texto.contains("zonas de alquileres")) {
-                mensajes.add(" Bot: Hay varias zonas populares para alquilar. ¿Buscas algo céntrico o más tranquilo?");
-            }
-            if (texto.contains("zonas de eventos")) {
-                mensajes.add(" Bot: Los eventos se realizan en distintas zonas. ¿Tienes preferencia por alguna área en particular?");
-            }
-            if (texto.contains("tipos de eventos")) {
-                mensajes.add(" Bot: Existen eventos culturales, deportivos, tecnológicos, entre otros. ¿Cuál es tu interés?");
-            }
-            if (texto.contains("tipos de libros")) {
-                mensajes.add(" Bot: Hay libros de ficción, no ficción, educativos, etc. ¿Qué tipo de lectura prefieres?");
-            }
-            if (texto.contains("informacion sobre editoriales")) {
-                mensajes.add(" Bot: Puedo proporcionarte datos de editoriales reconocidas. ¿Buscas alguna en especial?");
-            }
-            if (texto.contains("informacion sobre alquileres")) {
-                mensajes.add(" Bot: ¿Necesitas consejos sobre contratos de alquiler o cómo encontrar una buena oferta?");
-            }
-            if (texto.contains("informacion sobre libros")) {
-                mensajes.add(" Bot: Si necesitas recomendaciones o datos de libros, estoy aquí para ayudarte.");
-            }
-            if (texto.contains("informacion sobre eventos")) {
-                mensajes.add(" Bot: Puedo darte detalles sobre eventos actuales o futuros. ¿Qué tipo de información necesitas?");
-            }
-            if (texto.contains("ubicacion de pisos")) {
-                mensajes.add(" Bot: Puedo ayudarte a encontrar pisos. ¿Qué características buscas?");
-            } else if (texto.contains("precios de pisos")) {
-                mensajes.add(" Bot: Los precios de los pisos varían según la zona y las comodidades. ¿Tienes un presupuesto en mente?");
-            } else if (texto.contains("pisos")) {
-                mensajes.add(" Bot: Tengo información sobre pisos en alquiler y venta. ¿Qué estás buscando exactamente?");
-            }
-
-            // Contains para precios máximos y mínimos
-            if (texto.contains("precio maximo de libros")) {
-                mensajes.add(" Bot: ¿Cuál es el precio máximo que estás dispuesto a pagar por un libro?");
-            } else if (texto.contains("precio minimo de libros")) {
-                mensajes.add(" Bot: Tenemos opciones para todos los presupuestos. ¿Buscas algo en particular?");
-            } else if (texto.contains("precio maximo de alquileres")) {
-                mensajes.add(" Bot: ¿Cuál es tu límite de precio para un alquiler?");
-            } else if (texto.contains("precio minimo de alquileres")) {
-                mensajes.add(" Bot: Puedo mostrarte opciones de alquiler que se ajusten a tu presupuesto mínimo.");
-            }
-
-            if (texto.contains("ubicacion de viviendas")) {
-                mensajes.add(" Bot: Puedo ayudarte a encontrar viviendas. ¿Qué requisitos tienes?");
-            } else if (texto.contains("precios de viviendas")) {
-                mensajes.add(" Bot: Los precios de las viviendas varían mucho. ¿Qué rango de precio estás considerando?");
-            } else if (texto.contains("viviendas")) {
-                mensajes.add(" Bot: Tengo información sobre viviendas en alquiler o venta. ¿Qué tipo de vivienda buscas?");
-            }
-
-            // Nuevos contains para 'comercios locales'
-            if (texto.contains("ubicacion de comercios locales")) {
-                mensajes.add(" Bot: Puedo mostrarte dónde encontrar comercios locales para alquilar. ¿Qué tipo de negocio tienes?");
-            } else if (texto.contains("precios de comercios locales")) {
-                mensajes.add(" Bot: Los precios de alquiler de comercios locales dependen de la ubicación y el tamaño. ¿Tienes alguna preferencia?");
-            } else if (texto.contains("comercios locales")) {
-                mensajes.add(" Bot: ¿Estás buscando alquilar un local comercial? Puedo ayudarte con eso.");
-            }
-            if (texto.contains("lugares para pasear universidades")) {
-                mensajes.add(" Bot: Hay varios lugares agradables para pasear cerca de las universidades. ¿Estás buscando algún lugar en particular?");
-            }
-
-            // Contains para asignaturas de cada curso de la universidad y carreras
-            if (texto.contains("asignaturas universidad")) {
-                mensajes.add(" Bot: Puedo proporcionarte información sobre las asignaturas de diferentes cursos y carreras universitarias. ¿Qué carrera te interesa?");
-            } else if (texto.contains("carreras universidad")) {
-                mensajes.add(" Bot: Existen muchas carreras universitarias con distintas asignaturas. ¿Hay alguna carrera específica que quieras explorar?");
-            }
-
-            // Contains para libros de asignaturas de las carreras
-            if (texto.contains("libros de asignaturas")) {
-                mensajes.add(" Bot: Puedo recomendarte libros para las asignaturas de las carreras que mencionaste. ¿Para qué carrera y curso necesitas los libros?");
-            }
-
-            // Contains para cursos de las carreras
-            if (texto.contains("cursos de la carrera")) {
-                mensajes.add(" Bot: Las carreras universitarias suelen tener 4 o 5 cursos. ¿En qué curso estás interesado?");
-            }
-            if (texto.contains("libros de Matemáticas")) {
-                mensajes.add(" Bot: Puedo recomendarte libros de Matemáticas. ¿Buscas libros de algún nivel educativo específico?");
-            }
-
-// Contains para libros de Física
-            if (texto.contains("libros de Física")) {
-                mensajes.add(" Bot: Tengo una lista de libros esenciales de Física. ¿Para qué curso los necesitas?");
-            }
-
-// Contains para libros de Química
-            if (texto.contains("libros de Química")) {
-                mensajes.add(" Bot: La Química es fascinante. ¿Qué tema de Química te interesa más?");
-            }
-
-// Contains para libros de Historia
-            if (texto.contains("libros de Historia")) {
-                mensajes.add(" Bot: La Historia está llena de aprendizajes. ¿Hay alguna época o evento histórico que te interese?");
-            }
-
-// Contains para libros de Literatura
-            if (texto.contains("libros de Literatura")) {
-                mensajes.add(" Bot: La Literatura puede ser muy inspiradora. ¿Estás buscando literatura clásica, moderna o de algún autor en particular?");
-            }
-
-
-            if (texto.contains("matemáticas")) {
-                mensajes.add(" Bot: Puedo recomendarte libros de Matemáticas. ¿Buscas libros de algún nivel educativo específico?");
-            }
-
-// Contains para libros de Física
-            if (texto.contains("física")) {
-                mensajes.add(" Bot: Tengo una lista de libros esenciales de Física. ¿Para qué curso los necesitas?");
-            }
-
-// Contains para libros de Química
-            if (texto.contains("química")) {
-                mensajes.add(" Bot: La Química es fascinante. ¿Qué tema de Química te interesa más?");
-            }
-
-// Contains para libros de Historia
-            if (texto.contains("historia")) {
-                mensajes.add(" Bot: La Historia está llena de aprendizajes. ¿Hay alguna época o evento histórico que te interese?");
-            }
-
-// Contains para libros de Literatura
-            if (texto.contains("literatura")) {
-                mensajes.add(" Bot: La Literatura puede ser muy inspiradora. ¿Estás buscando literatura clásica, moderna o de algún autor en particular?");
-            }
-
-            // Contains para alquileres y viviendas en Valencia o solo la ciudad
-            if (texto.contains("alquileres en Valencia") || texto.contains("viviendas en Valencia") || texto.contains("Valencia")) {
-                mensajes.add(" Bot: Puedo ayudarte con información sobre alquileres, viviendas o cualquier otra consulta sobre Valencia. ¿Qué necesitas saber?");
-            }
-
-// Contains para alquileres y viviendas en Barcelona o solo la ciudad
-            if (texto.contains("alquileres en Barcelona") || texto.contains("viviendas en Barcelona") || texto.contains("Barcelona")) {
+            if (texto.contains("alquileres en valencia")) {
+                mensajes.add(" Bot: Puedo ayudarte con información sobre alquileres en Valencia. ¿Qué necesitas saber?");
+            } else if (texto.contains("alquileres en barcelona")) {
                 mensajes.add(" Bot: Ya sea alquileres, viviendas o detalles generales, puedo proporcionarte información sobre Barcelona. ¿Cuál es tu consulta?");
-            }
-
-// Contains para alquileres y viviendas en Madrid o solo la ciudad
-            if (texto.contains("alquileres en Madrid") || texto.contains("viviendas en Madrid") || texto.contains("Madrid")) {
+            } else if (texto.contains("alquileres en madrid")) {
                 mensajes.add(" Bot: Estoy aquí para ayudarte con temas de alquileres, viviendas o cualquier pregunta sobre Madrid. ¿Qué estás buscando?");
-            }
-
-// Contains para alquileres y viviendas en Sevilla o solo la ciudad
-            if (texto.contains("alquileres en Sevilla") || texto.contains("viviendas en Sevilla") || texto.contains("Sevilla")) {
+            } else if (texto.contains("alquileres en sevilla")) {
                 mensajes.add(" Bot: Puedo asistirte con información sobre alquileres, viviendas o cualquier otro tema relacionado con Sevilla. ¿En qué puedo ayudarte?");
-            }
+            } else if (texto.contains("alquileres")) {
+                mensajes.add(" Bot: ¿De qué tipo quieres la consulta? Precios // Ubicaciones // Otro");
 
+                // Subcondiciones para 'alquileres'
+                if (texto.contains("precios")) {
+                    mensajes.add(" Bot: ¿Qué rango de precios te interesa? De 100 a 300 // De 300 a 500 // De 500 a 800 // De 800 a máximo");
 
-
-
-// Contains para cuando no se entiende el mensaje
-            if (!texto.contains("hola") && !texto.contains("adios") && !texto.contains("ubicacion") &&
-                    !texto.contains("eventos") && !texto.contains("precios") && !texto.contains("alquileres") &&
-                    !texto.contains("libros") && !texto.contains("fecha") && !texto.contains("habitaciones") &&
-                    !texto.contains("ayuda") && !texto.contains("cambiar") && !texto.contains("zonas") &&
-                    !texto.contains("tipos") && !texto.contains("informacion") &&
-                    !texto.contains("ubicacion de viviendas") && !texto.contains("precios de viviendas") &&
-                    !texto.contains("viviendas") && !texto.contains("ubicacion de comercios locales") &&
-                    !texto.contains("precios de comercios locales") && !texto.contains("comercios locales") &&
-                    !texto.contains("lugares para pasear universidades") && !texto.contains("asignaturas universidad") &&
-                    !texto.contains("carreras universidad") && !texto.contains("libro de asignaturas") &&
-                    !texto.contains("cursos de la carrera") && !texto.contains("libro de Matemáticas") &&
-                    !texto.contains("libro de Física") && !texto.contains("libro de Química") &&
-                    !texto.contains("libro de Historia") && !texto.contains("libro de Literatura") &&
-                    !texto.contains("Matemáticas") && !texto.contains("Física") &&
-                    !texto.contains("Química") && !texto.contains("Historia") &&
-                    !texto.contains("literatura") && !texto.contains("valencia") && !texto.contains("barcelona")
-                    && !texto.contains("madrid") && !texto.contains("sevilla")) {
+                    // Subcondiciones para 'precios'
+                    if (texto.contains("de 100 a 300")) {
+                        mensajes.add(" Bot: Aquí tienes algunas opciones de alquileres entre 100 y 300.");
+                    } else if (texto.contains("de 300 a 500")) {
+                        mensajes.add(" Bot: Aquí tienes algunas opciones de alquileres entre 300 y 500.");
+                    } else if (texto.contains("de 500 a 800")) {
+                        mensajes.add(" Bot: Aquí tienes algunas opciones de alquileres entre 500 y 800.");
+                    } else if (texto.contains("de 800 a max")) {
+                        mensajes.add(" Bot: Aquí tienes algunas opciones de alquileres de 800 a máximo.");
+                    }
+                } else if (texto.contains("ubicaciones")) {
+                    mensajes.add(" Bot: Disponemos de las siguientes ubicaciones: Zona Centro, Cerca de playa, Cerca de Universidades, Afueras de la Ciudad, Cerca de zona de Ocio");
+                } else if (texto.contains("otro")) {
+                    mensajes.add(" Bot: Por favor, especifica más sobre lo que necesitas saber.");
+                }
+            } else if (texto.contains("libros de matemáticas")) {
+                mensajes.add(" Bot: Puedo recomendarte libros de Matemáticas. ¿Buscas libros de algún nivel educativo específico?");
+            } else if (texto.contains("libros de física")) {
+                mensajes.add(" Bot: Tengo una lista de libros esenciales de Física. ¿Para qué curso los necesitas?");
+            } else if (texto.contains("libros de química")) {
+                mensajes.add(" Bot: La Química es fascinante. ¿Qué tema de Química te interesa más?");
+            } else if (texto.contains("libros de historia")) {
+                mensajes.add(" Bot: La Historia está llena de aprendizajes. ¿Hay alguna época o evento histórico que te interese?");
+            } else if (texto.contains("libros de literatura")) {
+                mensajes.add(" Bot: La Literatura puede ser muy inspiradora. ¿Estás buscando literatura clásica, moderna o de algún autor en particular?");
+            } else if (texto.contains("libros")) {
+                mensajes.add(" Bot: Puedo recomendarte libros. ¿Qué géneros prefieres?");
+                if (texto.contains("precios")) {
+                    mensajes.add(" Bot: El precio de los libros varía. ¿Buscas algún libro en particular?");
+                }
+            } else if (texto.contains("eventos")) {
+                mensajes.add(" Bot: Hay varios eventos próximos. ¿Te interesan eventos culturales, deportivos o sociales?");
+            } else if (texto.contains("hola")) {
+                mensajes.add(" Bot: ¡Hola! ¿En qué puedo ayudarte?");
+            } else if (texto.contains("adios")) {
+                mensajes.add(" Bot: ¡Hasta Luego!");
+            } else {
                 mensajes.add(" Bot: No he entendido tu mensaje. ¿Puedes proporcionar más detalles o reformular tu pregunta?");
             }
+
             actualizarMensajes();
         });
         pause.play();
     }
+
+
+
+
 
 
 
@@ -346,5 +203,4 @@ public class Chat
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
 }
