@@ -1,5 +1,7 @@
 package com.example.proyecto;
 
+import javafx.scene.image.Image;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.sql.Date;
@@ -11,10 +13,19 @@ public class Libros {
     private String editorial;
     private double precio;
     private String curso;
-    private BufferedImage imagen;
     private File image;
     private Date d;
     private String asignatura;
+    private Image imagen;
+
+
+    public Image getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(Image imagen) {
+        this.imagen = imagen;
+    }
 
     public Date getD() {
         return d;
@@ -88,23 +99,9 @@ public class Libros {
         this.curso = curso;
     }
 
-    public BufferedImage getImagen() {
-        return imagen;
-    }
 
-    public void setImagen(BufferedImage imagen) {
-        this.imagen = imagen;
-    }
 
-    public Libros(String titulo, String isbn, String editorial, double precio, String curso, BufferedImage imagen, Date d) {
-        this.titulo = titulo;
-        this.isbn = isbn;
-        this.editorial = editorial;
-        this.precio = precio;
-        this.curso = curso;
-        this.imagen = imagen;
-        this.d = d;
-    }
+
 
     public Libros(String titulo, String isbn, String editorial, double precio, String curso, File image) {
 
@@ -128,23 +125,28 @@ public class Libros {
         this.d = d;
     }
 
-    public Libros(String isbn, String titulo, Double precio, String curso, String editorial, String asignatura) {
+    //
+
+
+    public Libros(String isbn, String titulo, Double precio, String curso, String editorial, String asignatura,Image imagen) {
         this.titulo = titulo;
         this.isbn = isbn;
         this.editorial = editorial;
         this.precio = precio;
         this.curso = curso;
         this.asignatura = asignatura;
+        this.imagen=imagen;
     }
 
 
-    public Libros(String isbn, String titulo, String curso, String asignatura, String editorial, double precio) {
+    public Libros(String isbn, String titulo, String curso, String asignatura, String editorial, double precio,Image image) {
         this.titulo = titulo;
         this.isbn = isbn;
         this.editorial = editorial;
         this.precio = precio;
         this.curso = curso;
         this.asignatura = asignatura;
+        this.imagen=image;
     }
 
     public Libros(String titulo, String isbn, String editorial, double precio, String asignatura, String curso, File imagen, Date d) {

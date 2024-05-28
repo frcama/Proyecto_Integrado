@@ -36,8 +36,7 @@ public class MostrarAlquileres extends Conexion{
 
         nombreAlquilerLabel.setText(alquiler.getNombre());
         precioAlquilerLabel.setText(String.valueOf(alquiler.getPrecio()+"€"));
-        //Image image = new Image(getClass().getResourceAsStream(alquiler.getImgSrc()));
-        //imagenalquilerImageView.setImage(image);
+
         metrosAlquilerLabel.setText(alquiler.getMetrosCuadrados() + " metros cuadrados");
         ubiAlquilerLabel.setText(alquiler.getUbicacion());
         descripcionAlquilerLabel.setText(alquiler.getDescripcion());

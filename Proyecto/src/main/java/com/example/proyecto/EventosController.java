@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.stage.FileChooser;
@@ -95,10 +96,10 @@ public class EventosController implements Initializable {
             Double precio = eventos.getPrecio();
             String desc = eventos.getDescripcion();
             Date fecha = eventos.getFechaEvento();
-            //Image image = eventos.getImagen();
+            Image image = eventos.getImagen();
             String tipo = eventos.getTipo();
 
-            Eventos ev = new Eventos(nombre, fecha, ubi, desc, precio, tipo);
+            Eventos ev = new Eventos(nombre, fecha, ubi, desc, precio, tipo,image);
 
         }
 

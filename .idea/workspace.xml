@@ -6,25 +6,31 @@
   <component name="ChangeListManager">
     <list default="true" id="599a3e3c-8dec-4e78-9449-a59b65385a10" name="Changes" comment="Arreglos cosas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Alquileres.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Alquileres.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AlquileresController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AlquileresController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AlquileresModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AlquileresModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AnyadirAlquileres.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AnyadirAlquileres.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AnyadirAlquileresModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AnyadirAlquileresModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Inicio_Sesion.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Inicio_Sesion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Eventos.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Eventos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/EventosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/EventosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/EventosModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/EventosModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Libros.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Libros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/LibrosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/LibrosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/LibrosModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/LibrosModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/MostrarAlquileres.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/MostrarAlquileres.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Perfil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Perfil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/MostrarAlquileres.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/MostrarAlquileres.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/Perfil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/Perfil.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Alquileres.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Alquileres.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/AlquileresController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/AlquileresController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/AlquileresModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/AlquileresModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/AnyadirAlquileres.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/AnyadirAlquileres.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/MostrarEventos.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/MostrarEventos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/MostrarLibros.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/MostrarLibros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/MostrarEventos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/MostrarEventos.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/MostrarLibros.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/MostrarLibros.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/AnyadirAlquileresModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/AnyadirAlquileresModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Eventos.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Eventos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/EventosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/EventosController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/EventosModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/EventosModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Inicio_Sesion.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Inicio_Sesion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Libros.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Libros.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/LibrosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/LibrosController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/LibrosModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/LibrosModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarAlquileres.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarAlquileres.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarAlquileres.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarAlquileres.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Perfil.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Perfil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarEventos.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarEventos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarEventos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarEventos.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarLibros.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarLibros.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarLibros.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarLibros.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Perfil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Perfil.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716921158176</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Arreglos cosas">
+      <option name="closed" value="true" />
+      <created>1716924850070</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1716924850070</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="UnknownFeatures">

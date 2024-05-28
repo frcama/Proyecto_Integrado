@@ -11,34 +11,26 @@ public class Eventos {
     private Date fechaEvento;
     private String ubicacion;
     private Date fecha_anyadido;
-    private Image Imagen;
+    private Image imagen;
     private String descripcion;
     private double precio;
     private String tipo;
     private File imageFile;
 
-    public Eventos(int id_evento, String nombre, Date fechaEvento, String ubicacion, Date fecha_anyadido, Image Imagen, String descripcion, double precio) {
-        this.id_evento = id_evento;
+
+
+
+    public Eventos( String nombre, Date fechaEvento, String ubicacion, Date fecha_anyadido, Image imagen, File imageFile, String descripcion, double precio, String tipo) {
         this.nombre = nombre;
         this.fechaEvento = fechaEvento;
         this.ubicacion = ubicacion;
         this.fecha_anyadido = fecha_anyadido;
-        this.Imagen = Imagen;
-        this.descripcion = descripcion;
-        this.precio = precio;
-    }
-
-
-    public Eventos( String nombre, Date fechaEvento, String ubicacion, Date fecha_anyadido, Image Imagen, File imageFile, String descripcion, double precio, String tipo) {
-        this.nombre = nombre;
-        this.fechaEvento = fechaEvento;
-        this.ubicacion = ubicacion;
-        this.fecha_anyadido = fecha_anyadido;
-        this.Imagen = Imagen;
+        this.imagen = imagen;
         this.imageFile=imageFile;
         this.descripcion = descripcion;
         this.precio = precio;
         this.tipo = tipo;
+        this.imagen=imagen;
     }
 
     public Eventos(){
@@ -46,37 +38,14 @@ public class Eventos {
     }
 
 
-    public Eventos( String nombre, Date fechaEvento, String ubicacion, Date fecha_anyadido, Image Imagen, String descripcion, double precio, String tipo) {
-        this.nombre = nombre;
-        this.fechaEvento = fechaEvento;
-        this.ubicacion = ubicacion;
-        this.fecha_anyadido = fecha_anyadido;
-        this.Imagen = Imagen;
-        this.descripcion = descripcion;
-        this.precio = precio;
-        this.tipo = tipo;
-    }
-
-
-    public Eventos( String nombre, Date fechaEvento, String ubicacion, String descripcion, double precio, String tipo) {
+    public Eventos( String nombre, Date fechaEvento, String ubicacion, String descripcion, double precio, String tipo, Image imagen) {
         this.nombre = nombre;
         this.fechaEvento = fechaEvento;
         this.ubicacion = ubicacion;
         this.descripcion = descripcion;
         this.precio = precio;
         this.tipo = tipo;
-    }
-
-
-
-    public Eventos( String nombre, Date fechaEvento, String ubicacion, String descripcion, double precio, String tipo, File imageFile) {
-        this.nombre = nombre;
-        this.fechaEvento = fechaEvento;
-        this.ubicacion = ubicacion;
-        this.descripcion = descripcion;
-        this.precio = precio;
-        this.tipo = tipo;
-        this.imageFile=imageFile;
+        this.imagen=imagen;
     }
 
 
@@ -113,11 +82,11 @@ public class Eventos {
     }
 
     public Image getImagen() {
-        return Imagen;
+        return imagen;
     }
 
     public void setImagen(Image imagen) {
-        this.Imagen = imagen;
+        this.imagen = imagen;
     }
 
     public String getDescripcion() {

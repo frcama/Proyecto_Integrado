@@ -16,7 +16,7 @@
             <Glow level="0.0" />
          </effect>
       </Label>
-      <ImageView fx:id="libroimagenImageView" fitHeight="116.0" fitWidth="159.0" layoutX="10.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="libroimagenImageView" fitHeight="99.0" fitWidth="145.0" layoutX="10.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" />
       <Label fx:id="isbnLabel" layoutX="166.0" layoutY="44.0" prefHeight="33.0" prefWidth="166.0" text="ISBN" wrapText="true" />
       <Label fx:id="editorialLabel" layoutX="166.0" layoutY="77.0" prefHeight="18.0" prefWidth="159.0" text="Editorial" wrapText="true" />
       <Label fx:id="cursoLabel" layoutX="166.0" layoutY="104.0" prefHeight="18.0" prefWidth="166.0" text="Curso" wrapText="true" />
