@@ -15,7 +15,7 @@ public class EventosModel extends Conexion{
         ArrayList<Eventos> listaEventos = new ArrayList<>();
 
         try {
-            String sql = "Select * from eventos_culturales";
+            String sql = "Select * from eventos_culturales ORDER BY fecha_anyadido DESC;";
 
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
@@ -36,7 +36,7 @@ public class EventosModel extends Conexion{
                 String d = rs.getString("Descripcion");
                 String tipo = rs.getString("tipoEvento");
 
-                Eventos e = new Eventos(nombre,fechaEvento,ubicacion,fechaEvento,Imagen,d,precio,tipo);
+                Eventos e = new Eventos(nombre,fechaEvento,ubicacion,d,precio,tipo, Imagen);
                 listaEventos.add(e);
             }
         } catch (SQLException e) {

@@ -31,21 +31,32 @@ public class Perfil implements Initializable {
     @javafx.fxml.FXML
     private AnchorPane panelDePerfil;
     @javafx.fxml.FXML
-    private Label nombreusuarioPerfil;
-    @javafx.fxml.FXML
-    private Label descripccionPerfil;
-    @javafx.fxml.FXML
     private Label nombrePerfil;
     @javafx.fxml.FXML
     private Label fechaNacimientoPerfil;
     @javafx.fxml.FXML
     private Label contrsaenaPerfil;
+    @javafx.fxml.FXML
+    private Label correoPerfil;
+    @javafx.fxml.FXML
+    private Label apellidosPerfil;
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+/*
+        PerfilModel pm = new PerfilModel();
+        Usuario u = new Usuario();
 
+       Inicio_Sesion is = new Inicio_Sesion();
+       u = is.infoUsuario();
 
+        correoPerfil.setText(u.getCorreo());
+        nombrePerfil.setText(u.getNombre());
+        contrsaenaPerfil.setText(u.getContra());
+        apellidosPerfil.setText(u.getNombre());
+        fechaNacimientoPerfil.setText(String.valueOf(u.getFechanacimiento()));
+*/
 
     }
 

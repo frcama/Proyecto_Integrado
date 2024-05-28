@@ -1,13 +1,12 @@
 package com.example.proyecto;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.SpinnerValueFactory;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -39,8 +38,6 @@ public class AnyadirLibros implements Initializable {
     @FXML
     private TextField editorialTextField;
     @FXML
-    private TextField cursoTextField;
-    @FXML
     private AnchorPane PanelAnyadirLIBROS;
     @FXML
     private TextField tituloTextField;
@@ -48,14 +45,32 @@ public class AnyadirLibros implements Initializable {
     private TextField isbnTextField;
     @FXML
     private TextField asignaturaTextField;
+    @FXML
+    private ChoiceBox cursoChoiceBox;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         SpinnerValueFactory<Integer> valueFactoryInteger =
-                new SpinnerValueFactory.IntegerSpinnerValueFactory(1,10000000,0,1);
+                new SpinnerValueFactory.IntegerSpinnerValueFactory(0,10000000,0,1);
 
         precioSpinner.setValueFactory(valueFactoryInteger);
+
+        ObservableList<String> cursosLibros = FXCollections.observableArrayList();
+
+        String curso1 = "Primero";
+        String curso2 = "Segundo";
+        String curso3 = "Tercero";
+        String curso4 = "Cuarto";
+
+
+        cursosLibros.add(curso1);
+        cursosLibros.add(curso2);
+        cursosLibros.add(curso3);
+        cursosLibros.add(curso4);
+
+
+        cursoChoiceBox.setItems(cursosLibros);
 
     }
 
@@ -83,7 +98,7 @@ public class AnyadirLibros implements Initializable {
         String titulo= tituloTextField.getText();
         String editorial = editorialTextField.getText();
         String isbn = isbnTextField.getText();
-        String curso = cursoTextField.getText();
+        String curso = String.valueOf(cursoChoiceBox.getValue());
         double precio = (Integer) precioSpinner.getValue();
         String asignatura = asignaturaTextField.getText();
         Date d = Date.valueOf(LocalDate.now());

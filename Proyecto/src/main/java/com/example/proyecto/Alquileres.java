@@ -23,7 +23,8 @@ public class Alquileres{
     private String imgSrc;
     private String Ciudad;
 
-
+    private siubda
+    // poner numero o informacion de contacto
 
     public Alquileres(int id_Alquiler, String ubicacion, String nombre, double precio, String metrosCuadrados, Image imagen, int nHabitaciones, String imgSrc) {
         this.id_Alquiler = id_Alquiler;
@@ -58,7 +59,7 @@ public class Alquileres{
         this.fechaPublicacion= fechaPublicacion;
     }
 
-    public Alquileres(String ubicacion, String nombre, Double precio, String mc, Integer nh, String d) {
+    public Alquileres(String ubicacion, String nombre, Double precio, String mc, Integer nh, String d, Image imagen) {
 
         this.ubicacion = ubicacion;
         this.nombre = nombre;
@@ -66,7 +67,7 @@ public class Alquileres{
         this.metrosCuadrados = mc;
         this.nHabitaciones = nh;
         this.Descripcion = d;
-
+        this.imagen=imagen;
 
     }
 

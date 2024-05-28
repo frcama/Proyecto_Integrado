@@ -155,7 +155,7 @@
       </MenuButton>
       <HBox fx:id="panelHBox" layoutY="131.0" prefHeight="412.0" prefWidth="335.0">
          <children>
-            <ScrollPane fx:id="librosScrollPane" prefHeight="452.0" prefWidth="335.0">
+            <ScrollPane fx:id="librosScrollPane" prefHeight="402.0" prefWidth="328.0">
                <content>
                   <GridPane fx:id="cosasGripPane" prefHeight="0.0" prefWidth="5.0">
                      <columnConstraints>

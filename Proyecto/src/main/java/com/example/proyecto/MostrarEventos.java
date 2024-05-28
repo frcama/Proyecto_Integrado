@@ -35,12 +35,14 @@ public class MostrarEventos {
 
         nombreLibroLabel.setText(evento.getNombre());
         precioEventoLabel.setText(String.valueOf(evento.getPrecio()+"€"));
-        //Image image = new Image(getClass().getResourceAsStream(evento.getImgSrc()));
-        //imagenalquilerImageView.setImage(image);
         ubiEventoLabel.setText(evento.getUbicacion());
         descripcionEventoLabel.setText(evento.getDescripcion());
         fechaEventoLabel.setText(String.valueOf(evento.getFechaEvento()));
         nombrePropietario.setText(u.getNombre());
 
+        // Establecer la imagen en el ImageView
+        if (evento.getImagen() != null) {
+            imagenEventoImageView.setImage(evento.getImagen());
+        }
     }
 }

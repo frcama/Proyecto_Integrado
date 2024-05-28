@@ -37,7 +37,7 @@ public class LibrosModel extends Conexion {
                 double precio = rs.getDouble("precio");
 
 
-                Libros l = new Libros(ISBN ,Titulo ,Curso , asignautra, editorial, precio);
+                Libros l = new Libros(ISBN ,Titulo ,Curso , asignautra, editorial, precio,imagen);
                 listaLibros.add(l);
             }
 

@@ -11,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.stage.FileChooser;
@@ -125,9 +126,9 @@ public class LibrosController implements Initializable {
             String curso = libros.getCurso();
             String editorial = libros.getEditorial();
             String asignatura = libros.getAsignatura();
-            //Image image = alquileres.getImagen();
+            Image image = libros.getImagen();
 
-            Libros l = new Libros(isbn, titulo, precio, curso, editorial, asignatura);
+            Libros l = new Libros(isbn, titulo, precio, curso, editorial, asignatura,image);
 
         }
 
