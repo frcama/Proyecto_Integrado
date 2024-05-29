@@ -137,7 +137,6 @@
             <DropShadow />
          </effect>
       </Button>
-      <ChoiceBox fx:id="editorialChoiceBox" layoutX="8.0" layoutY="71.0" prefHeight="25.0" prefWidth="88.0" />
       <ChoiceBox fx:id="cursoChoiceBox" layoutX="228.0" layoutY="71.0" prefHeight="25.0" prefWidth="88.0" />
       <Button fx:id="filtrarButton" layoutX="120.0" layoutY="104.0" mnemonicParsing="false" onAction="#filtrarBottonClick" text="Aplicar Filtros" />
       <MenuButton alignment="TOP_CENTER" layoutX="-2.0" layoutY="7.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="27.0" style="-fx-background-color: #1f23ff;">
@@ -170,5 +169,6 @@
          </children>
       </HBox>
       <TextField fx:id="asignaturaTextField" layoutX="105.0" layoutY="71.0" prefHeight="25.0" prefWidth="114.0" text="Asignatura" />
+      <TextField fx:id="editorialTextField" layoutX="14.0" layoutY="71.0" prefHeight="25.0" prefWidth="85.0" text="Editorial" />
    </children>
 </AnchorPane>

@@ -11,11 +11,6 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
-import javafx.stage.FileChooser;
-import javafx.stage.Stage;
-
-import javax.swing.*;
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -46,8 +41,6 @@ public class LibrosController implements Initializable {
     @FXML
     private Button librosBOTON;
     @FXML
-    private ChoiceBox<String> editorialChoiceBox;
-    @FXML
     private ChoiceBox<String> cursoChoiceBox;
 
     private ArrayList<Libros> librosArrayList;
@@ -57,6 +50,8 @@ public class LibrosController implements Initializable {
     private HBox panelHBox;
     @FXML
     private TextField asignaturaTextField;
+    @FXML
+    private TextField editorialTextField;
 
 
     @Override
@@ -67,28 +62,15 @@ public class LibrosController implements Initializable {
 
         librosBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);");
 
-        ObservableList<String> editoriales = FXCollections.observableArrayList();
         ObservableList<String> cursolibro = FXCollections.observableArrayList();
-        ObservableList<String> asignaturas = FXCollections.observableArrayList();
-
-
-        String editorial1 = "tonpare";
-        String editorial2 = "Bromera";
-        String editorial3 = "Escribi";
-        String editorial4 = "Quiqueeditoriales";
-
-        editoriales.add(editorial1);
-        editoriales.add(editorial2);
-        editoriales.add(editorial3);
-        editoriales.add(editorial4);
-
-        editorialChoiceBox.setItems(editoriales);
 
         String curso1 = "Primero";
         String curso2 = "Segundo";
         String curso3 = "Tercero";
         String curso4 = "Cuarto";
+        String cursovacio = " ";
 
+        cursolibro.add(cursovacio);
         cursolibro.add(curso1);
         cursolibro.add(curso2);
         cursolibro.add(curso3);
@@ -96,7 +78,6 @@ public class LibrosController implements Initializable {
 
         cursoChoiceBox.setItems(cursolibro);
 
-        editorialChoiceBox.setValue("Editorial");
         cursoChoiceBox.setValue("Curso");
 
         LibrosModel lm = new LibrosModel();
@@ -284,13 +265,13 @@ public class LibrosController implements Initializable {
     public void filtrarBottonClick(ActionEvent actionEvent) {
         System.out.println("Funciona");
 
-        String editorialfiltrar = editorialChoiceBox.getValue();
+        String editorialfiltrar = editorialTextField.getText().trim();
         String asignaturafiltrar = asignaturaTextField.getText().trim();
         String cursofiltrar = cursoChoiceBox.getValue();
 
         ArrayList<Libros> librosFiltrados = new ArrayList<>();
         for (Libros libro : librosArrayList) {
-            boolean matchesEditorial = editorialfiltrar.equals("Editorial") || libro.getEditorial().equals(editorialfiltrar);
+            boolean matchesEditorial = editorialfiltrar.equals("Editorial") || libro.getEditorial().equalsIgnoreCase(editorialfiltrar);
             boolean matchesAsignatura = asignaturafiltrar.equals("Asignatura") || libro.getAsignatura().equalsIgnoreCase(asignaturafiltrar);
             boolean matchesCurso = cursofiltrar.equals("Curso") || libro.getCurso().equals(cursofiltrar);
 
@@ -303,5 +284,24 @@ public class LibrosController implements Initializable {
 
     }
 
+    @Deprecated
+    public void eventosBOTON2click(ActionEvent actionEvent) {
+    }
+
+    @Deprecated
+    public void librosBOTON2click(ActionEvent actionEvent) {
+    }
+
+    @Deprecated
+    public void onAdd2Clicked(ActionEvent actionEvent) {
+    }
+
+    @Deprecated
+    public void alquileresBOTON2click(ActionEvent actionEvent) {
+    }
+
+    @Deprecated
+    public void novedadesBOTON2click(ActionEvent actionEvent) {
+    }
 }
 
