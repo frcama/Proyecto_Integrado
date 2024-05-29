@@ -14,7 +14,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class AlquileresModel extends Conexion{
-
+    // Método para mostrar todos los alquileres, ordenados por fecha de añadido
     public ArrayList<Alquileres> mostrarAlquileres() {
         this.conexion = true;
         ArrayList<Alquileres> alquileresLista = new ArrayList<>();
@@ -23,7 +23,7 @@ public class AlquileresModel extends Conexion{
             String sql = "SELECT Ubicacion, nombre, precio, MetrosCuadrados, imagen, NumHabitaciones, Descripcion FROM alquileres ORDER BY fecha_anyadido DESC;";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
-
+            // Itera sobre los resultados de la consulta
             while (rs.next()) {
                 Image imagen = null;
                 if (rs.getBlob("imagen") != null) {
@@ -32,7 +32,7 @@ public class AlquileresModel extends Conexion{
                     imagen = new Image(inputStream); //crea imagen en javaFX
 
                 }
-
+                // Obtiene los valores de las columnas de la fila actual
                 String ubicacion = rs.getString("Ubicacion");
                 String nombre =  rs.getString("nombre");
                 Double precio = rs.getDouble("precio");
@@ -40,11 +40,11 @@ public class AlquileresModel extends Conexion{
                 Integer nh = rs.getInt("NumHabitaciones");
                 String d = rs.getString("Descripcion");
 
-
+                // Crea un objeto Alquileres con los valores obtenidos y lo añade a la lista
                 Alquileres a = new Alquileres(ubicacion,nombre,precio,mc,nh,d,imagen);
                 alquileresLista.add(a);
             }
-
+            // Cierra el ResultSet y el PreparedStatement
             rs.close();
             ps.close();
 
@@ -58,13 +58,13 @@ public class AlquileresModel extends Conexion{
         return alquileresLista;
         }
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+// Método para filtrar los alquileres en función de varios criterios
     public ArrayList<Alquileres> filtrosAlquiler(String zona, Double min, Double max, String habs) {
-        this.conexion = true;
+        this.conexion = true; // Indica que la conexión está activa
         ArrayList<Alquileres> alquileresLista = new ArrayList<>();
 
         try {
-            // Construye la consulta SQL
+            // Construye la consulta SQL dinámicamente en función de los parámetros de filtro
             StringBuilder sql = new StringBuilder("SELECT * FROM alquileres WHERE 1 = 1");
             if (habs != null && !habs.isEmpty()) {
                 sql.append(" AND NumHabitaciones = ?");
@@ -82,7 +82,7 @@ public class AlquileresModel extends Conexion{
             // Prepara la consulta
             PreparedStatement ps = this.getConexion().prepareStatement(sql.toString());
 
-            // Establece los parámetros de la consulta
+            // Establece los parámetros de la consulta en función de los valores proporcionados
             int paramIndex = 1;
             if (habs != null && !habs.isEmpty()) {
                 ps.setString(paramIndex++, habs);
@@ -100,7 +100,7 @@ public class AlquileresModel extends Conexion{
             // Ejecuta la consulta
             ResultSet rs = ps.executeQuery();
 
-            // Procesa los resultados
+            // Procesa los resultados de la consulta
             while (rs.next()) {
                 Image imagen = null;
                 if (rs.getBlob("imagen") != null) {
@@ -108,7 +108,7 @@ public class AlquileresModel extends Conexion{
                     InputStream inputStream = blob.getBinaryStream();
                     imagen = new Image(inputStream);
                 }
-
+                // Obtiene los valores de las columnas de la fila actual
                 String ubicacion = rs.getString("Ubicacion");
                 String nombre = rs.getString("nombre");
                 Double precio = rs.getDouble("precio");
@@ -116,7 +116,7 @@ public class AlquileresModel extends Conexion{
                 String fileImagen = rs.getString("imagen");
                 Integer nh = rs.getInt("NumHabitaciones");
                 String d = rs.getString("Descripcion");
-
+                // Crea un objeto Alquileres con los valores obtenidos y lo añade a la lista
                 Alquileres a = new Alquileres(ubicacion, nombre, precio, mc, nh, d, imagen);
                 alquileresLista.add(a);
             }
