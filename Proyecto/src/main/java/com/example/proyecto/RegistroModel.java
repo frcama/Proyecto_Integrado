@@ -13,7 +13,7 @@ public class RegistroModel extends Conexion{
 
 
         try {
-            String sql = "INSERT INTO estudiantes VALUES (?, ?, ?, ?, ?, ?, ?,?);";
+            String sql = "INSERT INTO  estudiantes (dni_estudiante, nombre, apellidos, email, telefono,edad, fecha_nacimiento, contrasenya) VALUES (?, ?, ?, ?, ?, ?, ?,?);";
 
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
 
@@ -27,13 +27,10 @@ public class RegistroModel extends Conexion{
             ps.setString(8, u.getContra());
 
             ps.execute();
-            System.out.println("Alquiler añadido con éxito");
+            System.out.println("Usuario añadido con éxito");
         } catch (SQLException e) {
             System.out.println("Error SQL: " + e.getMessage());
 
-//oiaushndoians
-
-            //apidjnsa
         }
     }
 
