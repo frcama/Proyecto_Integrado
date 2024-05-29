@@ -1,6 +1,7 @@
 package com.example.proyecto;
 
 import javafx.scene.control.Alert;
+import javafx.scene.control.TextField;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,14 +10,14 @@ import java.util.ArrayList;
 
 public class InicioSesionModel extends Conexion {
 
-    public Usuario loginUsuario(String email, String contra) {
+    public Usuario loginUsuario(TextField email, TextField contra) {
         Usuario u = new Usuario();
 
         try {
-            String sql = "SELECT * FROM estudiantes WHERE email = ? AND contraseña = ?;";
+            String sql = "SELECT * FROM estudiantes WHERE email = ? AND contrasenya = ?;";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
-            ps.setString(1, email);
-            ps.setString(2, contra);
+            ps.setString(1, String.valueOf(email.getText()));
+            ps.setString(2, String.valueOf(contra.getText()));
 
 
             ResultSet resultSet = ps.executeQuery();
@@ -25,8 +26,9 @@ public class InicioSesionModel extends Conexion {
             if (resultSet.next()) {
                 System.out.println("El email y la contraseña existen en la base de datos.");
                 u.setCorreo(resultSet.getString("email"));
-                u.setContra(resultSet.getString("contraseña"));
+                u.setContra(resultSet.getString("contrasenya"));
                 u.setDNI(resultSet.getString("dni_estudiante"));
+                u.setId_usuario(resultSet.getString("id_estudiante"));
 
             } else {
                 Alert a = new Alert(Alert.AlertType.ERROR);

@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -15,6 +16,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -36,9 +38,9 @@ public class Inicio_Sesion{
     @FXML
     private AnchorPane panelDeInicio;
     @FXML
-    private Button recu_contra;
-    @FXML
     private PasswordField pass;
+    @FXML
+    private Button recu_contrasenya;
 
     @FXML
     public void initialize() {
@@ -54,32 +56,70 @@ public class Inicio_Sesion{
         String contra = pass.getText();
         String correo = email.getText();
 
-        Usuario us= ism.loginUsuario(correo, contra);
+        Usuario us = ism.loginUsuario(email, pass); // Asegúrate de que este método devuelva un usuario válido
+
         if (us != null) {
-            enviarDatos(actionEvent);
-            try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("Novedades.fxml"));
-                AnchorPane pane = loader.load();
-                NovedadesController novedadesController = loader.getController();
-                novedadesController.setUsuario(us); // Pasar el usuario al controlador
+            String passBDA = us.getContra();
+            String emailBDA = us.getCorreo();
+            if (contra.equals(passBDA) && correo.equals(emailBDA)) {
+                // Actualiza UsuarioHolder con la información del usuario
+                UsuarioHolder usuarioHolder = UsuarioHolder.getInstance();
+                usuarioHolder.setUsuario(us);
 
-                Scene scene = new Scene(pane);
-                Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-                stage.setScene(scene);
-                stage.show();
+                enviarDatos(actionEvent);
 
-                // Cerrar la ventana de inicio de sesión
-                Stage inicioSesionStage = (Stage) inicioBOTON.getScene().getWindow();
-                inicioSesionStage.close();
-            } catch (IOException ex) {
-                Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (Exception ex) {
-                Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+                // Cambio de pantalla
+                try {
+                    URL fxmlLocation = getClass().getClassLoader().getResource("inicio_sesion.fxml");
+                    if (fxmlLocation == null) {
+                        throw new IOException("No se pudo encontrar el archivo FXML en la ruta especificada.");
+                    }
+                    AnchorPane pane = FXMLLoader.load(fxmlLocation);
+                    this.panelDeInicio.getChildren().setAll(pane);
+                } catch (IOException ex) {
+                    Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, "Error cargando la pantalla de inicodeSEsion.", ex);
+                    ex.printStackTrace();
+                }
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("El correo o la contraseña son incorrectos.");
+                alert.showAndWait();
             }
         } else {
-            System.out.println("Inicio de sesión fallido. Por favor, verifica tu correo y contraseña.");
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("El usuario no existe.");
+            alert.showAndWait();
         }
+    }
 
+    private void enviarDatos(ActionEvent event) {
+        Usuario u = new Usuario();
+        u.setContra(pass.getText());
+        u.setCorreo(email.getText());
+
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        stage.close();
+
+        try {
+            URL fxmlLocation = getClass().getClassLoader().getResource("inicio_sesion.fxml");
+            if (fxmlLocation == null) {
+                throw new IOException("No se pudo encontrar el archivo FXML en la ruta especificada.");
+            }
+            Parent root = FXMLLoader.load(fxmlLocation);
+
+            // Paso 1
+            UsuarioHolder holder = UsuarioHolder.getInstance();
+            // Paso 2
+            holder.setUsuario(u);
+
+            Scene scene = new Scene(root);
+            stage.setTitle("Tutorial JavaFX");
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            System.err.println(String.format("Error creando ventana: %s", e.getMessage()));
+        }
     }
 
     @FXML
@@ -101,31 +141,6 @@ public class Inicio_Sesion{
             this.panelDeInicio.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-
-
-    private void enviarDatos(ActionEvent event) {
-        Usuario u = new Usuario();
-        u.setContra(pass.getText());
-        u.setCorreo(email.getText());
-
-        Node node = (Node) event.getSource();
-        Stage stage = (Stage) node.getScene().getWindow();
-        stage.close();
-
-        try {
-            Parent root = FXMLLoader.load(Inicio_Sesion.class.getClassLoader().getResource("inicio_sesion.fxml"));
-            // Paso 1
-            UsuarioHolder holder = UsuarioHolder.getInstance();
-            // Paso 2
-            holder.setUsuario(u);
-            Scene scene = new Scene(root);
-            stage.setTitle("Tutorial JavaFX");
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            System.err.println(String.format("Error creando ventana: %s", e.getMessage()));
         }
     }
 

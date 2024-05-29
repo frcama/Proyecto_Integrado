@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="599a3e3c-8dec-4e78-9449-a59b65385a10" name="Changes" comment="porfin imagenes">
+    <list default="true" id="599a3e3c-8dec-4e78-9449-a59b65385a10" name="Changes" comment="registro">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/RegistroModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/RegistroModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Registro.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Registro.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/InicioSesionModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/InicioSesionModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Inicio_Sesion.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Inicio_Sesion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/inicio_sesion.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/inicio_sesion.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/InicioSesionModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/InicioSesionModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Inicio_Sesion.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Inicio_Sesion.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/RegistroModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/RegistroModel.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +48,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.HelloApplication.executor": "Run",
+    "Application.HelloApplication.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
@@ -206,7 +209,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716998229787</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="registro">
+      <option name="closed" value="true" />
+      <created>1716999828569</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1716999828569</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -230,7 +241,8 @@
     <MESSAGE value="BDA Alquileres" />
     <MESSAGE value="Arreglos cosas" />
     <MESSAGE value="porfin imagenes" />
-    <option name="LAST_COMMIT_MESSAGE" value="porfin imagenes" />
+    <MESSAGE value="registro" />
+    <option name="LAST_COMMIT_MESSAGE" value="registro" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -259,16 +271,34 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Inicio_Sesion.java</url>
-          <line>51</line>
+          <line>53</line>
           <properties class="com.example.proyecto.Inicio_Sesion" method="inicioBOTONclick">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/InicioSesionModel.java</url>
+          <line>12</line>
+          <properties class="com.example.proyecto.InicioSesionModel" method="loginUsuario">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Inicio_Sesion.java</url>
+          <line>94</line>
+          <properties class="com.example.proyecto.Inicio_Sesion" method="enviarDatos">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/InicioSesionModel.java</url>
-          <line>9</line>
+          <line>10</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
