@@ -44,10 +44,10 @@ private MenuItem ChatAyuda;
 private Button librosBOTON;
 @FXML
 private ScrollPane novedadesScollPane;
-@FXML
-private GridPane cosasGripPane;
-@FXML
+    @FXML
 private HBox panelHBoxNovedades;
+    @FXML
+    private GridPane cosasGripPaneNovedades;
 
 
     @Override
@@ -115,20 +115,6 @@ public void eventosBOTONclick(ActionEvent actionEvent) {
         }
 }
 //-----------------------------------------------------------------------------------------------
-@Deprecated
-public void chatNovedadesclick(ActionEvent actionEvent) {
-    System.out.println("funciona");
-
-    try {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("Chat.fxml"));
-        this.PanelNovedades.getChildren().setAll(pane);
-    } catch (IOException ex) {
-        Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-    }
-}
-
-
-
 
 @FXML
 public void FondoBlancoclick(ActionEvent actionEvent) {
@@ -169,15 +155,15 @@ public void ChatAyudaclick(ActionEvent actionEvent) {
 public void onAddClicked(ActionEvent actionEvent) {
 }
 
-    @FXML
-    public void alquileresBOTONclick(ActionEvent actionEvent) {
-        System.out.println("funciona");
+@FXML
+public void alquileresBOTONclick(ActionEvent actionEvent) {
+    System.out.println("funciona");
 
-        try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Alquileres.fxml"));
-            this.PanelNovedades.getChildren().setAll(pane);
-        } catch (IOException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    try {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("Alquileres.fxml"));
+        this.PanelNovedades.getChildren().setAll(pane);
+    } catch (IOException ex) {
+        Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
     }
+}
 }

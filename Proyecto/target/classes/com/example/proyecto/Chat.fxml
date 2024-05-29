@@ -24,7 +24,7 @@
          <graphic>
             <ImageView fitHeight="24.0" fitWidth="21.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/boton%20atras%20blanco.png" />
+                  <Image url="@img/botonatrasblanco.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="SW_RESIZE" />

@@ -245,99 +245,31 @@ public class AlquileresController implements Initializable{
 
     }
 
+    @FXML
     public void filtrarBottonClick(ActionEvent actionEvent) {
-        Double preciomax = null;
-        Double preciomin = null;
-
-        if (!PrecioMaxTF.getText().isEmpty()) {
-            try {
-                preciomax = Double.valueOf(PrecioMaxTF.getText());
-            } catch (NumberFormatException e) {
-                System.out.println("Error: Precio máximo no es un número válido.");
-                preciomax = Double.MAX_VALUE;
-            }
-        }
-
-        if (!PrecioMinTF.getText().isEmpty()) {
-            try {
-                preciomin = Double.valueOf(PrecioMinTF.getText());
-            } catch (NumberFormatException e) {
-                System.out.println("Error: Precio mínimo no es un número válido.");
-                preciomin = 0.0;
-            }
-        }
-
-        if (preciomax == null) {
-            preciomax = Double.MAX_VALUE;
-        }
-        if (preciomin == null) {
-            preciomin = 0.0;
-        }
-
-        String nhabs = String.valueOf(NumHabChoiceBox.getValue());
-        String nh = "";
-
-        switch (nhabs) {
-            case "1 Habitación":
-                nh = "1";
-                break;
-            case "2 Habitaciones":
-                nh = "2";
-                break;
-            case "3 Habitaciones":
-                nh = "3";
-                break;
-            case "4 Habitaciones":
-                nh = "4";
-                break;
-            case "5 Habitaciones":
-                nh = "5";
-                break;
-        }
-
-        String ubicacion = String.valueOf(zonaFiltroChoicebox.getValue());
-
-        AlquileresModel am = new AlquileresModel();
-        ArrayList<Alquileres> alquileresArrayList = am.filtrosAlquiler(ubicacion, preciomin, preciomax, nh);
-
-        mostrarAlquileresEnPantalla(alquileresArrayList);
     }
+/*
+    public void filtrarBottonClick(ActionEvent actionEvent) {
+        System.out.println("Funciona");
 
-    private void mostrarAlquileresEnPantalla(ArrayList<Alquileres> alquileresArrayList) {
-        cosasGripPane.getChildren().clear();
+        String curso =
+        String asignaturafiltrar = asignaturaTextField.getText().trim();
+        String cursofiltrar = cursoChoiceBox.getValue();
 
-        int column = 0;
-        int row = 0;
+        ArrayList<Libros> librosFiltrados = new ArrayList<>();
+        for (Alquileres alquiler : alquileresArrayList) {
+            boolean matchesEditorial = editorialfiltrar.equals("Editorial") || alquiler.getEditorial().equals(editorialfiltrar);
+            boolean matchesAsignatura = asignaturafiltrar.equals("Asignatura") || alquiler.getAsignatura().equalsIgnoreCase(asignaturafiltrar);
+            boolean matchesCurso = cursofiltrar.equals("Curso") || alquiler.getCurso().equals(cursofiltrar);
 
-        for (int i = 0; i < alquileresArrayList.size(); i++) {
-            try {
-                FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("MostrarAlquileres.fxml"));
-
-                AnchorPane anchorPane = fxmlLoader.load();
-
-                MostrarAlquileres ma = fxmlLoader.getController();
-                ma.setData(alquileresArrayList.get(i));
-
-                if (column == 1) {
-                    column = 0;
-                    row++;
-                }
-
-                cosasGripPane.add(anchorPane, column++, row);
-
-                cosasGripPane.setMinWidth(Region.USE_COMPUTED_SIZE);
-                cosasGripPane.setPrefWidth(Region.USE_COMPUTED_SIZE);
-                cosasGripPane.setMaxWidth(Region.USE_PREF_SIZE);
-                cosasGripPane.setMinHeight(Region.USE_COMPUTED_SIZE);
-                cosasGripPane.setPrefHeight(Region.USE_COMPUTED_SIZE);
-                cosasGripPane.setMaxHeight(Region.USE_PREF_SIZE);
-
-                GridPane.setMargin(anchorPane, new Insets(10));
-            } catch (IOException e) {
-                e.printStackTrace();
+            if (matchesEditorial && matchesAsignatura && matchesCurso) {
+                librosFiltrados.add(alquiler);
             }
         }
-    }
 
+        actualizarVista(librosFiltrados);
+
+    }
+*/
+    /* */
 }

@@ -269,39 +269,33 @@ public class LibrosController implements Initializable {
         String asignaturafiltrar = asignaturaTextField.getText().trim();
         String cursofiltrar = cursoChoiceBox.getValue();
 
+        // Verificar si no se ha seleccionado ningún filtro o el texto está vacío
+        if ((editorialfiltrar.isEmpty() || "Editorial".equalsIgnoreCase(editorialfiltrar)) &&
+                (asignaturafiltrar.isEmpty() || "Asignatura".equalsIgnoreCase(asignaturafiltrar)) &&
+                (cursofiltrar == null || cursofiltrar.isEmpty() || "Curso".equalsIgnoreCase(cursofiltrar))) {
+            actualizarVista(librosArrayList); // Mostrar todos los libros
+            return;
+        }
+
         ArrayList<Libros> librosFiltrados = new ArrayList<>();
         for (Libros libro : librosArrayList) {
-            boolean matchesEditorial = editorialfiltrar.equals("Editorial") || libro.getEditorial().equalsIgnoreCase(editorialfiltrar);
-            boolean matchesAsignatura = asignaturafiltrar.equals("Asignatura") || libro.getAsignatura().equalsIgnoreCase(asignaturafiltrar);
-            boolean matchesCurso = cursofiltrar.equals("Curso") || libro.getCurso().equals(cursofiltrar);
+            boolean matchesEditorial = editorialfiltrar.isEmpty() || "Editorial".equalsIgnoreCase(editorialfiltrar) || libro.getEditorial().equalsIgnoreCase(editorialfiltrar);
+            boolean matchesAsignatura = asignaturafiltrar.isEmpty() || "Asignatura".equalsIgnoreCase(asignaturafiltrar) || (libro.getAsignatura() != null && libro.getAsignatura().equalsIgnoreCase(asignaturafiltrar));
+            boolean matchesCurso = cursofiltrar == null || cursofiltrar.isEmpty() || "Curso".equalsIgnoreCase(cursofiltrar) || libro.getCurso().equals(cursofiltrar);
 
             if (matchesEditorial && matchesAsignatura && matchesCurso) {
                 librosFiltrados.add(libro);
             }
         }
 
-        actualizarVista(librosFiltrados);
-
+        // Si no se encontraron libros filtrados, mostrar todos los libros
+        if (librosFiltrados.isEmpty()) {
+            actualizarVista(librosArrayList);
+        } else {
+            actualizarVista(librosFiltrados);
+        }
     }
 
-    @Deprecated
-    public void eventosBOTON2click(ActionEvent actionEvent) {
-    }
 
-    @Deprecated
-    public void librosBOTON2click(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void onAdd2Clicked(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void alquileresBOTON2click(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void novedadesBOTON2click(ActionEvent actionEvent) {
-    }
 }
 
