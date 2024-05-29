@@ -7,10 +7,16 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Region;
 
 import java.io.IOException;
 import java.net.URL;
@@ -294,7 +300,7 @@ public class AlquileresController implements Initializable{
         // Filtrar los alquileres
         ArrayList<Alquileres> alquileresFiltrados = new ArrayList<>();
         for (Alquileres alquiler : alquileresArrayList) {
-            boolean matchesNHabs = nHabsFiltrar.isEmpty() || "null".equalsIgnoreCase(nHabsFiltrar) || alquiler.getnHabitaciones() == Integer.parseInt(nHabsFiltrar);
+            boolean matchesNHabs = nHabsFiltrar.isEmpty() || "Nº Hab".equalsIgnoreCase(nHabsFiltrar) || alquiler.getnHabitaciones() == Integer.parseInt(nHabsFiltrar);
             boolean matchesZona = zonaFiltrar.isEmpty() || "null".equalsIgnoreCase(zonaFiltrar) || alquiler.getUbicacion().equalsIgnoreCase(zonaFiltrar);
             boolean matchesMin = minFiltrar == null || minFiltrar <= 0 || alquiler.getPrecio() >= minFiltrar;
             boolean matchesMax = maxFiltrar == null || maxFiltrar <= 0 || alquiler.getPrecio() <= maxFiltrar;

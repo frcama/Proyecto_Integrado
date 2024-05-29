@@ -20,8 +20,7 @@ public class MostrarEventos {
     @javafx.fxml.FXML
     private AnchorPane panelMostrarAlquiler;
 
-
-    Alquileres alquiler = new Alquileres();
+    Eventos evento = new Eventos();
     @javafx.fxml.FXML
     private Label nombrePropietario;
 

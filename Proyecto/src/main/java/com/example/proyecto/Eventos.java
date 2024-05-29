@@ -1,9 +1,9 @@
 package com.example.proyecto;
 
+import javafx.scene.image.Image;
+
 import java.io.File;
 import java.sql.Date;
-
-import javafx.scene.image.Image;
 
 public class Eventos {
     private int id_evento;
