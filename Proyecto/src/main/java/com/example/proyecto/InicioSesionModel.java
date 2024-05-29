@@ -1,21 +1,22 @@
 package com.example.proyecto;
 
 import javafx.scene.control.Alert;
-import javafx.scene.control.TextField;
 
-import java.sql.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class InicioSesionModel extends Conexion {
 
-    public ArrayList<Usuario> loginUsuario(TextField email, TextField contra) {
+    public ArrayList<Usuario> loginUsuario(String email, String contra) {
         ArrayList<Usuario> listaUsuarios = new ArrayList<>();
 
         try {
             String sql = "SELECT * FROM estudiantes WHERE email = ? AND contraseña = ?;";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
-            ps.setString(1, email.getText());
-            ps.setString(2, contra.getText());
+            ps.setString(1, email);
+            ps.setString(2, contra);
 
 
             ResultSet resultSet = ps.executeQuery();

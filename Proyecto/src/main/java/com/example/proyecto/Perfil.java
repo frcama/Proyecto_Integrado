@@ -41,23 +41,24 @@ public class Perfil implements Initializable {
     @javafx.fxml.FXML
     private Label apellidosPerfil;
 
-
+    Usuario usuario = new Usuario();
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-/*
-        PerfilModel pm = new PerfilModel();
-        Usuario u = new Usuario();
 
-       Inicio_Sesion is = new Inicio_Sesion();
-       u = is.infoUsuario();
+        recuperarDatos();
 
-        correoPerfil.setText(u.getCorreo());
-        nombrePerfil.setText(u.getNombre());
-        contrsaenaPerfil.setText(u.getContra());
-        apellidosPerfil.setText(u.getNombre());
-        fechaNacimientoPerfil.setText(String.valueOf(u.getFechanacimiento()));
-*/
 
+        correoPerfil.setText(usuario.getCorreo());
+        nombrePerfil.setText(usuario.getNombre());
+        contrsaenaPerfil.setText(usuario.getContra());
+        apellidosPerfil.setText(usuario.getNombre());
+        fechaNacimientoPerfil.setText(String.valueOf(usuario.getFechanacimiento()));
+
+
+    }
+    private void recuperarDatos(){
+        UsuarioHolder us = UsuarioHolder.getInstance();
+        Usuario u = us.getUsuario();
     }
 
     @javafx.fxml.FXML

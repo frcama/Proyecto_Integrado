@@ -3,18 +3,16 @@ package com.example.proyecto;
 public class UsuarioHolder {
 
     // La instancia única de UsuarioHolder
-    private static UsuarioHolder instance;
+    private static final UsuarioHolder instance = new UsuarioHolder();
     private Usuario usuario;
 
     // Constructor privado para evitar la creación de instancias fuera de la clase
     private UsuarioHolder() {
     }
 
+
     // Método para obtener la única instancia de UsuarioHolder
     public static UsuarioHolder getInstance() {
-        if (instance == null) {
-            instance = new UsuarioHolder();
-        }
         return instance;
     }
 
