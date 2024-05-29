@@ -25,7 +25,7 @@ import java.util.logging.Logger;
 public class AnyadirAlquileresOs implements Initializable {
 
     FileChooser fileChooser = new FileChooser();
-
+    // Declaración de los elementos de la interfaz gráfica
     @javafx.fxml.FXML
     private Spinner precioSpinner;
     @javafx.fxml.FXML
@@ -52,7 +52,7 @@ public class AnyadirAlquileresOs implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        // Inicializa los valores de los spinners (precio y número de habitaciones)
         SpinnerValueFactory<Integer> valueFactoryInteger =
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(1,10000000,0,1);
 
@@ -69,7 +69,7 @@ public class AnyadirAlquileresOs implements Initializable {
 
     @Deprecated
     public void onSubirButtonClick(ActionEvent actionEvent) {
-
+        // Crea un modelo de alquiler y extrae la información de los campos de texto e imagen
         AnyadirAlquileresModel am = new AnyadirAlquileresModel();
 
         Image imagenSeleccionada = muestraImagen.getImage();
@@ -100,6 +100,7 @@ public class AnyadirAlquileresOs implements Initializable {
         File file = fileChooser.showOpenDialog(new Stage());
 
         if (file != null) {
+            // Si se selecciona un archivo, muestra la imagen en la interfaz
             Image image = new Image(file.toURI().toString());
             muestraImagen.setImage(image);
         }
@@ -107,6 +108,7 @@ public class AnyadirAlquileresOs implements Initializable {
 
     @Deprecated
     public void atrasBOTONclick(ActionEvent actionEvent) {
+        // Navega a la pantalla anterior
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Alquileres.fxml"));
             this.PanelAnyadirALQUILERES.getChildren().setAll(pane);

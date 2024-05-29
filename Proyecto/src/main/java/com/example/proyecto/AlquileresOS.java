@@ -44,23 +44,23 @@ public class AlquileresOS implements Initializable {
     @javafx.fxml.FXML
     private Button librosBOTON;
 
-
+    // Método inicializador que se ejecuta al cargar el FXML
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         /*
-
+            // Configuración del estilo del botón perfil y manejo de eventos de ratón
             perfilBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';");
             perfilBOTON.setOnMouseEntered(e -> perfilBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000); -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
             perfilBOTON.setOnMouseExited(e -> perfilBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
-
+            // Establece el estilo del botón de alquileres
             alquileresBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);");
 
-
+             // Crea listas observables para las opciones de filtros
             ObservableList<String> zonaAlquiler = FXCollections.observableArrayList();
             ObservableList<String> nHabitacionesAlquiler = FXCollections.observableArrayList();
 
 
-
+             // Añade opciones de número de habitaciones a la lista
             String n = "";
             String n1 = "1 Habitación";
             String n2 = "2 Habitaciones";
@@ -78,6 +78,7 @@ public class AlquileresOS implements Initializable {
 
             NumHabChoiceBox.setItems(nHabitacionesAlquiler);
 
+            // Añade opciones de zonas a la lista
             String zona = "";
             String zona1 = "Zona centro";
             String zona2 = "Cerca de playa";
@@ -103,10 +104,10 @@ public class AlquileresOS implements Initializable {
             zonaFiltroChoicebox.setValue("Ubicación");
             nHabitacioneschoiceBox.setValue("Número Habitaciones");
 
-
+            // Crea una instancia del modelo Alquileres y obtiene la lista de alquileres
             AlquileresModel am = new AlquileresModel();
             alquileresArrayList = am.mostrarAlquileres();
-
+            // Procesa cada alquiler en la lista
             for ( Alquileres alquileres : alquileresArrayList){
 
                 String ubi = alquileres.getUbicacion();
@@ -124,7 +125,7 @@ public class AlquileresOS implements Initializable {
             int column = 0;
             int row = 0;
 
-
+            // Añade cada alquiler a un GridPane para mostrarlo en la interfaz
             for (int i = 0; i < alquileresArrayList.size(); i++) {
                 try {
                     FXMLLoader fxmlLoader = new FXMLLoader();
@@ -136,7 +137,7 @@ public class AlquileresOS implements Initializable {
                     PerfilModel pm= new PerfilModel();
                     u = pm.perfilModel(u.getCorreo(),u.getContra());
 
-
+                     // Obtiene el controlador del alquiler para establecer los datos
                     MostrarAlquileres ma = fxmlLoader.getController();
                     ma.setData(alquileresArrayList.get(i));
 
@@ -147,11 +148,13 @@ public class AlquileresOS implements Initializable {
 
                     cosasGripPane.add(anchorPane, column++, row); //(child,column,row)
                     //set grid width
+                    // Ajusta el tamaño del GridPane
                     cosasGripPane.setMinWidth(Region.USE_COMPUTED_SIZE);
                     cosasGripPane.setPrefWidth(Region.USE_COMPUTED_SIZE);
                     cosasGripPane.setMaxWidth(Region.USE_PREF_SIZE);
 
                     //set grid height
+                    // Ajusta el tamaño del GridPane
                     cosasGripPane.setMinHeight(Region.USE_COMPUTED_SIZE);
                     cosasGripPane.setPrefHeight(Region.USE_COMPUTED_SIZE);
                     cosasGripPane.setMaxHeight(Region.USE_PREF_SIZE);
@@ -166,31 +169,31 @@ public class AlquileresOS implements Initializable {
 
     @javafx.fxml.FXML
     public void onAddClicked(ActionEvent actionEvent) {
-    }
+    }   // Maneja el evento del botón añadir
 
     @javafx.fxml.FXML
     public void perfilBOTONclick(ActionEvent actionEvent) {
-    }
+    }   // Maneja el evento del botón perfil
 
     @javafx.fxml.FXML
     public void librosBOTONclick(ActionEvent actionEvent) {
-    }
+    }   // Maneja el evento del botón libros
 
     @javafx.fxml.FXML
     public void novedadesBOTONclick(ActionEvent actionEvent) {
-    }
+    }   // Maneja el evento del botón novedades
 
     @javafx.fxml.FXML
     public void eventosBOTONclick(ActionEvent actionEvent) {
-    }
+    }   // Maneja el evento del botón eventos
 
     @javafx.fxml.FXML
     public void alquileresBOTONclick_OS(ActionEvent actionEvent) {
-    }
+    }   // Maneja el evento del botón alquileres
 
     @javafx.fxml.FXML
     public void filtrarBottonClick(ActionEvent actionEvent) {
-    }
+    }   // Maneja el evento del botón filtrar
 
 
 }
