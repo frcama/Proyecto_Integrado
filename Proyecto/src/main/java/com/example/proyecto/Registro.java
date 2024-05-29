@@ -88,6 +88,9 @@ public class Registro extends Conexion implements Initializable {
         String contra = contrasenyaTF.getText();
         String contra2 = RepeContrasenyaTF.getText();
 
+
+        //hpojsodfpjasd
+        //apojda
         if ( contra2.equals(contra)){
             contra = contra2;
         }

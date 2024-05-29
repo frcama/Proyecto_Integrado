@@ -31,7 +31,9 @@ public class RegistroModel extends Conexion{
         } catch (SQLException e) {
             System.out.println("Error SQL: " + e.getMessage());
 
+//oiaushndoians
 
+            //apidjnsa
         }
     }
 
