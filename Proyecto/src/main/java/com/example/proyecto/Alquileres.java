@@ -8,6 +8,7 @@ import java.sql.Date;
 
 public class Alquileres{
 
+    //Atributos de la clase
 
     private BufferedImage Bimagen;
     private int id_Alquiler;
@@ -24,6 +25,8 @@ public class Alquileres{
     private String ciudad;
 
     // poner numero o informacion de contacto
+    // Constructores
+    // Constructor con parámetros incluyendo id_Alquiler, imagen y fuente de la imagen
 
     public Alquileres(int id_Alquiler, String ubicacion, String nombre, double precio, String metrosCuadrados, Image imagen, int nHabitaciones, String imgSrc) {
         this.id_Alquiler = id_Alquiler;
@@ -35,7 +38,7 @@ public class Alquileres{
         this.nHabitaciones = nHabitaciones;
         this.imgSrc=imgSrc;
     }
-
+    // Constructor con parámetros incluyendo archivo de imagen y descripción
     public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados,File imageFile, Image imagen, int nHabitaciones, String descripcion) {
         this.ubicacion = ubicacion;
         this.nombre = nombre;
@@ -46,7 +49,7 @@ public class Alquileres{
         this.nHabitaciones = nHabitaciones;
         this.Descripcion= descripcion;
     }
-
+    // Constructor con parámetros incluyendo archivo de imagen y fecha de publicación
     public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados, File imageFile, int nHabitaciones, String descripcion, Date fechaPublicacion,String ciudad) {
         this.ubicacion = ubicacion;
         this.nombre = nombre;
@@ -58,7 +61,7 @@ public class Alquileres{
         this.fechaPublicacion= fechaPublicacion;
         this.ciudad=ciudad;
     }
-
+    // Constructor con parámetros básicos y una imagen
     public Alquileres(String ubicacion, String nombre, Double precio, String mc, Integer nh, String d, Image imagen) {
 
         this.ubicacion = ubicacion;
@@ -70,7 +73,7 @@ public class Alquileres{
         this.imagen=imagen;
 
     }
-
+    // Métodos Getters y Setters para cada atributo
     public BufferedImage getBimagen() {
         return Bimagen;
     }

@@ -55,20 +55,20 @@ public class AlquileresController implements Initializable{
     @FXML
     private ScrollPane alquileresScollPane;
 
-
+    // Método initialize que se llama al cargar la interfaz
     public void initialize(URL location, ResourceBundle resources) {
-
+        // Configuración del botón perfil con estilos y eventos de ratón
         perfilBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';");
         perfilBOTON.setOnMouseEntered(e -> perfilBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000); -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
         perfilBOTON.setOnMouseExited(e -> perfilBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
-
+        // Estilo del botón de alquileres
         alquileresBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);");
 
-
+        // Creación de listas observables para las opciones de filtro
         ObservableList<String> zonaAlquiler = FXCollections.observableArrayList();
         ObservableList<String> nHabitacionesAlquiler = FXCollections.observableArrayList();
 
-
+        // Añadir opciones a la lista de número de habitaciones
 
         String n = "";
         String n1 = "1 Habitación";
@@ -86,7 +86,7 @@ public class AlquileresController implements Initializable{
         nHabitacionesAlquiler.add(n5);
 
         NumHabChoiceBox.setItems(nHabitacionesAlquiler);
-
+        // Añadir opciones a la lista de zonas
         String zona = "";
         String zona1 = "Zona centro";
         String zona2 = "Cerca de playa";
@@ -107,15 +107,15 @@ public class AlquileresController implements Initializable{
         ChoiceBox<String> nHabitacioneschoiceBox = new ChoiceBox<>();
         nHabitacioneschoiceBox.setItems(nHabitacionesAlquiler);
 
-
+        // Configuración de los valores predeterminados de las ChoiceBox
         NumHabChoiceBox.setValue("Nº Hab");
         zonaFiltroChoicebox.setValue("Ubicación");
         nHabitacioneschoiceBox.setValue("Número Habitaciones");
 
-
+        // Creación de un modelo de alquileres y obtención de la lista de alquileres
         AlquileresModel am = new AlquileresModel();
         alquileresArrayList = am.mostrarAlquileres();
-
+        // Creación de objetos Alquileres y configuración de sus atributos
         for ( Alquileres alquileres : alquileresArrayList){
 
             String ubi = alquileres.getUbicacion();
@@ -129,7 +129,7 @@ public class AlquileresController implements Initializable{
             Alquileres a = new Alquileres(ubi,nombre,precio,m2,nh,desc,image);
 
         }
-
+        // Configuración del GridPane para mostrar los alquileres
         int column = 0;
         int row = 0;
 
@@ -161,6 +161,7 @@ public class AlquileresController implements Initializable{
                 cosasGripPane.setMaxWidth(Region.USE_PREF_SIZE);
 
                 //set grid height
+                // Configuración de las dimensiones del GridPane
                 cosasGripPane.setMinHeight(Region.USE_COMPUTED_SIZE);
                 cosasGripPane.setPrefHeight(Region.USE_COMPUTED_SIZE);
                 cosasGripPane.setMaxHeight(Region.USE_PREF_SIZE);
@@ -171,7 +172,7 @@ public class AlquileresController implements Initializable{
             }
         }
     }
-
+    // Métodos para manejar eventos de botón
     @FXML
     public void perfilBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
