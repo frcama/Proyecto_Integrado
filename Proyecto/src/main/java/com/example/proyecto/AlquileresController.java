@@ -11,6 +11,7 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
+import com.example.proyecto.Usuario;
 
 import java.io.IOException;
 import java.net.URL;
@@ -71,12 +72,11 @@ public class AlquileresController implements Initializable{
         // Añadir opciones a la lista de número de habitaciones
 
         String n = "";
-        String n1 = "1 Habitación";
-        String n2 = "2 Habitaciones";
-        String n3 = "3 Habitaciones";
-        String n4 = "4 Habitaciones";
-
-        String n5 = "5 Habitaciones";
+        String n1 = "1";
+        String n2 = "2";
+        String n3 = "3";
+        String n4 = "4";
+        String n5 = "5";
 
         nHabitacionesAlquiler.add(n);
         nHabitacionesAlquiler.add(n1);
@@ -246,31 +246,76 @@ public class AlquileresController implements Initializable{
 
     }
 
-    @FXML
-    public void filtrarBottonClick(ActionEvent actionEvent) {
+    private void actualizarVista(ArrayList<Alquileres> alquileresArrayList) {
+        cosasGripPane.getChildren().clear(); // Limpiar el grid pane
+
+        int column = 0;
+        int row = 0;
+
+        for (Alquileres alquiler : alquileresArrayList) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("MostrarAlquileres.fxml"));
+                AnchorPane anchorPane = fxmlLoader.load();
+
+                MostrarAlquileres al = fxmlLoader.getController();
+                al.setData(alquiler);
+
+                if (column == 1) { // Ajustar columnas a la necesidad del programa
+                    column = 0;
+                    row++;
+                }
+
+                cosasGripPane.add(anchorPane, column++, row); // (child, column, row)
+                cosasGripPane.setMinWidth(Region.USE_COMPUTED_SIZE);
+                cosasGripPane.setPrefWidth(Region.USE_COMPUTED_SIZE);
+                cosasGripPane.setMaxWidth(Region.USE_PREF_SIZE);
+                cosasGripPane.setMinHeight(Region.USE_COMPUTED_SIZE);
+                cosasGripPane.setPrefHeight(Region.USE_COMPUTED_SIZE);
+                cosasGripPane.setMaxHeight(Region.USE_PREF_SIZE);
+
+                GridPane.setMargin(anchorPane, new Insets(10));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
-/*
+
     public void filtrarBottonClick(ActionEvent actionEvent) {
         System.out.println("Funciona");
 
-        String curso =
-        String asignaturafiltrar = asignaturaTextField.getText().trim();
-        String cursofiltrar = cursoChoiceBox.getValue();
+        String nHabsFiltrar = String.valueOf(NumHabChoiceBox.getValue()).trim();
+        String zonaFiltrar = String.valueOf(zonaFiltroChoicebox.getValue()).trim();
+        String precioMinString = PrecioMinTF.getText().trim();
+        String precioMaxString = PrecioMaxTF.getText().trim();
 
-        ArrayList<Libros> librosFiltrados = new ArrayList<>();
+        Double minFiltrar = !precioMinString.isEmpty() ? Double.valueOf(precioMinString) : null;
+        Double maxFiltrar = !precioMaxString.isEmpty() ? Double.valueOf(precioMaxString) : null;
+
+        // Filtrar los alquileres
+        ArrayList<Alquileres> alquileresFiltrados = new ArrayList<>();
         for (Alquileres alquiler : alquileresArrayList) {
-            boolean matchesEditorial = editorialfiltrar.equals("Editorial") || alquiler.getEditorial().equals(editorialfiltrar);
-            boolean matchesAsignatura = asignaturafiltrar.equals("Asignatura") || alquiler.getAsignatura().equalsIgnoreCase(asignaturafiltrar);
-            boolean matchesCurso = cursofiltrar.equals("Curso") || alquiler.getCurso().equals(cursofiltrar);
+            boolean matchesNHabs = nHabsFiltrar.isEmpty() || "null".equalsIgnoreCase(nHabsFiltrar) || alquiler.getnHabitaciones() == Integer.parseInt(nHabsFiltrar);
+            boolean matchesZona = zonaFiltrar.isEmpty() || "null".equalsIgnoreCase(zonaFiltrar) || alquiler.getUbicacion().equalsIgnoreCase(zonaFiltrar);
+            boolean matchesMin = minFiltrar == null || minFiltrar <= 0 || alquiler.getPrecio() >= minFiltrar;
+            boolean matchesMax = maxFiltrar == null || maxFiltrar <= 0 || alquiler.getPrecio() <= maxFiltrar;
 
-            if (matchesEditorial && matchesAsignatura && matchesCurso) {
-                librosFiltrados.add(alquiler);
+            // Verificar si hay algún filtro activo, si no hay, agregar el alquiler directamente
+            if (nHabsFiltrar.isEmpty() && zonaFiltrar.isEmpty() && minFiltrar == null && maxFiltrar == null) {
+                alquileresFiltrados.add(alquiler);
+            } else {
+                // Verificar si se cumplen todas las condiciones de los filtros activos
+                if (matchesNHabs && matchesZona && matchesMin && matchesMax) {
+                    alquileresFiltrados.add(alquiler);
+                }
             }
         }
-
-        actualizarVista(librosFiltrados);
-
+        // Verificar la cantidad de elementos en la lista de alquileres filtrados
+        System.out.println("Cantidad de alquileres filtrados: " + alquileresFiltrados.size());
+        // Actualizar la vista con los alquileres filtrados
+        actualizarVista(alquileresFiltrados);
     }
-*/
-    /* */
+
+
+
 }

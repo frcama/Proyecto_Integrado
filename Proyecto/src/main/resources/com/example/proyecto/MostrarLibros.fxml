@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="panelMostrarLibros" prefHeight="187.0" prefWidth="326.0" style="-fx-border-color: 000; -fx-border-style: solid;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.MostrarLibros">
+<AnchorPane fx:id="panelMostrarLibros" prefHeight="187.0" prefWidth="297.0" style="-fx-border-color: 000; -fx-border-style: solid;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.MostrarLibros">
    <children>
       <Label fx:id="tituloLibroLabel" layoutX="24.0" layoutY="24.0" text="Título Libro" underline="true">
          <font>
@@ -17,10 +17,10 @@
          </effect>
       </Label>
       <ImageView fx:id="libroimagenImageView" fitHeight="99.0" fitWidth="145.0" layoutX="10.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="isbnLabel" layoutX="166.0" layoutY="44.0" prefHeight="33.0" prefWidth="166.0" text="ISBN" wrapText="true" />
-      <Label fx:id="editorialLabel" layoutX="166.0" layoutY="77.0" prefHeight="18.0" prefWidth="159.0" text="Editorial" wrapText="true" />
-      <Label fx:id="cursoLabel" layoutX="166.0" layoutY="104.0" prefHeight="18.0" prefWidth="166.0" text="Curso" wrapText="true" />
-      <Label fx:id="precioLabel" layoutX="166.0" layoutY="154.0" prefHeight="18.0" prefWidth="166.0" text="Precio" wrapText="true" />
-      <Label fx:id="asignaturaLabel" layoutX="166.0" layoutY="129.0" prefHeight="20.0" prefWidth="159.0" text="Asignatura" wrapText="true" />
+      <Label fx:id="isbnLabel" layoutX="166.0" layoutY="44.0" prefHeight="34.0" prefWidth="134.0" text="ISBN" wrapText="true" />
+      <Label fx:id="editorialLabel" layoutX="166.0" layoutY="77.0" prefHeight="18.0" prefWidth="134.0" text="Editorial" wrapText="true" />
+      <Label fx:id="cursoLabel" layoutX="166.0" layoutY="104.0" prefHeight="18.0" prefWidth="134.0" text="Curso" wrapText="true" />
+      <Label fx:id="precioLabel" layoutX="166.0" layoutY="154.0" prefHeight="18.0" prefWidth="134.0" text="Precio" wrapText="true" />
+      <Label fx:id="asignaturaLabel" layoutX="166.0" layoutY="129.0" prefHeight="20.0" prefWidth="134.0" text="Asignatura" wrapText="true" />
    </children>
 </AnchorPane>

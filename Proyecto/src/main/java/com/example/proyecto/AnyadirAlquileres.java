@@ -134,8 +134,6 @@ public class AnyadirAlquileres implements Initializable {
             // Reemplaza el contenido del panel actual con el contenido de la vista anterior
             this.PanelAnyadirALQUILERES.getChildren().setAll(pane);
         } catch (IOException ex) {
-            // Manejo de excepciones
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
