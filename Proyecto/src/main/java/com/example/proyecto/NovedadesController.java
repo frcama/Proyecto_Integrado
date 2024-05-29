@@ -5,8 +5,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
-import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
@@ -18,8 +19,6 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javafx.scene.control.Button;
 
 public class NovedadesController implements Initializable {
 
@@ -49,130 +48,102 @@ private Button librosBOTON;
 private ScrollPane novedadesScollPane;
     @FXML
 private HBox panelHBoxNovedades;
-    @FXML
-    private GridPane cosasGripPane;
+@FXML
+private GridPane cosasGripPane;
 
 
-    @Override
-public void initialize(URL location, ResourceBundle resources) {
+@Override
+public void initialize(URL location, ResourceBundle resources){
 
 
+        perfilBOTON.setStyle("-fx-background-color: F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';");
+        perfilBOTON.setOnMouseEntered(e -> perfilBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000); -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
+        perfilBOTON.setOnMouseExited(e -> perfilBOTON.setStyle("-fx-background-color: F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
 
+        novedadesBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);");
 
-            // Carga la hoja de estilo CSS
-            Scene scene = cosasGripPane.getScene();
-            scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
+        ArrayList<Libros> librosArrayList = new ArrayList<>();
+        ArrayList<Eventos> eventosArrayList = new ArrayList<>();
+        ArrayList<Alquileres> alquileresArrayList = new ArrayList<>();
 
-            perfilBOTON.setStyle("-fx-background-color: F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';");
-            perfilBOTON.setOnMouseEntered(e -> perfilBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000); -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
-            perfilBOTON.setOnMouseExited(e -> perfilBOTON.setStyle("-fx-background-color: F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
+        // Load books
+        LibrosModel lm = new LibrosModel();
+        librosArrayList = lm.mostrarLibros();
 
-            novedadesBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);");
+        // Load rentals
+        AlquileresModel am = new AlquileresModel();
+        alquileresArrayList = am.mostrarAlquileres();
 
-            ArrayList<Libros> librosArrayList = new ArrayList<>();
-            ArrayList<Eventos> eventosArrayList = new ArrayList<>();
-            ArrayList<Alquileres> alquileresArrayList = new ArrayList<>();
+        // Load events
+        EventosModel em = new EventosModel();
+        eventosArrayList = em.mostrarEventos();
 
-            // Load books
-            LibrosModel lm = new LibrosModel();
-            librosArrayList = lm.mostrarLibros();
+        // Clear the GridPane before adding new content
+        cosasGripPane.getChildren().clear();
 
-            // Load rentals
-            AlquileresModel am = new AlquileresModel();
-            alquileresArrayList = am.mostrarAlquileres();
+        int row = 0;
 
-            // Load events
-            EventosModel em = new EventosModel();
-            eventosArrayList = em.mostrarEventos();
+        // Add books to the GridPane
+        for (Libros libro : librosArrayList) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("MostrarLibros.fxml"));
+                AnchorPane anchorPane = fxmlLoader.load();
 
-            // Clear the GridPane before adding new content
-            cosasGripPane.getChildren().clear();
+                MostrarLibros ml = fxmlLoader.getController();
+                ml.setData(libro);
 
-            int row = 0;
+                // Aplica la clase de estilo definida en el archivo CSS al AnchorPane
+                anchorPane.getStyleClass().add("anchor-pane-content");
 
-            // Add books to the GridPane
-            for (Libros libro : librosArrayList) {
-                try {
-                    FXMLLoader fxmlLoader = new FXMLLoader();
-                    fxmlLoader.setLocation(getClass().getResource("MostrarLibros.fxml"));
-                    AnchorPane anchorPane = fxmlLoader.load();
-
-                    MostrarLibros ml = fxmlLoader.getController();
-                    ml.setData(libro);
-
-                    // Aplica la clase de estilo definida en el archivo CSS al AnchorPane
-                    anchorPane.getStyleClass().add("anchor-pane-content");
-
-                    cosasGripPane.add(anchorPane, 0, row++); // Add always in column 0 and increase the row
-                    GridPane.setMargin(anchorPane, new Insets(10));
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
+                cosasGripPane.add(anchorPane, 0, row++); // Add always in column 0 and increase the row
+                GridPane.setMargin(anchorPane, new Insets(10));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
+        }
 
-            // Add rentals to the GridPane
-            for (Alquileres alquiler : alquileresArrayList) {
-                try {
-                    FXMLLoader fxmlLoader = new FXMLLoader();
-                    fxmlLoader.setLocation(getClass().getResource("MostrarAlquileres.fxml"));
-                    AnchorPane anchorPane = fxmlLoader.load();
 
-                    MostrarAlquileres ma = fxmlLoader.getController();
-                    ma.setData(alquiler);
+        // Add rentals to the GridPane
+        for (Alquileres alquiler : alquileresArrayList) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("MostrarAlquileres.fxml"));
+                AnchorPane anchorPane = fxmlLoader.load();
 
-                    // Aplica la clase de estilo definida en el archivo CSS al AnchorPane
-                    anchorPane.getStyleClass().add("anchor-pane-content");
+                MostrarAlquileres ma = fxmlLoader.getController();
+                ma.setData(alquiler);
 
-                    cosasGripPane.add(anchorPane, 0, row++); // Add always in column 0 and increase the row
-                    GridPane.setMargin(anchorPane, new Insets(10));
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
+                // Aplica la clase de estilo definida en el archivo CSS al AnchorPane
+                anchorPane.getStyleClass().add("anchor-pane-content");
+
+                cosasGripPane.add(anchorPane, 0, row++); // Add always in column 0 and increase the row
+                GridPane.setMargin(anchorPane, new Insets(10));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
+        }
 
-            // Add events to the GridPane
-            for (Eventos evento : eventosArrayList) {
-                try {
-                    FXMLLoader fxmlLoader = new FXMLLoader();
-                    fxmlLoader.setLocation(getClass().getResource("MostrarEventos.fxml"));
-                    AnchorPane anchorPane = fxmlLoader.load();
+        // Add events to the GridPane
+        for (Eventos evento : eventosArrayList) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("MostrarEventos.fxml"));
+                AnchorPane anchorPane = fxmlLoader.load();
 
-                    MostrarEventos me = fxmlLoader.getController();
-                    me.setData(evento);
+                MostrarEventos me = fxmlLoader.getController();
+                me.setData(evento);
 
-                    // Aplica la clase de estilo definida en el archivo CSS al AnchorPane
-                    anchorPane.getStyleClass().add("anchor-pane-content");
+                // Aplica la clase de estilo definida en el archivo CSS al AnchorPane
+                anchorPane.getStyleClass().add("anchor-pane-content");
 
-                    cosasGripPane.add(anchorPane, 0, row++); // Add always in column 0 and increase the row
-                    GridPane.setMargin(anchorPane, new Insets(10));
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
+                cosasGripPane.add(anchorPane, 0, row++); // Add always in column 0 and increase the row
+                GridPane.setMargin(anchorPane, new Insets(10));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        perfilBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';");
-    perfilBOTON.setOnMouseEntered(e -> perfilBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000); -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
-    perfilBOTON.setOnMouseExited(e -> perfilBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
-
-    //funciones de botones
-
-    novedadesBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);");
-
-
-}
+        }
+    }
 //-----------------------------------------------------------------------------------------------
 @FXML
 public void perfilBOTONclick(ActionEvent actionEvent) {

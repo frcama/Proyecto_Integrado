@@ -25,7 +25,7 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class AlquileresController implements Initializable{
+public class AlquileresController implements Initializable {
     @FXML
     private AnchorPane PanelAlquileres;
     @FXML
@@ -286,6 +286,7 @@ public class AlquileresController implements Initializable{
         }
     }
 
+    @FXML
     public void filtrarBottonClick(ActionEvent actionEvent) {
         System.out.println("Funciona");
 

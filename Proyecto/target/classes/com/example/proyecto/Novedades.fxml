@@ -141,7 +141,7 @@
          <children>
             <ScrollPane fx:id="novedadesScollPane" prefHeight="346.0" prefWidth="330.0">
                <content>
-                  <GridPane fx:id="cosasGripPaneNovedades" prefHeight="0.0" prefWidth="0.0">
+                  <GridPane fx:id="cosasGripPane" prefHeight="0.0" prefWidth="0.0">
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                      </columnConstraints>

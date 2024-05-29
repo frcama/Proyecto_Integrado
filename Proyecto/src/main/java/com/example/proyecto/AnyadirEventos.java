@@ -85,7 +85,7 @@ public class AnyadirEventos  implements Initializable {
         File imagen = new File(imageUrl);
 
 
-        String tipo = "";
+        String tipo = String.valueOf(tipoEventoChoiceBox.getValue());
         String nombre= nombreEventos.getText();
         String descripcion = descripcionEventos.getText();
         String ubi = ubicacionEventos.getText();
@@ -93,6 +93,7 @@ public class AnyadirEventos  implements Initializable {
         Date d = Date.valueOf(LocalDate.now());
         String p = String.valueOf(precioEventos.getValue());
         double precio = Double.valueOf(p);
+
 
         Eventos e = new Eventos(nombre,fechaEvento,ubi,d,imagenSeleccionada,imagen,descripcion,precio,tipo);
 
@@ -102,7 +103,7 @@ public class AnyadirEventos  implements Initializable {
     @javafx.fxml.FXML
     public void onAtrasButtonClick(ActionEvent actionEvent) {
         try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Alquileres.fxml"));
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Eventos.fxml"));
             this.PanelAnyadirEVENTOS.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
