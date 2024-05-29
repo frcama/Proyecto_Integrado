@@ -1,31 +1,32 @@
 package com.example.proyecto;
 
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 public class MostrarEventos {
-    @javafx.fxml.FXML
+    @FXML
     private Label precioEventoLabel;
-    @javafx.fxml.FXML
+    @FXML
     private Label descripcionEventoLabel;
-    @javafx.fxml.FXML
+    @FXML
     private Label fechaEventoLabel;
-    @javafx.fxml.FXML
+    @FXML
     private Label nombreLibroLabel;
-    @javafx.fxml.FXML
+    @FXML
     private Label ubiEventoLabel;
-    @javafx.fxml.FXML
+    @FXML
     private ImageView imagenEventoImageView;
-    @javafx.fxml.FXML
+    @FXML
     private AnchorPane panelMostrarAlquiler;
 
 
     Alquileres alquiler = new Alquileres();
-    @javafx.fxml.FXML
+    @FXML
     private Label nombrePropietario;
 
-
+@FXML
     public void setData(Eventos evento) {
 
         PerfilModel pm= new PerfilModel();
