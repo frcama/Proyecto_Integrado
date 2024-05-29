@@ -9,8 +9,8 @@ import java.util.ArrayList;
 
 public class InicioSesionModel extends Conexion {
 
-    public ArrayList<Usuario> loginUsuario(String email, String contra) {
-        ArrayList<Usuario> listaUsuarios = new ArrayList<>();
+    public Usuario loginUsuario(String email, String contra) {
+        Usuario u = new Usuario();
 
         try {
             String sql = "SELECT * FROM estudiantes WHERE email = ? AND contraseña = ?;";
@@ -24,10 +24,9 @@ public class InicioSesionModel extends Conexion {
 
             if (resultSet.next()) {
                 System.out.println("El email y la contraseña existen en la base de datos.");
-                Usuario u = new Usuario();
-                 u.setCorreo(resultSet.getString("email"));
+                u.setCorreo(resultSet.getString("email"));
                 u.setContra(resultSet.getString("contraseña"));
-                listaUsuarios.add(u);
+                u.setDNI(resultSet.getString("dni_estudiante"));
 
             } else {
                 Alert a = new Alert(Alert.AlertType.ERROR);
@@ -41,6 +40,6 @@ public class InicioSesionModel extends Conexion {
         }finally {
             this.cerrarConexion();
         }
-        return listaUsuarios;
+        return u;
     }
 }

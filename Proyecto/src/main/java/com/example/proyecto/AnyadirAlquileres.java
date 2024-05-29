@@ -13,8 +13,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
+
 import java.io.*;
 import java.net.URL;
 import java.security.cert.PolicyNode;
@@ -102,11 +101,11 @@ public class AnyadirAlquileres implements Initializable {
         String m2 = m2textField.getText();
         String ubi = String.valueOf(ubicacionChoiceBox.getValue());
         int nHabs = (Integer) nHabitacionesSpinner.getValue();
-        int precio = (Integer) precioSpinner.getValue();
+        Double precio = (Double) precioSpinner.getValue();
         Date d = Date.valueOf(LocalDate.now());
         String ciudad = ciudadNombreAlquiler.getText();
         // Crea una instancia de Alquileres con los valores obtenidos
-        Alquileres a = new Alquileres(ubi, nombre,precio,m2,imagen,nHabs,descripcion,d,ciudad);
+        Alquileres a = new Alquileres(ubi, nombre,precio,m2,imagen,imagenSeleccionada,nHabs,descripcion,d,ciudad);
         // Llama al método para añadir el alquiler en el modelo
         am.AnyadirAlquiler(a);
     }

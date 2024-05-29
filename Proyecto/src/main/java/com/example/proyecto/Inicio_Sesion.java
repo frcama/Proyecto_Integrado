@@ -50,28 +50,36 @@ public class Inicio_Sesion{
 
     @FXML
     public void inicioBOTONclick(ActionEvent actionEvent) {
-
         InicioSesionModel ism = new InicioSesionModel();
-
         String contra = pass.getText();
         String correo = email.getText();
 
-        ArrayList<Usuario> listausuarios = ism.loginUsuario(correo, contra);
+        Usuario us= ism.loginUsuario(correo, contra);
+        if (us != null) {
+            enviarDatos(actionEvent);
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("Novedades.fxml"));
+                AnchorPane pane = loader.load();
+                NovedadesController novedadesController = loader.getController();
+                novedadesController.setUsuario(us); // Pasar el usuario al controlador
 
-        for ( Usuario u : listausuarios){
-            String passBDA = u.getContra();
-            String emailBDA = u.getCorreo();
-            if(contra.equals(passBDA) && correo.equals(emailBDA) ){
-                enviarDatos(actionEvent);
-                // Cambio de pantalla
-                try {
-                    AnchorPane pane = FXMLLoader.load(getClass().getResource("Novedades.fxml"));
-                    this.panelDeInicio.getChildren().setAll(pane);
-                } catch (IOException ex) {
-                    Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                Scene scene = new Scene(pane);
+                Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+
+                // Cerrar la ventana de inicio de sesión
+                Stage inicioSesionStage = (Stage) inicioBOTON.getScene().getWindow();
+                inicioSesionStage.close();
+            } catch (IOException ex) {
+                Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (Exception ex) {
+                Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
             }
+        } else {
+            System.out.println("Inicio de sesión fallido. Por favor, verifica tu correo y contraseña.");
         }
+
     }
 
     @FXML
@@ -97,9 +105,7 @@ public class Inicio_Sesion{
     }
 
 
-    private void enviarDatos(ActionEvent event){
-
-
+    private void enviarDatos(ActionEvent event) {
         Usuario u = new Usuario();
         u.setContra(pass.getText());
         u.setCorreo(email.getText());

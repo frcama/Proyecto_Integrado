@@ -97,6 +97,7 @@ public class Registro extends Conexion implements Initializable {
             a.showAndWait();
         }
 
+
         LocalDate FechaNacimiento = fechaNacimiento.getValue();
         LocalDate fechaHoy = LocalDate.now();
         int edad = Period.between(FechaNacimiento, fechaHoy).getYears();

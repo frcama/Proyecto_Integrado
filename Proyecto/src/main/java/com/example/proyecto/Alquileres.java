@@ -8,7 +8,6 @@ import java.sql.Date;
 
 public class Alquileres{
 
-    //Atributos de la clase
 
     private BufferedImage Bimagen;
     private int id_Alquiler;
@@ -24,11 +23,9 @@ public class Alquileres{
     private String imgSrc;
     private String ciudad;
 
-    // poner numero o informacion de contacto
-    // Constructores
-    // Constructor con parámetros incluyendo id_Alquiler, imagen y fuente de la imagen
+    
 
-    public Alquileres(int id_Alquiler, String ubicacion, String nombre, double precio, String metrosCuadrados, Image imagen, int nHabitaciones, String imgSrc) {
+    public Alquileres(int id_Alquiler, String ubicacion, String nombre, Double precio, String metrosCuadrados, Image imagen, int nHabitaciones, String imgSrc) {
         this.id_Alquiler = id_Alquiler;
         this.ubicacion = ubicacion;
         this.nombre = nombre;
@@ -38,8 +35,8 @@ public class Alquileres{
         this.nHabitaciones = nHabitaciones;
         this.imgSrc=imgSrc;
     }
-    // Constructor con parámetros incluyendo archivo de imagen y descripción
-    public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados,File imageFile, Image imagen, int nHabitaciones, String descripcion) {
+
+    public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados,File imageFile, Image imagen, int nHabitaciones, String descripcion,String ciudad) {
         this.ubicacion = ubicacion;
         this.nombre = nombre;
         this.precio = precio;
@@ -48,21 +45,23 @@ public class Alquileres{
         this.imageFile=imageFile;
         this.nHabitaciones = nHabitaciones;
         this.Descripcion= descripcion;
+        this.ciudad=ciudad;
     }
-    // Constructor con parámetros incluyendo archivo de imagen y fecha de publicación
-    public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados, File imageFile, int nHabitaciones, String descripcion, Date fechaPublicacion,String ciudad) {
+
+    public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados, File imageFile, Image imagen ,int nHabitaciones, String descripcion, Date fechaPublicacion,String ciudad) {
         this.ubicacion = ubicacion;
         this.nombre = nombre;
         this.precio = precio;
         this.metrosCuadrados = metrosCuadrados;
         this.imageFile= imageFile;
+        this.imagen = imagen;
         this.nHabitaciones = nHabitaciones;
         Descripcion = descripcion;
         this.fechaPublicacion= fechaPublicacion;
         this.ciudad=ciudad;
     }
-    // Constructor con parámetros básicos y una imagen
-    public Alquileres(String ubicacion, String nombre, Double precio, String mc, Integer nh, String d, Image imagen) {
+
+    public Alquileres(String ubicacion, String nombre, Double precio, String mc, Integer nh, String d,Image imagen) {
 
         this.ubicacion = ubicacion;
         this.nombre = nombre;
@@ -73,7 +72,19 @@ public class Alquileres{
         this.imagen=imagen;
 
     }
-    // Métodos Getters y Setters para cada atributo
+
+    public Alquileres(String ubicacion, String nombre, Double precio, String mc, Integer nh, String d,String ciudad, File imageFile) {
+
+        this.ubicacion = ubicacion;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.metrosCuadrados = mc;
+        this.nHabitaciones = nh;
+        this.Descripcion = d;
+        this.imageFile=imageFile;
+
+    }
+
     public BufferedImage getBimagen() {
         return Bimagen;
     }

@@ -13,12 +13,15 @@ public class Usuario {
     private int telefono;
     private LocalDate fechanacimiento;
     private String contra;
+    private String id_usuario;
 
-    public Usuario(String nombre, String apellido, String correo, String DNI, int edad, int telefono, LocalDate fechanacimiento, String contra) {
+
+    public Usuario(String nombre, String id_usuario, String DNI, String apellido, String correo, int edad, int telefono, LocalDate fechanacimiento, String contra) {
         this.nombre = nombre;
+        this.id_usuario = id_usuario;
+        this.DNI = DNI;
         this.apellido = apellido;
         this.correo = correo;
-        this.DNI = DNI;
         this.edad = edad;
         this.telefono = telefono;
         this.fechanacimiento = fechanacimiento;
@@ -27,13 +30,37 @@ public class Usuario {
 
 
 
+    public Usuario(String nombre, String DNI, String apellido, String correo, int edad, int telefono, LocalDate fechanacimiento, String contra) {
+        this.nombre = nombre;
 
-    public Usuario(String nombre,String correo){
+        this.DNI = DNI;
+        this.apellido = apellido;
+        this.correo = correo;
+        this.edad = edad;
+        this.telefono = telefono;
+        this.fechanacimiento = fechanacimiento;
+        this.contra = contra;
+    }
+
+    public Usuario(String nombre, String correo){
         this.nombre = nombre;
         this.correo = correo;
     }
 
+    public Usuario(String nombre, String correo, String DNI, String id_usuario) {
+        this.nombre = nombre;
+        this.correo = correo;
+        this.DNI = DNI;
+        this.id_usuario = id_usuario;
+    }
 
+    public String getId_usuario() {
+        return id_usuario;
+    }
+
+    public void setId_usuario(String id_usuario) {
+        this.id_usuario = id_usuario;
+    }
 
     public int getTelefono() {
         return telefono;

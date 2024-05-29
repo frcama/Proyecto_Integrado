@@ -51,6 +51,11 @@ private HBox panelHBoxNovedades;
 @FXML
 private GridPane cosasGripPane;
 
+private Usuario usuario;
+
+public void setUsuario(Usuario usuario){
+    this.usuario = usuario;
+}
 
 @Override
 public void initialize(URL location, ResourceBundle resources){
