@@ -23,7 +23,7 @@ public class Alquileres{
     private String imgSrc;
     private String Ciudad;
 
-    private siubda
+   
     // poner numero o informacion de contacto
 
     public Alquileres(int id_Alquiler, String ubicacion, String nombre, double precio, String metrosCuadrados, Image imagen, int nHabitaciones, String imgSrc) {
