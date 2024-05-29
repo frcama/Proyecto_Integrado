@@ -49,7 +49,7 @@ public class AnyadirAlquileres implements Initializable {
     @javafx.fxml.FXML
     private ChoiceBox ubicacionChoiceBox;
     @javafx.fxml.FXML
-    private ChoiceBox ciudadChoiceBox;
+    private TextField ciudadNombreAlquiler;
 
 
     @Override
@@ -85,20 +85,6 @@ public class AnyadirAlquileres implements Initializable {
         ubicacionChoiceBox.setItems(zonaAlquiler);
 
 
-        ObservableList<String> ciudadesAlquiler = FXCollections.observableArrayList();
-
-        String c1 = "Valencia";
-        String c2 = "Alicante";
-        String c3 = "Castellón";
-
-
-        zonaAlquiler.add(c1);
-        zonaAlquiler.add(c2);
-        zonaAlquiler.add(c3);
-
-
-        ciudadChoiceBox.setItems(ciudadesAlquiler);
-
     }
 
 
@@ -118,9 +104,9 @@ public class AnyadirAlquileres implements Initializable {
         int nHabs = (Integer) nHabitacionesSpinner.getValue();
         int precio = (Integer) precioSpinner.getValue();
         Date d = Date.valueOf(LocalDate.now());
-        String ciudad = String.valueOf(ciudadChoiceBox.getValue());
+        String ciudad = ciudadNombreAlquiler.getText();
 
-        Alquileres a = new Alquileres(ubi, nombre,precio,m2,imagen,nHabs,descripcion,d);
+        Alquileres a = new Alquileres(ubi, nombre,precio,m2,imagen,nHabs,descripcion,d,ciudad);
 
         am.AnyadirAlquiler(a);
     }

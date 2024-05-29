@@ -67,6 +67,6 @@
       </Label>
       <ChoiceBox fx:id="ubicacionChoiceBox" layoutX="141.0" layoutY="401.0" prefWidth="150.0" />
       <Text layoutX="20.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ciudad" />
-      <ChoiceBox fx:id="ciudadChoiceBox" layoutX="139.0" layoutY="316.0" prefWidth="150.0" />
+      <TextField fx:id="ciudadNombreAlquiler" layoutX="142.0" layoutY="316.0" />
    </children>
 </AnchorPane>

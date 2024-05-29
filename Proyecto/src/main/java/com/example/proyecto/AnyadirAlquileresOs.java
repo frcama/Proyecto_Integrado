@@ -83,10 +83,11 @@ public class AnyadirAlquileresOs implements Initializable {
         int nHabs = (Integer) nHabitacionesSpinner.getValue();
         int precio = (Integer) precioSpinner.getValue();
         Date d = Date.valueOf(LocalDate.now());
+        //String ciudad = ciu
 
-        Alquileres a = new Alquileres(ubi, nombre,precio,m2,imagen,nHabs,descripcion,d);
+        //Alquileres a = new Alquileres(ubi, nombre,precio,m2,imagen,nHabs,descripcion,d);
 
-        am.AnyadirAlquiler(a);
+        //am.AnyadirAlquiler(a);
     }
 
     @Deprecated

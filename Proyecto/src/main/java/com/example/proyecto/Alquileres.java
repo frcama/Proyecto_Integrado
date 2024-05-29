@@ -21,7 +21,7 @@ public class Alquileres{
     private File imageFile;
     private Date fechaPublicacion;
     private String imgSrc;
-    private String Ciudad;
+    private String ciudad;
 
     // poner numero o informacion de contacto
 
@@ -47,7 +47,7 @@ public class Alquileres{
         this.Descripcion= descripcion;
     }
 
-    public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados, File imageFile, int nHabitaciones, String descripcion, Date fechaPublicacion) {
+    public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados, File imageFile, int nHabitaciones, String descripcion, Date fechaPublicacion,String ciudad) {
         this.ubicacion = ubicacion;
         this.nombre = nombre;
         this.precio = precio;
@@ -56,6 +56,7 @@ public class Alquileres{
         this.nHabitaciones = nHabitaciones;
         Descripcion = descripcion;
         this.fechaPublicacion= fechaPublicacion;
+        this.ciudad=ciudad;
     }
 
     public Alquileres(String ubicacion, String nombre, Double precio, String mc, Integer nh, String d, Image imagen) {
@@ -79,11 +80,11 @@ public class Alquileres{
     }
 
     public String getCiudad() {
-        return Ciudad;
+        return ciudad;
     }
 
     public void setCiudad(String ciudad) {
-        Ciudad = ciudad;
+        ciudad = ciudad;
     }
 
     public String getImgSrc() {

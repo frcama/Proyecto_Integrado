@@ -43,6 +43,7 @@ public class MostrarAlquileres extends Conexion{
         nHabsAlquilerLabel.setText(String.valueOf(alquiler.getnHabitaciones() + " núm Habitaciones"));
         ciudadAlquiler.setText(alquiler.getCiudad());
 
+
         // Establecer la imagen en el ImageView
         if (alquiler.getImagen() != null) {
             imagenalquilerImageView.setImage(alquiler.getImagen());

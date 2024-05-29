@@ -303,24 +303,5 @@ public class LibrosController implements Initializable {
 
     }
 
-    @Deprecated
-    public void eventosBOTON2click(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void librosBOTON2click(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void onAdd2Clicked(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void alquileresBOTON2click(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void novedadesBOTON2click(ActionEvent actionEvent) {
-    }
 }
 
