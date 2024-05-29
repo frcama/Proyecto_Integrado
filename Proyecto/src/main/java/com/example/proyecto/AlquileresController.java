@@ -245,36 +245,28 @@ public class AlquileresController implements Initializable{
 
     }
 
-    @FXML
     public void filtrarBottonClick(ActionEvent actionEvent) {
-
-        // Inicializa los precios máximos y mínimos con un valor por defecto
         Double preciomax = null;
         Double preciomin = null;
 
-        // Verifica si el campo PrecioMaxTF no está vacío
         if (!PrecioMaxTF.getText().isEmpty()) {
             try {
                 preciomax = Double.valueOf(PrecioMaxTF.getText());
             } catch (NumberFormatException e) {
                 System.out.println("Error: Precio máximo no es un número válido.");
-                // Maneja el error (puedes mostrar una alerta o establecer un valor por defecto)
-                preciomax = Double.MAX_VALUE; // por ejemplo, establecer a un valor muy alto
+                preciomax = Double.MAX_VALUE;
             }
         }
 
-        // Verifica si el campo PrecioMinTF no está vacío
         if (!PrecioMinTF.getText().isEmpty()) {
             try {
                 preciomin = Double.valueOf(PrecioMinTF.getText());
             } catch (NumberFormatException e) {
                 System.out.println("Error: Precio mínimo no es un número válido.");
-                // Maneja el error (puedes mostrar una alerta o establecer un valor por defecto)
-                preciomin = 0.0; // por ejemplo, establecer a un valor muy bajo
+                preciomin = 0.0;
             }
         }
 
-        // Verifica si los valores son nulos y establece valores por defecto si es necesario
         if (preciomax == null) {
             preciomax = Double.MAX_VALUE;
         }
@@ -306,7 +298,13 @@ public class AlquileresController implements Initializable{
         String ubicacion = String.valueOf(zonaFiltroChoicebox.getValue());
 
         AlquileresModel am = new AlquileresModel();
-        alquileresArrayList = am.filtrosAlquiler(ubicacion, preciomin, preciomax, nh);
+        ArrayList<Alquileres> alquileresArrayList = am.filtrosAlquiler(ubicacion, preciomin, preciomax, nh);
+
+        mostrarAlquileresEnPantalla(alquileresArrayList);
+    }
+
+    private void mostrarAlquileresEnPantalla(ArrayList<Alquileres> alquileresArrayList) {
+        cosasGripPane.getChildren().clear();
 
         int column = 0;
         int row = 0;
@@ -318,10 +316,6 @@ public class AlquileresController implements Initializable{
 
                 AnchorPane anchorPane = fxmlLoader.load();
 
-                Usuario u = new Usuario();
-                PerfilModel pm = new PerfilModel();
-                u = pm.perfilModel(u.getCorreo(), u.getContra());
-
                 MostrarAlquileres ma = fxmlLoader.getController();
                 ma.setData(alquileresArrayList.get(i));
 
@@ -330,20 +324,18 @@ public class AlquileresController implements Initializable{
                     row++;
                 }
 
-                cosasGripPane.add(anchorPane, column++, row); //(child,column,row)
-                //set grid width
+                cosasGripPane.add(anchorPane, column++, row);
+
                 cosasGripPane.setMinWidth(Region.USE_COMPUTED_SIZE);
                 cosasGripPane.setPrefWidth(Region.USE_COMPUTED_SIZE);
                 cosasGripPane.setMaxWidth(Region.USE_PREF_SIZE);
-
-                //set grid height
                 cosasGripPane.setMinHeight(Region.USE_COMPUTED_SIZE);
                 cosasGripPane.setPrefHeight(Region.USE_COMPUTED_SIZE);
                 cosasGripPane.setMaxHeight(Region.USE_PREF_SIZE);
 
                 GridPane.setMargin(anchorPane, new Insets(10));
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
         }
     }

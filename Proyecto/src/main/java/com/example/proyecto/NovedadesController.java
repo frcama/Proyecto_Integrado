@@ -45,7 +45,7 @@ private Button librosBOTON;
 @FXML
 private ScrollPane novedadesScollPane;
 @FXML
-private GridPane cosasGripPaneNovedades;
+private GridPane cosasGripPane;
 @FXML
 private HBox panelHBoxNovedades;
 

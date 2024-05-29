@@ -50,8 +50,7 @@ public class Inicio_Sesion{
 
     @FXML
     public void inicioBOTONclick(ActionEvent actionEvent) {
-
-
+/*
         Usuario u = new Usuario();
         InicioSesionModel ism = new InicioSesionModel();
         ArrayList<Usuario> listaUsuarios = ism.loginUsuario(email, pass);
@@ -64,8 +63,6 @@ public class Inicio_Sesion{
           emailBDA = us.getCorreo();
           passBDA = us.getContra();
 
-
-
             if (emailBDA != null && emailBDA.equals(emailUsuario) && passBDA.equals(contraUsuario)){
                 //cambio de pantalla
                 System.out.println("el if entra y compara");
@@ -75,23 +72,16 @@ public class Inicio_Sesion{
                 } catch (IOException ex) {
                     Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
                 }
-
             }else{
-
             }
-
-
         }
 
-        try {
+  */      try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Novedades.fxml"));
             this.panelDeInicio.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-//dentro del if
-
     }
 
     @FXML

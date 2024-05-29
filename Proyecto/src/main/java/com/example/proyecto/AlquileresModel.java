@@ -20,7 +20,7 @@ public class AlquileresModel extends Conexion{
         ArrayList<Alquileres> alquileresLista = new ArrayList<>();
 
         try {
-            String sql = "SELECT Ubicacion, nombre, precio, MetrosCuadrados, imagen, NumHabitaciones, Descripcion FROM alquileres ORDER BY FechaPublicacion DESC;";
+            String sql = "SELECT (Ubicacion, nombre, precio, MetrosCuadrados, imagen, NumHabitaciones, Descripcion)FROM alquileres ORDER BY fecha_anyadido DESC;";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
 
@@ -65,26 +65,26 @@ public class AlquileresModel extends Conexion{
 
         try {
             // Construye la consulta SQL
-            String sql = "SELECT * FROM alquileres WHERE 1 = 1";
-            if (habs != null) {
-                sql += " AND NumHabitaciones = ?";
+            StringBuilder sql = new StringBuilder("SELECT * FROM alquileres WHERE 1 = 1");
+            if (habs != null && !habs.isEmpty()) {
+                sql.append(" AND NumHabitaciones = ?");
             }
             if (min != null) {
-                sql += " AND precio >= ?";
+                sql.append(" AND precio >= ?");
             }
             if (max != null) {
-                sql += " AND precio <= ?";
+                sql.append(" AND precio <= ?");
             }
             if (zona != null && !zona.isEmpty()) {
-                sql += " AND Ubicacion = ?";
+                sql.append(" AND Ubicacion = ?");
             }
 
             // Prepara la consulta
-            PreparedStatement ps = this.getConexion().prepareStatement(sql);
+            PreparedStatement ps = this.getConexion().prepareStatement(sql.toString());
 
             // Establece los parámetros de la consulta
             int paramIndex = 1;
-            if (habs != null) {
+            if (habs != null && !habs.isEmpty()) {
                 ps.setString(paramIndex++, habs);
             }
             if (min != null) {
@@ -117,7 +117,7 @@ public class AlquileresModel extends Conexion{
                 Integer nh = rs.getInt("NumHabitaciones");
                 String d = rs.getString("Descripcion");
 
-                Alquileres a = new Alquileres(ubicacion, nombre, precio, mc, nh, d,imagen);
+                Alquileres a = new Alquileres(ubicacion, nombre, precio, mc, nh, d, imagen);
                 alquileresLista.add(a);
             }
 
@@ -133,6 +133,4 @@ public class AlquileresModel extends Conexion{
         }
         return alquileresLista;
     }
-
-
 }

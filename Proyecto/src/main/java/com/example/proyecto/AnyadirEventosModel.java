@@ -30,6 +30,7 @@ public class AnyadirEventosModel extends Conexion{
             ps.setString(6, ev.getDescripcion());
             ps.setDouble(7,ev.getPrecio());
             ps.setString(8,ev.getTipo());
+
             ps.executeUpdate();
             System.out.println("Evento añadido con éxito");
         } catch (SQLException e) {
