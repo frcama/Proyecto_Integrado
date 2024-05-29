@@ -7,10 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.ScrollPane;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
@@ -49,17 +46,17 @@ public class LibrosController implements Initializable {
     @FXML
     private Button librosBOTON;
     @FXML
-    private ChoiceBox editorialChoiceBox;
+    private ChoiceBox<String> editorialChoiceBox;
     @FXML
-    private ChoiceBox cursoChoiceBox;
+    private ChoiceBox<String> cursoChoiceBox;
 
     private ArrayList<Libros> librosArrayList;
-    @FXML
-    private ChoiceBox asignaturaChoiceBox;
     @FXML
     private ScrollPane librosScrollPane;
     @FXML
     private HBox panelHBox;
+    @FXML
+    private TextField asignaturaTextField;
 
 
     @Override
@@ -75,7 +72,7 @@ public class LibrosController implements Initializable {
         ObservableList<String> asignaturas = FXCollections.observableArrayList();
 
 
-        String editorial1 = "tompare";
+        String editorial1 = "tonpare";
         String editorial2 = "Bromera";
         String editorial3 = "Escribi";
         String editorial4 = "Quiqueeditoriales";
@@ -87,10 +84,10 @@ public class LibrosController implements Initializable {
 
         editorialChoiceBox.setItems(editoriales);
 
-        String curso1 = "Primer curso";
-        String curso2 = "Segundo curso";
-        String curso3 = "Tercer curso";
-        String curso4 = "Cuarto curso";
+        String curso1 = "Primero";
+        String curso2 = "Segundo";
+        String curso3 = "Tercero";
+        String curso4 = "Cuarto";
 
         cursolibro.add(curso1);
         cursolibro.add(curso2);
@@ -99,21 +96,8 @@ public class LibrosController implements Initializable {
 
         cursoChoiceBox.setItems(cursolibro);
 
-        String asig1 = "Matematicas";
-        String asig2 = "Lengua Castellana";
-        String asig3 = "Fisica";
-        String asig4 = "Biologia";
-
-        asignaturas.add(asig1);
-        asignaturas.add(asig2);
-        asignaturas.add(asig3);
-        asignaturas.add(asig4);
-
-        asignaturaChoiceBox.setItems(asignaturas);
-
         editorialChoiceBox.setValue("Editorial");
         cursoChoiceBox.setValue("Curso");
-        asignaturaChoiceBox.setValue("Asignatura");
 
         LibrosModel lm = new LibrosModel();
         librosArrayList = lm.mostrarLibros();
@@ -166,6 +150,44 @@ public class LibrosController implements Initializable {
                 GridPane.setMargin(anchorPane, new Insets(10));
             } catch (IOException e) {
                 throw new RuntimeException(e);
+            }
+        }
+
+
+    }
+
+
+    private void actualizarVista(ArrayList<Libros> librosFiltrados) {
+        cosasGripPane.getChildren().clear(); // Limpiar el grid pane
+
+        int column = 0;
+        int row = 0;
+
+        for (Libros libro : librosFiltrados) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("MostrarLibros.fxml"));
+                AnchorPane anchorPane = fxmlLoader.load();
+
+                MostrarLibros ml = fxmlLoader.getController();
+                ml.setData(libro);
+
+                if (column == 1) { // Ajustar columnas a la necesidad del programa
+                    column = 0;
+                    row++;
+                }
+
+                cosasGripPane.add(anchorPane, column++, row); // (child, column, row)
+                cosasGripPane.setMinWidth(Region.USE_COMPUTED_SIZE);
+                cosasGripPane.setPrefWidth(Region.USE_COMPUTED_SIZE);
+                cosasGripPane.setMaxWidth(Region.USE_PREF_SIZE);
+                cosasGripPane.setMinHeight(Region.USE_COMPUTED_SIZE);
+                cosasGripPane.setPrefHeight(Region.USE_COMPUTED_SIZE);
+                cosasGripPane.setMaxHeight(Region.USE_PREF_SIZE);
+
+                GridPane.setMargin(anchorPane, new Insets(10));
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
     }
@@ -260,6 +282,25 @@ public class LibrosController implements Initializable {
 
     @FXML
     public void filtrarBottonClick(ActionEvent actionEvent) {
+        System.out.println("Funciona");
+
+        String editorialfiltrar = editorialChoiceBox.getValue();
+        String asignaturafiltrar = asignaturaTextField.getText().trim();
+        String cursofiltrar = cursoChoiceBox.getValue();
+
+        ArrayList<Libros> librosFiltrados = new ArrayList<>();
+        for (Libros libro : librosArrayList) {
+            boolean matchesEditorial = editorialfiltrar.equals("Editorial") || libro.getEditorial().equals(editorialfiltrar);
+            boolean matchesAsignatura = asignaturafiltrar.equals("Asignatura") || libro.getAsignatura().equalsIgnoreCase(asignaturafiltrar);
+            boolean matchesCurso = cursofiltrar.equals("Curso") || libro.getCurso().equals(cursofiltrar);
+
+            if (matchesEditorial && matchesAsignatura && matchesCurso) {
+                librosFiltrados.add(libro);
+            }
+        }
+
+        actualizarVista(librosFiltrados);
+
     }
 
     @Deprecated
