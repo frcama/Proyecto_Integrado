@@ -42,6 +42,8 @@ public class Perfil implements Initializable {
     private Label apellidosPerfil;
 
     Usuario usuario = new Usuario();
+    @javafx.fxml.FXML
+    private Button verPubsButton;
 
 
     @Override
@@ -104,6 +106,17 @@ public class Perfil implements Initializable {
 
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("EditarPerfil.fxml"));
+            this.panelDePerfil.getChildren().setAll(pane);
+        } catch (IOException ex) {
+            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void verPubsCLick(ActionEvent actionEvent) {
+
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Publicaciones.fxml"));
             this.panelDePerfil.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);

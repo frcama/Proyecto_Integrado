@@ -156,7 +156,7 @@
             </ScrollPane>
          </children>
       </HBox>
-      <TextField fx:id="maxPreciofiltroEvento" layoutX="123.0" layoutY="74.0" prefHeight="26.0" prefWidth="88.0" />
-      <DatePicker fx:id="fechafiltroDatePicker" layoutX="220.0" layoutY="75.0" prefHeight="25.0" prefWidth="103.0" />
+      <TextField fx:id="maxPreciofiltroEvento" layoutX="123.0" layoutY="74.0" prefHeight="26.0" prefWidth="88.0" promptText="Max" />
+      <DatePicker fx:id="fechafiltroDatePicker" layoutX="220.0" layoutY="75.0" prefHeight="25.0" prefWidth="103.0" promptText="Fecha" />
    </children>
 </AnchorPane>

@@ -71,5 +71,10 @@
       <Label fx:id="correoPerfil" layoutX="150.0" layoutY="291.0" prefHeight="65.0" prefWidth="176.0" text="Label" wrapText="true" />
       <Label fx:id="fechaNacimientoPerfil" layoutX="150.0" layoutY="397.0" prefHeight="18.0" prefWidth="150.0" text="Label" />
       <Label fx:id="contrsaenaPerfil" layoutX="154.0" layoutY="489.0" prefHeight="18.0" prefWidth="150.0" text="Label" />
+      <Button fx:id="verPubsButton" layoutX="-4.0" layoutY="89.0" mnemonicParsing="false" onAction="#verPubsCLick" prefHeight="26.0" prefWidth="110.0" text="VER PUBLICACIONES">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
