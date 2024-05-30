@@ -14,8 +14,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.PublicacionesController">
+<AnchorPane fx:id="panelPublicaciones" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.PublicacionesController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="68.0" stroke="BLACK" strokeType="INSIDE" width="347.0">
          <fill>
@@ -40,7 +39,7 @@
             <Font name="Impact" size="30.0" />
          </font>
       </Label>
-      <Button fx:id="atrasButton" layoutX="152.0" layoutY="77.0" mnemonicParsing="false" text="Atras" />
+      <Button fx:id="atrasButton" layoutX="152.0" layoutY="77.0" mnemonicParsing="false" onAction="#atrasBotonCLick" text="Atras" />
       <HBox fx:id="panelHBoxNovedades" layoutX="10.0" layoutY="108.0" prefHeight="477.0" prefWidth="328.0">
          <children>
             <ScrollPane fx:id="novedadesScollPane" prefHeight="346.0" prefWidth="330.0">
