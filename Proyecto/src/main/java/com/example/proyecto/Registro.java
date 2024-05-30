@@ -18,10 +18,10 @@ import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+// Clase Registro que extiende de Conexion e implementa Initializable para manejar la interfaz de registro de usuario
 public class Registro extends Conexion implements Initializable {
 
-
+    // Definición de los componentes de la interfaz gráfica que se enlazan con el archivo FXML
     @FXML
     private TextField contrasenyaTF;
     @FXML
@@ -45,10 +45,11 @@ public class Registro extends Conexion implements Initializable {
     @FXML
     private Button regisrtarseBOTON;
 
+    // Método que se llama cuando se hace clic en el botón cancelar
     @FXML
     public void cancelarBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
-
+        // Carga la interfaz de inicio de sesión y la establece en el panel de registro
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("inicio_sesion.fxml"));
             this.PanelDeRegistro.getChildren().setAll(pane);
@@ -58,26 +59,29 @@ public class Registro extends Conexion implements Initializable {
     }
 
 
-
+    // Método initialize que se llama al inicializar el controlador
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        // Configuración de estilos para el botón de registrarse
         regisrtarseBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';");        regisrtarseBOTON.setOnMouseEntered(e -> regisrtarseBOTON.setStyle("-fx-background-color: linear-gradient(to right, #0000FF, #EE82EE); -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
         regisrtarseBOTON.setOnMouseExited(e -> regisrtarseBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
 
+        // Configuración de estilos para el botón de cancelar
         cancelarBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';");
         cancelarBOTON.setOnMouseEntered(e -> cancelarBOTON.setStyle("-fx-background-color: linear-gradient(to right, #0000FF, #EE82EE); -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
         cancelarBOTON.setOnMouseExited(e -> cancelarBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
 
 
     }
-
+    // Método que se llama cuando se hace clic en el botón de registrarse
     @FXML
     public void regisrtarseBOTONclick(ActionEvent actionEvent) {
-
+        // Creación de un nuevo usuario y un modelo de registro
         Usuario u = new Usuario();
         RegistroModel rm = new RegistroModel();
 
         System.out.println("funciona");
+        // Obtención de los valores ingresados en los campos de texto
         String nombre =nombreTF.getText();
         String apellido = apellidosTF.getText();
         int numTel = Integer.valueOf(telefonoTF.getText());
@@ -89,8 +93,7 @@ public class Registro extends Conexion implements Initializable {
         String contra2 = RepeContrasenyaTF.getText();
 
 
-        //hpojsodfpjasd
-        //apojda
+        // Verificación de que las contraseñas coinciden
         if ( contra2.equals(contra)){
             contra = contra2;
         }
@@ -100,15 +103,16 @@ public class Registro extends Conexion implements Initializable {
             a.showAndWait();
         }
 
-
+        // Cálculo de la edad del usuario
         LocalDate FechaNacimiento = fechaNacimiento.getValue();
         LocalDate fechaHoy = LocalDate.now();
         int edad = Period.between(FechaNacimiento, fechaHoy).getYears();
-
+        // Creación de un nuevo objeto Usuario con los datos ingresado
         Usuario us = new Usuario(nombre,apellido,correo,DNI,edad,numTel,FechaNacimiento,contra);
-
+        // Agregar el nuevo usuario al modelo de registro
         rm.anyadirResgistro(us);
 
+        // Carga la interfaz de términos y la establece en el panel de registro
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Terminos.fxml"));
             this.PanelDeRegistro.getChildren().setAll(pane);

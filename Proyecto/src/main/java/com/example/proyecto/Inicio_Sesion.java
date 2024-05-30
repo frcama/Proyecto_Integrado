@@ -20,6 +20,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+// Clase Inicio_Sesion que maneja la interfaz de inicio de sesión
 
 public class Inicio_Sesion{
 
@@ -41,7 +42,7 @@ public class Inicio_Sesion{
     private PasswordField pass;
     @FXML
     private Button recu_contrasenya;
-
+    // Método que se ejecuta al inicializar la clase
     @FXML
     public void initialize() {
 
@@ -49,13 +50,13 @@ public class Inicio_Sesion{
         Usuario u = new Usuario();
 
     }
-
+    // Método que se ejecuta al hacer clic en el botón de inicio de sesión
     @FXML
     public void inicioBOTONclick(ActionEvent actionEvent) {
         InicioSesionModel ism = new InicioSesionModel();
         String contra = pass.getText();
         String correo = email.getText();
-
+        // Intentar iniciar sesión y obtener el usuario correspondiente
         Usuario us = ism.loginUsuario(email, pass); // Asegúrate de que este método devuelva un usuario válido
 
         if (us != null) {
@@ -64,8 +65,7 @@ public class Inicio_Sesion{
             if (contra.equals(passBDA) && correo.equals(emailBDA)) {
                enviarDatos(actionEvent);
 
-
-                // Cambio de pantalla
+                // Cambio de pantalla a la interfaz de inicio de sesión
                 try {
                     URL fxmlLocation = getClass().getClassLoader().getResource("inicio_sesion.fxml");
                     if (fxmlLocation == null) {
@@ -78,17 +78,19 @@ public class Inicio_Sesion{
                     ex.printStackTrace();
                 }
             } else {
+                // Mostrar alerta si el correo o la contraseña son incorrectos
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("El correo o la contraseña son incorrectos.");
                 alert.showAndWait();
             }
         } else {
+            // Mostrar alerta si el usuario no existe
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setContentText("El usuario no existe.");
             alert.showAndWait();
         }
     }
-
+    // Método para enviar datos y cambiar de pantalla
     private void enviarDatos(ActionEvent event) {
         InicioSesionModel ism = new InicioSesionModel();
         Usuario us = ism.loginUsuario(email, pass);
@@ -100,11 +102,12 @@ public class Inicio_Sesion{
         try {
 
             // Paso 1
+            // Guardar el usuario en un holder para compartir datos entre pantallas
             UsuarioHolder holder = UsuarioHolder.getInstance();
             // Paso 2
             holder.setUsuario(us);
 
-
+            // Cargar la nueva interfaz de Novedades
             Parent root = FXMLLoader.load(getClass().getResource("Novedades.fxml"));
             Scene scene = new Scene(root);
             stage.setTitle("estubok");
@@ -114,22 +117,24 @@ public class Inicio_Sesion{
             System.err.println(String.format("Error creando ventana: %s", e.getMessage()));
         }
     }
-
+    // Método que se ejecuta al hacer clic en el botón de crear cuenta
     @FXML
     public void crearBOTONCLICK(ActionEvent actionEvent) {
         System.out.println("funciona bien");
         try {
+            // Cargar la interfaz de registro
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Registro.fxml"));
             this.panelDeInicio.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
+    // Método que se ejecuta al hacer clic en el botón de recuperación de contraseña
     @FXML
     public void recu_contraclick(ActionEvent actionEvent) {
         System.out.println("funciona bien");
         try {
+            // Cargar la interfaz de recuperación de contraseña
             AnchorPane pane = FXMLLoader.load(getClass().getResource("recuperacionContra.fxml"));
             this.panelDeInicio.getChildren().setAll(pane);
         } catch (IOException ex) {
