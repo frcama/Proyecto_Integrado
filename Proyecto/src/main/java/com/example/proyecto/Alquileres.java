@@ -22,9 +22,17 @@ public class Alquileres{
     private Date fechaPublicacion;
     private String imgSrc;
     private String ciudad;
-
+    private int id_Usuario;
+    private String contacto;
     private Usuario u;
 
+    public String getContacto() {
+        return contacto;
+    }
+
+    public void setContacto(String contacto) {
+        this.contacto = contacto;
+    }
 
     public Alquileres(int id_Alquiler, String ubicacion, String nombre, Double precio, String metrosCuadrados, Image imagen, int nHabitaciones, String imgSrc, Usuario u) {
         this.id_Alquiler = id_Alquiler;
@@ -69,7 +77,7 @@ public class Alquileres{
         this.ciudad=ciudad;
     }
 
-    public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados, File imageFile, Image imagen ,int nHabitaciones, String descripcion, Date fechaPublicacion,String ciudad) {
+    public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados, File imageFile, Image imagen ,int nHabitaciones, String descripcion, Date fechaPublicacion,String ciudad,String contacto,int id_Usuario) {
         this.ubicacion = ubicacion;
         this.nombre = nombre;
         this.precio = precio;
@@ -80,6 +88,8 @@ public class Alquileres{
         Descripcion = descripcion;
         this.fechaPublicacion= fechaPublicacion;
         this.ciudad=ciudad;
+        this.contacto=contacto;
+        this.id_Usuario=id_Usuario;
     }
 
     public Alquileres(String ubicacion, String nombre, Double precio, String mc, Integer nh, String d,Image imagen) {
@@ -116,6 +126,14 @@ public class Alquileres{
         this.Descripcion = d;
         this.imagen = imagen;
         this.ciudad = ci;
+    }
+
+    public int getId_Usuario() {
+        return id_Usuario;
+    }
+
+    public void setId_Usuario(int id_Usuario) {
+        this.id_Usuario = id_Usuario;
     }
 
     public BufferedImage getBimagen() {

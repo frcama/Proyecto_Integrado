@@ -36,8 +36,8 @@
       <Text layoutX="20.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripción" />
       <Text layoutX="21.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nº Habitaciones" />
       <Line endX="199.9000244140625" layoutX="117.0" layoutY="487.0" startX="-100.0" />
-      <Text layoutX="35.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio" />
-      <Spinner fx:id="precioSpinner" layoutX="140.0" layoutY="510.0" />
+      <Text layoutX="34.0" layoutY="513.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio" />
+      <Spinner fx:id="precioSpinner" layoutX="140.0" layoutY="496.0" />
       <Button fx:id="subirButton" layoutX="146.0" layoutY="560.0" mnemonicParsing="false" onAction="#onSubirButtonClick" text="Subir" />
       <Button fx:id="atrasBOTON" layoutX="21.0" layoutY="18.0" mnemonicParsing="false" onAction="#atrasBOTONclick" text="Atrás" />
       <Text layoutX="16.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ubicación" />
@@ -68,5 +68,7 @@
       <ChoiceBox fx:id="ubicacionChoiceBox" layoutX="141.0" layoutY="401.0" prefWidth="150.0" />
       <Text layoutX="20.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ciudad" />
       <TextField fx:id="ciudadNombreAlquiler" layoutX="142.0" layoutY="316.0" />
+      <TextField fx:id="contactoAlquiler" layoutX="139.0" layoutY="528.0" />
+      <Text layoutX="34.0" layoutY="545.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contacto" />
    </children>
 </AnchorPane>

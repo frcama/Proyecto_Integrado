@@ -252,11 +252,16 @@ public class EventosController implements Initializable {
 
     @javafx.fxml.FXML
     public void filtrarBottonClick(ActionEvent actionEvent) {
-
-
         System.out.println("Funciona");
 
-        double precioMaximo = Double.parseDouble(maxPreciofiltroEvento.getText());
+        // Obtener los valores de los filtros seleccionados
+        double precioMaximo;
+        try {
+            precioMaximo = Double.parseDouble(maxPreciofiltroEvento.getText());
+        } catch (NumberFormatException e) {
+            precioMaximo = Double.MAX_VALUE; // Establecer un valor alto si el campo está vacío o no es un número válido
+        }
+
         LocalDate fechaEvento = fechafiltroDatePicker.getValue();
         String tipoEvento = TipoFiltroChoicebox.getValue();
 
@@ -267,15 +272,17 @@ public class EventosController implements Initializable {
             boolean matchesPrecio = precioMaximo <= 0 || evento.getPrecio() <= precioMaximo;
             boolean matchesFecha = fechaEvento == null || evento.getFechaEvento().toLocalDate().isEqual(fechaEvento);
 
+            // Aplicar filtros según las combinaciones de variables
             if (matchesTipo && matchesPrecio && matchesFecha) {
                 eventosFiltrados.add(evento);
             }
         }
 
+        // Actualizar la vista con los eventos filtrados
         if (eventosFiltrados.isEmpty()) {
-            actualizarVista(eventosArrayList);
+            actualizarVista(eventosArrayList); // Mostrar todos los eventos si no hay filtros aplicados
         } else {
-            actualizarVista(eventosFiltrados);
+            actualizarVista(eventosFiltrados); // Mostrar eventos filtrados si hay resultados
         }
     }
 

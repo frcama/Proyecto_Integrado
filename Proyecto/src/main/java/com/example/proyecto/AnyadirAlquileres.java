@@ -49,6 +49,11 @@ public class AnyadirAlquileres implements Initializable {
     private ChoiceBox ubicacionChoiceBox;
     @javafx.fxml.FXML
     private TextField ciudadNombreAlquiler;
+    @javafx.fxml.FXML
+    private TextField contactoAlquiler;
+
+    Usuario usuario = new Usuario();
+
 
     // Método inicializador que se ejecuta al cargar el FXML
     @Override
@@ -86,9 +91,13 @@ public class AnyadirAlquileres implements Initializable {
 
     }
 
+
     // Método para manejar el evento del botón "Subir"
     @javafx.fxml.FXML
     public void onSubirButtonClick(ActionEvent actionEvent) {
+
+        recuperarDatos();
+
         // Crea una instancia del modelo AnyadirAlquileresModel
         AnyadirAlquileresModel am = new AnyadirAlquileresModel();
         // Obtiene la imagen seleccionada y su ruta
@@ -104,11 +113,15 @@ public class AnyadirAlquileres implements Initializable {
         Double precio = (Double) precioSpinner.getValue();
         Date d = Date.valueOf(LocalDate.now());
         String ciudad = ciudadNombreAlquiler.getText();
+        String contacto = contactoAlquiler.getText();
+        int id_estu= usuario.getId_usuario();
         // Crea una instancia de Alquileres con los valores obtenidos
-        Alquileres a = new Alquileres(ubi, nombre,precio,m2,imagen,imagenSeleccionada,nHabs,descripcion,d,ciudad);
+        Alquileres a = new Alquileres(ubi, nombre,precio,m2,imagen,imagenSeleccionada,nHabs,descripcion,d,ciudad,contacto,id_estu);
         // Llama al método para añadir el alquiler en el modelo
         am.AnyadirAlquiler(a);
     }
+
+
     // Método para manejar el evento del botón "Subir Imagen"
     @javafx.fxml.FXML
     public void OnSubirImagenbutton(ActionEvent actionEvent) {
@@ -134,7 +147,12 @@ public class AnyadirAlquileres implements Initializable {
             this.PanelAnyadirALQUILERES.getChildren().setAll(pane);
         } catch (IOException ex) {
         }
-    }
 
+    }
+    private void recuperarDatos(){
+
+        UsuarioHolder us = UsuarioHolder.getInstance();
+        usuario = us.getUsuario();
+    }
 
 }

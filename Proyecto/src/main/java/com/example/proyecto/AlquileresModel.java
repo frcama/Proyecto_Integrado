@@ -20,7 +20,7 @@ public class AlquileresModel extends Conexion{
         ArrayList<Alquileres> alquileresLista = new ArrayList<>();
 
         try {
-            String sql = "SELECT Ubicacion, nombre, precio, MetrosCuadrados, imagen, NumHabitaciones, Descripcion, Ciudad FROM alquileres ORDER BY fecha_anyadido ASC;";
+            String sql = "SELECT Ubicacion, nombre, precio, MetrosCuadrados, imagen, NumHabitaciones, Descripcion, Ciudad FROM alquileres ORDER BY fecha_anyadido DESC;";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
 

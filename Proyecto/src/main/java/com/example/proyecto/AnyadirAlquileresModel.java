@@ -7,13 +7,15 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class AnyadirAlquileresModel extends Conexion{
+
+
+    Usuario usuario = new Usuario();
     // Método para añadir un alquiler a la base de datos
         public void AnyadirAlquiler(Alquileres a) {
 
-
             try {
                 // Sentencia SQL para insertar un nuevo registro en la tabla alquileres
-                String sql = "INSERT INTO alquileres (Ubicacion, nombre, precio, MetrosCuadrados, imagen,fecha_anyadido, NumHabitaciones, Descripcion, Ciudad)VALUES (?, ?, ?, ?, ?, ?, ?,?,?);";
+                String sql = "INSERT INTO alquileres (Ubicacion, nombre, precio, MetrosCuadrados, imagen,fecha_anyadido, NumHabitaciones, Descripcion, Ciudad,contacto,id_usuario)VALUES (?, ?, ?, ?, ?, ?, ?,?,?,?,?);";
                 // Prepara la sentencia SQL utilizando la conexión establecida en la clase base 'Conexion'
                 PreparedStatement ps = this.getConexion().prepareStatement(sql);
                 // Establece los valores de los parámetros en la sentencia SQL
@@ -31,6 +33,8 @@ public class AnyadirAlquileresModel extends Conexion{
                     ps.setInt(7, a.getnHabitaciones());
                     ps.setString(8, a.getDescripcion());
                     ps.setString(9, a.getCiudad());
+                    ps.setString(10,a.getContacto());
+                    ps.setInt(11,usuario.getId_usuario());
                 // Ejecuta la sentencia SQL para insertar el nuevo registro
                     ps.executeUpdate();
                     System.out.println("Alquiler añadido con éxito");
@@ -41,6 +45,11 @@ public class AnyadirAlquileresModel extends Conexion{
                 // Manejo de excepciones de archivo no encontrado
                 throw new RuntimeException(e);
             }
+        }
+        private void recuperarDatos(){
+
+            UsuarioHolder us = UsuarioHolder.getInstance();
+            usuario = us.getUsuario();
         }
 
 }

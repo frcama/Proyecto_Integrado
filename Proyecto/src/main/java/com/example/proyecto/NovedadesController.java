@@ -27,22 +27,14 @@ private ImageView PerfilBOTON;
 @FXML
 private Button perfilBOTON;
 @FXML
-private Button addButton11;
-@FXML
 private AnchorPane PanelNovedades;
-@FXML
-private MenuItem FondoBlanco;
-@FXML
+    @FXML
 private Button novedadesBOTON;
-@FXML
-private MenuItem FondoOscuro;
-@FXML
+    @FXML
 private Button alquileresBOTON;
 @FXML
 private Button eventosBOTON;
-@FXML
-private MenuItem ChatAyuda;
-@FXML
+    @FXML
 private Button librosBOTON;
 @FXML
 private ScrollPane novedadesScollPane;
@@ -52,8 +44,10 @@ private HBox panelHBoxNovedades;
 private GridPane cosasGripPane;
 
 private Usuario usuario;
+    @FXML
+    private Button addButton11;
 
-public void setUsuario(Usuario usuario){
+    public void setUsuario(Usuario usuario){
     this.usuario = usuario;
 }
 
@@ -126,6 +120,8 @@ public void initialize(URL location, ResourceBundle resources){
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+
+
         }
 
         // Add events to the GridPane
@@ -147,6 +143,7 @@ public void initialize(URL location, ResourceBundle resources){
                 throw new RuntimeException(e);
             }
         }
+
     }
 //-----------------------------------------------------------------------------------------------
 @FXML
@@ -202,31 +199,7 @@ public void eventosBOTONclick(ActionEvent actionEvent) {
 }
 //-----------------------------------------------------------------------------------------------
 
-@FXML
-public void FondoBlancoclick(ActionEvent actionEvent) {
-    System.out.println("funciona");
-
-    try {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("Novedades.fxml"));
-        this.PanelNovedades.getChildren().setAll(pane);
-    } catch (IOException ex) {
-        Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-    }
-}
-
-@FXML
-public void FondoOscuroclick(ActionEvent actionEvent) {
-    System.out.println("funciona");
-
-    try {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("NovedadesOs.fxml"));
-        this.PanelNovedades.getChildren().setAll(pane);
-    } catch (IOException ex) {
-        Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-    }
-}
-
-@FXML
+@Deprecated
 public void ChatAyudaclick(ActionEvent actionEvent) {
     System.out.println("funciona");
     try {
@@ -237,9 +210,6 @@ public void ChatAyudaclick(ActionEvent actionEvent) {
     }
 }
 
-@FXML
-public void onAddClicked(ActionEvent actionEvent) {
-}
 
 @FXML
 public void alquileresBOTONclick(ActionEvent actionEvent) {
@@ -252,4 +222,9 @@ public void alquileresBOTONclick(ActionEvent actionEvent) {
         Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
     }
 }
+
+
+    @FXML
+    public void onAddClicked(ActionEvent actionEvent) {
+    }
 }

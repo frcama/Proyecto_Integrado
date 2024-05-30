@@ -15,7 +15,7 @@ public class InicioSesionModel extends Conexion {
         Usuario u = new Usuario();
 
         try {
-            String sql = "SELECT * FROM estudiantes WHERE email = ? AND contrasenya = ?;";
+            String sql = "SELECT * FROM estudiantes WHERE email = ? AND contrasenya = ?";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ps.setString(1, String.valueOf(email.getText()));
             ps.setString(2, String.valueOf(contra.getText()));

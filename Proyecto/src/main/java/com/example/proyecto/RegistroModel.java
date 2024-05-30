@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 public class RegistroModel extends Conexion{
 
-    public void anyadirResgistro(Usuario u) {
+    public void anyadirResgistro(Usuario us) {
 
 
         try {
@@ -17,14 +17,14 @@ public class RegistroModel extends Conexion{
 
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
 
-            ps.setString(1, u.getDNI());
-            ps.setString(2, u.getNombre());
-            ps.setString(3, u.getApellido());
-            ps.setString(4, u.getCorreo());
-            ps.setInt(5, u.getTelefono());
-            ps.setInt(6, u.getEdad());
-            ps.setDate(7, Date.valueOf(u.getFechanacimiento()));
-            ps.setString(8, u.getContra());
+            ps.setString(1, us.getDNI());
+            ps.setString(2, us.getNombre());
+            ps.setString(3, us.getApellido());
+            ps.setString(4, us.getCorreo());
+            ps.setInt(5, us.getTelefono());
+            ps.setInt(6, us.getEdad());
+            ps.setDate(7, Date.valueOf(us.getFechanacimiento()));
+            ps.setString(8, us.getContra());
 
             ps.execute();
             System.out.println("Usuario añadido con éxito");
