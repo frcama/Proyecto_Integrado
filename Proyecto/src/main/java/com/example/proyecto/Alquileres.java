@@ -85,6 +85,18 @@ public class Alquileres{
 
     }
 
+    public Alquileres(String ubicacion, String nombre, Double precio, String mc, Integer nh, String d, Image imagen, String ci) {
+
+        this.ubicacion = ubicacion;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.metrosCuadrados = mc;
+        this.nHabitaciones = nh;
+        this.Descripcion = d;
+        this.imagen = imagen;
+        this.ciudad = ci;
+    }
+
     public BufferedImage getBimagen() {
         return Bimagen;
     }

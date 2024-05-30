@@ -20,7 +20,7 @@ public class AlquileresModel extends Conexion{
         ArrayList<Alquileres> alquileresLista = new ArrayList<>();
 
         try {
-            String sql = "SELECT Ubicacion, nombre, precio, MetrosCuadrados, imagen, NumHabitaciones, Descripcion FROM alquileres ORDER BY fecha_anyadido DESC;";
+            String sql = "SELECT Ubicacion, nombre, precio, MetrosCuadrados, imagen, NumHabitaciones, Descripcion, Ciudad FROM alquileres ORDER BY fecha_anyadido DESC;";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
 
@@ -40,9 +40,10 @@ public class AlquileresModel extends Conexion{
                 String mc = rs.getString("MetrosCuadrados");
                 Integer nh = rs.getInt("NumHabitaciones");
                 String d = rs.getString("Descripcion");
+                String ci = rs.getString("Ciudad");
 
                 // Crea un objeto Alquileres con los valores obtenidos y lo añade a la lista
-                Alquileres a = new Alquileres(ubicacion,nombre,precio,mc,nh,d,imagen);
+                Alquileres a = new Alquileres(ubicacion,nombre,precio,mc,nh,d,imagen, ci);
                 alquileresLista.add(a);
             }
             // Cierra el ResultSet y el PreparedStatement

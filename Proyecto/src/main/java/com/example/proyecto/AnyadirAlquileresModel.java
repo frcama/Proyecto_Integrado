@@ -13,7 +13,7 @@ public class AnyadirAlquileresModel extends Conexion{
 
             try {
                 // Sentencia SQL para insertar un nuevo registro en la tabla alquileres
-                String sql = "INSERT INTO alquileres (Ubicacion, nombre, precio, MetrosCuadrados, imagen,fecha_anyadido, NumHabitaciones, Descripcion, ciudad)VALUES (?, ?, ?, ?, ?, ?, ?,?,?);";
+                String sql = "INSERT INTO alquileres (Ubicacion, nombre, precio, MetrosCuadrados, imagen,fecha_anyadido, NumHabitaciones, Descripcion, Ciudad)VALUES (?, ?, ?, ?, ?, ?, ?,?,?);";
                 // Prepara la sentencia SQL utilizando la conexión establecida en la clase base 'Conexion'
                 PreparedStatement ps = this.getConexion().prepareStatement(sql);
                 // Establece los valores de los parámetros en la sentencia SQL

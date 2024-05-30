@@ -14,6 +14,7 @@ import javafx.scene.layout.*;
 import javafx.stage.FileChooser;
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -46,7 +47,7 @@ public class EventosController implements Initializable {
     @javafx.fxml.FXML
     private Button librosBOTON;
     @javafx.fxml.FXML
-    private ChoiceBox TipoFiltroChoicebox;
+    private ChoiceBox<String> TipoFiltroChoicebox;
     @javafx.fxml.FXML
     private TextField maxPreciofiltroEvento;
     @javafx.fxml.FXML
@@ -57,6 +58,8 @@ public class EventosController implements Initializable {
     private GridPane cosasGripPaneEvento;
 
     ArrayList<Eventos> eventosArrayList = new ArrayList<>();
+    @javafx.fxml.FXML
+    private DatePicker fechafiltroDatePicker;
 
     public void initialize(URL location, ResourceBundle resources) {
         perfilBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';");
@@ -146,6 +149,41 @@ public class EventosController implements Initializable {
         }
     }
 
+    private void actualizarVista(ArrayList<Eventos> eventosFiltrados) {
+
+        cosasGripPaneEvento.getChildren().clear(); // Limpiar el grid pane
+
+        int column = 0;
+        int row = 0;
+
+        for (Eventos eventos : eventosFiltrados) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("MostrarEventos.fxml"));
+                AnchorPane anchorPane = fxmlLoader.load();
+
+                MostrarEventos me = fxmlLoader.getController();
+                me.setData(eventos);
+
+                if (column == 1) { // Ajustar columnas a la necesidad del programa
+                    column = 0;
+                    row++;
+                }
+
+                cosasGripPaneEvento.add(anchorPane, column++, row); // (child, column, row)
+                cosasGripPaneEvento.setMinWidth(Region.USE_COMPUTED_SIZE);
+                cosasGripPaneEvento.setPrefWidth(Region.USE_COMPUTED_SIZE);
+                cosasGripPaneEvento.setMaxWidth(Region.USE_PREF_SIZE);
+                cosasGripPaneEvento.setMinHeight(Region.USE_COMPUTED_SIZE);
+                cosasGripPaneEvento.setPrefHeight(Region.USE_COMPUTED_SIZE);
+                cosasGripPaneEvento.setMaxHeight(Region.USE_PREF_SIZE);
+
+                GridPane.setMargin(anchorPane, new Insets(10));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
     @javafx.fxml.FXML
     public void onAddClicked(ActionEvent actionEvent) {
@@ -215,6 +253,30 @@ public class EventosController implements Initializable {
     @javafx.fxml.FXML
     public void filtrarBottonClick(ActionEvent actionEvent) {
 
+
+        System.out.println("Funciona");
+
+        double precioMaximo = Double.parseDouble(maxPreciofiltroEvento.getText());
+        LocalDate fechaEvento = fechafiltroDatePicker.getValue();
+        String tipoEvento = TipoFiltroChoicebox.getValue();
+
+        ArrayList<Eventos> eventosFiltrados = new ArrayList<>();
+
+        for (Eventos evento : eventosArrayList) {
+            boolean matchesTipo = tipoEvento == null || tipoEvento.isEmpty() || "Tipo Evento".equalsIgnoreCase(tipoEvento) || evento.getTipo().equalsIgnoreCase(tipoEvento);
+            boolean matchesPrecio = precioMaximo <= 0 || evento.getPrecio() <= precioMaximo;
+            boolean matchesFecha = fechaEvento == null || evento.getFechaEvento().toLocalDate().isEqual(fechaEvento);
+
+            if (matchesTipo && matchesPrecio && matchesFecha) {
+                eventosFiltrados.add(evento);
+            }
+        }
+
+        if (eventosFiltrados.isEmpty()) {
+            actualizarVista(eventosArrayList);
+        } else {
+            actualizarVista(eventosFiltrados);
+        }
     }
 
 

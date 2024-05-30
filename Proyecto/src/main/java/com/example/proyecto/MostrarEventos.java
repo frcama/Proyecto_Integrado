@@ -23,6 +23,8 @@ public class MostrarEventos {
     Eventos evento = new Eventos();
     @javafx.fxml.FXML
     private Label nombrePropietario;
+    @javafx.fxml.FXML
+    private Label tipoEventoLabel;
 
 
     public void setData(Eventos evento) {
@@ -33,6 +35,7 @@ public class MostrarEventos {
 
 
         nombreLibroLabel.setText(evento.getNombre());
+        tipoEventoLabel.setText(evento.getTipo());
         precioEventoLabel.setText(String.valueOf(evento.getPrecio()+"€"));
         ubiEventoLabel.setText(evento.getUbicacion());
         descripcionEventoLabel.setText(evento.getDescripcion());

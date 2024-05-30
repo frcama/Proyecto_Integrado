@@ -14,7 +14,7 @@ public class AnyadirEventosModel extends Conexion{
 
 
         try {
-            String sql = "INSERT INTO eventos_culturales (nombre, fecha, ubicacion, fecha_anyadido,imagen,Descripcion, precio,tipoEvento)VALUES (?, ?, ?, ?, ?, ?, ?,?);";
+            String sql = "INSERT INTO eventos_culturales (nombre, fecha, ubicacion, fecha_anyadido,imagen,descripcion, precio,tipoEvento)VALUES (?, ?, ?, ?, ?, ?, ?,?);";
 
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
 

@@ -42,7 +42,7 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="recu_contra" layoutX="71.0" layoutY="422.0" mnemonicParsing="false" onAction="#recu_contraclick" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: F2F2F2;" text="¿Olvidaste tu contraseña?">
+      <Button fx:id="recu_contrasenya" layoutX="71.0" layoutY="422.0" mnemonicParsing="false" onAction="#recu_contraclick" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: F2F2F2;" text="¿Olvidaste tu contraseña?">
          <font>
             <Font size="15.0" />
          </font>

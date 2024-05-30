@@ -5,13 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="599a3e3c-8dec-4e78-9449-a59b65385a10" name="Changes" comment="registro">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_05_2024_20_06__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_05_2024_20_06__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_05_2024_18_07__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_05_2024_18_07__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_05_2024_18_58__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_05_2024_18_58__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_05_2024_15_26__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_05_2024_15_26__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/InicioSesionModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/InicioSesionModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Inicio_Sesion.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Inicio_Sesion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/inicio_sesion.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/inicio_sesion.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/InicioSesionModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/InicioSesionModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Inicio_Sesion.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Inicio_Sesion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/RegistroModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/RegistroModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Alquileres.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Alquileres.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AlquileresModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AlquileresModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AnyadirAlquileresModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AnyadirAlquileresModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AnyadirEventosModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AnyadirEventosModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/EventosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/EventosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/MostrarEventos.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/MostrarEventos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/Eventos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/Eventos.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/MostrarEventos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/MostrarEventos.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Eventos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Eventos.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/EventosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/EventosController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarEventos.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarEventos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarEventos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarEventos.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/inicio_sesion.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/inicio_sesion.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,12 +38,12 @@
     &quot;assignee&quot;: &quot;arnandisQuique&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/frcama/Proyecto_Integrado.git&quot;,
-    &quot;accountId&quot;: &quot;38ca9e88-fda3-4726-b655-3366fa10b245&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:frcama/Proyecto_Integrado.git",
+    "accountId": "d75de73d-e21f-4a35-ba8c-11962c9ee84d"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
@@ -53,7 +64,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Teresa/Desktop/pr/Proyecto_Integrado",
+    "last_opened_file_path": "C:/Users/xavie/OneDrive/Escritorio/proyecto - copia/Proyecto_Integrado",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -259,47 +270,6 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AnyadirLibrosModel.java</url>
-          <line>10</line>
-          <properties class="com.example.proyecto.AnyadirLibrosModel" method="AnyadirLibros">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Inicio_Sesion.java</url>
-          <line>53</line>
-          <properties class="com.example.proyecto.Inicio_Sesion" method="inicioBOTONclick">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/InicioSesionModel.java</url>
-          <line>12</line>
-          <properties class="com.example.proyecto.InicioSesionModel" method="loginUsuario">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Inicio_Sesion.java</url>
-          <line>94</line>
-          <properties class="com.example.proyecto.Inicio_Sesion" method="enviarDatos">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/InicioSesionModel.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
