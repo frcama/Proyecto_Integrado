@@ -18,6 +18,7 @@ public class Libros {
     private String asignatura;
     private Image imagen;
 
+    private Usuario u;
 
     public Image getImagen() {
         return imagen;
@@ -99,8 +100,24 @@ public class Libros {
         this.curso = curso;
     }
 
+    public Usuario getU() {
+        return u;
+    }
 
+    public void setU(Usuario u) {
+        this.u = u;
+    }
 
+    public Libros(String titulo, String isbn, String editorial, double precio, String curso, File image, Usuario u ) {
+
+        this.titulo = titulo;
+        this.isbn = isbn;
+        this.editorial = editorial;
+        this.precio = precio;
+        this.curso = curso;
+        this.image = image;
+this.u = u;
+    }
 
 
     public Libros(String titulo, String isbn, String editorial, double precio, String curso, File image) {

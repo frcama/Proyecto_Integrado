@@ -29,7 +29,7 @@ public class InicioSesionModel extends Conexion {
                 u.setCorreo(resultSet.getString("email"));
                 u.setContra(resultSet.getString("contrasenya"));
                 u.setDNI(resultSet.getString("dni_estudiante"));
-                u.setId_usuario(resultSet.getString("id_estudiante"));
+                u.setId_usuario(resultSet.getInt("id_estudiante"));
                 u.setEdad(resultSet.getInt("edad"));
                 u.setNombre(resultSet.getString("nombre"));
                 u.setApellido(resultSet.getString("apellidos"));

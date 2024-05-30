@@ -23,7 +23,28 @@ public class Alquileres{
     private String imgSrc;
     private String ciudad;
 
-    
+    private Usuario u;
+
+
+    public Alquileres(int id_Alquiler, String ubicacion, String nombre, Double precio, String metrosCuadrados, Image imagen, int nHabitaciones, String imgSrc, Usuario u) {
+        this.id_Alquiler = id_Alquiler;
+        this.ubicacion = ubicacion;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.metrosCuadrados = metrosCuadrados;
+        this.imagen = imagen;
+        this.nHabitaciones = nHabitaciones;
+        this.imgSrc=imgSrc;
+        this.u = u;
+    }
+
+    public Usuario getU() {
+        return u;
+    }
+
+    public void setU(Usuario u) {
+        this.u = u;
+    }
 
     public Alquileres(int id_Alquiler, String ubicacion, String nombre, Double precio, String metrosCuadrados, Image imagen, int nHabitaciones, String imgSrc) {
         this.id_Alquiler = id_Alquiler;

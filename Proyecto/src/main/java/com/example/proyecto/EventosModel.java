@@ -15,7 +15,7 @@ public class EventosModel extends Conexion{
         ArrayList<Eventos> listaEventos = new ArrayList<>();
 
         try {
-            String sql = "Select * from eventos_culturales ORDER BY fecha_anyadido DESC;";
+            String sql = "Select * from eventos_culturales ORDER BY fecha_anyadido ASC;";
 
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ResultSet rs = ps.executeQuery();

@@ -13,10 +13,10 @@ public class Usuario {
     private int telefono;
     private LocalDate fechanacimiento;
     private String contra;
-    private String id_usuario;
+    private int id_usuario;
 
 
-    public Usuario(String nombre, String id_usuario, String DNI, String apellido, String correo, int edad, int telefono, LocalDate fechanacimiento, String contra) {
+    public Usuario(String nombre, int id_usuario, String DNI, String apellido, String correo, int edad, int telefono, LocalDate fechanacimiento, String contra) {
         this.nombre = nombre;
         this.id_usuario = id_usuario;
         this.DNI = DNI;
@@ -47,18 +47,18 @@ public class Usuario {
         this.correo = correo;
     }
 
-    public Usuario(String nombre, String correo, String DNI, String id_usuario) {
+    public Usuario(String nombre, String correo, String DNI, int id_usuario) {
         this.nombre = nombre;
         this.correo = correo;
         this.DNI = DNI;
         this.id_usuario = id_usuario;
     }
 
-    public String getId_usuario() {
+    public int getId_usuario() {
         return id_usuario;
     }
 
-    public void setId_usuario(String id_usuario) {
+    public void setId_usuario(int id_usuario) {
         this.id_usuario = id_usuario;
     }
 

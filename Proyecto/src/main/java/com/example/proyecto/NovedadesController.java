@@ -108,7 +108,6 @@ public void initialize(URL location, ResourceBundle resources){
             }
         }
 
-
         // Add rentals to the GridPane
         for (Alquileres alquiler : alquileresArrayList) {
             try {

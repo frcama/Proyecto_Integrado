@@ -17,6 +17,7 @@ public class Eventos {
     private String tipo;
     private File imageFile;
 
+private Usuario u ;
 
 
 
@@ -36,9 +37,26 @@ public class Eventos {
     public Eventos(){
 
     }
+    public Eventos( String nombre, Date fechaEvento, String ubicacion, String descripcion, double precio, String tipo, Image imagen, Usuario u ) {
+        this.nombre = nombre;
+        this.fechaEvento = fechaEvento;
+        this.ubicacion = ubicacion;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.tipo = tipo;
+        this.imagen=imagen;
+        this.u = u;
+    }
 
+    public Usuario getU() {
+        return u;
+    }
 
-    public Eventos( String nombre, Date fechaEvento, String ubicacion, String descripcion, double precio, String tipo, Image imagen) {
+    public void setU(Usuario u) {
+        this.u = u;
+    }
+
+    public Eventos(String nombre, Date fechaEvento, String ubicacion, String descripcion, double precio, String tipo, Image imagen) {
         this.nombre = nombre;
         this.fechaEvento = fechaEvento;
         this.ubicacion = ubicacion;

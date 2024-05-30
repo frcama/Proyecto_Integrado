@@ -17,7 +17,7 @@ public class LibrosModel extends Conexion {
         ArrayList<Libros> listaLibros = new ArrayList<>();
 
         try {
-            String sql = "SELECT  isbn, Titulo, curso, asignatura, editorial, precio, imagen FROM libros";
+            String sql = "SELECT  isbn, Titulo, curso, asignatura, editorial, precio, imagen FROM libros ORDER BY fecha_anyadido ASC;";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
 
