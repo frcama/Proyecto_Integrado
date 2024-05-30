@@ -1,10 +1,10 @@
 package com.example.proyecto;
-
+// Clase que actúa como un singleton para almacenar el usuario actual
 public class UsuarioHolder {
 
     // La instancia única de UsuarioHolder
     private static final UsuarioHolder instance = new UsuarioHolder();
-    private Usuario usuario;
+    private Usuario usuario; // Variable para almacenar el usuario actual
 
     // Constructor privado para evitar la creación de instancias fuera de la clase
     private UsuarioHolder() {
