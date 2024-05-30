@@ -6,6 +6,7 @@ import javafx.scene.control.TextField;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class InicioSesionModel extends Conexion {
@@ -29,6 +30,10 @@ public class InicioSesionModel extends Conexion {
                 u.setContra(resultSet.getString("contrasenya"));
                 u.setDNI(resultSet.getString("dni_estudiante"));
                 u.setId_usuario(resultSet.getString("id_estudiante"));
+                u.setEdad(resultSet.getInt("edad"));
+                u.setNombre(resultSet.getString("nombre"));
+                u.setApellido(resultSet.getString("apellidos"));
+                u.setTelefono(resultSet.getInt("telefono"));
 
             } else {
                 Alert a = new Alert(Alert.AlertType.ERROR);

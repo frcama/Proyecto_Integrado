@@ -62,11 +62,8 @@ public class Inicio_Sesion{
             String passBDA = us.getContra();
             String emailBDA = us.getCorreo();
             if (contra.equals(passBDA) && correo.equals(emailBDA)) {
-                // Actualiza UsuarioHolder con la información del usuario
-                UsuarioHolder usuarioHolder = UsuarioHolder.getInstance();
-                usuarioHolder.setUsuario(us);
+               enviarDatos(actionEvent);
 
-                enviarDatos(actionEvent);
 
                 // Cambio de pantalla
                 try {
@@ -93,28 +90,24 @@ public class Inicio_Sesion{
     }
 
     private void enviarDatos(ActionEvent event) {
-        Usuario u = new Usuario();
-        u.setContra(pass.getText());
-        u.setCorreo(email.getText());
+        InicioSesionModel ism = new InicioSesionModel();
+        Usuario us = ism.loginUsuario(email, pass);
 
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         stage.close();
 
         try {
-            URL fxmlLocation = getClass().getClassLoader().getResource("inicio_sesion.fxml");
-            if (fxmlLocation == null) {
-                throw new IOException("No se pudo encontrar el archivo FXML en la ruta especificada.");
-            }
-            Parent root = FXMLLoader.load(fxmlLocation);
 
             // Paso 1
             UsuarioHolder holder = UsuarioHolder.getInstance();
             // Paso 2
-            holder.setUsuario(u);
+            holder.setUsuario(us);
 
+
+            Parent root = FXMLLoader.load(getClass().getResource("Novedades.fxml"));
             Scene scene = new Scene(root);
-            stage.setTitle("Tutorial JavaFX");
+            stage.setTitle("estubok");
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {

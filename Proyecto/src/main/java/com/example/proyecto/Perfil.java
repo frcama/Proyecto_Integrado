@@ -42,6 +42,8 @@ public class Perfil implements Initializable {
     private Label apellidosPerfil;
 
     Usuario usuario = new Usuario();
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -51,14 +53,15 @@ public class Perfil implements Initializable {
         correoPerfil.setText(usuario.getCorreo());
         nombrePerfil.setText(usuario.getNombre());
         contrsaenaPerfil.setText(usuario.getContra());
-        apellidosPerfil.setText(usuario.getNombre());
+        apellidosPerfil.setText(usuario.getApellido());
         fechaNacimientoPerfil.setText(String.valueOf(usuario.getFechanacimiento()));
 
 
     }
     private void recuperarDatos(){
+
         UsuarioHolder us = UsuarioHolder.getInstance();
-        Usuario u = us.getUsuario();
+         usuario = us.getUsuario();
     }
 
     @javafx.fxml.FXML
