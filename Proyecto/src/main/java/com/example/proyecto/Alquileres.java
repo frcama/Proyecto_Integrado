@@ -5,7 +5,7 @@ import javafx.scene.image.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.sql.Date;
-
+// Clase Alquileres que representa la información de un alquiler
 public class Alquileres{
 
 
@@ -25,7 +25,7 @@ public class Alquileres{
     private int id_Usuario;
     private String contacto;
     private Usuario u;
-
+    // Métodos getter y setter para cada atributo
     public String getContacto() {
         return contacto;
     }
@@ -33,7 +33,7 @@ public class Alquileres{
     public void setContacto(String contacto) {
         this.contacto = contacto;
     }
-
+    // Constructor que inicializa varios atributos del alquiler, incluyendo el usuario asociado
     public Alquileres(int id_Alquiler, String ubicacion, String nombre, Double precio, String metrosCuadrados, Image imagen, int nHabitaciones, String imgSrc, Usuario u) {
         this.id_Alquiler = id_Alquiler;
         this.ubicacion = ubicacion;
@@ -53,7 +53,7 @@ public class Alquileres{
     public void setU(Usuario u) {
         this.u = u;
     }
-
+    // Constructor que inicializa varios atributos del alquiler sin el usuario asociado
     public Alquileres(int id_Alquiler, String ubicacion, String nombre, Double precio, String metrosCuadrados, Image imagen, int nHabitaciones, String imgSrc) {
         this.id_Alquiler = id_Alquiler;
         this.ubicacion = ubicacion;
@@ -64,7 +64,7 @@ public class Alquileres{
         this.nHabitaciones = nHabitaciones;
         this.imgSrc=imgSrc;
     }
-
+    // Constructor que inicializa varios atributos del alquiler, incluyendo el archivo de imagen
     public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados,File imageFile, Image imagen, int nHabitaciones, String descripcion,String ciudad) {
         this.ubicacion = ubicacion;
         this.nombre = nombre;
@@ -76,7 +76,7 @@ public class Alquileres{
         this.Descripcion= descripcion;
         this.ciudad=ciudad;
     }
-
+    // Constructor que inicializa todos los atributos del alquiler
     public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados, File imageFile, Image imagen ,int nHabitaciones, String descripcion, Date fechaPublicacion,String ciudad,String contacto,int id_Usuario) {
         this.ubicacion = ubicacion;
         this.nombre = nombre;
@@ -91,7 +91,7 @@ public class Alquileres{
         this.contacto=contacto;
         this.id_Usuario=id_Usuario;
     }
-
+    // Otro constructor con diferentes parámetros
     public Alquileres(String ubicacion, String nombre, Double precio, String mc, Integer nh, String d,Image imagen) {
 
         this.ubicacion = ubicacion;
@@ -103,7 +103,7 @@ public class Alquileres{
         this.imagen=imagen;
 
     }
-
+    // Otro constructor que incluye ciudad y archivo de imagen
     public Alquileres(String ubicacion, String nombre, Double precio, String mc, Integer nh, String d,String ciudad, File imageFile) {
 
         this.ubicacion = ubicacion;
@@ -115,7 +115,7 @@ public class Alquileres{
         this.imageFile=imageFile;
 
     }
-
+    // Otro constructor que incluye imagen y ciudad
     public Alquileres(String ubicacion, String nombre, Double precio, String mc, Integer nh, String d, Image imagen, String ci) {
 
         this.ubicacion = ubicacion;
@@ -127,7 +127,7 @@ public class Alquileres{
         this.imagen = imagen;
         this.ciudad = ci;
     }
-
+    // Métodos getter y setter para cada atributo
     public int getId_Usuario() {
         return id_Usuario;
     }
@@ -168,6 +168,7 @@ public class Alquileres{
         this.fechaPublicacion = fechaPublicacion;
     }
 
+    // Constructor por defecto
     public Alquileres(){}
 
 
