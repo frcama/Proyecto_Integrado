@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_Update_at_31_05_2024_17_48_[Changes]" date="1717170506500" recycled="false" toDelete="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_05_2024_17_48_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 31/05/2024 17:48 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="Proyecto/target/classes/com/example/proyecto/Inicio_Sesion.class" />
+    <option name="AFTER_PATH" value="Proyecto/target/classes/com/example/proyecto/Inicio_Sesion.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_05_2024_17_48_[Changes]/Inicio_Sesion.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Proyecto/target/classes/com/example/proyecto/Registro.class" />
+    <option name="AFTER_PATH" value="Proyecto/target/classes/com/example/proyecto/Registro.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_05_2024_17_48_[Changes]/Registro.class" />
+  </binary>
+</changelist>

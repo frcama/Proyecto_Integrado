@@ -2,7 +2,6 @@ package com.example.proyecto;
 
 import javafx.scene.image.Image;
 
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.sql.Date;
 // Clase para representar libros

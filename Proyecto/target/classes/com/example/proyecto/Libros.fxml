@@ -33,14 +33,14 @@
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.8533333539962769" green="0.20000000298023224" blue="1.0" />
+                        <Color red="0.11764705926179886" green="0.5647059082984924" blue="1.0" />
                      </color>
                   </Stop>
                </stops>
             </LinearGradient>
          </fill>
       </Rectangle>
-      <Label layoutX="122.0" layoutY="14.0" text="LIBROS" textFill="WHITE">
+      <Label layoutX="122.0" layoutY="12.0" text="LIBROS" textFill="WHITE">
          <font>
             <Font name="Impact" size="30.0" />
          </font>
@@ -60,11 +60,11 @@
             <Image url="@../../../../../../../../../../imagenes/Image%20Pasted%202024-30-04%20at%2010.08.23.png" />
          </image>
       </ImageView>
-      <Button fx:id="perfilBOTON" alignment="CENTER" layoutX="280.0" layoutY="3.0" mnemonicParsing="false" onAction="#perfilBOTONclick" prefHeight="52.0" prefWidth="54.0" style="-fx-background-image: &quot;@img/logo.png&quot;; -fx-background-radius: 1000000;" textAlignment="JUSTIFY">
+      <Button fx:id="perfilBOTON" alignment="CENTER" layoutX="266.0" layoutY="5.0" mnemonicParsing="false" onAction="#perfilBOTONclick" prefHeight="52.0" prefWidth="54.0" style="-fx-background-image: &quot;@img/logo.png&quot;; -fx-background-radius: 1000000; -fx-background-color: #1f93ff;" textAlignment="JUSTIFY">
          <graphic>
-            <ImageView fx:id="PerfilBOTON1" fitHeight="40.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="PerfilBOTON1" fitHeight="31.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/boton_perfil.png" />
+                  <Image url="@img/perfil3.png" />
                </image>
                <effect>
                   <ColorAdjust />
@@ -77,7 +77,7 @@
             <DropShadow />
          </effect>
          <graphic>
-            <ImageView fitHeight="33.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@img/libroAzul.png" />
                </image>

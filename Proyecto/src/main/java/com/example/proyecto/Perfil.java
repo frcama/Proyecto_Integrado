@@ -1,6 +1,7 @@
 package com.example.proyecto;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -21,30 +22,30 @@ import java.util.logging.Logger;
 public class Perfil implements Initializable {
     FileChooser fileChooser = new FileChooser();
 
-    @javafx.fxml.FXML
+    @FXML
     private ImageView fotoPerfil;
-    @javafx.fxml.FXML
+    @FXML
     private Button atrasDePerfilBOTON;
-    @javafx.fxml.FXML
+    @FXML
     private Button CerrarSesionBOTON;
-    @javafx.fxml.FXML
+    @FXML
     private Button editarPerfil;
-    @javafx.fxml.FXML
+    @FXML
     private AnchorPane panelDePerfil;
-    @javafx.fxml.FXML
+    @FXML
     private Label nombrePerfil;
-    @javafx.fxml.FXML
+    @FXML
     private Label fechaNacimientoPerfil;
-    @javafx.fxml.FXML
+    @FXML
     private Label contrsaenaPerfil;
-    @javafx.fxml.FXML
-    private Label correoPerfil;
-    @javafx.fxml.FXML
+    @FXML
     private Label apellidosPerfil;
 
     Usuario usuario = new Usuario();
-    @javafx.fxml.FXML
+    @FXML
     private Button verPubsButton;
+    @FXML
+    private Label correoPerfilLabel;
 
 
     @Override
@@ -52,15 +53,14 @@ public class Perfil implements Initializable {
 
         // Recuperar los datos del usuario actual
         recuperarDatos();
+        if (usuario != null && correoPerfilLabel != null) {
+            correoPerfilLabel.setText(usuario.getCorreo());
+            nombrePerfil.setText(usuario.getNombre());
+            contrsaenaPerfil.setText(usuario.getContra());
+            apellidosPerfil.setText(usuario.getApellido());
+            fechaNacimientoPerfil.setText(String.valueOf(usuario.getFechanacimiento()));
 
-        // Mostrar los datos del usuario en la interfaz
-        correoPerfil.setText(usuario.getCorreo());
-        nombrePerfil.setText(usuario.getNombre());
-        contrsaenaPerfil.setText(usuario.getContra());
-        apellidosPerfil.setText(usuario.getApellido());
-        fechaNacimientoPerfil.setText(String.valueOf(usuario.getFechanacimiento()));
-
-
+        }
     }
     // Método para recuperar los datos del usuario actual
     private void recuperarDatos(){
@@ -96,24 +96,26 @@ public class Perfil implements Initializable {
     @javafx.fxml.FXML
     public void editarPerfilclick(ActionEvent actionEvent) {
 
-        try {
-            AnchorPane pane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("EditarPerfil.fxml")));
-            this.panelDePerfil.getChildren().setAll(pane);
-        } catch (IOException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-    // Método para ver las publicaciones del usuario
-    @javafx.fxml.FXML
-    public void verPubsCLick(ActionEvent actionEvent) {
 
         try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Publicaciones.fxml"));
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("EditarPerfil.fxml"));
             this.panelDePerfil.getChildren().setAll(pane);
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+
+
+@FXML
+public void verPubsCLick(ActionEvent actionEvent){
+    try {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("Publicaciones.fxml"));
+        this.panelDePerfil.getChildren().setAll(pane);
+    } catch (IOException ex) {
+        Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+    }
+}
 
 
 }

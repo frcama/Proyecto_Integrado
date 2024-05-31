@@ -44,7 +44,7 @@ public class MostrarEventos {
         // Establecer los datos del evento en las etiquetas de la interfaz de usuario
         nombreEventolabel.setText(evento.getNombre());
         tipoEventoLabel.setText(evento.getTipo());
-        precioEventoLabel.setText(String.valueOf(evento.getPrecio()+"€"));
+        precioEventoLabel.setText(String.valueOf(evento.getPrecio()+""));
         ubiEventoLabel.setText(evento.getUbicacion());
         descripcionEventoLabel.setText(evento.getDescripcion());
         fechaEventoLabel.setText(String.valueOf(evento.getFechaEvento()));

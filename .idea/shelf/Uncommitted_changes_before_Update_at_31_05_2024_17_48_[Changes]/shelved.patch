@@ -1,0 +1,183 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"599a3e3c-8dec-4e78-9449-a59b65385a10\" name=\"Changes\" comment=\"muestra eventos y revisión de consultas\">\r\n      <change afterPath=\"$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/PublicacionesController.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/Publicaciones.fxml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Perfil.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Perfil.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/Perfil.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/Perfil.fxml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Eventos.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Eventos.fxml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Novedades.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Novedades.fxml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n        <option value=\"FxmlFile\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;arnandisQuique&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;git@github.com:frcama/Proyecto_Integrado.git&quot;,\r\n    &quot;accountId&quot;: &quot;d75de73d-e21f-4a35-ba8c-11962c9ee84d&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;customColor&quot;: &quot;&quot;,\r\n  &quot;associatedIndex&quot;: 5\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2gmj6pfo7y7Xx5A11nm3Rw4GPYl\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\r\n    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/xavie/OneDrive/Escritorio/proyecto - copia/Proyecto_Integrado&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"HelloApplication\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.example.proyecto.HelloApplication\" />\r\n      <module name=\"Proyecto\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.example.proyecto.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.HelloApplication\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"599a3e3c-8dec-4e78-9449-a59b65385a10\" name=\"Changes\" comment=\"\" />\r\n      <created>1716309475577</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1716309475577</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Filtros en alquileres\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716312548370</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716312548370</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Mostrar Info de la base de datos en Alquileres\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716313738036</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716313738036</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Mostrar Info de la base de datos en Alquileres\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716314040563</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716314040563</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Mostrar Info de la base de datos en Alquileres\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716541929216</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716541929216</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"BDA Alquileres\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716749207899</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716749207899</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"BDA Alquileres\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716749217533</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716749217533</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Arreglos cosas\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716830757276</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716830757276</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Arreglos cosas\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716839661794</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716839661794</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Arreglos cosas\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716919792429</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716919792429</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Arreglos cosas\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716921158176</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716921158176</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Arreglos cosas\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716924850070</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716924850070</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"porfin imagenes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716926283750</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716926283750</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"porfin imagenes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716927942508</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716927942508</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"porfin imagenes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716998149788</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716998149788</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"porfin imagenes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716998229787</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716998229787</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"registro\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716999828569</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716999828569</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"muestra eventos y revisión de consultas\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717052319253</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717052319253</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"18\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"UnknownFeatures\">\r\n    <option featureType=\"dependencySupport\" implementationName=\"java:org.openjfx:javafx-base\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"Filtros en alquileres\" />\r\n    <MESSAGE value=\"Mostrar Info de la base de datos en Alquileres\" />\r\n    <MESSAGE value=\"BDA Alquileres\" />\r\n    <MESSAGE value=\"Arreglos cosas\" />\r\n    <MESSAGE value=\"porfin imagenes\" />\r\n    <MESSAGE value=\"registro\" />\r\n    <MESSAGE value=\"muestra eventos y revisión de consultas\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"muestra eventos y revisión de consultas\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.sql.SQLException\" package=\"java.sql\" />\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-method\">\r\n          <url>file://$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AnyadirLibros.java</url>\r\n          <line>88</line>\r\n          <properties class=\"com.example.proyecto.AnyadirLibros\" method=\"onSubirButtonClick\">\r\n            <option name=\"EMULATED\" value=\"true\" />\r\n            <option name=\"WATCH_EXIT\" value=\"false\" />\r\n          </properties>\r\n          <option name=\"timeStamp\" value=\"6\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 1375a19ff4f54e325849a7c7196f8591369667b1)
++++ b/.idea/workspace.xml	(date 1717085946053)
+@@ -4,27 +4,16 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="599a3e3c-8dec-4e78-9449-a59b65385a10" name="Changes" comment="muestra eventos y revisión de consultas">
+-      <change afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/PublicacionesController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/Publicaciones.fxml" afterDir="false" />
++    <list default="true" id="599a3e3c-8dec-4e78-9449-a59b65385a10" name="Changes" comment="registro">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Perfil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Perfil.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/Perfil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/Perfil.fxml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Eventos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Eventos.fxml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Novedades.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Novedades.fxml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Inicio_Sesion.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Inicio_Sesion.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarLibros.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarLibros.fxml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Registro.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Registro.class" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+-  </component>
+-  <component name="FileTemplateManagerImpl">
+-    <option name="RECENT_TEMPLATES">
+-      <list>
+-        <option value="Class" />
+-        <option value="FxmlFile" />
+-      </list>
+-    </option>
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -37,8 +26,8 @@
+ }</component>
+   <component name="GithubPullRequestsUISettings">{
+   &quot;selectedUrlAndAccountId&quot;: {
+-    &quot;url&quot;: &quot;git@github.com:frcama/Proyecto_Integrado.git&quot;,
+-    &quot;accountId&quot;: &quot;d75de73d-e21f-4a35-ba8c-11962c9ee84d&quot;
++    &quot;url&quot;: &quot;https://github.com/frcama/Proyecto_Integrado.git&quot;,
++    &quot;accountId&quot;: &quot;38ca9e88-fda3-4726-b655-3366fa10b245&quot;
+   }
+ }</component>
+   <component name="ProjectColorInfo">{
+@@ -53,21 +42,21 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/xavie/OneDrive/Escritorio/proyecto - copia/Proyecto_Integrado&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "ASKED_ADD_EXTERNAL_FILES": "true",
++    "Application.HelloApplication.executor": "Run",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "git-widget-placeholder": "main",
++    "ignore.virus.scanning.warn.message": "true",
++    "kotlin-language-version-configured": "true",
++    "last_opened_file_path": "C:/Users/Teresa/Desktop/pr/Proyecto_Integrado",
++    "project.structure.last.edited": "Project",
++    "project.structure.proportion": "0.0",
++    "project.structure.side.proportion": "0.0",
++    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+   }
+-}</component>
++}]]></component>
+   <component name="RunManager">
+     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="com.example.proyecto.HelloApplication" />
+@@ -225,13 +214,13 @@
+       <option name="project" value="LOCAL" />
+       <updated>1716999828569</updated>
+     </task>
+-    <task id="LOCAL-00017" summary="muestra eventos y revisión de consultas">
++    <task id="LOCAL-00017" summary="registro">
+       <option name="closed" value="true" />
+-      <created>1717052319253</created>
++      <created>1717004408620</created>
+       <option name="number" value="00017" />
+       <option name="presentableId" value="LOCAL-00017" />
+       <option name="project" value="LOCAL" />
+-      <updated>1717052319253</updated>
++      <updated>1717004408620</updated>
+     </task>
+     <option name="localTasksCounter" value="18" />
+     <servers />
+@@ -258,8 +247,7 @@
+     <MESSAGE value="Arreglos cosas" />
+     <MESSAGE value="porfin imagenes" />
+     <MESSAGE value="registro" />
+-    <MESSAGE value="muestra eventos y revisión de consultas" />
+-    <option name="LAST_COMMIT_MESSAGE" value="muestra eventos y revisión de consultas" />
++    <option name="LAST_COMMIT_MESSAGE" value="registro" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+@@ -276,6 +264,47 @@
+             <option name="WATCH_EXIT" value="false" />
+           </properties>
+           <option name="timeStamp" value="6" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-method">
++          <url>file://$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AnyadirLibrosModel.java</url>
++          <line>10</line>
++          <properties class="com.example.proyecto.AnyadirLibrosModel" method="AnyadirLibros">
++            <option name="EMULATED" value="true" />
++            <option name="WATCH_EXIT" value="false" />
++          </properties>
++          <option name="timeStamp" value="7" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-method">
++          <url>file://$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Inicio_Sesion.java</url>
++          <line>54</line>
++          <properties class="com.example.proyecto.Inicio_Sesion">
++            <option name="EMULATED" value="true" />
++            <option name="WATCH_EXIT" value="false" />
++          </properties>
++          <option name="timeStamp" value="8" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-method">
++          <url>file://$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/InicioSesionModel.java</url>
++          <line>13</line>
++          <properties class="com.example.proyecto.InicioSesionModel">
++            <option name="EMULATED" value="true" />
++            <option name="WATCH_EXIT" value="false" />
++          </properties>
++          <option name="timeStamp" value="10" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-method">
++          <url>file://$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Inicio_Sesion.java</url>
++          <line>93</line>
++          <properties class="com.example.proyecto.Inicio_Sesion">
++            <option name="EMULATED" value="true" />
++            <option name="WATCH_EXIT" value="false" />
++          </properties>
++          <option name="timeStamp" value="12" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/InicioSesionModel.java</url>
++          <line>11</line>
++          <option name="timeStamp" value="9" />
+         </line-breakpoint>
+       </breakpoints>
+     </breakpoint-manager>
+Index: Proyecto/target/classes/com/example/proyecto/MostrarLibros.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Label?>\r\n<?import javafx.scene.effect.Glow?>\r\n<?import javafx.scene.image.Image?>\r\n<?import javafx.scene.image.ImageView?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.text.Font?>\r\n\r\n<AnchorPane fx:id=\"panelMostrarLibros\" prefHeight=\"368.0\" prefWidth=\"293.0\" style=\"-fx-border-color: 000; -fx-border-style: box-shadow; -fx-background-color: FFFFF;\" xmlns=\"http://javafx.com/javafx/21\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.proyecto.MostrarLibros\">\r\n   <children>\r\n      <Label fx:id=\"tituloLibroLabel\" alignment=\"CENTER\" contentDisplay=\"CENTER\" layoutX=\"102.0\" layoutY=\"8.0\" text=\"Título Libro\" textAlignment=\"CENTER\" underline=\"true\" wrapText=\"true\">\r\n         <font>\r\n            <Font size=\"20.0\" />\r\n         </font>\r\n         <effect>\r\n            <Glow level=\"0.0\" />\r\n         </effect>\r\n      </Label>\r\n      <ImageView fx:id=\"libroimagenImageView\" fitHeight=\"153.0\" fitWidth=\"267.0\" layoutX=\"13.0\" layoutY=\"52.0\" pickOnBounds=\"true\" preserveRatio=\"true\" />\r\n      <Label fx:id=\"isbnLabel\" layoutX=\"75.0\" layoutY=\"292.0\" prefHeight=\"20.0\" prefWidth=\"214.0\" text=\"ISBN\" textFill=\"#7e7c7c\" wrapText=\"true\">\r\n         <font>\r\n            <Font size=\"14.0\" />\r\n         </font></Label>\r\n      <Label fx:id=\"editorialLabel\" layoutX=\"75.0\" layoutY=\"272.0\" prefHeight=\"20.0\" prefWidth=\"214.0\" text=\"Editorial\" textFill=\"#7e7c7c\" wrapText=\"true\">\r\n         <font>\r\n            <Font size=\"14.0\" />\r\n         </font></Label>\r\n      <Label fx:id=\"cursoLabel\" layoutX=\"75.0\" layoutY=\"252.0\" prefHeight=\"20.0\" prefWidth=\"214.0\" text=\"Curso\" textFill=\"#7e7c7c\" wrapText=\"true\">\r\n         <font>\r\n            <Font size=\"14.0\" />\r\n         </font></Label>\r\n      <Label fx:id=\"precioLabel\" layoutX=\"191.0\" layoutY=\"204.0\" prefHeight=\"54.0\" prefWidth=\"94.0\" text=\"201\" textFill=\"#7e7c7ce5\" wrapText=\"true\">\r\n         <font>\r\n            <Font name=\"System Bold\" size=\"36.0\" />\r\n         </font></Label>\r\n      <Label fx:id=\"asignaturaLabel\" layoutX=\"15.0\" layoutY=\"218.0\" prefHeight=\"20.0\" prefWidth=\"274.0\" text=\"Asignatura\" textFill=\"#7e7c7c\" wrapText=\"true\">\r\n         <font>\r\n            <Font size=\"18.0\" />\r\n         </font></Label>\r\n      <Label fx:id=\"correoLibros\" contentDisplay=\"CENTER\" layoutX=\"62.0\" layoutY=\"326.0\" prefHeight=\"30.0\" prefWidth=\"229.0\" text=\"Label\" textAlignment=\"CENTER\" textFill=\"#7e7c7c\">\r\n         <font>\r\n            <Font size=\"14.0\" />\r\n         </font></Label>\r\n      <ImageView fitHeight=\"54.0\" fitWidth=\"56.0\" layoutX=\"10.0\" layoutY=\"257.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\r\n         <image>\r\n            <Image url=\"@img/iconoLibro.png\" />\r\n         </image>\r\n      </ImageView>\r\n      <ImageView fitHeight=\"30.0\" fitWidth=\"30.0\" layoutX=\"22.0\" layoutY=\"327.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\r\n         <image>\r\n            <Image url=\"@img/iconocontacto.png\" />\r\n         </image>\r\n      </ImageView>\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Proyecto/target/classes/com/example/proyecto/MostrarLibros.fxml b/Proyecto/target/classes/com/example/proyecto/MostrarLibros.fxml
+--- a/Proyecto/target/classes/com/example/proyecto/MostrarLibros.fxml	(revision 1375a19ff4f54e325849a7c7196f8591369667b1)
++++ b/Proyecto/target/classes/com/example/proyecto/MostrarLibros.fxml	(date 1717085534886)
+@@ -7,7 +7,7 @@
+ <?import javafx.scene.layout.AnchorPane?>
+ <?import javafx.scene.text.Font?>
+ 
+-<AnchorPane fx:id="panelMostrarLibros" prefHeight="368.0" prefWidth="293.0" style="-fx-border-color: 000; -fx-border-style: box-shadow; -fx-background-color: FFFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.MostrarLibros">
++<AnchorPane fx:id="panelMostrarLibros" prefHeight="368.0" prefWidth="293.0" style="-fx-border-color: 000; -fx-border-style: box-shadow; -fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.MostrarLibros">
+    <children>
+       <Label fx:id="tituloLibroLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="102.0" layoutY="8.0" text="Título Libro" textAlignment="CENTER" underline="true" wrapText="true">
+          <font>

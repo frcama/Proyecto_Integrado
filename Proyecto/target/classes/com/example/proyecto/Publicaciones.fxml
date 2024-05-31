@@ -27,7 +27,7 @@
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.8549019694328308" green="0.20000000298023224" blue="1.0" />
+                        <Color red="0.11764705926179886" green="0.5647059082984924" blue="1.0" />
                      </color>
                   </Stop>
                </stops>
