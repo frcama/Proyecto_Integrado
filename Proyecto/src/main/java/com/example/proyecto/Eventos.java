@@ -1,10 +1,18 @@
 package com.example.proyecto;
-// Importación necesaria para manejar imágenes
+/**
+ * Importación necesaria para manejar imágenes
+ */
+
 import javafx.scene.image.Image;
-// Importación necesaria para manejar fechas
+/**
+ * Importación necesaria para manejar fechas
+ */
 import java.io.File;
 import java.sql.Date;
-// Clase que representa un evento
+
+/**
+ * Clase que representa un evento
+ */
 public class Eventos {
     private int id_evento;
     private String nombre;
@@ -21,7 +29,19 @@ public class Eventos {
 private Usuario u ;
 
 
-    // Constructor de la clase con parámetros completos
+    /**
+     * Constructor de la clase con parámetros completos
+     * @param nombre
+     * @param fechaEvento
+     * @param ubicacion
+     * @param fecha_anyadido
+     * @param imagen
+     * @param imageFile
+     * @param descripcion
+     * @param precio
+     * @param tipo
+     * @param id_usuario
+     */
     public Eventos( String nombre, Date fechaEvento, String ubicacion, Date fecha_anyadido, Image imagen, File imageFile, String descripcion, double precio, String tipo,int id_usuario) {
         this.nombre = nombre;
         this.fechaEvento = fechaEvento;
@@ -35,11 +55,25 @@ private Usuario u ;
         this.imagen=imagen;
         this.id_usuario=id_usuario;
     }
-    // Constructor vacío de la clase
+
+    /**
+     * Constructor de la clase con parámetros completos
+     */
     public Eventos(){
 
     }
-    // Constructor de la clase con parámetros básicos
+
+    /**
+     * Constructor de la clase con parámetros básicos
+     * @param nombre
+     * @param fechaEvento
+     * @param ubicacion
+     * @param descripcion
+     * @param precio
+     * @param tipo
+     * @param imagen
+     * @param u
+     */
     public Eventos( String nombre, Date fechaEvento, String ubicacion, String descripcion, double precio, String tipo, Image imagen, Usuario u ) {
         this.nombre = nombre;
         this.fechaEvento = fechaEvento;
@@ -58,7 +92,17 @@ private Usuario u ;
     public void setU(Usuario u) {
         this.u = u;
     }
-    // Constructor de la clase con parámetros básicos y sin usuario
+
+    /**
+     * Constructor de la clase con parámetros básicos y sin usuario
+     * @param nombre
+     * @param fechaEvento
+     * @param ubicacion
+     * @param descripcion
+     * @param precio
+     * @param tipo
+     * @param imagen
+     */
     public Eventos(String nombre, Date fechaEvento, String ubicacion, String descripcion, double precio, String tipo, Image imagen) {
         this.nombre = nombre;
         this.fechaEvento = fechaEvento;
@@ -69,7 +113,10 @@ private Usuario u ;
         this.imagen=imagen;
     }
 
-    // Getters y Setters para todos los atributos de la clase
+    /**
+     * Getters y Setters para todos los atributos de la clase
+     * @return
+     */
     public File getImageFile() {
         return imageFile;
     }

@@ -4,9 +4,14 @@ import javafx.scene.layout.AnchorPane;
 
 import javafx.scene.image.ImageView;
 import javafx.scene.control.Label;
-// Clase para mostrar los detalles de un libro en la interfaz de usuario
+
+/**
+ * Clase para mostrar los detalles de un libro en la interfaz de usuario
+ */
 public class MostrarLibros extends Conexion{
-    // Etiquetas y elementos de la interfaz de usuario
+    /**
+     * Etiquetas y elementos de la interfaz de usuario
+     */
     @javafx.fxml.FXML
     private Label isbnLabel;
     @javafx.fxml.FXML
@@ -29,13 +34,20 @@ public class MostrarLibros extends Conexion{
     @javafx.fxml.FXML
     private Label correoLibros;
 
-    // Instancia de Usuario
+    /**
+     * Instancia de Usuario
+     */
     Usuario usuario = new Usuario();
 
-    // Método para establecer los datos del libro en la interfaz de usuario
+    /**
+     * Método para establecer los datos del libro en la interfaz de usuario
+     * @param libros
+     */
     public void setData(Libros libros) {
         recuperarDatos();
-        // Establecer los datos del libro en las etiquetas de la interfaz de usuario
+        /**
+         * Establecer los datos del libro en las etiquetas de la interfaz de usuario
+         */
         this.libros = libros;
 
         tituloLibroLabel.setText(libros.getTitulo());
@@ -48,13 +60,18 @@ public class MostrarLibros extends Conexion{
         isbnLabel.setText(libros.getIsbn());
         correoLibros.setText(usuario.getCorreo());
 
-        // Establecer la imagen en el ImageView
+        /**
+         * Establecer la imagen en el ImageView
+         */
         if (libros.getImagen() != null) {
             libroimagenImageView.setImage(libros.getImagen());
         }
 
     }
-    // Método para recuperar los datos del usuario actual
+
+    /**
+     * Método para recuperar los datos del usuario actual
+     */
     private void recuperarDatos(){
 
         UsuarioHolder us = UsuarioHolder.getInstance();

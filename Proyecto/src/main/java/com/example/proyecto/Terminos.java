@@ -23,12 +23,18 @@ public class Terminos {
     public void cancelarTerminosBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona bien");
         try {
-            // Cargar la vista de inicio de sesión al cancelar los términos
+            /**
+             * Cargar la vista de inicio de sesión al cancelar los términos
+             */
             AnchorPane pane = FXMLLoader.load(getClass().getResource("inicio_sesion.fxml"));
-            // Establecer la vista de inicio de sesión en el panel de términos
+            /**
+             * Establecer la vista de inicio de sesión en el panel de términos
+             */
             this.panelTerminos.getChildren().setAll(pane);
         } catch (IOException ex) {
-            // Manejar cualquier excepción de E/S que ocurra durante la carga de la vista
+            /**
+             * Manejar cualquier excepción de E/S que ocurra durante la carga de la vista
+             */
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -39,12 +45,18 @@ public class Terminos {
     public void aceptarTerminosBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona bien");
         try {
-            // Cargar la vista de novedades al aceptar los términos
+            /**
+             * Cargar la vista de novedades al aceptar los términos
+             */
             AnchorPane pane = FXMLLoader.load(getClass().getResource("inicio_sesion.fxml"));
-            // Establecer la vista de novedades en el panel de términos
+            /**
+             * Establecer la vista de novedades en el panel de términos
+             */
             this.panelTerminos.getChildren().setAll(pane);
         } catch (IOException ex) {
-            // Manejar cualquier excepción de E/S que ocurra durante la carga de la vista
+            /**
+             * Manejar cualquier excepción de E/S que ocurra durante la carga de la vista
+             */
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

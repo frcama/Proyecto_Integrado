@@ -20,7 +20,10 @@ import java.time.LocalDate;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-// Clase AnyadirEventos que implementa Initializable para inicializar la interfaz gráfica al cargar
+
+/**
+ * Clase AnyadirEventos que implementa Initializable para inicializar la interfaz gráfica al cargar
+ */
 public class AnyadirEventos  implements Initializable {
 
     // Definición de elementos de la interfaz gráfica mediante anotaciones FXML
@@ -49,7 +52,11 @@ public class AnyadirEventos  implements Initializable {
     Usuario usuario = new Usuario();
 
 
-    // Método que se ejecuta al inicializar la interfaz gráfica
+    /**
+     * Método que se ejecuta al inicializar la interfaz gráfica
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -61,7 +68,9 @@ public class AnyadirEventos  implements Initializable {
         precioEventos.setValueFactory(valueFactoryInteger);
 
 
-        // Creación de una lista observable para los tipos de eventos
+        /**
+         * Creación de una lista observable para los tipos de eventos
+         */
         ObservableList<String> tipoEvento = FXCollections.observableArrayList();
 
         // Adición de tipos de eventos a la lista
@@ -82,7 +91,11 @@ public class AnyadirEventos  implements Initializable {
         tipoEventoChoiceBox.setValue("TipoEvento");
 
     }
-    // Método que se ejecuta al hacer clic en el botón "Subir"
+
+    /**
+     * Método que se ejecuta al hacer clic en el botón "Subir"
+     * @param actionEvent
+     */
     @javafx.fxml.FXML
     public void onSubirButtonClick(ActionEvent actionEvent) {
 
@@ -115,7 +128,10 @@ public class AnyadirEventos  implements Initializable {
         usuario = us.getUsuario();
     }
 
-    // Método que se ejecuta al hacer clic en el botón "Atrás"
+    /**
+     * Método que se ejecuta al hacer clic en el botón "Atrás"
+     * @param actionEvent
+     */
     @javafx.fxml.FXML
     public void onAtrasButtonClick(ActionEvent actionEvent) {
         try {
@@ -126,7 +142,11 @@ public class AnyadirEventos  implements Initializable {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    // Método que se ejecuta al hacer clic en el botón "Subir Imagen"
+
+    /**
+     * Método que se ejecuta al hacer clic en el botón "Subir Imagen"
+     * @param actionEvent
+     */
     @javafx.fxml.FXML
     public void OnSubirImagenbutton(ActionEvent actionEvent) {
         // Crear un selector de archivos

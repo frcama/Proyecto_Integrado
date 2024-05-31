@@ -55,7 +55,11 @@ public class AnyadirAlquileres implements Initializable {
     Usuario usuario = new Usuario();
 
 
-    // Método inicializador que se ejecuta al cargar el FXML
+    /**
+     * Método inicializador que se ejecuta al cargar el FXML
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -101,7 +105,10 @@ public class AnyadirAlquileres implements Initializable {
     }
 
 
-    // Método para manejar el evento del botón "Subir"
+    /**
+     * Método para manejar el evento del botón "Subir"
+     * @param actionEvent
+     */
     @javafx.fxml.FXML
     public void onSubirButtonClick(ActionEvent actionEvent) {
 
@@ -132,7 +139,10 @@ public class AnyadirAlquileres implements Initializable {
     }
 
 
-    // Método para manejar el evento del botón "Subir Imagen"
+    /**
+     * Método para manejar el evento del botón "Subir Imagen"
+     * @param actionEvent
+     */
     @javafx.fxml.FXML
     public void OnSubirImagenbutton(ActionEvent actionEvent) {
         FileChooser fileChooser = new FileChooser();
@@ -147,7 +157,11 @@ public class AnyadirAlquileres implements Initializable {
             muestraImagen.setImage(image);
         }
     }
-    // Método para manejar el evento del botón "Atrás"
+
+    /**
+     * Método para manejar el evento del botón "Atrás"
+     * @param actionEvent
+     */
     @javafx.fxml.FXML
     public void atrasBOTONclick(ActionEvent actionEvent) {
         try {

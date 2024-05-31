@@ -7,7 +7,10 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class AlquileresModel extends Conexion{
-    // Método para mostrar todos los alquileres, ordenados por fecha de añadido
+    /**
+     * Método para mostrar todos los alquileres, ordenados por fecha de añadido
+     * @return
+     */
     public ArrayList<Alquileres> mostrarAlquileres() {
         this.conexion = true;
         ArrayList<Alquileres> alquileresLista = new ArrayList<>();

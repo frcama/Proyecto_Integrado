@@ -10,7 +10,10 @@ public class AnyadirAlquileresModel extends Conexion {
 
     Usuario usuario = new Usuario();
 
-    // Método para añadir un alquiler a la base de datos
+    /**
+     * Método para añadir un alquiler a la base de datos
+     * @param a
+     */
     public void AnyadirAlquiler(Alquileres a) {
         recuperarDatos();
 

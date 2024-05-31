@@ -14,7 +14,10 @@ import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-// Clase para editar el perfil del usuario
+
+/**
+ * Clase para editar el perfil del usuario
+ */
 public class EditarPerfil extends Perfil{
     @FXML
     private ImageView fotoPerfil;
@@ -43,7 +46,10 @@ public class EditarPerfil extends Perfil{
     @FXML
     private Label correoEditarPerfil;
 
-    // Método para manejar el evento de hacer clic en el botón "Atrás"
+    /**
+     * Método para manejar el evento de hacer clic en el botón "Atrás"
+     * @param actionEvent
+     */
 
     @FXML
     public void atrasDePerfilBOTONclick(ActionEvent actionEvent) {
@@ -56,7 +62,11 @@ public class EditarPerfil extends Perfil{
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    // Método para manejar el evento de hacer clic en el botón "Cerrar Sesión"
+
+    /**
+     * Método para manejar el evento de hacer clic en el botón "Cerrar Sesión"
+     * @param actionEvent
+     */
     @FXML
     public void CerrarSesionBOTONCLICK(ActionEvent actionEvent) {
         System.out.println("funciona");
@@ -68,13 +78,22 @@ public class EditarPerfil extends Perfil{
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    // Instancia de usuario
-Usuario u = new Usuario();
-    // Método para manejar el evento de hacer clic en el botón de cambios
+
+    /**
+     * Instancia de usuario
+     */
+    Usuario u = new Usuario();
+
+    /**
+     * Método para manejar el evento de hacer clic en el botón de cambios
+     * @param actionEvent
+     */
     @FXML
     public void cambiosButtonClick(ActionEvent actionEvent) {
         boolean datosActualizados = false;
-        // Verificar si se han realizado cambios en el nombre
+        /**
+         * Verificar si se han realizado cambios en el nombre
+         */
         if (!u.getNombre().equals(NuevoNombreTF.getText())) {
             EditarPerfilModel.actualizarNombre();
             datosActualizados = true;
@@ -83,7 +102,9 @@ Usuario u = new Usuario();
             a.setContentText("Tu Nombre es el mismo");
             a.showAndWait();
         }
-        // Verificar si se han realizado cambios en el apellido
+        /**
+         * Verificar si se han realizado cambios en el apellido
+         */
         if (!u.getApellido().equals(NuevoApelllidoTF.getText())) {
             EditarPerfilModel.actualizarNombre();
             datosActualizados = true;
@@ -92,7 +113,9 @@ Usuario u = new Usuario();
             a.setContentText("Tu Apellido es el mismo");
             a.showAndWait();
         }
-        // Verificar si se han realizado cambios en el correo electrónico
+        /**
+         * Verificar si se han realizado cambios en el correo electrónico
+         */
         if (!u.getCorreo().equals(NuevoCorreoTF.getText())) {
             EditarPerfilModel.actualizarNombre();
             datosActualizados = true;
@@ -101,7 +124,9 @@ Usuario u = new Usuario();
             a.setContentText("Tu Correo es el mismo");
             a.showAndWait();
         }
-        // Verificar si se han realizado cambios en la fecha de nacimiento
+        /**
+         * Verificar si se han realizado cambios en la fecha de nacimiento
+         */
         if (!u.getFechanacimiento().equals(NuevaFechaTF.getValue())) { // Asumiendo que NuevaFechaTF es un DatePicker
             EditarPerfilModel.actualizarNombre();
             datosActualizados = true;
@@ -110,7 +135,9 @@ Usuario u = new Usuario();
             a.setContentText("Tu Fecha es la misma");
             a.showAndWait();
         }
-        // Verificar si se han realizado cambios en la contraseña
+        /**
+         * Verificar si se han realizado cambios en la contraseña
+         */
         if (!u.getContra().equals(NuevaContrasenyaTF.getText())) {
             EditarPerfilModel.actualizarNombre();
             datosActualizados = true;
@@ -120,7 +147,9 @@ Usuario u = new Usuario();
             a.showAndWait();
         }
 
-        // Si se han actualizado los datos, mostrar un mensaje de éxito
+        /**
+         * Si se han actualizado los datos, mostrar un mensaje de éxito
+         */
         if (datosActualizados) {
             Alert a = new Alert(Alert.AlertType.INFORMATION);
             a.setContentText("Tus datos han sido actualizados con éxito");

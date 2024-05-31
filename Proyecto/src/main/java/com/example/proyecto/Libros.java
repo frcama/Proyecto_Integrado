@@ -5,7 +5,10 @@ import javafx.scene.image.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.sql.Date;
-// Clase para representar libros
+
+/**
+ * Clase para representar libros
+ */
 public class Libros {
     // Atributos de la clase Libros
     private String titulo;
@@ -21,7 +24,10 @@ public class Libros {
     private int id_usuario;
 
 
-    // Métodos getters y setters para acceder y modificar los atributos de la clase
+    /**
+     * Métodos getters y setters para acceder y modificar los atributos de la clase
+     * @return
+     */
     public Image getImagen() {
         return imagen;
     }

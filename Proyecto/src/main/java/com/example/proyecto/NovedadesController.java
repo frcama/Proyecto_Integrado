@@ -125,8 +125,10 @@ public void initialize(URL location, ResourceBundle resources){
 
         }
 
-        // Agregar eventos al GridPane
-        for (Eventos evento : eventosArrayList) {
+    /**
+     * Agregar eventos al GridPane
+     */
+    for (Eventos evento : eventosArrayList) {
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("MostrarEventos.fxml"));
@@ -147,8 +149,12 @@ public void initialize(URL location, ResourceBundle resources){
 
     }
 //-----------------------------------------------------------------------------------------------
-// Método para ir a la pantalla de perfil
-@FXML
+
+    /**
+     * Método para ir a la pantalla de perfil
+     * @param actionEvent
+     */
+    @FXML
 public void perfilBOTONclick(ActionEvent actionEvent) {
     System.out.println("funciona");
     try {
@@ -159,8 +165,12 @@ public void perfilBOTONclick(ActionEvent actionEvent) {
     }
 }
 //-----------------------------------------------------------------------------------------------
-// Método para ir a la pantalla de libros
-@FXML
+
+    /**
+     * Método para ir a la pantalla de libros
+     * @param actionEvent
+     */
+    @FXML
 public void librosBOTONclick(ActionEvent actionEvent) {
     System.out.println("funciona");
 
@@ -175,8 +185,12 @@ public void librosBOTONclick(ActionEvent actionEvent) {
 //-----------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------
-// Método para ir a la pantalla de novedades
-@FXML
+
+    /**
+     * Método para ir a la pantalla de novedades
+     * @param actionEvent
+     */
+    @FXML
 public void novedadesBOTONclick(ActionEvent actionEvent) {
     System.out.println("funciona");
 
@@ -188,8 +202,12 @@ public void novedadesBOTONclick(ActionEvent actionEvent) {
     }
 }
 //-----------------------------------------------------------------------------------------------
-// Método para ir a la pantalla de eventos
-@FXML
+
+    /**
+     * Método para ir a la pantalla de eventos
+     * @param actionEvent
+     */
+    @FXML
 public void eventosBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
 
@@ -201,8 +219,12 @@ public void eventosBOTONclick(ActionEvent actionEvent) {
         }
 }
 //-----------------------------------------------------------------------------------------------
-// Método para abrir la pantalla de chat (marcado como obsoleto)
-@Deprecated
+
+    /**
+     * Método para abrir la pantalla de chat (marcado como obsoleto)
+     * @param actionEvent
+     */
+    @Deprecated
 public void ChatAyudaclick(ActionEvent actionEvent) {
     System.out.println("funciona");
     try {
@@ -213,8 +235,11 @@ public void ChatAyudaclick(ActionEvent actionEvent) {
     }
 }
 
-// Método para abrir la pantalla de alquileres
-@FXML
+    /**
+     * Método para abrir la pantalla de alquileres
+     * @param actionEvent
+     */
+    @FXML
 public void alquileresBOTONclick(ActionEvent actionEvent) {
     System.out.println("funciona");
 
@@ -226,7 +251,10 @@ public void alquileresBOTONclick(ActionEvent actionEvent) {
     }
 }
 
-// Método para manejar la acción de hacer clic en "Agregar"
+    /**
+     * Método para manejar la acción de hacer clic en "Agregar"
+     * @param actionEvent
+     */
     @FXML
     public void onAddClicked(ActionEvent actionEvent) {
     }

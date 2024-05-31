@@ -9,11 +9,18 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-// Clase para manejar operaciones relacionadas con libros en la base de datos
+
+/**
+ * Clase para manejar operaciones relacionadas con libros en la base de datos
+ */
 public class LibrosModel extends Conexion {
 
     Usuario usuario = new Usuario();
-    // Método para mostrar todos los libros disponibles
+
+    /**
+     * Método para mostrar todos los libros disponibles
+     * @return
+     */
     public ArrayList<Libros> mostrarLibros() {
 
         ArrayList<Libros> listaLibros = new ArrayList<>();
@@ -58,7 +65,12 @@ public class LibrosModel extends Conexion {
 
     //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //
-    // Método para mostrar los libros pertenecientes a un usuario específico
+
+    /**
+     * Método para mostrar los libros pertenecientes a un usuario específico
+     * @param usuario
+     * @return
+     */
     public ArrayList<Libros> mostrarLibrosPorUsuario(Usuario usuario) {
         ArrayList<Libros> librosPorUsuario = new ArrayList<>();
 

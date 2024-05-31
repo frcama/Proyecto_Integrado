@@ -61,7 +61,11 @@ public class AlquileresController implements Initializable {
     @FXML
     private ScrollPane alquileresScollPane;
 
-    // Método initialize que se llama al cargar la interfaz
+    /**
+     * Método initialize que se llama al cargar la interfaz
+     * @param location
+     * @param resources
+     */
     public void initialize(URL location, ResourceBundle resources) {
 /*
         // Configuración del botón perfil con estilos y eventos de ratón
@@ -178,7 +182,11 @@ public class AlquileresController implements Initializable {
             }
         }
     }
-    // Métodos para manejar eventos de botón
+
+    /**
+     * Métodos para manejar eventos de botón
+     * @param actionEvent
+     */
     @FXML
     public void perfilBOTONclick(ActionEvent actionEvent) {
 

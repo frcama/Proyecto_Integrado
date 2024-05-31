@@ -4,7 +4,10 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-// Clase para controlar la vista de un alquiler en el sistema
+
+/**
+ * Clase para controlar la vista de un alquiler en el sistema
+ */
 public class MostrarAlquileres extends Conexion{
     // Etiquetas y elementos de la interfaz de usuario
     @javafx.fxml.FXML
@@ -34,7 +37,11 @@ public class MostrarAlquileres extends Conexion{
     private Label contactoLabel;
     @javafx.fxml.FXML
     private ImageView imagenAlquilerImageView;
-    // Método para establecer los datos del alquiler en la interfaz de usuario
+
+    /**
+     * Método para establecer los datos del alquiler en la interfaz de usuario
+     * @param alquiler
+     */
     public void setData(Alquileres alquiler) {
         // Recuperar datos del usuario
         recuperarDatos();
@@ -61,7 +68,10 @@ public class MostrarAlquileres extends Conexion{
             imagenAlquilerImageView.setImage(alquiler.getImagen());
         }
     }
-    // Método para recuperar los datos del usuario actual
+
+    /**
+     * Método para recuperar los datos del usuario actual
+     */
     private void recuperarDatos(){
 
         UsuarioHolder us = UsuarioHolder.getInstance();

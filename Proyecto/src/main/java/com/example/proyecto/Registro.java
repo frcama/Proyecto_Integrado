@@ -18,7 +18,10 @@ import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-// Clase Registro que extiende de Conexion e implementa Initializable para manejar la interfaz de registro de usuario
+
+/**
+ * Clase Registro que extiende de Conexion e implementa Initializable para manejar la interfaz de registro de usuario
+ */
 public class Registro extends Conexion implements Initializable {
 
     @FXML
@@ -44,11 +47,16 @@ public class Registro extends Conexion implements Initializable {
     @FXML
     private TextField telefonoTF;
 
-    // Método que se llama cuando se hace clic en el botón cancelar
+    /**
+     * Método que se llama cuando se hace clic en el botón cancelar
+     * @param actionEvent
+     */
     @FXML
     public void cancelarBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
-        // Carga la interfaz de inicio de sesión y la establece en el panel de registro
+        /**
+         * Carga la interfaz de inicio de sesión y la establece en el panel de registro
+         */
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("inicio_sesion.fxml"));
             this.PanelDeRegistro.getChildren().setAll(pane);
@@ -58,12 +66,20 @@ public class Registro extends Conexion implements Initializable {
     }
 
 
-    // Método initialize que se llama al inicializar el controlador
+    /**
+     * Método initialize que se llama al inicializar el controlador
+     * @param location
+     * @param resources
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
     }
-    // Método que se llama cuando se hace clic en el botón de registrarse
+
+    /**
+     * Método que se llama cuando se hace clic en el botón de registrarse
+     * @param actionEvent
+     */
 
 
 
@@ -74,7 +90,9 @@ public class Registro extends Conexion implements Initializable {
         RegistroModel rm = new RegistroModel();
 
         System.out.println("funciona");
-        // Obtención de los valores ingresados en los campos de texto
+        /**
+         *  Obtención de los valores ingresados en los campos de texto
+         */
         String nombre =nombreTF.getText();
         String apellido = apellidosTF.getText();
         int numTel = Integer.valueOf(telefonoTF.getText());
@@ -86,7 +104,9 @@ public class Registro extends Conexion implements Initializable {
         String contra2 = RepeContrasenyaTF.getText();
 
 
-        // Verificación de que las contraseñas coinciden
+        /**
+         * Verificación de que las contraseñas coinciden
+         */
         if ( contra2.equals(contra)){
             contra = contra2;
         }
@@ -96,16 +116,24 @@ public class Registro extends Conexion implements Initializable {
             a.showAndWait();
         }
 
-        // Cálculo de la edad del usuario
+        /**
+         * Cálculo de la edad del usuario
+         */
         LocalDate FechaNacimiento = fechaNacimiento.getValue();
         LocalDate fechaHoy = LocalDate.now();
         int edad = Period.between(FechaNacimiento, fechaHoy).getYears();
-        // Creación de un nuevo objeto Usuario con los datos ingresado
+        /**
+         * Creación de un nuevo objeto Usuario con los datos ingresado
+         */
         Usuario us = new Usuario(DNI,nombre,apellido,correo,numTel,edad,FechaNacimiento,contra);
-        // Agregar el nuevo usuario al modelo de registro
+        /**
+         * Agregar el nuevo usuario al modelo de registro
+         */
         rm.anyadirResgistro(us);
 
-        // Carga la interfaz de términos y la establece en el panel de registro
+        /**
+         * Carga la interfaz de términos y la establece en el panel de registro
+         */
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Terminos.fxml"));
             this.PanelDeRegistro.getChildren().setAll(pane);

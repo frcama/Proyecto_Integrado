@@ -42,7 +42,9 @@ public class RecuperarContraController {
     public void datosButtonClick(ActionEvent actionEvent) {
         String correo = correoRecuTextField.getText();
         LocalDate fechaNacimiento = nacimientoDatePicker.getValue();
-        // Código de inicialización para el controlador
+        /**
+         * Código de inicialización para el controlador
+         */
         if (correo.isEmpty() || fechaNacimiento == null) {
             incorrectoLabel.setText("Por favor, completa todos los campos.");
             return;
@@ -58,7 +60,9 @@ public class RecuperarContraController {
 
     @FXML
     public void salirRECUCLICK(ActionEvent actionEvent) {
-        // Acción cuando se hace clic en el botón "salirRECU"
+        /**
+         * Acción cuando se hace clic en el botón "salirRECU"
+         */
         System.out.println("funciona");
 
         try {

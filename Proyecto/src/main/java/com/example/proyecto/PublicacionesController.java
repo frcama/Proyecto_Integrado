@@ -42,37 +42,53 @@ public class PublicacionesController implements Initializable {
         ArrayList<Eventos> eventosArrayList = new ArrayList<>();
         ArrayList<Alquileres> alquileresArrayList = new ArrayList<>();
 
-        // Cargar Libros
+        /**
+         * Cargar Libros
+         */
         LibrosModel lm = new LibrosModel();
         librosArrayList = lm.mostrarLibros();
 
-        // Cargar Alguileres
+        /**
+         * Cargar Alguileres
+         */
         AlquileresModel am = new AlquileresModel();
         alquileresArrayList = am.mostrarAlquileres();
 
-        // Cargar Eventos
+        /**
+         *  Cargar Eventos
+         */
         EventosModel em = new EventosModel();
         eventosArrayList = em.mostrarEventos();
 
-        // Cargar libros subidos por el usuario
+        /**
+         * Cargar libros subidos por el usuario
+         */
         LibrosModel librosModel = new LibrosModel();
         librosArrayList = librosModel.mostrarLibrosPorUsuario(usuario);
 
-        // Cargar eventos subidos por el usuario
+        /**
+         * Cargar eventos subidos por el usuario
+         */
 
         EventosModel eventosModel = new EventosModel();
         eventosArrayList = eventosModel.mostrarEventosPorUsuario(usuario);
 
-        // Cargar alquileres subidos por el usuario
+        /**
+         * Cargar alquileres subidos por el usuario
+         */
         AlquileresModel alquileresModel = new AlquileresModel();
         alquileresArrayList = alquileresModel.mostrarAlquileresPorUsuario(usuario);
 
-        // Clear the GridPane before adding new content
+        /**
+         * Clear the GridPane before adding new content
+         */
         cosasGripPane.getChildren().clear();
 
         int row = 0;
 
-        // Añadir libros al GridPane
+        /**
+         * Añadir libros al GridPane
+         */
         for (Libros libro : librosArrayList) {
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader();
@@ -82,7 +98,9 @@ public class PublicacionesController implements Initializable {
                 MostrarLibros ml = fxmlLoader.getController();
                 ml.setData(libro);
 
-                // Aplica la clase de estilo definida en el archivo CSS al AnchorPane
+                /**
+                 * Aplica la clase de estilo definida en el archivo CSS al AnchorPane
+                 */
                 anchorPane.getStyleClass().add("anchor-pane-content");
 
                 cosasGripPane.add(anchorPane, 0, row++); // Add always in column 0 and increase the row
@@ -92,7 +110,9 @@ public class PublicacionesController implements Initializable {
             }
         }
 
-        // Añadir alquileres al GridPane
+        /**
+         * Añadir alquileres al GridPane
+         */
         for (Alquileres alquiler : alquileresArrayList) {
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader();
@@ -102,7 +122,9 @@ public class PublicacionesController implements Initializable {
                 MostrarAlquileres ma = fxmlLoader.getController();
                 ma.setData(alquiler);
 
-                // Aplica la clase de estilo definida en el archivo CSS al AnchorPane
+                /**
+                 * Aplica la clase de estilo definida en el archivo CSS al AnchorPane
+                 */
                 anchorPane.getStyleClass().add("anchor-pane-content");
 
                 cosasGripPane.add(anchorPane, 0, row++); // Add always in column 0 and increase the row
@@ -112,7 +134,9 @@ public class PublicacionesController implements Initializable {
             }
         }
 
-        // Añadir eventos al GridPane
+        /**
+         * Añadir eventos al GridPane
+         */
         for (Eventos evento : eventosArrayList) {
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader();
@@ -122,7 +146,9 @@ public class PublicacionesController implements Initializable {
                 MostrarEventos me = fxmlLoader.getController();
                 me.setData(evento);
 
-                // Aplica la clase de estilo definida en el archivo CSS al AnchorPane
+                /**
+                 * Aplica la clase de estilo definida en el archivo CSS al AnchorPane
+                 */
                 anchorPane.getStyleClass().add("anchor-pane-content");
 
                 cosasGripPane.add(anchorPane, 0, row++); // Add always in column 0 and increase the row
@@ -132,7 +158,11 @@ public class PublicacionesController implements Initializable {
             }
         }
     }
-    // Accion que realiza el boton cuando hacen clic sobre el
+
+    /**
+     * Accion que realiza el boton cuando hacen clic sobre el
+     * @param actionEvent
+     */
     public void atrasBotonCLick(ActionEvent actionEvent) {
 
         try {

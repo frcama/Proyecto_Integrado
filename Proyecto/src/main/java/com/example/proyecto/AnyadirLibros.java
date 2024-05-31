@@ -25,7 +25,10 @@ import java.time.LocalDate;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-// Clase AnyadirLibros que implementa Initializable para manejar la inicialización de la interfaz de usuario
+
+/**
+ * Clase AnyadirLibros que implementa Initializable para manejar la inicialización de la interfaz de usuario
+ */
 public class AnyadirLibros implements Initializable {
     @FXML
     private Spinner precioSpinner;
@@ -47,7 +50,12 @@ public class AnyadirLibros implements Initializable {
     private TextField asignaturaTextField;
     @FXML
     private ChoiceBox cursoChoiceBox;
-    // Método initialize se ejecuta al cargar la interfaz de usuario
+
+    /**
+     * Método initialize se ejecuta al cargar la interfaz de usuario
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // Configuración del Spinner para el precio del libro
@@ -73,7 +81,11 @@ public class AnyadirLibros implements Initializable {
         cursoChoiceBox.setItems(cursosLibros);
 
     }
-    // Método para manejar el evento de clic en el botón "Atrás"
+
+    /**
+     * Método para manejar el evento de clic en el botón "Atrás"
+     * @param actionEvent
+     */
     @FXML
     public void atrasBOTONclick(ActionEvent actionEvent) {
         try {
@@ -85,7 +97,10 @@ public class AnyadirLibros implements Initializable {
         }
     }
 
-    // Método para manejar el evento de clic en el botón "Subir"
+    /**
+     * Método para manejar el evento de clic en el botón "Subir"
+     * @param actionEvent
+     */
     @FXML
     public void onSubirButtonClick(ActionEvent actionEvent) {
 
@@ -111,7 +126,11 @@ public class AnyadirLibros implements Initializable {
 
 
     }
-    // Método para manejar el evento de clic en el botón "Subir Imagen"
+
+    /**
+     * Método para manejar el evento de clic en el botón "Subir Imagen"
+     * @param actionEvent
+     */
     @FXML
     public void OnSubirImagenbutton(ActionEvent actionEvent) {
         FileChooser fileChooser = new FileChooser();

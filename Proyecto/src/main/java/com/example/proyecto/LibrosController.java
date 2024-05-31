@@ -289,7 +289,9 @@ public class LibrosController implements Initializable {
             }
         }
 
-        // Si no se encontraron libros filtrados, mostrar todos los libros
+        /**
+         * Si no se encontraron libros filtrados, mostrar todos los libros
+         */
         if (librosFiltrados.isEmpty()) {
             actualizarVista(librosArrayList);
         } else {

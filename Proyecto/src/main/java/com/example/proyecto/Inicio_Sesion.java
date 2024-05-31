@@ -20,7 +20,10 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-// Clase Inicio_Sesion que maneja la interfaz de inicio de sesión
+
+/**
+ * Clase Inicio_Sesion que maneja la interfaz de inicio de sesión
+ */
 
 public class Inicio_Sesion{
 
@@ -38,7 +41,10 @@ public class Inicio_Sesion{
     private PasswordField pass;
     @FXML
     private Button recu_contrasenya;
-    // Método que se ejecuta al inicializar la clase
+
+    /**
+     * Método que se ejecuta al inicializar la clase
+     */
     @FXML
     public void initialize() {
 
@@ -46,13 +52,19 @@ public class Inicio_Sesion{
         Usuario u = new Usuario();
 
     }
-    // Método que se ejecuta al hacer clic en el botón de inicio de sesión
+
+    /**
+     * Método que se ejecuta al hacer clic en el botón de inicio de sesión
+     * @param actionEvent
+     */
     @FXML
     public void inicioBOTONclick(ActionEvent actionEvent) {
         InicioSesionModel ism = new InicioSesionModel();
         String contra = pass.getText();
         String correo = email.getText();
-        // Intentar iniciar sesión y obtener el usuario correspondiente
+        /**
+         * Intentar iniciar sesión y obtener el usuario correspondiente
+         */
         Usuario us = ism.loginUsuario(email, pass); // Asegúrate de que este método devuelva un usuario válido
 
         if (us != null) {
@@ -61,7 +73,9 @@ public class Inicio_Sesion{
             if (contra.equals(passBDA) && correo.equals(emailBDA)) {
                enviarDatos(actionEvent);
 
-                // Cambio de pantalla a la interfaz de inicio de sesión
+                /**
+                 * Cambio de pantalla a la interfaz de inicio de sesión
+                 */
                 try {
                     URL fxmlLocation = getClass().getClassLoader().getResource("inicio_sesion.fxml");
                     if (fxmlLocation == null) {
@@ -74,19 +88,27 @@ public class Inicio_Sesion{
                     ex.printStackTrace();
                 }
             } else {
-                // Mostrar alerta si el correo o la contraseña son incorrectos
+                /**
+                 * Mostrar alerta si el correo o la contraseña son incorrectos
+                 */
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("El correo o la contraseña son incorrectos.");
                 alert.showAndWait();
             }
         } else {
-            // Mostrar alerta si el usuario no existe
+            /**
+             * Mostrar alerta si el usuario no existe
+             */
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setContentText("El usuario no existe.");
             alert.showAndWait();
         }
     }
-    // Método para enviar datos y cambiar de pantalla
+
+    /**
+     * Método para enviar datos y cambiar de pantalla
+     * @param event
+     */
     private void enviarDatos(ActionEvent event) {
         InicioSesionModel ism = new InicioSesionModel();
         Usuario us = ism.loginUsuario(email, pass);
@@ -113,7 +135,11 @@ public class Inicio_Sesion{
             System.err.println(String.format("Error creando ventana: %s", e.getMessage()));
         }
     }
-    // Método que se ejecuta al hacer clic en el botón de crear cuenta
+
+    /**
+     * Método que se ejecuta al hacer clic en el botón de crear cuenta
+     * @param actionEvent
+     */
     @FXML
     public void crearBOTONCLICK(ActionEvent actionEvent) {
         System.out.println("funciona bien");
@@ -125,7 +151,11 @@ public class Inicio_Sesion{
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    // Método que se ejecuta al hacer clic en el botón de recuperación de contraseña
+
+    /**
+     * Método que se ejecuta al hacer clic en el botón de recuperación de contraseña
+     * @param actionEvent
+     */
     @FXML
     public void recu_contraclick(ActionEvent actionEvent) {
         System.out.println("funciona bien");

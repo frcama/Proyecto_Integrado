@@ -11,7 +11,12 @@ import java.util.ArrayList;
 
 public class PerfilModel extends Conexion{
 
-    // Método para obtener el perfil del usuario
+    /**
+     * Método para obtener el perfil del usuario
+     * @param emailUsuario
+     * @param contraUsuario
+     * @return
+     */
     public Usuario perfilModel(String emailUsuario, String contraUsuario) {
         this.conexion = true; // Marcar la conexión como exitosa
 
@@ -25,7 +30,9 @@ public class PerfilModel extends Conexion{
 
             ResultSet rs = ps.executeQuery();
 
-            // Obtener los datos del usuario del resultado de la consulta
+            /**
+             * Obtener los datos del usuario del resultado de la consulta
+             */
 
             while (rs.next()) {
 

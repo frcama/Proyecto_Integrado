@@ -57,17 +57,25 @@ public class Chat
 
     @FXML
     private void initialize() {
-        // Configuración del estilo de la etiqueta (tamaño de fuente, negrita, color)
+        /**
+         * Configuración del estilo de la etiqueta (tamaño de fuente, negrita, color)
+         */
         label.setStyle("-fx-font-size: 12px; -fx-font-weight: bold; -fx-fill: blue");
 
-        // Añadir mensaje de bienvenida del bot en azul
+        /**
+         * Añadir mensaje de bienvenida del bot en azul
+         */
         mensajes.add("¡Hola! Soy EstuBot ¡Bienvenid@ al chat!\n\n¿Que tipo de información necessitas?\n\nAlquileres // libros // Eventos");
 
 
-        // Ajustar el padding del TextFlow
+        /**
+         * Ajustar el padding del TextFlow
+         */
         textFlow.setPadding(new Insets(90, 0, 0, 0));
 
-        // Actualizar mensajes para mostrar el mensaje de bienvenida
+        /**
+         * Actualizar mensajes para mostrar el mensaje de bienvenida
+         */
         actualizarMensajes();
     }
 
@@ -149,13 +157,9 @@ public class Chat
     }
 
 
-
-
-
-
-
-
-    // Método para actualizar los mensajes mostrados en el chat
+    /**
+     * Método para actualizar los mensajes mostrados en el chat
+     */
     private void actualizarMensajes() {
         textFlow.getChildren().clear(); // Limpia los mensajes anteriores
 
