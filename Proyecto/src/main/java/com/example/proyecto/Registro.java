@@ -43,7 +43,7 @@ public class Registro extends Conexion implements Initializable {
     @FXML
     private TextField telefonoTF;
     @FXML
-    private Button regisrtarseBOTON;
+    private Button registrarseBOTON;
 
     // Método que se llama cuando se hace clic en el botón cancelar
     @FXML
@@ -62,21 +62,13 @@ public class Registro extends Conexion implements Initializable {
     // Método initialize que se llama al inicializar el controlador
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // Configuración de estilos para el botón de registrarse
-        regisrtarseBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';");        regisrtarseBOTON.setOnMouseEntered(e -> regisrtarseBOTON.setStyle("-fx-background-color: linear-gradient(to right, #0000FF, #EE82EE); -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
-        regisrtarseBOTON.setOnMouseExited(e -> regisrtarseBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
-
-        // Configuración de estilos para el botón de cancelar
-        cancelarBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';");
-        cancelarBOTON.setOnMouseEntered(e -> cancelarBOTON.setStyle("-fx-background-color: linear-gradient(to right, #0000FF, #EE82EE); -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
-        cancelarBOTON.setOnMouseExited(e -> cancelarBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
-
 
     }
     // Método que se llama cuando se hace clic en el botón de registrarse
-    @FXML
-    public void regisrtarseBOTONclick(ActionEvent actionEvent) {
-        // Creación de un nuevo usuario y un modelo de registro
+
+
+    @Deprecated
+    public void registrarseBOTON(ActionEvent actionEvent) {
         Usuario u = new Usuario();
         RegistroModel rm = new RegistroModel();
 
@@ -121,7 +113,9 @@ public class Registro extends Conexion implements Initializable {
         }
     }
 
-
+    @FXML
+    public void registrarseBOTONclick(ActionEvent actionEvent) {
+    }
 }
 
 
