@@ -21,29 +21,28 @@ import java.util.logging.Logger;
 // Clase Registro que extiende de Conexion e implementa Initializable para manejar la interfaz de registro de usuario
 public class Registro extends Conexion implements Initializable {
 
-    // Definición de los componentes de la interfaz gráfica que se enlazan con el archivo FXML
-    @FXML
-    private TextField contrasenyaTF;
-    @FXML
-    private TextField nombreTF;
-    @FXML
-    private TextField dniTF;
-    @FXML
-    private DatePicker fechaNacimiento;
-    @FXML
-    private TextField RepeContrasenyaTF;
     @FXML
     private AnchorPane PanelDeRegistro;
     @FXML
     private Button cancelarBOTON;
     @FXML
-    private TextField apellidosTF;
-    @FXML
-    private TextField correoTF;
-    @FXML
-    private TextField telefonoTF;
-    @FXML
     private Button registrarseBOTON;
+    @FXML
+    private TextField RepeContrasenyaRegistro;
+    @FXML
+    private TextField telefonoRegistro;
+    @FXML
+    private DatePicker fechaNacimientoRegistro;
+    @FXML
+    private TextField nombreRegistro;
+    @FXML
+    private TextField correoRegistro;
+    @FXML
+    private TextField contrasenyaRegistro;
+    @FXML
+    private TextField apellidosRegistro;
+    @FXML
+    private TextField dniRegistro;
 
     // Método que se llama cuando se hace clic en el botón cancelar
     @FXML
@@ -67,22 +66,24 @@ public class Registro extends Conexion implements Initializable {
     // Método que se llama cuando se hace clic en el botón de registrarse
 
 
-    @Deprecated
-    public void registrarseBOTON(ActionEvent actionEvent) {
+
+
+    @FXML
+    public void registrarseBOTONclick(ActionEvent actionEvent) {
         Usuario u = new Usuario();
         RegistroModel rm = new RegistroModel();
 
         System.out.println("funciona");
         // Obtención de los valores ingresados en los campos de texto
-        String nombre =nombreTF.getText();
-        String apellido = apellidosTF.getText();
-        int numTel = Integer.valueOf(telefonoTF.getText());
-        String DNI = dniTF.getText();
-        String correo = correoTF.getText();
+        String nombre =nombreRegistro.getText();
+        String apellido = apellidosRegistro.getText();
+        int numTel = Integer.valueOf(telefonoRegistro.getText());
+        String DNI = dniRegistro.getText();
+        String correo = correoRegistro.getText();
 
 
-        String contra = contrasenyaTF.getText();
-        String contra2 = RepeContrasenyaTF.getText();
+        String contra = contrasenyaRegistro.getText();
+        String contra2 = RepeContrasenyaRegistro.getText();
 
 
         // Verificación de que las contraseñas coinciden
@@ -96,11 +97,11 @@ public class Registro extends Conexion implements Initializable {
         }
 
         // Cálculo de la edad del usuario
-        LocalDate FechaNacimiento = fechaNacimiento.getValue();
+        LocalDate FechaNacimiento = fechaNacimientoRegistro.getValue();
         LocalDate fechaHoy = LocalDate.now();
         int edad = Period.between(FechaNacimiento, fechaHoy).getYears();
         // Creación de un nuevo objeto Usuario con los datos ingresado
-        Usuario us = new Usuario(nombre,apellido,correo,DNI,edad,numTel,FechaNacimiento,contra);
+        Usuario us = new Usuario(DNI,nombre,apellido,correo,numTel,edad,FechaNacimiento,contra);
         // Agregar el nuevo usuario al modelo de registro
         rm.anyadirResgistro(us);
 
@@ -111,10 +112,6 @@ public class Registro extends Conexion implements Initializable {
         } catch (IOException ex) {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-
-    @FXML
-    public void registrarseBOTONclick(ActionEvent actionEvent) {
     }
 }
 

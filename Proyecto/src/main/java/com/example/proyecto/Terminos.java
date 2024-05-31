@@ -40,7 +40,7 @@ public class Terminos {
         System.out.println("funciona bien");
         try {
             // Cargar la vista de novedades al aceptar los términos
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Novedades.fxml"));
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("inicio_sesion.fxml"));
             // Establecer la vista de novedades en el panel de términos
             this.panelTerminos.getChildren().setAll(pane);
         } catch (IOException ex) {

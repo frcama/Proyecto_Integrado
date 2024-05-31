@@ -31,7 +31,7 @@
          <font>
             <Font size="14.0" />
          </font></Label>
-      <Label fx:id="precioLabel" layoutX="177.0" layoutY="314.0" prefHeight="54.0" prefWidth="94.0" text="25" textFill="#7e7c7ce5" wrapText="true">
+      <Label fx:id="precioLabel" layoutX="212.0" layoutY="316.0" prefHeight="54.0" prefWidth="66.0" text="200" textFill="#7e7c7ce5" wrapText="true">
          <font>
             <Font name="System Bold" size="36.0" />
          </font></Label>
@@ -53,6 +53,11 @@
             <Image url="@img/iconocontacto.png" />
          </image>
       </ImageView>
+      <Label layoutX="197.0" layoutY="316.0" prefHeight="30.0" prefWidth="14.0" text="€">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
    </children>
    <effect>
       <DropShadow />

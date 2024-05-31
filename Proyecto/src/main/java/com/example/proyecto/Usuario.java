@@ -34,7 +34,7 @@ public class Usuario {
      * Constructor que inicializa un usuario sin el ID de usuario, pero con todos los demás atributos.
      */
 
-    public Usuario(String nombre, String DNI, String apellido, String correo, int edad, int telefono, LocalDate fechanacimiento, String contra) {
+    public Usuario(String DNI, String nombre, String apellido, String correo, int telefono,int edad, LocalDate fechanacimiento, String contra) {
         this.nombre = nombre;
 
         this.DNI = DNI;
