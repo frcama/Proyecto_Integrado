@@ -10,6 +10,11 @@
 
 <AnchorPane fx:id="panelMostrarAlquiler" prefHeight="368.0" prefWidth="293.0" style="-fx-border-color: black; -fx-border-style: box-shadow; -fx-background-color: white; -fx-background-radius: 30; -fx-border-radius: 30;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.MostrarAlquileres">
    <children>
+      <Label fx:id="AlquilerLabel" layoutX="16.0" layoutY="187.0" prefHeight="27.0" prefWidth="140.0" text="Alquiler" textFill="#7e7c7c" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
       <ImageView fitHeight="54.0" fitWidth="56.0" layoutX="10.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/edificio.png" />

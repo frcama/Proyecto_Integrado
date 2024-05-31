@@ -12,17 +12,17 @@ public class AnyadirLibrosModel extends Conexion{
 
         recuperarDatos();
         try {
-            String sql = "INSERT INTO libros (isbn, Titulo,editorial,precio, curso, asignatura,imagen, fecha_anyadido,id_usuario)" +
+            String sql = "INSERT INTO libros (isbn, Titulo, curso, asignatura, editorial, precio, imagen, fecha_anyadido, id_usuario)" +
                     "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
 
             ps.setString(1, l.getIsbn());
             ps.setString(2, l.getTitulo());
-            ps.setString(3, l.getEditorial());
-            ps.setDouble(4, l.getPrecio());
-            ps.setString(5, l.getCurso());
-            ps.setString(6, l.getAsignatura());
+            ps.setString(3, l.getCurso());
+            ps.setString(4, l.getAsignatura());
+            ps.setString(5, l.getEditorial());
+            ps.setDouble(6, l.getPrecio());
 
 
             File imagen = l.getImage();
