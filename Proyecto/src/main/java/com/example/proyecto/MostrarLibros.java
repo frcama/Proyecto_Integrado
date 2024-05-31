@@ -4,8 +4,9 @@ import javafx.scene.layout.AnchorPane;
 
 import javafx.scene.image.ImageView;
 import javafx.scene.control.Label;
-
+// Clase para mostrar los detalles de un libro en la interfaz de usuario
 public class MostrarLibros extends Conexion{
+    // Etiquetas y elementos de la interfaz de usuario
     @javafx.fxml.FXML
     private Label isbnLabel;
     @javafx.fxml.FXML
@@ -22,18 +23,19 @@ public class MostrarLibros extends Conexion{
     private AnchorPane panelMostrarLibros;
     @javafx.fxml.FXML
     private ImageView libroimagenImageView;
-    
+    // Instancia de Libros
     Libros libros = new Libros();
+    // Etiqueta para mostrar el correo de contacto
     @javafx.fxml.FXML
     private Label correoLibros;
 
-
+    // Instancia de Usuario
     Usuario usuario = new Usuario();
 
-
+    // Método para establecer los datos del libro en la interfaz de usuario
     public void setData(Libros libros) {
         recuperarDatos();
-
+        // Establecer los datos del libro en las etiquetas de la interfaz de usuario
         this.libros = libros;
 
         tituloLibroLabel.setText(libros.getTitulo());
@@ -52,6 +54,7 @@ public class MostrarLibros extends Conexion{
         }
 
     }
+    // Método para recuperar los datos del usuario actual
     private void recuperarDatos(){
 
         UsuarioHolder us = UsuarioHolder.getInstance();
