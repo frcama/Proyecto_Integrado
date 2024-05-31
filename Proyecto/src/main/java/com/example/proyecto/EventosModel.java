@@ -50,12 +50,14 @@ public class EventosModel extends Conexion{
 
     public ArrayList<Eventos> mostrarEventosPorUsuario(Usuario usuario) {
         ArrayList<Eventos> listaEventosPorUsuario = new ArrayList<>();
+        Usuario usuactual = UsuarioHolder.getInstance().getUsuario();
 
 
         try  {
             String sql = "SELECT * FROM eventos_culturales WHERE id_estudiante = ? order by fecha_anyadido ASC";
 
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
+            ps.setInt(1, usuactual.getId_usuario());
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {

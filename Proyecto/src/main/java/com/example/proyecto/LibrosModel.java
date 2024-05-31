@@ -54,14 +54,19 @@ public class LibrosModel extends Conexion {
         return listaLibros;
     }
 
+    //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//
+
     public ArrayList<Libros> mostrarLibrosPorUsuario(Usuario usuario) {
         ArrayList<Libros> librosPorUsuario = new ArrayList<>();
 
+        Usuario usuactual = UsuarioHolder.getInstance().getUsuario();
 
         try  {
             String sql = "SELECT  isbn, Titulo, curso, asignatura, editorial, precio, imagen FROM libros WHERE id_estudiante = ?";
 
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
+            ps.setInt(1, usuactual.getId_usuario());
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
@@ -90,9 +95,9 @@ public class LibrosModel extends Conexion {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-        //se cierra conexion
-        this.cerrarConexion();
-    }
+            //se cierra conexion
+            this.cerrarConexion();
+        }
 
         return librosPorUsuario;
     }
