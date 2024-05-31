@@ -13,7 +13,7 @@ public class Alquileres{
     private int id_Alquiler;
     private String ubicacion;
     private String nombre;
-    private double precio;
+    private int precio;
     private String metrosCuadrados;
     private Image imagen;
     private int nHabitaciones;
@@ -34,7 +34,7 @@ public class Alquileres{
         this.contacto = contacto;
     }
     // Constructor que inicializa varios atributos del alquiler, incluyendo el usuario asociado
-    public Alquileres(int id_Alquiler, String ubicacion, String nombre, Double precio, String metrosCuadrados, Image imagen, int nHabitaciones, String imgSrc, Usuario u) {
+    public Alquileres(int id_Alquiler, String ubicacion, String nombre, int precio, String metrosCuadrados, Image imagen, int nHabitaciones, String imgSrc, Usuario u) {
         this.id_Alquiler = id_Alquiler;
         this.ubicacion = ubicacion;
         this.nombre = nombre;
@@ -54,7 +54,7 @@ public class Alquileres{
         this.u = u;
     }
     // Constructor que inicializa varios atributos del alquiler sin el usuario asociado
-    public Alquileres(int id_Alquiler, String ubicacion, String nombre, Double precio, String metrosCuadrados, Image imagen, int nHabitaciones, String imgSrc) {
+    public Alquileres(int id_Alquiler, String ubicacion, String nombre, int precio, String metrosCuadrados, Image imagen, int nHabitaciones, String imgSrc) {
         this.id_Alquiler = id_Alquiler;
         this.ubicacion = ubicacion;
         this.nombre = nombre;
@@ -65,7 +65,7 @@ public class Alquileres{
         this.imgSrc=imgSrc;
     }
     // Constructor que inicializa varios atributos del alquiler, incluyendo el archivo de imagen
-    public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados,File imageFile, Image imagen, int nHabitaciones, String descripcion,String ciudad) {
+    public Alquileres(String ubicacion, String nombre, int precio, String metrosCuadrados,File imageFile, Image imagen, int nHabitaciones, String descripcion,String ciudad) {
         this.ubicacion = ubicacion;
         this.nombre = nombre;
         this.precio = precio;
@@ -77,7 +77,7 @@ public class Alquileres{
         this.ciudad=ciudad;
     }
     // Constructor que inicializa todos los atributos del alquiler
-    public Alquileres(String ubicacion, String nombre, double precio, String metrosCuadrados, File imageFile, Image imagen ,int nHabitaciones, String descripcion, Date fechaPublicacion,String ciudad,String contacto,int id_Usuario) {
+    public Alquileres(String ubicacion, String nombre, int precio, String metrosCuadrados, File imageFile, Image imagen ,int nHabitaciones, String descripcion, Date fechaPublicacion,String ciudad,String contacto,int id_Usuario) {
         this.ubicacion = ubicacion;
         this.nombre = nombre;
         this.precio = precio;
@@ -92,7 +92,7 @@ public class Alquileres{
         this.id_Usuario=id_Usuario;
     }
     // Otro constructor con diferentes parámetros
-    public Alquileres(String ubicacion, String nombre, Double precio, String mc, Integer nh, String d,Image imagen) {
+    public Alquileres(String ubicacion, String nombre, int precio, String mc, Integer nh, String d,Image imagen) {
 
         this.ubicacion = ubicacion;
         this.nombre = nombre;
@@ -104,7 +104,7 @@ public class Alquileres{
 
     }
     // Otro constructor que incluye ciudad y archivo de imagen
-    public Alquileres(String ubicacion, String nombre, Double precio, String mc, Integer nh, String d,String ciudad, File imageFile) {
+    public Alquileres(String ubicacion, String nombre, int precio, String mc, Integer nh, String d,String ciudad, File imageFile) {
 
         this.ubicacion = ubicacion;
         this.nombre = nombre;
@@ -116,7 +116,7 @@ public class Alquileres{
 
     }
     // Otro constructor que incluye imagen y ciudad
-    public Alquileres(String ubicacion, String nombre, Double precio, String mc, Integer nh, String d, Image imagen, String ci) {
+    public Alquileres(String ubicacion, String nombre, int precio, String mc, Integer nh, String d, Image imagen, String ci) {
 
         this.ubicacion = ubicacion;
         this.nombre = nombre;
@@ -228,11 +228,11 @@ public class Alquileres{
         this.nombre = nombre;
     }
 
-    public double getPrecio() {
+    public int getPrecio() {
         return precio;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(int precio) {
         this.precio = precio;
     }
 

@@ -39,9 +39,7 @@ public class MostrarEventos {
         // Recuperar datos del usuario
         recuperarDatos();
         // Crear una instancia del modelo de perfil
-        PerfilModel pm= new PerfilModel();
-        Usuario u = new Usuario();
-        u = pm.perfilModel(u.getCorreo(),u.getContra());
+
 
         // Establecer los datos del evento en las etiquetas de la interfaz de usuario
         nombreEventolabel.setText(evento.getNombre());
@@ -50,7 +48,7 @@ public class MostrarEventos {
         ubiEventoLabel.setText(evento.getUbicacion());
         descripcionEventoLabel.setText(evento.getDescripcion());
         fechaEventoLabel.setText(String.valueOf(evento.getFechaEvento()));
-        correoEvento.setText("Contacto:" +u.getCorreo());
+        correoEvento.setText(usuario.getCorreo());
 
         // Establecer la imagen en el ImageView
         if (evento.getImagen() != null) {

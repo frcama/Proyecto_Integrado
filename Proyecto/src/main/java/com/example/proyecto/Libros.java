@@ -18,6 +18,9 @@ public class Libros {
     private String asignatura;
     private Image imagen;
     private Usuario u;
+    private int id_usuario;
+
+
     // Métodos getters y setters para acceder y modificar los atributos de la clase
     public Image getImagen() {
         return imagen;
@@ -107,6 +110,14 @@ public class Libros {
         this.u = u;
     }
 
+    public int getId_usuario() {
+        return id_usuario;
+    }
+
+    public void setId_usuario(int id_usuario) {
+        this.id_usuario = id_usuario;
+    }
+
     public Libros(String titulo, String isbn, String editorial, double precio, String curso, File image, Usuario u ) {
 
         this.titulo = titulo;
@@ -115,7 +126,7 @@ public class Libros {
         this.precio = precio;
         this.curso = curso;
         this.image = image;
-this.u = u;
+        this.u = u;
     }
 
 

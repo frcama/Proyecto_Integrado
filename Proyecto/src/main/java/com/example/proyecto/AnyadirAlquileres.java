@@ -58,6 +58,10 @@ public class AnyadirAlquileres implements Initializable {
     // Método inicializador que se ejecuta al cargar el FXML
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+
+        applyCharacterLimit(descripciontextField, 255);
+
         // Configura el Spinner para el precio
         SpinnerValueFactory<Integer> valueFactoryInteger =
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(1,10000000,0,1);
@@ -91,6 +95,11 @@ public class AnyadirAlquileres implements Initializable {
 
     }
 
+    public void applyCharacterLimit(TextField textField, int maxLength) {
+        textField.setTextFormatter(new TextFormatter<>(change ->
+                change.getControlNewText().length() <= maxLength ? change : null));
+    }
+
 
     // Método para manejar el evento del botón "Subir"
     @javafx.fxml.FXML
@@ -110,7 +119,8 @@ public class AnyadirAlquileres implements Initializable {
         String m2 = m2textField.getText();
         String ubi = String.valueOf(ubicacionChoiceBox.getValue());
         int nHabs = (Integer) nHabitacionesSpinner.getValue();
-        Double precio = (Double) precioSpinner.getValue();
+        String p = String.valueOf(precioSpinner.getValue());
+        int precio = Integer.valueOf(p);
         Date d = Date.valueOf(LocalDate.now());
         String ciudad = ciudadNombreAlquiler.getText();
         String contacto = contactoAlquiler.getText();

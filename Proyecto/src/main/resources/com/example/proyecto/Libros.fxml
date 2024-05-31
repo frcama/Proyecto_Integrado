@@ -33,7 +33,7 @@
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.11764705926179886" green="0.5647059082984924" blue="1.0" />
+                        <Color red="0.8533333539962769" green="0.20000000298023224" blue="1.0" />
                      </color>
                   </Stop>
                </stops>
@@ -60,7 +60,7 @@
             <Image url="@../../../../../../../../../../imagenes/Image%20Pasted%202024-30-04%20at%2010.08.23.png" />
          </image>
       </ImageView>
-      <Button fx:id="perfilBOTON" alignment="CENTER" layoutX="270.0" layoutY="5.0" mnemonicParsing="false" onAction="#perfilBOTONclick" prefHeight="52.0" prefWidth="54.0" style="-fx-background-image: &quot;@img/logo.png&quot;; -fx-background-radius: 1000000;" textAlignment="JUSTIFY">
+      <Button fx:id="perfilBOTON" alignment="CENTER" layoutX="280.0" layoutY="3.0" mnemonicParsing="false" onAction="#perfilBOTONclick" prefHeight="52.0" prefWidth="54.0" style="-fx-background-image: &quot;@img/logo.png&quot;; -fx-background-radius: 1000000;" textAlignment="JUSTIFY">
          <graphic>
             <ImageView fx:id="PerfilBOTON1" fitHeight="40.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -139,7 +139,7 @@
       <Button fx:id="filtrarButton" layoutX="120.0" layoutY="104.0" mnemonicParsing="false" onAction="#filtrarBottonClick" text="Aplicar Filtros" />
       <HBox fx:id="panelHBox" layoutY="131.0" prefHeight="412.0" prefWidth="335.0">
          <children>
-            <ScrollPane fx:id="librosScrollPane" prefHeight="402.0" prefWidth="328.0">
+            <ScrollPane fx:id="librosScrollPane" prefHeight="402.0" prefWidth="333.0">
                <content>
                   <GridPane fx:id="cosasGripPane" prefHeight="0.0" prefWidth="5.0">
                      <columnConstraints>

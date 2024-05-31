@@ -16,12 +16,13 @@ public class Eventos {
     private double precio;
     private String tipo;
     private File imageFile;
+    private int id_usuario;
 
 private Usuario u ;
 
 
     // Constructor de la clase con parámetros completos
-    public Eventos( String nombre, Date fechaEvento, String ubicacion, Date fecha_anyadido, Image imagen, File imageFile, String descripcion, double precio, String tipo) {
+    public Eventos( String nombre, Date fechaEvento, String ubicacion, Date fecha_anyadido, Image imagen, File imageFile, String descripcion, double precio, String tipo,int id_usuario) {
         this.nombre = nombre;
         this.fechaEvento = fechaEvento;
         this.ubicacion = ubicacion;
@@ -32,6 +33,7 @@ private Usuario u ;
         this.precio = precio;
         this.tipo = tipo;
         this.imagen=imagen;
+        this.id_usuario=id_usuario;
     }
     // Constructor vacío de la clase
     public Eventos(){

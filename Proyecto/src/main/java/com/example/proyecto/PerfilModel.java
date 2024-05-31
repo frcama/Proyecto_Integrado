@@ -18,7 +18,7 @@ public class PerfilModel extends Conexion{
         Usuario u = new Usuario(); // Crear una instancia de Usuario
 
         try {
-            String sql = "SELECT * FROM estudiantes WHERE email = ? AND contraseña = ?;";
+            String sql = "SELECT * FROM estudiantes WHERE email = ? AND contrasenya = ?;";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ps.setString(1, emailUsuario);
             ps.setString(2, contraUsuario);

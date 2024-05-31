@@ -126,7 +126,7 @@ public class AlquileresController implements Initializable {
 
             String ubi = alquileres.getUbicacion();
             String nombre = alquileres.getNombre();
-            Double precio = alquileres.getPrecio();
+            int precio = alquileres.getPrecio();
             String m2 = alquileres.getMetrosCuadrados();
             Integer nh = alquileres.getnHabitaciones();
             String desc = alquileres.getDescripcion();

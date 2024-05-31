@@ -46,7 +46,7 @@ public class MostrarLibros extends Conexion{
         asignaturaLabel.setText(libros.getAsignatura());
         cursoLabel.setText("Curso: " + libros.getCurso() );
         isbnLabel.setText(libros.getIsbn());
-        correoLibros.setText("Contacto:" +usuario.getCorreo());
+        correoLibros.setText(usuario.getCorreo());
 
         // Establecer la imagen en el ImageView
         if (libros.getImagen() != null) {

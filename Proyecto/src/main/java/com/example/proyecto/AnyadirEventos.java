@@ -45,10 +45,15 @@ public class AnyadirEventos  implements Initializable {
     @javafx.fxml.FXML
     private ChoiceBox tipoEventoChoiceBox;
 
+
+    Usuario usuario = new Usuario();
+
+
     // Método que se ejecuta al inicializar la interfaz gráfica
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        recuperarDatos();
         // Configuración del Spinner para seleccionar el precio del evento
         SpinnerValueFactory<Integer> valueFactoryInteger =
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(1,10000000,0,1);
@@ -96,13 +101,20 @@ public class AnyadirEventos  implements Initializable {
         Date fechaEvento = Date.valueOf(fechaEventos.getValue());
         Date d = Date.valueOf(LocalDate.now());
         String p = String.valueOf(precioEventos.getValue());
-        double precio = Double.valueOf(p);
+        int precio =Integer.valueOf(p);
+        int id_usuario= usuario.getId_usuario();
 
         // Crear una instancia del evento con los datos ingresados
-        Eventos e = new Eventos(nombre,fechaEvento,ubi,d,imagenSeleccionada,imagen,descripcion,precio,tipo);
+        Eventos e = new Eventos(nombre,fechaEvento,ubi,d,imagenSeleccionada,imagen,descripcion,precio,tipo,id_usuario);
         // Llamar al método para añadir el evento
         aem.AnyadirAlquiler(e);
     }
+    private void recuperarDatos(){
+
+        UsuarioHolder us = UsuarioHolder.getInstance();
+        usuario = us.getUsuario();
+    }
+
     // Método que se ejecuta al hacer clic en el botón "Atrás"
     @javafx.fxml.FXML
     public void onAtrasButtonClick(ActionEvent actionEvent) {

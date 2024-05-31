@@ -47,7 +47,7 @@ public class MostrarAlquileres extends Conexion{
         u = pm.perfilModel(u.getCorreo(),u.getContra());
         // Establecer los datos del alquiler en las etiquetas de la interfaz de usuario
         nombreAlquilerLabel.setText(alquiler.getNombre());
-        precioAlquilerLabel.setText(String.valueOf(alquiler.getPrecio()+"€"));
+        precioAlquilerLabel.setText(String.valueOf(alquiler.getPrecio()));
 
         metrosAlquilerLabel.setText(alquiler.getMetrosCuadrados() + " metros cuadrados");
         ubiAlquilerLabel.setText(alquiler.getUbicacion());

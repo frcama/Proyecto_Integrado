@@ -9,13 +9,13 @@ import javafx.scene.image.Image;
 
 
 public class AnyadirEventosModel extends Conexion{
+    Usuario usuario = new Usuario();
 
     public void AnyadirAlquiler(Eventos ev) {
 
-        Usuario usuactual = UsuarioHolder.getInstance().getUsuario();
-
+        recuperarDatos();
         try {
-            String sql = "INSERT INTO eventos_culturales (nombre, fecha, ubicacion, fecha_anyadido,imagen,descripcion, precio,tipoEvento, id_estudiante)VALUES (?, ?, ?, ?, ?, ?, ?,?,?);";
+            String sql = "INSERT INTO eventos_culturales (nombre, fecha, ubicacion, fecha_anyadido,imagen,descripcion, precio,tipoEvento, id_usuario)VALUES (?, ?, ?, ?, ?, ?, ?,?,?);";
 
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
 
@@ -31,7 +31,7 @@ public class AnyadirEventosModel extends Conexion{
             ps.setString(6, ev.getDescripcion());
             ps.setDouble(7,ev.getPrecio());
             ps.setString(8,ev.getTipo());
-            ps.setInt(9, usuactual.getId_usuario());
+            ps.setInt(9,usuario.getId_usuario());
 
 
             ps.executeUpdate();
@@ -44,4 +44,12 @@ public class AnyadirEventosModel extends Conexion{
 
 
     }
+    private void recuperarDatos(){
+
+        UsuarioHolder us = UsuarioHolder.getInstance();
+        usuario = us.getUsuario();
+
+    }
 }
+
+

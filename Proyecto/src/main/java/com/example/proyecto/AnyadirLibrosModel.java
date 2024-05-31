@@ -7,11 +7,10 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class AnyadirLibrosModel extends Conexion{
-
+    Usuario usuario = new Usuario();
     public void AnyadirLibros(Libros l) {
 
-        Usuario usuactual = UsuarioHolder.getInstance().getUsuario();
-
+        recuperarDatos();
         try {
             String sql = "INSERT INTO libros (isbn, Titulo, curso, asignatura, editorial, precio, imagen, fecha_anyadido, id_estudiante)" +
                     "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
@@ -31,7 +30,7 @@ public class AnyadirLibrosModel extends Conexion{
             ps.setBinaryStream(7, FIS, (int) imagen.length());
 
             ps.setDate(8, l.getFechaPublicacion());
-            ps.setInt(9, usuactual.getId_usuario());
+            ps.setInt(9, usuario.getId_usuario());
 
             ps.executeUpdate();
             System.out.println("Libro añadido con éxito");
@@ -40,6 +39,13 @@ public class AnyadirLibrosModel extends Conexion{
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
+
+    }
+
+    private void recuperarDatos(){
+
+        UsuarioHolder us = UsuarioHolder.getInstance();
+        usuario = us.getUsuario();
 
     }
 }
