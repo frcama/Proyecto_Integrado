@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="panelMostrarLibros" prefHeight="385.0" prefWidth="293.0" style="-fx-background-color: white; -fx-border-radius: 35; -fx-background-radius: 35;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.MostrarLibros">
+<AnchorPane fx:id="panelMostrarLibros" prefHeight="385.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-radius: 35; -fx-background-radius: 35;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.MostrarLibros">
    <children>
       <Label fx:id="tituloLibroLabel" layoutX="12.0" layoutY="178.0" prefHeight="30.0" prefWidth="254.0" text="Título Libro" underline="true" wrapText="true">
          <font>
@@ -27,11 +27,11 @@
          <font>
             <Font size="14.0" />
          </font></Label>
-      <Label fx:id="cursoLabel" layoutX="75.0" layoutY="234.0" prefHeight="20.0" prefWidth="214.0" text="Curso" textFill="#7e7c7c" wrapText="true">
+      <Label fx:id="cursoLabel" layoutX="75.0" layoutY="234.0" prefHeight="20.0" prefWidth="198.0" text="Curso" textFill="#7e7c7c" wrapText="true">
          <font>
             <Font size="14.0" />
          </font></Label>
-      <Label fx:id="precioLabel" layoutX="177.0" layoutY="314.0" prefHeight="54.0" prefWidth="94.0" text="25" textFill="#7e7c7ce5" wrapText="true">
+      <Label fx:id="precioLabel" layoutX="177.0" layoutY="314.0" prefHeight="54.0" prefWidth="85.0" text="25" textFill="#7e7c7ce5" wrapText="true">
          <font>
             <Font name="System Bold" size="36.0" />
          </font></Label>
