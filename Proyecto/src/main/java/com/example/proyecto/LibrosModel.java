@@ -9,9 +9,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-
+// Clase para manejar operaciones relacionadas con libros en la base de datos
 public class LibrosModel extends Conexion {
-
+    // Método para mostrar todos los libros disponibles
     public ArrayList<Libros> mostrarLibros() {
 
         ArrayList<Libros> listaLibros = new ArrayList<>();
@@ -20,7 +20,7 @@ public class LibrosModel extends Conexion {
             String sql = "SELECT  isbn, Titulo, curso, asignatura, editorial, precio, imagen FROM libros ORDER BY fecha_anyadido ASC;";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
-
+            // Recorrer el conjunto de resultados y crear objetos Libros
             while (rs.next()) {
                 Image imagen = null;
                 if (rs.getBlob("imagen") != null) {
@@ -56,7 +56,7 @@ public class LibrosModel extends Conexion {
 
     //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //
-
+    // Método para mostrar los libros pertenecientes a un usuario específico
     public ArrayList<Libros> mostrarLibrosPorUsuario(Usuario usuario) {
         ArrayList<Libros> librosPorUsuario = new ArrayList<>();
 
@@ -68,7 +68,7 @@ public class LibrosModel extends Conexion {
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ps.setInt(1, usuactual.getId_usuario());
             ResultSet rs = ps.executeQuery();
-
+            // Recorrer el conjunto de resultados y crear objetos Libros
             while (rs.next()) {
                 Image imagen = null;
                 if (rs.getBlob("imagen") != null) {
@@ -84,7 +84,7 @@ public class LibrosModel extends Conexion {
                 String editorial = rs.getString("editorial");
                 double precio = rs.getDouble("precio");
 
-
+                // Crear un objeto Libros y agregarlo a la lista
                 Libros l = new Libros(ISBN ,Titulo ,Curso , asignautra, editorial, precio,imagen);
                 librosPorUsuario.add(l);
             }
