@@ -1,10 +1,10 @@
 package com.example.proyecto;
-
+// Importación necesaria para manejar imágenes
 import javafx.scene.image.Image;
-
+// Importación necesaria para manejar fechas
 import java.io.File;
 import java.sql.Date;
-
+// Clase que representa un evento
 public class Eventos {
     private int id_evento;
     private String nombre;
@@ -20,7 +20,7 @@ public class Eventos {
 private Usuario u ;
 
 
-
+    // Constructor de la clase con parámetros completos
     public Eventos( String nombre, Date fechaEvento, String ubicacion, Date fecha_anyadido, Image imagen, File imageFile, String descripcion, double precio, String tipo) {
         this.nombre = nombre;
         this.fechaEvento = fechaEvento;
@@ -33,10 +33,11 @@ private Usuario u ;
         this.tipo = tipo;
         this.imagen=imagen;
     }
-
+    // Constructor vacío de la clase
     public Eventos(){
 
     }
+    // Constructor de la clase con parámetros básicos
     public Eventos( String nombre, Date fechaEvento, String ubicacion, String descripcion, double precio, String tipo, Image imagen, Usuario u ) {
         this.nombre = nombre;
         this.fechaEvento = fechaEvento;
@@ -55,7 +56,7 @@ private Usuario u ;
     public void setU(Usuario u) {
         this.u = u;
     }
-
+    // Constructor de la clase con parámetros básicos y sin usuario
     public Eventos(String nombre, Date fechaEvento, String ubicacion, String descripcion, double precio, String tipo, Image imagen) {
         this.nombre = nombre;
         this.fechaEvento = fechaEvento;
@@ -66,7 +67,7 @@ private Usuario u ;
         this.imagen=imagen;
     }
 
-
+    // Getters y Setters para todos los atributos de la clase
     public File getImageFile() {
         return imageFile;
     }

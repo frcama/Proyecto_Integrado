@@ -20,10 +20,10 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.sql.Date;
-
+// Controlador para la vista de eventos
 public class EventosController implements Initializable {
 
-
+    // Componentes de la vista
     FileChooser fileChooser = new FileChooser();
 
     @javafx.fxml.FXML
@@ -56,11 +56,11 @@ public class EventosController implements Initializable {
     private HBox panelHBoxEventos;
     @javafx.fxml.FXML
     private GridPane cosasGripPaneEvento;
-
+    // Lista de eventos
     ArrayList<Eventos> eventosArrayList = new ArrayList<>();
     @javafx.fxml.FXML
     private DatePicker fechafiltroDatePicker;
-
+    // Método de inicialización del controlador
     public void initialize(URL location, ResourceBundle resources) {
         /*
         perfilBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';");
@@ -69,7 +69,7 @@ public class EventosController implements Initializable {
 
         eventosBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);");
 */
-
+        // Configuración inicial de la vista y carga de datos
         ObservableList<String> tipoEvento = FXCollections.observableArrayList();
 
 
@@ -92,7 +92,7 @@ public class EventosController implements Initializable {
 
         EventosModel em = new EventosModel();
         eventosArrayList = em.mostrarEventos();
-
+        // Iteración sobre la lista de eventos para mostrarlos en la vista
         for ( Eventos eventos : eventosArrayList) {
 
             String ubi = eventos.getUbicacion();
@@ -107,7 +107,7 @@ public class EventosController implements Initializable {
 
         }
 
-
+        // Configuración de la disposición de los eventos en la vista
         int column = 0;
         int row = 0;
 
