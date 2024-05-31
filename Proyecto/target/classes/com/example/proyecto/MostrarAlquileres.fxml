@@ -2,26 +2,47 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="panelMostrarAlquiler" prefHeight="241.0" prefWidth="306.0" style="-fx-border-color: 000; -fx-border-style: solid;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.MostrarAlquileres">
+<AnchorPane fx:id="panelMostrarAlquiler" prefHeight="368.0" prefWidth="293.0" style="-fx-border-color: 000; -fx-border-style: box-shadow; -fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.MostrarAlquileres">
    <children>
-      <Label fx:id="nombreAlquilerLabel" layoutX="14.0" layoutY="14.0" text="Nombre Alquiler" underline="true">
+      <Label fx:id="AlquilerLabel" layoutX="16.0" layoutY="217.0" prefHeight="27.0" prefWidth="140.0" text="Alquiler" textFill="#7e7c7c" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="54.0" fitWidth="56.0" layoutX="10.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/edificio.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="22.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/iconocontacto.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imagenAlquilerImageView" fitHeight="144.0" fitWidth="324.0" layoutX="13.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="nombreAlquilerLabel" layoutX="13.0" layoutY="10.0" text="Nombre Alquiler" underline="true">
          <font>
             <Font size="14.0" />
          </font>
          <effect>
             <Glow level="0.0" />
-         </effect></Label>
-      <ImageView fx:id="imagenalquilerImageView" fitHeight="107.0" fitWidth="144.0" layoutX="12.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="descripcionAlquilerLabel" layoutX="163.0" layoutY="14.0" prefHeight="81.0" prefWidth="144.0" text="Descripcion alquileres" wrapText="true" />
-      <Label fx:id="precioAlquilerLabel" layoutX="163.0" layoutY="103.0" prefHeight="18.0" prefWidth="144.0" text="Precio Alquleres" wrapText="true" />
-      <Label fx:id="nHabsAlquilerLabel" layoutX="163.0" layoutY="159.0" prefHeight="18.0" prefWidth="144.0" text="nHabitaciones Alquiler" wrapText="true" />
-      <Label fx:id="ubiAlquilerLabel" layoutX="163.0" layoutY="183.0" prefHeight="18.0" prefWidth="144.0" text="Ubicacion Alquiler" wrapText="true" />
-      <Label fx:id="metrosAlquilerLabel" layoutX="166.0" layoutY="207.0" prefHeight="20.0" prefWidth="144.0" text="Metros Alquiler" wrapText="true" />
-      <Label fx:id="ciudadAlquiler" layoutX="163.0" layoutY="135.0" prefHeight="18.0" prefWidth="129.0" text="Label" />
-      <Label fx:id="correoAlquiler" layoutX="14.0" layoutY="184.0" prefHeight="44.0" prefWidth="138.0" text="Label" wrapText="true" />
+         </effect>
+      </Label>
+      <Label fx:id="precioAlquilerLabel" layoutX="219.0" layoutY="204.0" prefHeight="54.0" prefWidth="72.0" text="300" textFill="#7e7c7c" wrapText="true">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="descripcionAlquilerLabel" layoutX="219.0" layoutY="260.0" prefHeight="81.0" prefWidth="144.0" text="Descripcion alquileres" textFill="#7e7c7c" wrapText="true" />
+      <Label fx:id="ciudadAlquiler" layoutX="75.0" layoutY="301.0" prefHeight="18.0" prefWidth="129.0" text="Label" textFill="#7e7c7c" />
+      <Label fx:id="ubiAlquilerLabel" layoutX="74.0" layoutY="283.0" prefHeight="18.0" prefWidth="144.0" text="Ubicacion Alquiler" textFill="#7e7c7c" wrapText="true" />
+      <Label fx:id="metrosAlquilerLabel" layoutX="75.0" layoutY="259.0" prefHeight="20.0" prefWidth="144.0" text="Metros Alquiler" textFill="#7e7c7c" wrapText="true" />
+      <Label fx:id="nHabsAlquilerLabel" layoutX="72.0" layoutY="243.0" prefHeight="18.0" prefWidth="144.0" text="nHabitaciones Alquiler" textFill="#7e7c7c" wrapText="true" />
+      <Label fx:id="contactoLabel" layoutX="52.0" layoutY="334.0" text="Label" />
    </children>
 </AnchorPane>

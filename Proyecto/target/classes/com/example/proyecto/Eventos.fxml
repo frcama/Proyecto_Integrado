@@ -5,8 +5,6 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ColorAdjust?>
@@ -37,7 +35,7 @@
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.8533333539962769" green="0.20000000298023224" blue="1.0" />
+                        <Color red="0.11764705926179886" green="0.5647059082984924" blue="1.0" />
                      </color>
                   </Stop>
                </stops>
@@ -49,7 +47,7 @@
             <Font name="Impact" size="30.0" />
          </font>
       </Label>
-      <Button fx:id="perfilBOTON" alignment="CENTER" layoutX="279.0" layoutY="1.0" mnemonicParsing="false" onAction="#perfilBOTONclick" prefHeight="51.0" prefWidth="54.0" style="-fx-background-image: &quot;@img/logo.png&quot;; -fx-background-radius: 1000000;" textAlignment="JUSTIFY">
+      <Button fx:id="perfilBOTON" alignment="CENTER" layoutX="278.0" layoutY="6.0" mnemonicParsing="false" onAction="#perfilBOTONclick" prefHeight="51.0" prefWidth="54.0" style="-fx-background-image: &quot;@img/logo.png&quot;; -fx-background-radius: 1000000;" textAlignment="JUSTIFY">
          <graphic>
             <ImageView fx:id="PerfilBOTON" fitHeight="41.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -127,19 +125,6 @@
       <ChoiceBox fx:id="TipoFiltroChoicebox" layoutX="11.0" layoutY="75.0" prefHeight="25.0" prefWidth="88.0" />
       <Button fx:id="filtrarButton" layoutX="123.0" layoutY="100.0" mnemonicParsing="false" onAction="#filtrarBottonClick" text="Aplicar Filtros" />
       <Line endX="224.99996948242188" layoutX="109.0" layoutY="544.0" startX="-114.0000228881836" />
-      <MenuButton alignment="TOP_CENTER" layoutX="1.0" layoutY="2.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="27.0" style="-fx-background-color: #1f23ff;">
-         <items>
-            <MenuItem mnemonicParsing="false" text="Caambiar fondo" />
-            <MenuItem mnemonicParsing="false" text="Chat de ayuda" />
-         </items>
-         <graphic>
-            <ImageView fitHeight="44.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@img/opciones2.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </MenuButton>
       <HBox fx:id="panelHBoxEventos" layoutX="4.0" layoutY="122.0" prefHeight="394.0" prefWidth="328.0">
          <children>
             <ScrollPane fx:id="eventosScollPane" prefHeight="414.0" prefWidth="328.0">

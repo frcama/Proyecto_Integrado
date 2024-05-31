@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="panelMostrarAlquiler" prefHeight="241.0" prefWidth="306.0" style="-fx-border-color: 000; -fx-border-style: solid;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.MostrarAlquileres">
+   <children>
+      <Label fx:id="nombreAlquilerLabel" layoutX="14.0" layoutY="14.0" text="Nombre Alquiler" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.0" />
+         </effect></Label>
+      <ImageView fx:id="imagenalquilerImageView" fitHeight="107.0" fitWidth="144.0" layoutX="12.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="descripcionAlquilerLabel" layoutX="163.0" layoutY="14.0" prefHeight="81.0" prefWidth="144.0" text="Descripcion alquileres" wrapText="true" />
+      <Label fx:id="precioAlquilerLabel" layoutX="163.0" layoutY="103.0" prefHeight="18.0" prefWidth="144.0" text="Precio Alquleres" wrapText="true" />
+      <Label fx:id="nHabsAlquilerLabel" layoutX="163.0" layoutY="159.0" prefHeight="18.0" prefWidth="144.0" text="nHabitaciones Alquiler" wrapText="true" />
+      <Label fx:id="ubiAlquilerLabel" layoutX="163.0" layoutY="183.0" prefHeight="18.0" prefWidth="144.0" text="Ubicacion Alquiler" wrapText="true" />
+      <Label fx:id="metrosAlquilerLabel" layoutX="166.0" layoutY="207.0" prefHeight="20.0" prefWidth="144.0" text="Metros Alquiler" wrapText="true" />
+      <Label fx:id="ciudadAlquiler" layoutX="163.0" layoutY="135.0" prefHeight="18.0" prefWidth="129.0" text="Label" />
+      <Label fx:id="correoAlquiler" layoutX="14.0" layoutY="184.0" prefHeight="44.0" prefWidth="138.0" text="Label" wrapText="true" />
+   </children>
+</AnchorPane>

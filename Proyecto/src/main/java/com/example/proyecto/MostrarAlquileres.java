@@ -13,8 +13,6 @@ public class MostrarAlquileres extends Conexion{
     @javafx.fxml.FXML
     private Label precioAlquilerLabel;
     @javafx.fxml.FXML
-    private ImageView imagenalquilerImageView;
-    @javafx.fxml.FXML
     private Label metrosAlquilerLabel;
     @javafx.fxml.FXML
     private Label ubiAlquilerLabel;
@@ -30,7 +28,11 @@ public class MostrarAlquileres extends Conexion{
 
     Usuario usuario = new Usuario();
     @javafx.fxml.FXML
-    private Label correoAlquiler;
+    private Label AlquilerLabel;
+    @javafx.fxml.FXML
+    private Label contactoLabel;
+    @javafx.fxml.FXML
+    private ImageView imagenAlquilerImageView;
 
     public void setData(Alquileres alquiler) {
         recuperarDatos();
@@ -48,11 +50,11 @@ public class MostrarAlquileres extends Conexion{
         descripcionAlquilerLabel.setText(alquiler.getDescripcion());
         nHabsAlquilerLabel.setText(String.valueOf(alquiler.getnHabitaciones() + " núm Habitaciones"));
         ciudadAlquiler.setText(alquiler.getCiudad());
-        correoAlquiler.setText("Contacto: " +usuario.getCorreo());
+        contactoLabel.setText("Contacto: " +usuario.getCorreo());
 
         // Establecer la imagen en el ImageView
         if (alquiler.getImagen() != null) {
-            imagenalquilerImageView.setImage(alquiler.getImagen());
+            imagenAlquilerImageView.setImage(alquiler.getImagen());
         }
     }
     private void recuperarDatos(){

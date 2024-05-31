@@ -27,10 +27,6 @@ public class Inicio_Sesion{
     @FXML
     Button inicioBOTON;
     @FXML
-    private Text id_email;
-    @FXML
-    private Text id_pass;
-    @FXML
     private ImageView logo;
     @FXML
     private TextField email;

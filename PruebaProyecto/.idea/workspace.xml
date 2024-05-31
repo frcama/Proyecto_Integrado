@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="05e0454c-8e90-440c-a4d7-414d644d22aa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/AlquileresController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/AlquileresModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/AnyadirAlquileresModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/AnyadirEventos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/AnyadirEventosModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/AnyadirLibrosModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/Chat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/Conexion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/EditarPerfil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/EditarPerfilModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/Eventos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/EventosController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/HelloApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/InicioSesionModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/Inicio_Sesion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/Libros.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/LibrosController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/LibrosModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/MostrarAlquileres.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/MostrarEventos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/MostrarLibros.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/NovedadesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/Perfil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/PerfilModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/PublicacionesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/Registro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/RegistroModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/Terminos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/UsuarioHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/UsuarioModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/proyecto/Alquileres.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/proyecto/AnyadirAlquileres.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/proyecto/AnyadirLibros.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/proyecto/EventosModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pruebaproyecto/recuperacionContra.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/Alquileres.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/AnyadirAlquileres.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/AnyadirEventos.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/AnyadirLibros.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/Chat.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/EditarPerfil.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/Eventos.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/Libros.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/MostrarAlquileres.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/MostrarEventos.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/MostrarLibros.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/Novedades.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/Perfil.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/Publicaciones.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/Registro.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/Terminos.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/CASAboton.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/CASAboton2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/Chat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/Enviar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/Image Pasted 2024-30-04 at 10.07.48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/Image Pasted 2024-30-04 at 10.10.35.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/ImagePasted2024-30-04at10.07.26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/ImagePasted2024-30-04at10.08.23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/ImagePasted2024-30-04at10.09.08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/añadir.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/añadir2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/blanco.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/blanco2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/bombilla.2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/bombilla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/bombillaEncendida.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/boton agregar en azul.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/boton atras negro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/boton perfil azul.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/boton perfil2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/boton_perfil.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/botonatrasblanco.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/calendario.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/calendario2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/calendarioAzul.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/casaAzul.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/casa_blanca.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/caseta.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/chatbot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/home_icon_176375.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/iconoDollar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/iconoLibro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/iconoUbi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/iconocontacto.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/imagen_2024-05-01_181923471.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/imagen_2024-05-01_182029839.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/libro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/libro2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/libroAzul.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/opciones.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/img/opciones2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pruebaproyecto/inicio_sesion.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto/target/classes/com/example/proyecto/AlquileresModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Proyecto/target/classes/com/example/proyecto/AlquileresModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto/target/classes/com/example/proyecto/EventosModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Proyecto/target/classes/com/example/proyecto/EventosModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto/target/classes/com/example/proyecto/LibrosModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Proyecto/target/classes/com/example/proyecto/LibrosModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto/target/classes/com/example/proyecto/Publicaciones.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../Proyecto/target/classes/com/example/proyecto/Publicaciones.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto/target/classes/com/example/proyecto/PublicacionesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Proyecto/target/classes/com/example/proyecto/PublicacionesController.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "alpaso01"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/frcama/Proyecto_Integradp.git",
+    "accountId": "b14231d3-03ed-4b01-8180-afd33e19dc82"
+  }
+}]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2hDm66en2snO1jnPmssQtl6jZ7i" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/alex/Desktop/proyecto/aplicacion del proyecto/proyecto/Proyecto_Integradp/PruebaProyecto/src/main/resources/com/example/pruebaproyecto"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alex\Desktop\proyecto\aplicacion del proyecto\proyecto\Proyecto_Integradp\PruebaProyecto\src\main\resources\com\example\pruebaproyecto" />
+      <recent name="C:\Users\alex\Desktop\proyecto\aplicacion del proyecto\proyecto\Proyecto_Integradp\PruebaProyecto\src\main\java\com\example\pruebaproyecto" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="05e0454c-8e90-440c-a4d7-414d644d22aa" name="Changes" comment="" />
+      <created>1717136844244</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717136844244</updated>
+    </task>
+    <servers />
+  </component>
+</project>
