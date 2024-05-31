@@ -54,13 +54,13 @@ private Usuario usuario;
 @Override
 public void initialize(URL location, ResourceBundle resources){
 
-
+/*
         perfilBOTON.setStyle("-fx-background-color: F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';");
         perfilBOTON.setOnMouseEntered(e -> perfilBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000); -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
         perfilBOTON.setOnMouseExited(e -> perfilBOTON.setStyle("-fx-background-color: F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
 
         novedadesBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);");
-
+*/
         ArrayList<Libros> librosArrayList = new ArrayList<>();
         ArrayList<Eventos> eventosArrayList = new ArrayList<>();
         ArrayList<Alquileres> alquileresArrayList = new ArrayList<>();

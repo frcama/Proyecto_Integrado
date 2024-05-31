@@ -61,18 +61,17 @@
       <Circle fill="DODGERBLUE" layoutX="143.0" layoutY="62.0" radius="43.0" stroke="BLACK" strokeType="INSIDE" />
       <Button fx:id="atrasDePerfilBOTON" layoutX="18.0" layoutY="22.0" mnemonicParsing="false" onAction="#atrasDePerfilBOTONclick" text="ATRAS" />
       <ImageView fx:id="fotoPerfil" fitHeight="80.0" fitWidth="86.0" layoutX="100.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="EditarFoto" layoutX="206.0" layoutY="89.0" mnemonicParsing="false" onAction="#EditarFotoclick" prefHeight="26.0" prefWidth="96.0" text="EDITAR FOTO" />
       <Line endX="219.0" endY="-1.52587890625E-5" layoutX="116.0" layoutY="536.0" startX="-116.0000228881836" startY="-1.52587890625E-5" />
       <Label layoutX="16.0" layoutY="483.0" prefHeight="30.0" prefWidth="104.0" text="Contraseña">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="nombrePerfil" layoutX="153.0" layoutY="152.0" />
-      <TextField fx:id="nombreusuarioPerfil" layoutX="153.0" layoutY="232.0" />
-      <TextField fx:id="descripccionPerfil" layoutX="154.0" layoutY="300.0" prefHeight="50.0" prefWidth="150.0" />
-      <PasswordField fx:id="contrsaenaPerfil" layoutX="155.0" layoutY="483.0" />
-      <DatePicker fx:id="fechaNacimientoPerfil" layoutX="158.0" layoutY="397.0" prefHeight="26.0" prefWidth="150.0" />
+      <TextField fx:id="NuevoNombreTF" layoutX="153.0" layoutY="152.0" />
+      <TextField fx:id="NuevoApelllidoTF" layoutX="153.0" layoutY="232.0" />
+      <TextField fx:id="NuevoCorreoTF" layoutX="154.0" layoutY="300.0" prefHeight="50.0" prefWidth="150.0" />
+      <PasswordField fx:id="NuevaContrasenyaTF" layoutX="155.0" layoutY="483.0" />
+      <DatePicker fx:id="NuevaFechaTF" layoutX="158.0" layoutY="397.0" prefHeight="26.0" prefWidth="150.0" />
       <Button fx:id="CerrarSesionBOTON" layoutX="172.0" layoutY="558.0" mnemonicParsing="false" onAction="#CerrarSesionBOTONCLICK" prefHeight="26.0" prefWidth="138.0" text="Cerrar Sesión" />
       <Label layoutX="206.0" layoutY="20.0" text="EDITAR">
          <font>

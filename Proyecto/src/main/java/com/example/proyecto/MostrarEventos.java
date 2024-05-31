@@ -12,8 +12,6 @@ public class MostrarEventos {
     @javafx.fxml.FXML
     private Label fechaEventoLabel;
     @javafx.fxml.FXML
-    private Label nombreLibroLabel;
-    @javafx.fxml.FXML
     private Label ubiEventoLabel;
     @javafx.fxml.FXML
     private ImageView imagenEventoImageView;
@@ -26,7 +24,11 @@ public class MostrarEventos {
 
     Usuario usuario = new Usuario();
     @javafx.fxml.FXML
+    private Label asignaturaLabel;
+    @javafx.fxml.FXML
     private Label correoEvento;
+    @javafx.fxml.FXML
+    private Label nombreEventolabel;
 
     public void setData(Eventos evento) {
         recuperarDatos();
@@ -36,7 +38,7 @@ public class MostrarEventos {
         u = pm.perfilModel(u.getCorreo(),u.getContra());
 
 
-        nombreLibroLabel.setText(evento.getNombre());
+        nombreEventolabel.setText(evento.getNombre());
         tipoEventoLabel.setText(evento.getTipo());
         precioEventoLabel.setText(String.valueOf(evento.getPrecio()+"€"));
         ubiEventoLabel.setText(evento.getUbicacion());

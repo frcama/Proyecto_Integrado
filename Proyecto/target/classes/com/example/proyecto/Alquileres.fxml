@@ -80,14 +80,14 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="alquileresBOTON" layoutX="77.0" layoutY="550.0" mnemonicParsing="false" onAction="#alquileresBOTONclick" prefHeight="35.0" prefWidth="43.0" style="-fx-background-radius: 5; -fx-background-color: white;">
+      <Button fx:id="alquileresBOTON" layoutX="77.0" layoutY="550.0" mnemonicParsing="false" onAction="#alquileresBOTONclick" prefHeight="35.0" prefWidth="43.0" style="-fx-background-radius: 5; -fx-background-color: BADBFF;">
          <effect>
             <DropShadow />
          </effect>
          <graphic>
             <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/CASAboton.png" />
+                  <Image url="@img/casaAzul.png" />
                </image>
             </ImageView>
          </graphic>

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="panelMostrarLibros" prefHeight="368.0" prefWidth="293.0" style="-fx-border-color: 000; -fx-border-style: box-shadow; -fx-background-color: FFFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.MostrarLibros">
+<AnchorPane fx:id="panelMostrarLibros" prefHeight="368.0" prefWidth="293.0" style="-fx-border-color: 000; -fx-border-style: box-shadow; -fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.MostrarLibros">
    <children>
       <Label fx:id="tituloLibroLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="102.0" layoutY="8.0" text="Título Libro" textAlignment="CENTER" underline="true" wrapText="true">
          <font>

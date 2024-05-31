@@ -63,14 +63,14 @@ public class AlquileresController implements Initializable {
 
     // Método initialize que se llama al cargar la interfaz
     public void initialize(URL location, ResourceBundle resources) {
-
+/*
         // Configuración del botón perfil con estilos y eventos de ratón
         perfilBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';");
         perfilBOTON.setOnMouseEntered(e -> perfilBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000); -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
         perfilBOTON.setOnMouseExited(e -> perfilBOTON.setStyle("-fx-background-color:  F2F2F2; -fx-shape: 'M70,50 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0';"));
         // Estilo del botón de alquileres
         alquileresBOTON.setStyle("-fx-background-color: linear-gradient(to right, #ffff00, #ff0000);");
-
+*/
         // Creación de listas observables para las opciones de filtro
         ObservableList<String> zonaAlquiler = FXCollections.observableArrayList();
         ObservableList<String> nHabitacionesAlquiler = FXCollections.observableArrayList();
@@ -181,6 +181,7 @@ public class AlquileresController implements Initializable {
     // Métodos para manejar eventos de botón
     @FXML
     public void perfilBOTONclick(ActionEvent actionEvent) {
+
         System.out.println("funciona");
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Perfil.fxml"));

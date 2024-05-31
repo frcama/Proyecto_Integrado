@@ -3,10 +3,7 @@ package com.example.proyecto;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -18,11 +15,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class EditarPerfil {
-    @FXML
-    private TextField nombreusuarioPerfil;
-    @FXML
-    private TextField descripccionPerfil;
+public class EditarPerfil extends Perfil{
     @FXML
     private ImageView fotoPerfil;
     @FXML
@@ -32,17 +25,19 @@ public class EditarPerfil {
     @FXML
     private AnchorPane panelDePerfil;
     @FXML
-    private Button EditarFoto;
-    @FXML
-    private TextField nombrePerfil;
-    @FXML
-    private DatePicker fechaNacimientoPerfil;
-    @FXML
-    private PasswordField contrsaenaPerfil;
-    @FXML
     private Button cambiosbutton;
-
     @FXML
+    private TextField NuevoCorreoTF;
+    @FXML
+    private TextField NuevoApelllidoTF;
+    @FXML
+    private TextField NuevoNombreTF;
+    @FXML
+    private PasswordField NuevaContrasenyaTF;
+    @FXML
+    private DatePicker NuevaFechaTF;
+
+    @Deprecated
     public void EditarFotoclick(ActionEvent actionEvent) {
 
         FileChooser fileChooser = new FileChooser();
@@ -77,12 +72,65 @@ public class EditarPerfil {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
+Usuario u = new Usuario();
     @FXML
     public void cambiosButtonClick(ActionEvent actionEvent) {
+        boolean datosActualizados = false;
 
+        if (!u.getNombre().equals(NuevoNombreTF.getText())) {
+            EditarPerfilModel.actualizarNombre();
+            datosActualizados = true;
+        } else {
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setContentText("Tu Nombre es el mismo");
+            a.showAndWait();
+        }
 
+        if (!u.getApellido().equals(NuevoApelllidoTF.getText())) {
+            EditarPerfilModel.actualizarNombre();
+            datosActualizados = true;
+        } else {
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setContentText("Tu Apellido es el mismo");
+            a.showAndWait();
+        }
 
+        if (!u.getCorreo().equals(NuevoCorreoTF.getText())) {
+            EditarPerfilModel.actualizarNombre();
+            datosActualizados = true;
+        } else {
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setContentText("Tu Correo es el mismo");
+            a.showAndWait();
+        }
+
+        if (!u.getFechanacimiento().equals(NuevaFechaTF.getValue())) { // Asumiendo que NuevaFechaTF es un DatePicker
+            EditarPerfilModel.actualizarNombre();
+            datosActualizados = true;
+        } else {
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setContentText("Tu Fecha es la misma");
+            a.showAndWait();
+        }
+
+        if (!u.getContra().equals(NuevaContrasenyaTF.getText())) {
+            EditarPerfilModel.actualizarNombre();
+            datosActualizados = true;
+        } else {
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setContentText("Tu contraseña es la misma");
+            a.showAndWait();
+        }
+
+        // Si se han actualizado los datos, mostrar un mensaje de éxito
+        if (datosActualizados) {
+            Alert a = new Alert(Alert.AlertType.INFORMATION);
+            a.setContentText("Tus datos han sido actualizados con éxito");
+            a.showAndWait();
+        }
     }
+
+
+
 }
 

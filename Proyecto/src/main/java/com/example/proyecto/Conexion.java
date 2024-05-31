@@ -13,8 +13,11 @@ public class Conexion {
     private String nombreUsuario = "root";
     private String password = "1234";
 
+    protected static void abrirConexion() {
+    }
+
     public java.sql.Connection getConexion() {
-        this.conn=null;
+
 
         try {
             DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
@@ -27,11 +30,7 @@ public class Conexion {
         }
     }
 
-    public void cerrarConexion() {
-        try {
-            this.conn.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+    public static void cerrarConexion() {
+
     }
 }

@@ -4,7 +4,6 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.effect.DropShadow?>
@@ -94,19 +93,19 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="novedadesBOTON" layoutX="13.0" layoutY="552.0" mnemonicParsing="false" onAction="#novedadesBOTONclick" prefHeight="37.0" prefWidth="51.0" style="-fx-background-radius: 5; -fx-background-color: white;">
+      <Button fx:id="novedadesBOTON" layoutX="13.0" layoutY="552.0" mnemonicParsing="false" onAction="#novedadesBOTONclick" prefHeight="38.0" prefWidth="51.0" style="-fx-background-radius: 5; -fx-background-color: BADBFF;">
          <effect>
             <DropShadow />
          </effect>
          <graphic>
-            <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="34.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/bombilla.png" />
+                  <Image url="@img/bombillaEncendida.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="addButton11" layoutX="139.0" layoutY="551.0" mnemonicParsing="false" onAction="#onAddClicked" prefHeight="43.0" prefWidth="51.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+      <Button fx:id="addButton11" layoutX="142.0" layoutY="551.0" mnemonicParsing="false" onAction="#onAddClicked" prefHeight="43.0" prefWidth="51.0" style="-fx-background-color: white; -fx-background-radius: 5;">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -122,15 +121,6 @@
          </effect>
       </Button>
       <Line endX="224.99996948242188" layoutX="110.0" layoutY="536.0" startX="-114.0000228881836" />
-      <MenuButton alignment="TOP_CENTER" layoutX="4.0" layoutY="4.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="27.0" style="-fx-background-color: #1f23ff;">
-         <graphic>
-            <ImageView fitHeight="44.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@img/opciones2.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </MenuButton>
       <HBox fx:id="panelHBoxNovedades" layoutX="2.0" layoutY="66.0" prefHeight="469.0" prefWidth="328.0">
          <children>
             <ScrollPane fx:id="novedadesScollPane" prefHeight="346.0" prefWidth="330.0">

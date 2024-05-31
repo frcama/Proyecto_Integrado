@@ -74,14 +74,14 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="librosBOTON" layoutX="203.0" layoutY="551.0" mnemonicParsing="false" onAction="#librosBOTONclick" prefHeight="43.0" prefWidth="54.0" style="-fx-background-radius: 5; -fx-background-color: white;">
+      <Button fx:id="librosBOTON" layoutX="203.0" layoutY="551.0" mnemonicParsing="false" onAction="#librosBOTONclick" prefHeight="43.0" prefWidth="54.0" style="-fx-background-radius: 5; -fx-background-color: BADBFF;">
          <effect>
             <DropShadow />
          </effect>
          <graphic>
             <ImageView fitHeight="33.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/libro.png" />
+                  <Image url="@img/libroAzul.png" />
                </image>
             </ImageView>
          </graphic>

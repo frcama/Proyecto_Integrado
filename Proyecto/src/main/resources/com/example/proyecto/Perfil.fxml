@@ -66,11 +66,26 @@
          </font>
       </Label>
       <Button fx:id="CerrarSesionBOTON" layoutX="160.0" layoutY="558.0" mnemonicParsing="false" onAction="#CerrarSesionBOTONCLICK" prefHeight="26.0" prefWidth="150.0" text="Cerrar Sesión" />
-      <Label fx:id="nombrePerfil" layoutX="154.0" layoutY="157.0" prefHeight="18.0" prefWidth="150.0" text="Label" wrapText="true" />
-      <Label fx:id="apellidosPerfil" layoutX="154.0" layoutY="236.0" prefHeight="18.0" prefWidth="150.0" text="Label" wrapText="true" />
-      <Label fx:id="correoPerfil" layoutX="150.0" layoutY="291.0" prefHeight="65.0" prefWidth="176.0" text="Label" wrapText="true" />
-      <Label fx:id="fechaNacimientoPerfil" layoutX="150.0" layoutY="397.0" prefHeight="18.0" prefWidth="150.0" text="Label" />
-      <Label fx:id="contrsaenaPerfil" layoutX="154.0" layoutY="489.0" prefHeight="18.0" prefWidth="150.0" text="Label" />
+      <Label fx:id="nombrePerfil" layoutX="154.0" layoutY="157.0" prefHeight="18.0" prefWidth="150.0" text="Label" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Label fx:id="apellidosPerfil" layoutX="154.0" layoutY="236.0" prefHeight="18.0" prefWidth="150.0" text="Label" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Label fx:id="correoPerfil" layoutX="150.0" layoutY="291.0" prefHeight="65.0" prefWidth="176.0" text="Label" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Label fx:id="fechaNacimientoPerfil" layoutX="150.0" layoutY="397.0" prefHeight="18.0" prefWidth="150.0" text="Label">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Label fx:id="contrsaenaPerfil" layoutX="154.0" layoutY="489.0" prefHeight="18.0" prefWidth="150.0" text="Label">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
       <Button fx:id="verPubsButton" layoutX="-4.0" layoutY="89.0" mnemonicParsing="false" onAction="#verPubsCLick" prefHeight="26.0" prefWidth="110.0" text="VER PUBLICACIONES">
          <font>
             <Font size="10.0" />
