@@ -1,0 +1,85 @@
+DELIMITER $$
+
+CREATE TRIGGER after_insert_libros
+AFTER INSERT ON libros
+FOR EACH ROW
+BEGIN
+    INSERT INTO novedades (id_producto, tipo, id_tipo, fecha)
+    VALUES (NEW.id_libro, 'libros', 1, NOW());
+END$$
+
+CREATE TRIGGER after_update_libros
+AFTER UPDATE ON libros
+FOR EACH ROW
+BEGIN
+    INSERT INTO novedades (id_producto, tipo, id_tipo, fecha)
+    VALUES (NEW.id_libro, 'libros', 1, NOW());
+END$$
+
+CREATE TRIGGER after_delete_libros
+AFTER DELETE ON libros
+FOR EACH ROW
+BEGIN
+    INSERT INTO novedades (id_producto, tipo, id_tipo, fecha)
+    VALUES (OLD.id_libro, 'libros', 1, NOW());
+END$$
+
+DELIMITER ;
+
+
+DELIMITER $$
+
+CREATE TRIGGER after_insert_alquileres
+AFTER INSERT ON alquileres
+FOR EACH ROW
+BEGIN
+    INSERT INTO novedades (id_producto, tipo, id_tipo, fecha)
+    VALUES (NEW.id_alquiler, 'alquileres', 2, NOW());
+END$$
+
+CREATE TRIGGER after_update_alquileres
+AFTER UPDATE ON alquileres
+FOR EACH ROW
+BEGIN
+    INSERT INTO novedades (id_producto, tipo, id_tipo, fecha)
+    VALUES (NEW.id_alquiler, 'alquileres', 2, NOW());
+END$$
+
+CREATE TRIGGER after_delete_alquileres
+AFTER DELETE ON alquileres
+FOR EACH ROW
+BEGIN
+    INSERT INTO novedades (id_producto, tipo, id_tipo, fecha)
+    VALUES (OLD.id_alquiler, 'alquileres', 2, NOW());
+END$$
+
+DELIMITER ;
+
+
+DELIMITER $$
+
+CREATE TRIGGER after_insert_eventos_culturales
+AFTER INSERT ON eventos_culturales
+FOR EACH ROW
+BEGIN
+    INSERT INTO novedades (id_producto, tipo, id_tipo, fecha)
+    VALUES (NEW.id_evento, 'eventos', 3, NOW());
+END$$
+
+CREATE TRIGGER after_update_eventos_culturales
+AFTER UPDATE ON eventos_culturales
+FOR EACH ROW
+BEGIN
+    INSERT INTO novedades (id_producto, tipo, id_tipo, fecha)
+    VALUES (NEW.id_evento, 'eventos', 3, NOW());
+END$$
+
+CREATE TRIGGER after_delete_eventos_culturales
+AFTER DELETE ON eventos_culturales
+FOR EACH ROW
+BEGIN
+    INSERT INTO novedades (id_producto, tipo, id_tipo, fecha)
+    VALUES (OLD.id_evento, 'eventos', 3, NOW());
+END$$
+
+
