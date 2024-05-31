@@ -25,11 +25,12 @@ public class recuperacionContra implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        // Código de inicialización para el controlador
     }
 
     @javafx.fxml.FXML
     public void salirRECUCLICK(ActionEvent actionEvent) {
+        // Acción cuando se hace clic en el botón "salirRECU"
         System.out.println("funciona bien");
         try {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("inicio_sesion.fxml"));
