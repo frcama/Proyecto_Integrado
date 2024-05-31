@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.PublicacionesController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="68.0" stroke="BLACK" strokeType="INSIDE" width="347.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.12156862765550613" green="0.13725490868091583" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8549019694328308" green="0.20000000298023224" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="55.0" layoutY="15.0" text="MIS PUBLICACIONES" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="atrasButton" layoutX="152.0" layoutY="77.0" mnemonicParsing="false" text="Atras" />
+      <HBox fx:id="panelHBoxNovedades" layoutX="10.0" layoutY="108.0" prefHeight="477.0" prefWidth="328.0">
+         <children>
+            <ScrollPane fx:id="novedadesScollPane" prefHeight="346.0" prefWidth="330.0">
+               <content>
+                  <GridPane fx:id="cosasGripPane" prefHeight="0.0" prefWidth="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                  </GridPane>
+               </content>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </ScrollPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
