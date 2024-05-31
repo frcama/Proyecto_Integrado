@@ -1,5 +1,6 @@
 package com.example.proyecto;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
@@ -12,6 +13,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class PublicacionesController implements Initializable {
 
@@ -25,6 +28,8 @@ public class PublicacionesController implements Initializable {
     private HBox panelHBoxNovedades;
 
     private Usuario usuario;
+    @javafx.fxml.FXML
+    private AnchorPane panelPublicaciones;
 
     public void setUsuario(Usuario usuario){
         this.usuario = usuario;
@@ -48,6 +53,19 @@ public class PublicacionesController implements Initializable {
         // Load events
         EventosModel em = new EventosModel();
         eventosArrayList = em.mostrarEventos();
+
+        // Load books uploaded by the current user
+        LibrosModel librosModel = new LibrosModel();
+        librosArrayList = librosModel.mostrarLibrosPorUsuario(usuario);
+
+        // Load events uploaded by the current user
+
+        EventosModel eventosModel = new EventosModel();
+        eventosArrayList = eventosModel.mostrarEventosPorUsuario(usuario);
+
+        // Load rentals uploaded by the current user
+        AlquileresModel alquileresModel = new AlquileresModel();
+        alquileresArrayList = alquileresModel.mostrarAlquileresPorUsuario(usuario);
 
         // Clear the GridPane before adding new content
         cosasGripPane.getChildren().clear();
@@ -112,6 +130,16 @@ public class PublicacionesController implements Initializable {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+        }
+    }
+
+    public void atrasBotonCLick(ActionEvent actionEvent) {
+
+        try {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Perfil.fxml"));
+            this.panelPublicaciones.getChildren().setAll(pane);
+        } catch (IOException ex) {
+            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

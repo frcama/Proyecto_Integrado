@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="599a3e3c-8dec-4e78-9449-a59b65385a10" name="Changes" comment="muestra eventos y revisión de consultas">
-      <change afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/PublicacionesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/Publicaciones.fxml" afterDir="false" />
+    <list default="true" id="599a3e3c-8dec-4e78-9449-a59b65385a10" name="Changes" comment="commit publicaciones Xavier">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Perfil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/Perfil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/Perfil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/Perfil.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Eventos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Eventos.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Novedades.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/Novedades.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AlquileresModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AlquileresModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/EventosModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/EventosModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/LibrosModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/LibrosModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/PublicacionesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/PublicacionesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/Publicaciones.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/resources/com/example/proyecto/Publicaciones.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/LibrosModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/LibrosModel.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717052319253</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="commit publicaciones Xavier">
+      <option name="closed" value="true" />
+      <created>1717065411181</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1717065411181</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -259,7 +267,8 @@
     <MESSAGE value="porfin imagenes" />
     <MESSAGE value="registro" />
     <MESSAGE value="muestra eventos y revisión de consultas" />
-    <option name="LAST_COMMIT_MESSAGE" value="muestra eventos y revisión de consultas" />
+    <MESSAGE value="commit publicaciones Xavier" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit publicaciones Xavier" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
