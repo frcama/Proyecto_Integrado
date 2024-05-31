@@ -25,7 +25,7 @@ import java.time.LocalDate;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+// Clase AnyadirLibros que implementa Initializable para manejar la inicialización de la interfaz de usuario
 public class AnyadirLibros implements Initializable {
     @FXML
     private Spinner precioSpinner;
@@ -47,15 +47,15 @@ public class AnyadirLibros implements Initializable {
     private TextField asignaturaTextField;
     @FXML
     private ChoiceBox cursoChoiceBox;
-
+    // Método initialize se ejecuta al cargar la interfaz de usuario
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        // Configuración del Spinner para el precio del libro
         SpinnerValueFactory<Integer> valueFactoryInteger =
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(0,10000000,0,1);
 
         precioSpinner.setValueFactory(valueFactoryInteger);
-
+        // Creación de la lista de opciones para el ChoiceBox de cursos
         ObservableList<String> cursosLibros = FXCollections.observableArrayList();
 
         String curso1 = "Primero";
@@ -73,10 +73,11 @@ public class AnyadirLibros implements Initializable {
         cursoChoiceBox.setItems(cursosLibros);
 
     }
-
+    // Método para manejar el evento de clic en el botón "Atrás"
     @FXML
     public void atrasBOTONclick(ActionEvent actionEvent) {
         try {
+            // Cargar el nuevo AnchorPane desde el archivo FXML y reemplazar el contenido del panel actual
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Libros.fxml"));
             this.PanelAnyadirLIBROS.getChildren().setAll(pane);
         } catch (IOException ex) {
@@ -84,17 +85,17 @@ public class AnyadirLibros implements Initializable {
         }
     }
 
-
+    // Método para manejar el evento de clic en el botón "Subir"
     @FXML
     public void onSubirButtonClick(ActionEvent actionEvent) {
 
         AnyadirLibrosModel al = new AnyadirLibrosModel();
 
-
+        // Obtener la imagen seleccionada y su ruta
         Image imagenSeleccionada = muestraImagen.getImage();
         String imageUrl = imagenSeleccionada.getUrl().replace("file:", "");
         File imagen = new File(imageUrl);
-
+        // Obtener los datos de los campos de texto y controles
         String titulo= tituloTextField.getText();
         String editorial = editorialTextField.getText();
         String isbn = isbnTextField.getText();
@@ -102,24 +103,24 @@ public class AnyadirLibros implements Initializable {
         double precio = (Integer) precioSpinner.getValue();
         String asignatura = asignaturaTextField.getText();
         Date d = Date.valueOf(LocalDate.now());
-
+        // Crear un nuevo objeto Libros con los datos obtenidos
         Libros l = new Libros(titulo, isbn, editorial, precio, asignatura, curso, imagen, d);
-
+        // Llamar al método para añadir el libro a la base de datos
         al.AnyadirLibros(l);
 
 
 
     }
-
+    // Método para manejar el evento de clic en el botón "Subir Imagen"
     @FXML
     public void OnSubirImagenbutton(ActionEvent actionEvent) {
         FileChooser fileChooser = new FileChooser();
 
         // Configurar los filtros de extensión antes de mostrar el diálogo
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.jpeg"));
-
+        // Mostrar el diálogo de selección de archivos
         File file = fileChooser.showOpenDialog(new Stage());
-
+        // Si se selecciona un archivo, cargarlo y mostrar la imagen en el ImageView
         if (file != null) {
             Image image = new Image(file.toURI().toString());
             muestraImagen.setImage(image);
