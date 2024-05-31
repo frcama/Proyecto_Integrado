@@ -75,7 +75,8 @@ Usuario u = new Usuario();
     public void cambiosButtonClick(ActionEvent actionEvent) {
         boolean datosActualizados = false;
         // Verificar si se han realizado cambios en el nombre
-        if (!u.getNombre().equals(NuevoNombreTF.getText())) {
+
+        if (u.getNombre() != null && !u.getNombre().equals(NuevoNombreTF.getText())) {
             EditarPerfilModel.actualizarNombre();
             datosActualizados = true;
         } else {
@@ -83,8 +84,10 @@ Usuario u = new Usuario();
             a.setContentText("Tu Nombre es el mismo");
             a.showAndWait();
         }
+
+
         // Verificar si se han realizado cambios en el apellido
-        if (!u.getApellido().equals(NuevoApelllidoTF.getText())) {
+        if (u.getApellido() != null && !u.getApellido().equals(NuevoApelllidoTF.getText())) {
             EditarPerfilModel.actualizarNombre();
             datosActualizados = true;
         } else {
@@ -93,7 +96,7 @@ Usuario u = new Usuario();
             a.showAndWait();
         }
         // Verificar si se han realizado cambios en el correo electrónico
-        if (!u.getCorreo().equals(NuevoCorreoTF.getText())) {
+        if (u.getCorreo() != null && !u.getCorreo().equals(NuevoCorreoTF.getText())) {
             EditarPerfilModel.actualizarNombre();
             datosActualizados = true;
         } else {
@@ -102,7 +105,7 @@ Usuario u = new Usuario();
             a.showAndWait();
         }
         // Verificar si se han realizado cambios en la fecha de nacimiento
-        if (!u.getFechanacimiento().equals(NuevaFechaTF.getValue())) { // Asumiendo que NuevaFechaTF es un DatePicker
+        if (u.getFechanacimiento() != null && !u.getFechanacimiento().equals(NuevaFechaTF.getValue())) { // Asumiendo que NuevaFechaTF es un DatePicker
             EditarPerfilModel.actualizarNombre();
             datosActualizados = true;
         } else {
@@ -111,7 +114,7 @@ Usuario u = new Usuario();
             a.showAndWait();
         }
         // Verificar si se han realizado cambios en la contraseña
-        if (!u.getContra().equals(NuevaContrasenyaTF.getText())) {
+        if (u.getContra() != null && !u.getContra().equals(NuevaContrasenyaTF.getText())) {
             EditarPerfilModel.actualizarNombre();
             datosActualizados = true;
         } else {

@@ -39,7 +39,7 @@ public class MostrarLibros extends Conexion{
         this.libros = libros;
 
         tituloLibroLabel.setText(libros.getTitulo());
-        precioLabel.setText(libros.getPrecio() + "€");
+        precioLabel.setText(libros.getPrecio() + "");
         //Image image = new Image(getClass().getResourceAsStream(alquiler.getImgSrc()));
         //imagenalquilerImageView.setImage(image);
         editorialLabel.setText(libros.getEditorial());
