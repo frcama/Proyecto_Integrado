@@ -31,6 +31,11 @@
                         <Color red="0.12156862765550613" green="0.13725490868091583" blue="1.0" />
                      </color>
                   </Stop>
+                  <Stop offset="0.8341463414634145">
+                     <color>
+                        <Color red="0.12156862765550613" green="0.5764706134796143" blue="1.0" />
+                     </color>
+                  </Stop>
                   <Stop offset="1.0">
                      <color>
                         <Color red="0.11764705926179886" green="0.5647059082984924" blue="1.0" />
@@ -45,11 +50,11 @@
             <Font name="Impact" size="30.0" />
          </font>
       </Label>
-      <Button fx:id="perfilBOTON" alignment="CENTER" layoutX="269.0" layoutY="4.0" mnemonicParsing="false" onAction="#perfilBOTONclick" prefHeight="52.0" prefWidth="50.0" style="-fx-background-image: &quot;@img/logo.png&quot;; -fx-background-radius: 1000000;" textAlignment="JUSTIFY">
+      <Button fx:id="perfilBOTON" alignment="CENTER" layoutX="269.0" layoutY="4.0" mnemonicParsing="false" onAction="#perfilBOTONclick" prefHeight="52.0" prefWidth="50.0" style="-fx-background-image: &quot;@img/logo.png&quot;; -fx-background-radius: 1000000; -fx-background-color: #1f93ff;" textAlignment="JUSTIFY">
          <graphic>
-            <ImageView fx:id="PerfilBOTON" fitHeight="40.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="PerfilBOTON" fitHeight="35.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/boton_perfil.png" />
+                  <Image url="@img/perfil3.png" />
                </image>
                <effect>
                   <ColorAdjust />
