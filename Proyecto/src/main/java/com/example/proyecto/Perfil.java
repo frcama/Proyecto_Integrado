@@ -38,13 +38,13 @@ public class Perfil implements Initializable {
     @javafx.fxml.FXML
     private Label contrsaenaPerfil;
     @javafx.fxml.FXML
-    private Label correoPerfil;
-    @javafx.fxml.FXML
     private Label apellidosPerfil;
 
     Usuario usuario = new Usuario();
     @javafx.fxml.FXML
     private Button verPubsButton;
+    @javafx.fxml.FXML
+    private Label correoPerfilLabel;
 
 
     @Override
@@ -58,7 +58,7 @@ public class Perfil implements Initializable {
         /**
          * Mostrar los datos del usuario en la interfaz
          */
-        correoPerfil.setText(usuario.getCorreo());
+        correoPerfilLabel.setText(usuario.getCorreo());
         nombrePerfil.setText(usuario.getNombre());
         contrsaenaPerfil.setText(usuario.getContra());
         apellidosPerfil.setText(usuario.getApellido());

@@ -83,7 +83,7 @@ public class EventosModel extends Conexion{
             /**
              * Consulta SQL para seleccionar los eventos del usuario actual ordenados por fecha de añadido
              */
-            String sql = "SELECT * FROM eventos_culturales WHERE id_estudiante = ? order by fecha_anyadido ASC";
+            String sql = "SELECT * FROM eventos_culturales WHERE id_usuario = ? order by fecha_anyadido ASC";
             // Preparar la declaración SQL
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ps.setInt(1, usuactual.getId_usuario());

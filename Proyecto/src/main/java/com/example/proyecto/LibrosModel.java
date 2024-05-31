@@ -77,7 +77,7 @@ public class LibrosModel extends Conexion {
         Usuario usuactual = UsuarioHolder.getInstance().getUsuario();
 
         try  {
-            String sql = "SELECT  isbn, Titulo, curso, asignatura, editorial, precio, imagen FROM libros WHERE id_estudiante = ?";
+            String sql = "SELECT  isbn, Titulo, curso, asignatura, editorial, precio, imagen FROM libros WHERE id_usuario = ?";
 
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ps.setInt(1, usuactual.getId_usuario());

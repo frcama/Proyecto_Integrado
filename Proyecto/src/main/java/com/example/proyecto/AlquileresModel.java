@@ -60,10 +60,12 @@ public class AlquileresModel extends Conexion{
 public ArrayList<Alquileres> mostrarAlquileresPorUsuario(Usuario usuario) {
     this.conexion = true;
     ArrayList<Alquileres> alquileresListaPorUsuario = new ArrayList<>();
+    Usuario usuactual = UsuarioHolder.getInstance().getUsuario();
 
     try {
-        String sql = "SELECT * FROM alquileres where id_estudiante = ? ORDER BY fecha_anyadido DESC;";
+        String sql = "SELECT * FROM alquileres where id_usuario = ? ORDER BY fecha_anyadido DESC;";
         PreparedStatement ps = this.getConexion().prepareStatement(sql);
+        ps.setInt(1, usuactual.getId_usuario());
         ResultSet rs = ps.executeQuery();
 
         // Itera sobre los resultados de la consulta
