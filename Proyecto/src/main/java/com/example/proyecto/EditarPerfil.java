@@ -14,7 +14,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+// Clase para editar el perfil del usuario
 public class EditarPerfil extends Perfil{
     @FXML
     private ImageView fotoPerfil;
@@ -36,7 +36,7 @@ public class EditarPerfil extends Perfil{
     private PasswordField NuevaContrasenyaTF;
     @FXML
     private DatePicker NuevaFechaTF;
-
+    // Método para manejar el evento de hacer clic en editar foto
     @Deprecated
     public void EditarFotoclick(ActionEvent actionEvent) {
 
@@ -48,7 +48,7 @@ public class EditarPerfil extends Perfil{
             fotoPerfil.setImage(image);
         }
     }
-
+    // Método para manejar el evento de hacer clic en el botón "Atrás"
     @FXML
     public void atrasDePerfilBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
@@ -60,7 +60,7 @@ public class EditarPerfil extends Perfil{
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
+    // Método para manejar el evento de hacer clic en el botón "Cerrar Sesión"
     @FXML
     public void CerrarSesionBOTONCLICK(ActionEvent actionEvent) {
         System.out.println("funciona");
@@ -72,11 +72,13 @@ public class EditarPerfil extends Perfil{
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    // Instancia de usuario
 Usuario u = new Usuario();
+    // Método para manejar el evento de hacer clic en el botón de cambios
     @FXML
     public void cambiosButtonClick(ActionEvent actionEvent) {
         boolean datosActualizados = false;
-
+        // Verificar si se han realizado cambios en el nombre
         if (!u.getNombre().equals(NuevoNombreTF.getText())) {
             EditarPerfilModel.actualizarNombre();
             datosActualizados = true;
@@ -85,7 +87,7 @@ Usuario u = new Usuario();
             a.setContentText("Tu Nombre es el mismo");
             a.showAndWait();
         }
-
+        // Verificar si se han realizado cambios en el apellido
         if (!u.getApellido().equals(NuevoApelllidoTF.getText())) {
             EditarPerfilModel.actualizarNombre();
             datosActualizados = true;
@@ -94,7 +96,7 @@ Usuario u = new Usuario();
             a.setContentText("Tu Apellido es el mismo");
             a.showAndWait();
         }
-
+        // Verificar si se han realizado cambios en el correo electrónico
         if (!u.getCorreo().equals(NuevoCorreoTF.getText())) {
             EditarPerfilModel.actualizarNombre();
             datosActualizados = true;
@@ -103,7 +105,7 @@ Usuario u = new Usuario();
             a.setContentText("Tu Correo es el mismo");
             a.showAndWait();
         }
-
+        // Verificar si se han realizado cambios en la fecha de nacimiento
         if (!u.getFechanacimiento().equals(NuevaFechaTF.getValue())) { // Asumiendo que NuevaFechaTF es un DatePicker
             EditarPerfilModel.actualizarNombre();
             datosActualizados = true;
@@ -112,7 +114,7 @@ Usuario u = new Usuario();
             a.setContentText("Tu Fecha es la misma");
             a.showAndWait();
         }
-
+        // Verificar si se han realizado cambios en la contraseña
         if (!u.getContra().equals(NuevaContrasenyaTF.getText())) {
             EditarPerfilModel.actualizarNombre();
             datosActualizados = true;

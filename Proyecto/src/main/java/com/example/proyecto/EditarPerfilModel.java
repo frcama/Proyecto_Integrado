@@ -6,12 +6,12 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.time.LocalDate;
-
+// Clase para manejar la lógica de actualización del perfil de usuario en la base de datos
 public class EditarPerfilModel extends Conexion{
-
+    // Método para actualizar el nombre del usuario (actualmente vacío)
     public static void actualizarNombre() {
     }
-
+    // Método para actualizar todos los datos del usuario en la base de datos
     public void actualizarUsuario(Usuario u, String nuevoNombre, String nuevoApellido, String nuevoCorreo, LocalDate nuevaFechaNacimiento, String nuevaContrasenya) {
         // Asumiendo que 'u' es el objeto de usuario actual con sus datos actuales
         // Asumiendo que 'perfilModel' es una instancia de una clase que maneja la conexión a la base de datos

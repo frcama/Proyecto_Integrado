@@ -57,7 +57,7 @@ public class Chat
 
     @FXML
     private void initialize() {
-        // Configuración del tamaño de la fuente de la respuesta y negrita
+        // Configuración del estilo de la etiqueta (tamaño de fuente, negrita, color)
         label.setStyle("-fx-font-size: 12px; -fx-font-weight: bold; -fx-fill: blue");
 
         // Añadir mensaje de bienvenida del bot en azul
@@ -76,13 +76,18 @@ public class Chat
 
     @FXML
     public void EnviarBOTONclick(ActionEvent actionEvent) {
+        // Obtener el texto ingresado por el usuario y convertirlo a minúsculas
         String texto = MensajeTF.getText().toLowerCase(); // Convert user's input to lowercase
+        // Agregar el mensaje del usuario a la lista de mensajes
         mensajes.add(" Usuario: " + texto); // Agrega el mensaje del usuario a la lista de mensajes
+        // Limpiar el campo de texto
         MensajeTF.clear();
+        // Actualizar los mensajes mostrados en el chat
         actualizarMensajes();
-
+        // Crear una pausa de 1 segundo antes de responder
         PauseTransition pause = new PauseTransition(Duration.seconds(1));
         pause.setOnFinished(event -> {
+            // Responder dependiendo del contenido del mensaje del usuario
             if (texto.contains("alquileres en valencia")) {
                 mensajes.add(" Bot: Puedo ayudarte con información sobre alquileres en Valencia. ¿Qué necesitas saber?");
             } else if (texto.contains("alquileres en barcelona")) {
@@ -137,7 +142,7 @@ public class Chat
             } else {
                 mensajes.add(" Bot: No he entendido tu mensaje. ¿Puedes proporcionar más detalles o reformular tu pregunta?");
             }
-
+            // Actualizar los mensajes mostrados en el chat
             actualizarMensajes();
         });
         pause.play();
@@ -150,7 +155,7 @@ public class Chat
 
 
 
-
+    // Método para actualizar los mensajes mostrados en el chat
     private void actualizarMensajes() {
         textFlow.getChildren().clear(); // Limpia los mensajes anteriores
 
@@ -197,6 +202,7 @@ public class Chat
         System.out.println("funciona");
 
         try {
+            // Cargar la escena de "Novedades.fxml" y cambiar el contenido del panel del chat
             AnchorPane pane = FXMLLoader.load(getClass().getResource("Novedades.fxml"));
             this.panelDelChat.getChildren().setAll(pane);
         } catch (IOException ex) {
