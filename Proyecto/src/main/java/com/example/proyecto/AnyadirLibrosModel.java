@@ -12,7 +12,7 @@ public class AnyadirLibrosModel extends Conexion{
 
         recuperarDatos();
         try {
-            String sql = "INSERT INTO libros (isbn, Titulo, curso, asignatura, editorial, precio, imagen, fecha_anyadido, id_estudiante)" +
+            String sql = "INSERT INTO libros (isbn, Titulo, curso, asignatura, editorial, precio, imagen, fecha_anyadido, id_usuario)" +
                     "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
             PreparedStatement ps = this.getConexion().prepareStatement(sql);

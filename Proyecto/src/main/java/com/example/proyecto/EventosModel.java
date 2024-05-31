@@ -14,6 +14,7 @@ public class EventosModel extends Conexion{
         // Lista para almacenar los eventos
         ArrayList<Eventos> listaEventos = new ArrayList<>();
 
+
         try {
             // Consulta SQL para seleccionar todos los eventos ordenados por fecha de añadido
             String sql = "Select * from eventos_culturales ORDER BY fecha_anyadido DESC;";
