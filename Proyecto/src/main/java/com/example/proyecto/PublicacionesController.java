@@ -42,28 +42,28 @@ public class PublicacionesController implements Initializable {
         ArrayList<Eventos> eventosArrayList = new ArrayList<>();
         ArrayList<Alquileres> alquileresArrayList = new ArrayList<>();
 
-        // Load books
+        // Cargar Libros
         LibrosModel lm = new LibrosModel();
         librosArrayList = lm.mostrarLibros();
 
-        // Load rentals
+        // Cargar Alguileres
         AlquileresModel am = new AlquileresModel();
         alquileresArrayList = am.mostrarAlquileres();
 
-        // Load events
+        // Cargar Eventos
         EventosModel em = new EventosModel();
         eventosArrayList = em.mostrarEventos();
 
-        // Load books uploaded by the current user
+        // Cargar libros subidos por el usuario
         LibrosModel librosModel = new LibrosModel();
         librosArrayList = librosModel.mostrarLibrosPorUsuario(usuario);
 
-        // Load events uploaded by the current user
+        // Cargar eventos subidos por el usuario
 
         EventosModel eventosModel = new EventosModel();
         eventosArrayList = eventosModel.mostrarEventosPorUsuario(usuario);
 
-        // Load rentals uploaded by the current user
+        // Cargar alquileres subidos por el usuario
         AlquileresModel alquileresModel = new AlquileresModel();
         alquileresArrayList = alquileresModel.mostrarAlquileresPorUsuario(usuario);
 
@@ -72,7 +72,7 @@ public class PublicacionesController implements Initializable {
 
         int row = 0;
 
-        // Add books to the GridPane
+        // Añadir libros al GridPane
         for (Libros libro : librosArrayList) {
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader();
@@ -92,7 +92,7 @@ public class PublicacionesController implements Initializable {
             }
         }
 
-        // Add rentals to the GridPane
+        // Añadir alquileres al GridPane
         for (Alquileres alquiler : alquileresArrayList) {
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader();
@@ -112,7 +112,7 @@ public class PublicacionesController implements Initializable {
             }
         }
 
-        // Add events to the GridPane
+        // Añadir eventos al GridPane
         for (Eventos evento : eventosArrayList) {
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader();
@@ -132,7 +132,7 @@ public class PublicacionesController implements Initializable {
             }
         }
     }
-
+    // Accion que realiza el boton cuando hacen clic sobre el
     public void atrasBotonCLick(ActionEvent actionEvent) {
 
         try {

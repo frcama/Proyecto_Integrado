@@ -11,10 +11,11 @@ import java.util.ArrayList;
 
 public class PerfilModel extends Conexion{
 
+    // Método para obtener el perfil del usuario
     public Usuario perfilModel(String emailUsuario, String contraUsuario) {
-        this.conexion = true;
+        this.conexion = true; // Marcar la conexión como exitosa
 
-        Usuario u = new Usuario();
+        Usuario u = new Usuario(); // Crear una instancia de Usuario
 
         try {
             String sql = "SELECT * FROM estudiantes WHERE email = ? AND contraseña = ?;";
@@ -24,6 +25,7 @@ public class PerfilModel extends Conexion{
 
             ResultSet rs = ps.executeQuery();
 
+            // Obtener los datos del usuario del resultado de la consulta
 
             while (rs.next()) {
 
@@ -36,14 +38,14 @@ public class PerfilModel extends Conexion{
             ps.close();
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            e.printStackTrace(); // Manejar cualquier error de SQL
 
         } finally {
             //se cierra conexion
             this.cerrarConexion();
         }
 
-    return u;
+    return u; // Devolver el objeto Usuario
     }
 
 }

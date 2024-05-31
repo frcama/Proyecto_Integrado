@@ -49,9 +49,10 @@ public class Perfil implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        // Recuperar los datos del usuario actual
         recuperarDatos();
 
-
+        // Mostrar los datos del usuario en la interfaz
         correoPerfil.setText(usuario.getCorreo());
         nombrePerfil.setText(usuario.getNombre());
         contrsaenaPerfil.setText(usuario.getContra());
@@ -60,12 +61,13 @@ public class Perfil implements Initializable {
 
 
     }
+    // Método para recuperar los datos del usuario actual
     private void recuperarDatos(){
 
         UsuarioHolder us = UsuarioHolder.getInstance();
          usuario = us.getUsuario();
     }
-
+    // Método para regresar a la pantalla de novedades desde el perfil
     @javafx.fxml.FXML
     public void atrasDePerfilBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");
@@ -77,7 +79,7 @@ public class Perfil implements Initializable {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
+    // Método para seleccionar una foto de perfil (depreciado)
     @Deprecated
     public void EditarFotoPerfilclick(ActionEvent actionEvent) {
 
@@ -88,7 +90,7 @@ public class Perfil implements Initializable {
             fotoPerfil.setImage(image);
         }
     }
-
+    // Método para cerrar la sesión
     @javafx.fxml.FXML
     public void CerrarSesionBOTONCLICK(ActionEvent actionEvent) {
         System.out.println("funciona");
@@ -100,7 +102,7 @@ public class Perfil implements Initializable {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
+    // Método para editar el perfil del usuario
     @javafx.fxml.FXML
     public void editarPerfilclick(ActionEvent actionEvent) {
 
@@ -111,7 +113,7 @@ public class Perfil implements Initializable {
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
+    // Método para ver las publicaciones del usuario
     @javafx.fxml.FXML
     public void verPubsCLick(ActionEvent actionEvent) {
 

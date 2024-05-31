@@ -3,7 +3,17 @@ package com.example.proyecto;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+/**
+ * Esta clase representa el modelo para el manejo de usuarios, proporciona funcionalidades como encriptar contraseñas.
+ */
 public class UsuarioModel extends Conexion{
+
+    /**
+     * Método para encriptar una contraseña utilizando el algoritmo MD5.
+     * @param contraseña La contraseña a encriptar.
+     * @return La contraseña encriptada.
+     * @throws NoSuchAlgorithmException Si no se encuentra el algoritmo de encriptación especificado.
+     */
 
   private String encriptarContraseña(String contraseña) throws NoSuchAlgorithmException{
       MessageDigest digest = MessageDigest.getInstance("MD5");
