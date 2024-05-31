@@ -83,7 +83,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="eventosBOTON" layoutX="269.0" layoutY="551.0" mnemonicParsing="false" onAction="#eventosBOTONclick" prefHeight="44.0" prefWidth="54.0" style="-fx-background-radius: 5; -fx-background-color: BADBFF;">
+      <Button fx:id="eventosBOTON" layoutX="274.0" layoutY="552.0" mnemonicParsing="false" onAction="#eventosBOTONclick" prefHeight="43.0" prefWidth="49.0" style="-fx-background-radius: 5; -fx-background-color: BADBFF;">
          <effect>
             <DropShadow />
          </effect>
@@ -107,7 +107,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="addButton" layoutX="139.0" layoutY="552.0" mnemonicParsing="false" onAction="#onAddClicked" prefHeight="43.0" prefWidth="51.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+      <Button fx:id="addButton" layoutX="142.0" layoutY="553.0" mnemonicParsing="false" onAction="#onAddClicked" prefHeight="43.0" prefWidth="51.0" style="-fx-background-color: white; -fx-background-radius: 5;">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -124,7 +124,7 @@
       </Button>
       <ChoiceBox fx:id="TipoFiltroChoicebox" layoutX="11.0" layoutY="75.0" prefHeight="25.0" prefWidth="88.0" />
       <Button fx:id="filtrarButton" layoutX="123.0" layoutY="100.0" mnemonicParsing="false" onAction="#filtrarBottonClick" text="Aplicar Filtros" />
-      <Line endX="224.99996948242188" layoutX="109.0" layoutY="544.0" startX="-114.0000228881836" />
+      <Line endX="224.99996948242188" layoutX="107.0" layoutY="539.0" startX="-114.0000228881836" />
       <HBox fx:id="panelHBoxEventos" layoutX="4.0" layoutY="122.0" prefHeight="394.0" prefWidth="328.0">
          <children>
             <ScrollPane fx:id="eventosScollPane" prefHeight="414.0" prefWidth="328.0">
