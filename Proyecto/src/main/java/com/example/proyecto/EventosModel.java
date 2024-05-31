@@ -16,7 +16,7 @@ public class EventosModel extends Conexion{
 
         try {
             // Consulta SQL para seleccionar todos los eventos ordenados por fecha de añadido
-            String sql = "Select * from eventos_culturales ORDER BY fecha_anyadido ASC;";
+            String sql = "Select * from eventos_culturales ORDER BY fecha_anyadido DESC;";
             // Preparar la declaración SQL
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             // Ejecutar la consulta

@@ -13,17 +13,17 @@
 
 <AnchorPane fx:id="panelDePerfil" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.EditarPerfil">
    <children>
-      <Label layoutX="14.0" layoutY="150.0" text="Nombre">
+      <Label fx:id="nombreEditarPerfil" layoutX="14.0" layoutY="150.0" text="Nombre">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="14.0" layoutY="300.0" prefHeight="42.0" prefWidth="124.0" text="Descripción">
+      <Label fx:id="correoEditarPerfil" layoutX="14.0" layoutY="300.0" prefHeight="42.0" prefWidth="124.0" text="Correo">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="14.0" layoutY="230.0" prefHeight="42.0" prefWidth="112.0" text="de Usuario">
+      <Label fx:id="apellidosEditarPerfil" layoutX="14.0" layoutY="223.0" prefHeight="42.0" prefWidth="112.0" text="Apellido">
          <font>
             <Font size="20.0" />
          </font>
@@ -33,11 +33,6 @@
       <Line endX="219.0" endY="-1.52587890625E-5" layoutX="116.0" layoutY="281.0" startX="-116.0000228881836" startY="-1.52587890625E-5" />
       <Line endX="219.0" endY="-1.52587890625E-5" layoutX="116.0" layoutY="369.0" startX="-116.0000228881836" startY="-1.52587890625E-5" />
       <Line endX="219.0" endY="-1.52587890625E-5" layoutX="116.0" layoutY="454.0" startX="-116.0000228881836" startY="-1.52587890625E-5" />
-      <Label layoutX="14.0" layoutY="215.0" text="Nombre">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
       <Label layoutX="14.0" layoutY="376.0" prefHeight="42.0" prefWidth="59.0" text="Fecha ">
          <font>
             <Font size="20.0" />

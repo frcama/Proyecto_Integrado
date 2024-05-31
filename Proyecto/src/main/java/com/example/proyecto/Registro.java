@@ -28,21 +28,21 @@ public class Registro extends Conexion implements Initializable {
     @FXML
     private Button registrarseBOTON;
     @FXML
-    private TextField RepeContrasenyaRegistro;
+    private TextField contrasenyaTF;
     @FXML
-    private TextField telefonoRegistro;
+    private TextField nombreTF;
     @FXML
-    private DatePicker fechaNacimientoRegistro;
+    private TextField dniTF;
     @FXML
-    private TextField nombreRegistro;
+    private DatePicker fechaNacimiento;
     @FXML
-    private TextField correoRegistro;
+    private TextField RepeContrasenyaTF;
     @FXML
-    private TextField contrasenyaRegistro;
+    private TextField apellidosTF;
     @FXML
-    private TextField apellidosRegistro;
+    private TextField correoTF;
     @FXML
-    private TextField dniRegistro;
+    private TextField telefonoTF;
 
     // Método que se llama cuando se hace clic en el botón cancelar
     @FXML
@@ -75,15 +75,15 @@ public class Registro extends Conexion implements Initializable {
 
         System.out.println("funciona");
         // Obtención de los valores ingresados en los campos de texto
-        String nombre =nombreRegistro.getText();
-        String apellido = apellidosRegistro.getText();
-        int numTel = Integer.valueOf(telefonoRegistro.getText());
-        String DNI = dniRegistro.getText();
-        String correo = correoRegistro.getText();
+        String nombre =nombreTF.getText();
+        String apellido = apellidosTF.getText();
+        int numTel = Integer.valueOf(telefonoTF.getText());
+        String DNI = dniTF.getText();
+        String correo = correoTF.getText();
 
 
-        String contra = contrasenyaRegistro.getText();
-        String contra2 = RepeContrasenyaRegistro.getText();
+        String contra = contrasenyaTF.getText();
+        String contra2 = RepeContrasenyaTF.getText();
 
 
         // Verificación de que las contraseñas coinciden
@@ -97,7 +97,7 @@ public class Registro extends Conexion implements Initializable {
         }
 
         // Cálculo de la edad del usuario
-        LocalDate FechaNacimiento = fechaNacimientoRegistro.getValue();
+        LocalDate FechaNacimiento = fechaNacimiento.getValue();
         LocalDate fechaHoy = LocalDate.now();
         int edad = Period.between(FechaNacimiento, fechaHoy).getYears();
         // Creación de un nuevo objeto Usuario con los datos ingresado

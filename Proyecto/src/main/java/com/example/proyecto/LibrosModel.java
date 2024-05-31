@@ -11,13 +11,15 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 // Clase para manejar operaciones relacionadas con libros en la base de datos
 public class LibrosModel extends Conexion {
+
+    Usuario usuario = new Usuario();
     // Método para mostrar todos los libros disponibles
     public ArrayList<Libros> mostrarLibros() {
 
         ArrayList<Libros> listaLibros = new ArrayList<>();
 
         try {
-            String sql = "SELECT  isbn, Titulo, curso, asignatura, editorial, precio, imagen FROM libros ORDER BY fecha_anyadido ASC;";
+            String sql = "SELECT isbn, Titulo, curso, asignatura, editorial, precio, imagen,id_estudiante FROM libros ORDER BY fecha_anyadido ASC;";
             PreparedStatement ps = this.getConexion().prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             // Recorrer el conjunto de resultados y crear objetos Libros

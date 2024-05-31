@@ -24,7 +24,7 @@
 
 <AnchorPane fx:id="PanelEventos" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto.EventosController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="65.0" layoutX="-3.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="342.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="71.0" layoutX="-3.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="342.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -47,7 +47,7 @@
             <Font name="Impact" size="30.0" />
          </font>
       </Label>
-      <Button fx:id="perfilBOTON" alignment="CENTER" layoutX="268.0" layoutY="3.0" mnemonicParsing="false" onAction="#perfilBOTONclick" prefHeight="51.0" prefWidth="54.0" style="-fx-background-image: &quot;@img/logo.png&quot;; -fx-background-radius: 1000000;" textAlignment="JUSTIFY">
+      <Button fx:id="perfilBOTON" alignment="CENTER" layoutX="278.0" layoutY="6.0" mnemonicParsing="false" onAction="#perfilBOTONclick" prefHeight="51.0" prefWidth="54.0" style="-fx-background-image: &quot;@img/logo.png&quot;; -fx-background-radius: 1000000;" textAlignment="JUSTIFY">
          <graphic>
             <ImageView fx:id="PerfilBOTON" fitHeight="41.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                <image>

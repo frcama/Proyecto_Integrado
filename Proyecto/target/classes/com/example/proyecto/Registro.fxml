@@ -20,13 +20,13 @@
             <Font name="Cooper Black" size="25.0" />
          </font>
       </Label>
-      <TextField fx:id="nombreRegistro" layoutX="77.0" layoutY="181.0" prefHeight="25.0" prefWidth="181.0" promptText="Nombre" style="-fx-border-color: #1e90ff; -fx-background-radius: 30; -fx-border-radius: 30;" />
-      <TextField fx:id="apellidosRegistro" layoutX="77.0" layoutY="221.0" prefHeight="25.0" prefWidth="181.0" promptText="Apellidos" style="-fx-border-color: #1e90ff; -fx-border-radius: 30; -fx-background-radius: 30;" />
-      <TextField fx:id="telefonoRegistro" layoutX="75.0" layoutY="440.0" prefHeight="25.0" prefWidth="181.0" promptText="Numero de telefono" style="-fx-border-color: #1e90ff; -fx-background-radius: 30; -fx-border-radius: 30;" />
-      <TextField fx:id="dniRegistro" layoutX="77.0" layoutY="261.0" prefHeight="27.0" prefWidth="182.0" promptText="Dni" style="-fx-border-color: #1e90ff; -fx-background-radius: 30; -fx-border-radius: 30;" />
-      <TextField fx:id="correoRegistro" layoutX="77.0" layoutY="300.0" prefHeight="25.0" prefWidth="181.0" promptText="Correo electronico" style="-fx-border-color: #1e90ff; -fx-background-radius: 30; -fx-border-radius: 30;" />
-      <TextField fx:id="contrasenyaRegistro" layoutX="77.0" layoutY="348.0" prefHeight="25.0" prefWidth="181.0" promptText="Contraseña" style="-fx-border-color: #1e90ff; -fx-background-radius: 30; -fx-border-radius: 30;" />
-      <TextField fx:id="RepeContrasenyaRegistro" layoutX="78.0" layoutY="391.0" prefHeight="25.0" prefWidth="181.0" promptText="Repite Contraseña" style="-fx-border-color: #1e90ff; -fx-background-radius: 30; -fx-border-radius: 30;" />
+      <TextField fx:id="nombreTF" layoutX="77.0" layoutY="181.0" prefHeight="25.0" prefWidth="181.0" promptText="Nombre" style="-fx-border-color: #1e90ff; -fx-background-radius: 30; -fx-border-radius: 30;" />
+      <TextField fx:id="apellidosTF" layoutX="77.0" layoutY="221.0" prefHeight="25.0" prefWidth="181.0" promptText="Apellidos" style="-fx-border-color: #1e90ff; -fx-border-radius: 30; -fx-background-radius: 30;" />
+      <TextField fx:id="telefonoTF" layoutX="75.0" layoutY="440.0" prefHeight="25.0" prefWidth="181.0" promptText="Numero de telefono" style="-fx-border-color: #1e90ff; -fx-background-radius: 30; -fx-border-radius: 30;" />
+      <TextField fx:id="dniTF" layoutX="77.0" layoutY="261.0" prefHeight="27.0" prefWidth="182.0" promptText="Dni" style="-fx-border-color: #1e90ff; -fx-background-radius: 30; -fx-border-radius: 30;" />
+      <TextField fx:id="correoTF" layoutX="77.0" layoutY="300.0" prefHeight="25.0" prefWidth="181.0" promptText="Correo electronico" style="-fx-border-color: #1e90ff; -fx-background-radius: 30; -fx-border-radius: 30;" />
+      <TextField fx:id="contrasenyaTF" layoutX="77.0" layoutY="348.0" prefHeight="25.0" prefWidth="181.0" promptText="Contraseña" style="-fx-border-color: #1e90ff; -fx-background-radius: 30; -fx-border-radius: 30;" />
+      <TextField fx:id="RepeContrasenyaTF" layoutX="78.0" layoutY="391.0" prefHeight="25.0" prefWidth="181.0" promptText="Repite Contraseña" style="-fx-border-color: #1e90ff; -fx-background-radius: 30; -fx-border-radius: 30;" />
       <Button fx:id="registrarseBOTON" layoutX="79.0" layoutY="534.0" mnemonicParsing="false" onAction="#registrarseBOTONclick" prefHeight="30.0" prefWidth="171.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 30; -fx-border-radius: 30;" text="Registrarse" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
@@ -39,7 +39,7 @@
                </image>
             </ImageView>
          </graphic></Button>
-      <DatePicker fx:id="fechaNacimientoRegistro" layoutX="76.0" layoutY="482.0" prefHeight="26.0" prefWidth="182.0" promptText="Fecha de nacimiento" style="-fx-background-color: #1e90ff;" />
+      <DatePicker fx:id="fechaNacimiento" layoutX="76.0" layoutY="482.0" prefHeight="26.0" prefWidth="182.0" promptText="Fecha de nacimiento" style="-fx-background-color: #1e90ff;" />
       <ImageView fitHeight="97.0" fitWidth="100.0" layoutX="117.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/logo2.png" />

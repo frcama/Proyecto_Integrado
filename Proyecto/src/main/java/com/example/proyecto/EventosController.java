@@ -207,9 +207,6 @@ public class EventosController implements Initializable {
         }
     }
 
-    @Deprecated
-    public void chatNovedadesclick(ActionEvent actionEvent) {
-    }
 
     @javafx.fxml.FXML
     public void librosBOTONclick(ActionEvent actionEvent) {

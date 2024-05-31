@@ -36,19 +36,15 @@ public class EditarPerfil extends Perfil{
     private PasswordField NuevaContrasenyaTF;
     @FXML
     private DatePicker NuevaFechaTF;
-    // Método para manejar el evento de hacer clic en editar foto
-    @Deprecated
-    public void EditarFotoclick(ActionEvent actionEvent) {
+    @FXML
+    private Label apellidosEditarPerfil;
+    @FXML
+    private Label nombreEditarPerfil;
+    @FXML
+    private Label correoEditarPerfil;
 
-        FileChooser fileChooser = new FileChooser();
-        File file = fileChooser.showOpenDialog(new Stage());
-        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.jpeg"));
-        if (file != null) {
-            Image image = new Image(file.toURI().toString());
-            fotoPerfil.setImage(image);
-        }
-    }
     // Método para manejar el evento de hacer clic en el botón "Atrás"
+
     @FXML
     public void atrasDePerfilBOTONclick(ActionEvent actionEvent) {
         System.out.println("funciona");

@@ -8,6 +8,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
+
 // Clase para manejar el inicio de sesión de usuarios
 public class InicioSesionModel extends Conexion {
     // Método para iniciar sesión de usuario
@@ -37,6 +39,7 @@ public class InicioSesionModel extends Conexion {
                 u.setNombre(resultSet.getString("nombre"));
                 u.setApellido(resultSet.getString("apellidos"));
                 u.setTelefono(resultSet.getInt("telefono"));
+                u.setFechanacimiento(resultSet.getDate("fecha_nacimiento").toLocalDate());
 
             } else {
                 // No se encontraron coincidencias, mostrar mensaje de error
