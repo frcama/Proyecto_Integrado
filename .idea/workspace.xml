@@ -4,24 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="599a3e3c-8dec-4e78-9449-a59b65385a10" name="Changes" comment="commit publicaciones Xavier">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_05_2024_20_06_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_05_2024_20_06__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_05_2024_18_07__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_05_2024_18_07__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_05_2024_18_58__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_05_2024_18_58__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_05_2024_15_26__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_05_2024_15_26__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_05_2024_18_12__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_05_2024_18_12__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_05_2024_17_48__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_05_2024_17_48__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AlquileresModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AlquileresModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/EventosModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/EventosModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/LibrosModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/LibrosModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/MostrarAlquileres.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/MostrarAlquileres.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/MostrarEventos.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/MostrarEventos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/MostrarLibros.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/MostrarLibros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarAlquileres.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarAlquileres.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarEventos.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarEventos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarLibros.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/MostrarLibros.class" afterDir="false" />
+    <list default="true" id="599a3e3c-8dec-4e78-9449-a59b65385a10" name="Changes" comment="ultimo retoque">
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AnyadirAlquileresModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AnyadirAlquileresModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AnyadirEventosModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AnyadirEventosModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AnyadirLibrosModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/java/com/example/proyecto/AnyadirLibrosModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/AlquileresModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/AlquileresModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/EventosModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/EventosModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/LibrosModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/target/classes/com/example/proyecto/LibrosModel.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717065411181</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="ultimo retoque">
+      <option name="closed" value="true" />
+      <created>1717404752696</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1717404752696</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -278,7 +275,8 @@
     <MESSAGE value="registro" />
     <MESSAGE value="muestra eventos y revisión de consultas" />
     <MESSAGE value="commit publicaciones Xavier" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit publicaciones Xavier" />
+    <MESSAGE value="ultimo retoque" />
+    <option name="LAST_COMMIT_MESSAGE" value="ultimo retoque" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

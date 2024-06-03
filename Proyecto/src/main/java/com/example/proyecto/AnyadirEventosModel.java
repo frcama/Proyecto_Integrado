@@ -29,7 +29,7 @@ public class AnyadirEventosModel extends Conexion{
             ps.setBinaryStream(5, FIS, (int) imagen.length());
 
             ps.setString(6, ev.getDescripcion());
-            ps.setDouble(7,ev.getPrecio());
+            ps.setInt(7,(int) ev.getPrecio());
             ps.setString(8,ev.getTipo());
             ps.setInt(9,usuario.getId_usuario());
 

@@ -25,7 +25,7 @@ public class AnyadirAlquileresModel extends Conexion {
             // Establece los valores de los parámetros en la sentencia SQL
             ps.setString(1, a.getUbicacion());
             ps.setString(2, a.getNombre());
-            ps.setDouble(3, a.getPrecio());
+            ps.setInt(3, (int) a.getPrecio());
             ps.setString(4, a.getMetrosCuadrados());
 
             // Obtiene el archivo de imagen y lo convierte a FileInputStream para almacenarlo como un flujo binario

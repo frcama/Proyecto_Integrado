@@ -22,7 +22,7 @@ public class AnyadirLibrosModel extends Conexion{
             ps.setString(3, l.getCurso());
             ps.setString(4, l.getAsignatura());
             ps.setString(5, l.getEditorial());
-            ps.setDouble(6, l.getPrecio());
+            ps.setInt(6, (int) l.getPrecio());
 
 
             File imagen = l.getImage();
