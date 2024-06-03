@@ -43,7 +43,7 @@ public class LibrosModel extends Conexion {
                 String Curso = rs.getString("curso");
                 String asignautra = rs.getString("asignatura");
                 String editorial = rs.getString("editorial");
-                double precio = rs.getDouble("precio");
+                int precio = rs.getInt("precio");
 
 
                 Libros l = new Libros(ISBN ,Titulo ,Curso , asignautra, editorial, precio,imagen);

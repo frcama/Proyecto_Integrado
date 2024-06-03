@@ -51,7 +51,7 @@ public class MostrarEventos {
          */
         nombreEventolabel.setText(evento.getNombre());
         tipoEventoLabel.setText(evento.getTipo());
-        precioEventoLabel.setText(String.valueOf(evento.getPrecio()+""));
+        precioEventoLabel.setText(String.valueOf(evento.getPrecio()));
         ubiEventoLabel.setText(evento.getUbicacion());
         descripcionEventoLabel.setText(evento.getDescripcion());
         fechaEventoLabel.setText(String.valueOf(evento.getFechaEvento()));

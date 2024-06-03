@@ -48,7 +48,7 @@ public class EventosModel extends Conexion{
                  */
                 String ubicacion = rs.getString("ubicacion");
                 String nombre =  rs.getString("nombre");
-                Double precio = rs.getDouble("precio");
+                int precio = rs.getInt("precio");
                 Date fechaEvento = rs.getDate("fecha");
                 String d = rs.getString("Descripcion");
                 String tipo = rs.getString("tipoEvento");

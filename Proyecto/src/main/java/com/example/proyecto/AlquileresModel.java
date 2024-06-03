@@ -63,7 +63,7 @@ public ArrayList<Alquileres> mostrarAlquileresPorUsuario(Usuario usuario) {
     Usuario usuactual = UsuarioHolder.getInstance().getUsuario();
 
     try {
-        String sql = "SELECT * FROM alquileres where id_usuario = ? ORDER BY fecha_anyadido DESC;";
+        String sql = "SELECT * FROM alquileres where id_usuario = ? ORDER BY fecha_anyadido ASC;";
         PreparedStatement ps = this.getConexion().prepareStatement(sql);
         ps.setInt(1, usuactual.getId_usuario());
         ResultSet rs = ps.executeQuery();
